@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Savings Card</title>
+  <style type="text/css">
+    /* Reset styles */
+    body, table, td, p, a, li, blockquote {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+    
+    /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #f4f4f4;
+    }
+    
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f4f4f4;
+      padding: 20px 0;
+    }
+    
+    .card-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .two-columns {
+      padding: 0;
+    }
+    
+    .pr10 {
+      padding-right: 0;
+    }
+    
+    .pl10 {
+      padding-left: 0;
+    }
+    
+    .teal-section {
+      background-color: #2d6a6a;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .yellow-stripe {
+      background-color: #e8d44d;
+      width: 6px;
+    }
+    
+    .pay-text {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    
+    .price {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 72px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 10px 0;
+      line-height: 1;
+    }
+    
+    .per-dose {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #ffffff;
+      margin: 0;
+    }
+    
+    .info-section {
+      padding: 25px 30px;
+    }
+    
+    .info-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #333333;
+      margin: 0 0 20px 0;
+      line-height: 1.4;
+    }
+    
+    .info-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+    
+    .info-item {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    
+    .info-label {
+      font-weight: bold;
+      color: #333333;
+    }
+    
+    .info-value {
+      color: #d63384;
+      font-weight: normal;
+    }
+    
+    /* Mobile styles */
+    @media screen and (max-width: 600px) {
+      .card-container {
+        width: 95% !important;
+        border-radius: 12px !important;
+      }
+      
+      .column2 {
+        width: 100% !important;
+        display: block !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      
+      .teal-section {
+        border-radius: 12px 12px 0 0 !important;
+      }
+      
+      .yellow-stripe {
+        display: none !important;
+      }
+      
+      .price {
+        font-size: 60px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="card-container" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600">
+      <!-- Start 2 columns -->
+      <tr>
+        <td class="two-columns">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <!-- Start left column (Teal section) -->
+              <td class="column2 block pr10" valign="middle" width="44%" style="background-color: #ffffff; padding: 20px 0 20px 20px;">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="teal-section">
+                      <p class="pay-text">Pay as<br>little as</p>
+                      <p class="price">$0</p>
+                      <p class="per-dose">per dose</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <!-- End left column -->
+              
+              <!-- Yellow stripe -->
+              <td class="yellow-stripe" width="6" valign="middle">
+                &nbsp;
+              </td>
+              
+              <!-- Start right column (Card info) -->
+              <td class="column2 block pl10" valign="middle" width="50%" style="background-color: #ffffff; padding: 20px 20px 20px 10px;">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="info-section">
+                      <p class="info-title">Here's your Savings<br>Program card information:</p>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td style="padding-bottom: 12px;">
+                            <span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333;">&#8226;&nbsp;&nbsp;<span class="info-label">BIN:</span> <span class="info-value">[610020]</span></span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-bottom: 12px;">
+                            <span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333;">&#8226;&nbsp;&nbsp;<span class="info-label">GROUP:</span> <span class="info-value">[99992553]</span></span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333;">&#8226;&nbsp;&nbsp;<span class="info-label">ID:</span> <span class="info-value">[12345678910]</span></span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <!-- End right column -->
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End 2 columns -->
+    </table>
+  </div>
+</body>
+</html>
