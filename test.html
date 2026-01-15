@@ -151,6 +151,10 @@
         box-shadow: 0 2px 8px #cccccc;
         border-radius: 26px;
     }
+    /* Centered content wrapper for blocks outside main 600px container */
+    .content-centered {
+        margin: 0 auto;
+    }
     /* Button Styling */
     .button { 
       font-size: 15px;
@@ -1051,18 +1055,14 @@
           <!-- end image -->
                       
         </table>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-          
-          <tr>
-            <td class="prl35">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
                   <tr>
                     <td class="pb25">
                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           
                         <!-- Start 2 columns - Savings Card -->
                         <tr>
-                          <td class="plr35 two-columns card-shadow">
+                          <td class="plr35 two-columns card-shadow" style="border: 1px solid #cccccc; border-radius: 26px;">
                             <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
                                 <!-- Start left column (Teal section) -->
@@ -1074,7 +1074,7 @@
                                         </td>
                                       </tr>
                                       <tr>
-                                          <td class="white pb10" style="font-size: 72px; line-height: 1;">
+                                          <td align="center" class="white pb10" style="font-size: 72px; line-height: 1; text-align: center;">
                                             <sup>$</sup>0
                                           </td>
                                       </tr>
@@ -1090,7 +1090,7 @@
                                 <td width="6" style="background-color: #FFEE58">&nbsp;</td>
                                 
                                 <!-- Start right column (Card info) -->
-                                <td class="column2 block pl10" valign="middle" width="50%" style="border-radius: 0 12px 12px 0; padding: 30px;">
+                                <td class="column2 block pl10" valign="middle" width="50%" style="border-radius: 0 26px 26px 0; padding: 30px; border-right: 1px solid #cccccc;">
                                   <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                       <td class="light-grey" style="font-size: 16px; line-height: 1.4; padding-bottom: 20px;">
@@ -1162,7 +1162,7 @@
     <tr>
       <td class="content">
          
-          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
                           
             <tr>
               <td class="image pb20">
@@ -1228,7 +1228,7 @@
     <!-- BLOCK E1 – PsO: Injection Training -->
     <tr>
       <td>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
           <tr>
             <td>
                 
@@ -1400,7 +1400,7 @@
     <!-- BLOCK E2 - PsA: Injection Training -->
     <tr>
       <td>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
           <tr>
             <td>
                 
@@ -1572,7 +1572,7 @@
     <!-- BLOCK E3 – UC: Injection Training -->
      <tr>
       <td>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
           <tr>
             <td>
                 
@@ -1744,7 +1744,7 @@
     <!-- BLOCK E4 – CD: Injection Training -->
      <tr>
       <td>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
           <tr>
             <td>
                 
@@ -1916,7 +1916,7 @@
     <!-- BLOCK F - Patient Portal Info Safety -->
     <tr>
       <td>
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
            <tr>
             <td>
                 
@@ -1945,7 +1945,7 @@
             <td>
                 <tr>
             <td>
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
                 <tr>
                   <td class="yellow-bg">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -2046,7 +2046,7 @@
     
     <tr>
       <td class="safety">
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
             <tr>
               <td class="image">
                 <img src="{{asset.jnj-logo-2x.url}}" alt="{{asset.jnj-logo-2x.alt}}" width="{{asset.jnj-logo-2x.width}}" height="{{asset.jnj-logo-2x.height}}"/>
@@ -2061,7 +2061,7 @@
     <!-- Start Footer -->
     <tr>
       <td class="footer">
-        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
           <tr>
             <td class="bt-darkblue">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
