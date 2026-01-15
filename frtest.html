@@ -162,26 +162,6 @@
       /*border-radius: 5px;*/
     }
 
-    /* Non-standard button code to be used with the tnon snippet */
-    /* .ns-button{
-      font-size: 15px;
-      line-height: 19px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffffff;
-      background-color: #00b2e2;
-      border: 2px solid #00b2e2;
-    }
-    .ns-button a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 0px solid #00b2e2;
-    } */
-
-
     /***************************************
                  SPACING STYLES 
     ****************************************/
@@ -197,7 +177,6 @@
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
     .ptb40 { padding-top: 40px; padding-bottom: 40px; }
     .ptb45 { padding-top: 45px; padding-bottom: 45px; }
-    /* Padding top and bottom */
 
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
@@ -210,7 +189,6 @@
     .pt35 { padding-top: 35px; }
     .pt40 { padding-top: 40px; }
     .pt45 { padding-top: 45px; }
-    /* padding top */
 
     .pb0  { padding-bottom: 0; }
     .pb5  { padding-bottom: 5px; }
@@ -223,7 +201,6 @@
     .pb35 { padding-bottom: 35px; }
     .pb40 { padding-bottom: 40px; }
     .pb45 { padding-bottom: 45px; }
-    /* padding bottom */
 
     .prl0  { padding-right: 0; padding-left: 0; }
     .prl5  { padding-right: 5px; padding-left: 5px; }
@@ -236,7 +213,6 @@
     .prl35 { padding-right: 35px; padding-left: 35px; }
     .prl40 { padding-right: 40px; padding-left: 40px; }
     .prl45 { padding-right: 45px; padding-left: 45px; }
-    /* Padding left and right */
 
     .pr0  { padding-right: 0; }
     .pr5  { padding-right: 5px; }
@@ -250,7 +226,6 @@
     .pr40 { padding-right: 40px; }
     .pr45 { padding-right: 45px; }
     .pr50 { padding-right: 50px; }
-    /* padding right */
 
     .pl0  { padding-left: 0; }
     .pl5  { padding-left: 5px; }
@@ -264,30 +239,23 @@
     .pl40 { padding-left: 40px; }
     .pl45 { padding-left: 45px; }
     .pl60 { padding-left: 60px; }
-    /* padding left */
 
     /***************************************
             CLIENT SPECIFIC STYLES
     ****************************************/
 
-    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
     .mso-exact { mso-line-height-rule: exactly; }
 
     #outlook a { padding: 0; }
-    /* Force Outlook to provide a "view in browser" menu link. */
 
     body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
 
     #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
-    /* end reset */
 
     img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
     a img { border: none; }
-    /* Some sensible defaults for images*/
 
     .ghost-link img { display: inline-block; }
-    /* Removes unwanted linked space - only links the image */
 
     /***************************************
                  SAFETY STYLES 
@@ -326,17 +294,12 @@
       color: #666D70;
       line-height: 24px;
     }
-    /* Render font family properly in Outlook */
 
     table { font-size: inherit; }
-    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
 
     * { line-height: inherit; }
-    /* Prevent Outlook.com from overriding line-height */
 
-    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
-    /* Outlook 07, 10 Padding issue fix
-    Bring inline: No.*/
+    table td { border-collapse: collapse; }
 
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -346,7 +309,6 @@
       font-weight: inherit !important;
       line-height: inherit !important;
     }
-    /* Disguises iOS auto links */
 
     .mobile-only {
       display: none;
@@ -354,145 +316,206 @@
       overflow: hidden;
       mso-hide: all;
     }
-    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
 
     .mobile-only table {
       mso-hide: all;
     }
-    /* Hides <table> elements in Outlook 2007-13 issue */
 
     .address a { color: #ffffff !important; text-decoration: none !important; }
-    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
-
-    /***************************************
-                Hover State Button
-    ****************************************/
-
-    /* uncomment below for hover state button */
-    /* .button:hover {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-      border: 1px solid #7fbf12 !important;
-    }
-    .button:hover a {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-      color: #ffffff !important;
-      transition: color 200ms;
-      border: 1px solid #7fbf12 !important;
-    } */
     
   </style>
 
 
+<!-- ========================================
+     BLOCK D - SAVINGS PROGRAM CARD
+     ======================================== -->
 <tr>
-            <td>
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">         
+  <td>
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">         
+      <tr>
+        <td class="image pb20">
+          <img src="{{asset.savings-program-gradient-2x.url}}" alt="{{asset.savings-program-gradient-2x.alt}}" width="{{asset.savings-program-gradient-2x.width}}" height="{{asset.savings-program-gradient-2x.height}}"/>
+        </td>
+      </tr>
+    </table>
+    
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">  
+      <tr>
+        <td class="prl35">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="pb25">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      
+                  <!-- ============================================
+                       SAVINGS CARD - NON-OUTLOOK VERSION
+                       ============================================ -->
+                  <!--[if !mso]><!-->
                   <tr>
-                    <td class="image pb20">
-                      <img src="{{asset.savings-program-gradient-2x.url}}" alt="{{asset.savings-program-gradient-2x.alt}}" width="{{asset.savings-program-gradient-2x.width}}" height="{{asset.savings-program-gradient-2x.height}}"/>
-                    </td>
-                  </tr>
-                  <!-- end image -->                      
-              </table>
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">  
-                  <tr>
-                    <td class="prl35">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                          <tr>
-                            <td class="pb25">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                  
-                                <!-- Start 2 columns - Savings Card -->
-                                <tr>
-                                  <td class="plr35 two-columns card-shadow">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr>
-                                        <!-- Start left column (Teal section) -->
-                                        <td class="column2 block" valign="middle" width="50%" style="background-color: #2D6E7D; border-radius: 26px 0 0 26px;  text-align: center;">
-                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td align="center" class="white lh0 pb20" style=" font-size: 22px; ">
-                                                  Pay as<br>little as
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                  <td class="white pb10" style="font-size: 72px; line-height: 1;">
-                                                    <sup>$</sup>0
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                  <td class="white" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; text-align: center;">
-                                                    per dose
-                                                  </td>
-                                                </tr>
-                                          </table>
-                                        </td>
-                                          <!-- End left column -->     
-                                          <!-- Yellow stripe -->
-                                        <td width="6" style="background-color: #FFEE58">&nbsp;</td>
-                                        
-                                        <!-- Start right column (Card info) -->
-                                        <td class="column2 block pl10" valign="middle" width="50%" style="border-radius: 0 12px 12px 0; padding: 30px;">
-                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                              <td class="light-grey" style="font-size: 16px; line-height: 1.4; padding-bottom: 20px;">
-                                                Here's your Savings Program&nbsp;card&nbsp;information:
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                              <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
-                                                &#8226;&nbsp;&nbsp;<strong >BIN:</strong> <span class="pink">[610020]</span>
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                              <td class="light-grey" style=" font-size: 16px; padding-bottom: 12px;">
-                                                &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span class="pink">[99992553]</span>
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                              <td class="light-grey" style="font-size: 16px;">
-                                                &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span class="pink">[12345678910]</span>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-                                        <!-- End right column -->
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
-                          <!-- End 2 columns - Savings Card -->
-                        </table>
-                    </td>
-                  </tr>
-                <!-- end paragraph -->
-                     </table>
-              <!-- end table block -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="pb20 prl25">Please provide this information to your specialty pharmacy to receive savings off your out-of-pocket costs for TREMFYA<sup>&reg;</sup>.</td>
-                  </tr>
-                  <tr>
-                    <td class="image pb20 " align="center"><a class="ghost-link" href="https://asset.jnjwithme.com/document/TREMFYA-withMe_Savings-Program-Web-Flashcard.pdf">
-                      <img src="{{asset.learn-more-cta-2x.url}}" alt="{{asset.learn-more-cta-2x.alt}}" width="{{asset.learn-more-cta-2x.width}}" height="{{asset.learn-more-cta-2x.height}}"/></a>
-                    </td>
-                  </tr>
-            <!-- end image -->
-                  <tr>  
-                    <td class="prl25">
+                    <td class="plr35 two-columns card-shadow">
                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                          <td class="" style="vertical-align: top;"><sup>†</sup></td>
-                          <td class="pb20 pr30">Maximum program benefit per calendar year shall apply. There may be a savings limit per dose. Terms expire at the end of each calendar year. Offer subject to change or end without notice. Restrictions, including monthly maximums, may apply.
+                          <!-- Left column (Teal section) -->
+                          <td class="column2 block" valign="middle" width="50%" style="background-color: #2D6E7D; border-radius: 26px 0 0 26px; text-align: center; padding: 30px 15px;">
+                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" style="color: #ffffff; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
+                                  Pay as<br>little as
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="color: #ffffff; font-size: 72px; line-height: 1; padding-bottom: 10px;">
+                                  <sup style="font-size: 36px;">$</sup>0
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                                  per dose
+                                </td>
+                              </tr>
+                            </table>
                           </td>
-
+                          
+                          <!-- Yellow stripe -->
+                          <td width="6" style="background-color: #FFEE58;">&nbsp;</td>
+                          
+                          <!-- Right column (Card info) -->
+                          <td class="column2 block" valign="middle" width="50%" style="border-radius: 0 26px 26px 0; padding: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-left: none;">
+                            <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="light-grey" style="font-size: 16px; line-height: 1.4; padding-bottom: 20px;">
+                                  Here's your Savings Program&nbsp;card&nbsp;information:
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
+                                  &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span class="pink">[610020]</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
+                                  &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span class="pink">[99992553]</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="light-grey" style="font-size: 16px;">
+                                  &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span class="pink">[12345678910]</span>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
                         </tr>
                       </table>
                     </td>
                   </tr>
-          <!-- end paragraph -->
-              </table>
-            </td>
-          </tr>
+                  <!--<![endif]-->
+                  
+                  <!-- ============================================
+                       SAVINGS CARD - OUTLOOK VML VERSION
+                       ============================================ -->
+                  <!--[if mso]>
+                  <tr>
+                    <td align="center" style="padding: 0 35px;">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="530">
+                        <tr>
+                          <!-- Left column with VML rounded corners -->
+                          <td width="250" valign="top" align="center">
+                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="width:250px; height:200px; v-text-anchor:middle;" arcsize="10%" fillcolor="#2D6E7D" strokecolor="#2D6E7D" strokeweight="0">
+                              <w:anchorlock/>
+                              <v:textbox style="mso-fit-shape-to-text:false;" inset="10px,20px,10px,20px">
+                                <center>
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
+                                        Pay as<br>little as
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 72px; line-height: 1; padding-bottom: 10px;">
+                                        <sup style="font-size: 36px;">$</sup>0
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                                        per dose
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </center>
+                              </v:textbox>
+                            </v:roundrect>
+                          </td>
+                          
+                          <!-- Yellow stripe -->
+                          <td width="6" bgcolor="#FFEE58" style="background-color: #FFEE58; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                          
+                          <!-- Right column with VML rounded corners -->
+                          <td width="274" valign="top">
+                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="width:274px; height:200px; v-text-anchor:middle;" arcsize="10%" fillcolor="#ffffff" strokecolor="#e0e0e0" strokeweight="1pt">
+                              <w:anchorlock/>
+                              <v:textbox style="mso-fit-shape-to-text:false;" inset="20px,25px,20px,25px">
+                                <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; line-height: 1.4; padding-bottom: 15px;">
+                                      Here's your Savings Program card information:
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
+                                      &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span style="color: #d63384;">[610020]</span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
+                                      &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span style="color: #d63384;">[99992553]</span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px;">
+                                      &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span style="color: #d63384;">[12345678910]</span>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </v:textbox>
+                            </v:roundrect>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <![endif]-->
+                  
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="pb20 prl25">Please provide this information to your specialty pharmacy to receive savings off your out-of-pocket costs for TREMFYA<sup>&reg;</sup>.</td>
+      </tr>
+      
+      <tr>
+        <td class="image pb20" align="center">
+          <a class="ghost-link" href="https://asset.jnjwithme.com/document/TREMFYA-withMe_Savings-Program-Web-Flashcard.pdf">
+            <img src="{{asset.learn-more-cta-2x.url}}" alt="{{asset.learn-more-cta-2x.alt}}" width="{{asset.learn-more-cta-2x.width}}" height="{{asset.learn-more-cta-2x.height}}"/>
+          </a>
+        </td>
+      </tr>
+      
+      <tr>  
+        <td class="prl25">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="" style="vertical-align: top;"><sup>†</sup></td>
+              <td class="pb20 pr30">Maximum program benefit per calendar year shall apply. There may be a savings limit per dose. Terms expire at the end of each calendar year. Offer subject to change or end without notice. Restrictions, including monthly maximums, may apply.</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+    </table>
+  </td>
+</tr>
+<!-- END BLOCK D -->
