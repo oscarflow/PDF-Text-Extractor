@@ -1,521 +1,126 @@
-<style type="text/css">
-    /***************************************
-                GLOBAL STYLES
-    ****************************************/
-
-    .main-td {
-      font-family: Verdana, Arial, sans-serif;
-      font-size: 18px;
-      color: #666D70;
-      line-height: 24px;
-      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
-    }
-
-    .h1 { font-size: 30px; line-height: 33px; color: #FFFFFF; font-weight: bold; }
-    .h2 { font-size: 20px; line-height: 24px; color: #666D70; font-weight: bold; }
-    .h3 { font-size: 18px; line-height: 22px; color: #5B027A; font-weight: bold; }
-    .h4 { font-size: 16px; line-height: 20px; color: #003479; font-weight: bold; }
-    .h5 { font-size: 14px; line-height: 18px; color: #003479; font-weight: bold; }
-    .lh10 {line-height: 10px; }
-    .lh20 { line-height: 20px; }
-    .fs14 { font-size: 14px; }
-
-    a { text-decoration: underline; }
-
-    /* Build Section Styling */
-    .preheader td {
-      font-size: 10px;
-      line-height: 14px;
-      color: #333333;
-    }
-    .webversion a {
-      color: #333333;
-      text-decoration: underline;
-    }
-    .preheader {
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #e6bfd4;
-    }
-    .header {
-      padding-top: 20px;
-    }
-    .desktop-bg { background-size: 100% 100%; }
-    .content {
-      padding-top: 35px;
-    }
-    .yellow-bg {
-      background-color: #FFFACC;
-    }
-    .safety {
-      padding-right: 35px;
-      padding-left: 35px;
-      padding-bottom: 30px;
-    }
-    .footer {
-      padding-right: 35px;
-      padding-left: 35px;
-      padding-bottom: 45px;
-    }
-    .footer .p { 
-      font-size: 13px;
-      line-height: 16px;
-      padding-bottom: 20px;
-    }
-    .footer a {
-      color: #00A0DF;
-    }
-    .copyright-text {
-      font-size: 12px;
-      line-height: 15px;
-    }
-    /* Legal Links */
-    .link-divider { font-weight: lighter; }
-    .legal a { text-decoration: none; }
-    .legal a span { text-decoration: underline; }
-
-    .references tr:first-child .li + td { width: auto; }
-    .references .li { width: 15px; }
-    /*fixes width issue in yahoo*/
-
-    .footnote,
-    .footnote td {
-      font-size: 10px;
-      line-height: 13px;
-    }
-
-    /* Horizontal Rule */
-    .bt-ocean { border-top: 2px solid #004f5e; }
-    .bt-darkblue { border-top: 2px solid #7fa6ae }
-
-    /* additional colors */
-    .black { color: #000001; }
-    .white { color: #ffffff; }
-    .pink { color: #d63384; } 
-    .blue { color: #00A0DF; }
-    .ocean { color: #00CCC0; }
-    .light-grey { color: #666D70; }
-    .teal { color: #296A77; }
-    /* Element Styling */
-    .p,
-    .ul { padding-bottom: 15px; }
-
-    .li { width: 1px; }
-    .ul .li { padding-right: 5px; }
-
-    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
-    .ul tr:first-child .li + td { width: 100%; }
-
-    sup, sub { line-height: 0; font-size: 75%; }
-
-    /* Additional formatting and styling */
-    .center { text-align: center; }
-    .center-block { margin: 0 auto; }
-    .no-underline { text-decoration: none; }
-    .underline { text-decoration: underline; }
-    .bold { font-weight: bold; }
-    .italic { font-style: italic; }
-
-    .no-wrap { white-space: nowrap; }
-    a[href^="tel:"] { white-space: nowrap; }
-    
-    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
-    /*Hides mobile only elements. Needs to be inlined for Gmail*/
-
-    /* Callout styling */
-    .callout {
-      font-size: 15px;
-      line-height: 19px;
-      color: #ffffff;
-      background-color: #79cd3f;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-    .card-shadow {
-        box-shadow: 0 2px 8px #cccccc;
-        border-radius: 26px;
-    }
-    /* Button Styling */
-    .button { 
-      font-size: 15px;
-      line-height: 19px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffffff;
-      background-color: #00b2e2;
-      border: 1px solid #00b2e2;
-      /*border-radius: 5px; */
-    }
-
-    .button a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 1px solid #00b2e2;
-      /*border hack needed for outlook clients*/
-      /*border-radius: 5px;*/
-    }
-
-    /***************************************
-                 SPACING STYLES 
-    ****************************************/
-
-    .ptb0  { padding-top: 0; padding-bottom: 0; }
-    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
-    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
-    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
-    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
-    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
-    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
-    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
-    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
-    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
-    .ptb45 { padding-top: 45px; padding-bottom: 45px; }
-
-    .pt0  { padding-top: 0; }
-    .pt5  { padding-top: 5px; }
-    .pt10 { padding-top: 10px; }
-    .pt15 { padding-top: 15px; }
-    .pt20 { padding-top: 20px; }
-    .pt24 { padding-top: 24px; }
-    .pt25 { padding-top: 25px; }
-    .pt30 { padding-top: 30px; }
-    .pt35 { padding-top: 35px; }
-    .pt40 { padding-top: 40px; }
-    .pt45 { padding-top: 45px; }
-
-    .pb0  { padding-bottom: 0; }
-    .pb5  { padding-bottom: 5px; }
-    .pb10 { padding-bottom: 10px; }
-    .pb15 { padding-bottom: 15px; }
-    .pb20 { padding-bottom: 20px; }
-    .pb24 { padding-bottom: 24px; }
-    .pb25 { padding-bottom: 25px; }
-    .pb30 { padding-bottom: 30px; }
-    .pb35 { padding-bottom: 35px; }
-    .pb40 { padding-bottom: 40px; }
-    .pb45 { padding-bottom: 45px; }
-
-    .prl0  { padding-right: 0; padding-left: 0; }
-    .prl5  { padding-right: 5px; padding-left: 5px; }
-    .prl10 { padding-right: 10px; padding-left: 10px; }
-    .prl15 { padding-right: 15px; padding-left: 15px; }
-    .prl20 { padding-right: 20px; padding-left: 20px; }
-    .prl24 { padding-right: 24px; padding-left: 24px; }
-    .prl25 { padding-right: 25px; padding-left: 25px; }
-    .prl30 { padding-right: 30px; padding-left: 30px; }
-    .prl35 { padding-right: 35px; padding-left: 35px; }
-    .prl40 { padding-right: 40px; padding-left: 40px; }
-    .prl45 { padding-right: 45px; padding-left: 45px; }
-
-    .pr0  { padding-right: 0; }
-    .pr5  { padding-right: 5px; }
-    .pr10 { padding-right: 10px; }
-    .pr15 { padding-right: 15px; }
-    .pr20 { padding-right: 20px; }
-    .pr24 { padding-right: 24px; }
-    .pr25 { padding-right: 25px; }
-    .pr30 { padding-right: 30px; }
-    .pr35 { padding-right: 35px; }
-    .pr40 { padding-right: 40px; }
-    .pr45 { padding-right: 45px; }
-    .pr50 { padding-right: 50px; }
-
-    .pl0  { padding-left: 0; }
-    .pl5  { padding-left: 5px; }
-    .pl10 { padding-left: 10px; }
-    .pl15 { padding-left: 15px; }
-    .pl20 { padding-left: 20px; }
-    .pl24 { padding-left: 24px; }
-    .pl25 { padding-left: 25px; }
-    .pl30 { padding-left: 30px; }
-    .pl35 { padding-left: 35px; }
-    .pl40 { padding-left: 40px; }
-    .pl45 { padding-left: 45px; }
-    .pl60 { padding-left: 60px; }
-
-    /***************************************
-            CLIENT SPECIFIC STYLES
-    ****************************************/
-
-    .mso-exact { mso-line-height-rule: exactly; }
-
-    #outlook a { padding: 0; }
-
-    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
-
-    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
-
-    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
-    a img { border: none; }
-
-    .ghost-link img { display: inline-block; }
-
-    /***************************************
-                 SAFETY STYLES 
-    ****************************************/
-
-    .safety .ul .ul {
-      padding-bottom: 0;
-    }
-
-    .safety .ul .pt10 {
-      padding-top: 10px;
-    }
-
-  </style>
-  <!--[if gte mso 9]>
-    <xml>
-     <o:OfficeDocumentSettings>
-     <o:AllowPNG/>
-     <o:PixelsPerInch>96</o:PixelsPerInch>
-     </o:OfficeDocumentSettings>
-    </xml>
-    <style>
-      sup, sub { font-size: 100% !important; }
-      table { border-collapse: collapse !important; border-spacing: 0 !important; }
-    </style> 
-  <![endif]-->
-  <style type="text/css" data-embed>
-    /***************************************
-                GLOBAL STYLES
-    ****************************************/
-
-    body,
-    td {
-      font-family: Verdana, Arial, sans-serif;
-      font-size: 18px;
-      color: #666D70;
-      line-height: 24px;
-    }
-
-    table { font-size: inherit; }
-
-    * { line-height: inherit; }
-
-    table td { border-collapse: collapse; }
-
-    a[x-apple-data-detectors] {
-      color: inherit !important;
-      text-decoration: none !important;
-      font-size: inherit !important;
-      font-family: inherit !important;
-      font-weight: inherit !important;
-      line-height: inherit !important;
-    }
-
-    .mobile-only {
-      display: none;
-      max-height: 0px;
-      overflow: hidden;
-      mso-hide: all;
-    }
-
-    .mobile-only table {
-      mso-hide: all;
-    }
-
-    .address a { color: #ffffff !important; text-decoration: none !important; }
-    
-  </style>
-
-
-<!-- ========================================
-     BLOCK D - SAVINGS PROGRAM CARD
-     ======================================== -->
+<!-- ============================================
+     SAVINGS CARD - NON-OUTLOOK VERSION
+     ============================================ -->
+<!--[if !mso]><!-->
 <tr>
-  <td>
-    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">         
+  <td class="plr35 two-columns card-shadow">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td class="image pb20">
-          <img src="{{asset.savings-program-gradient-2x.url}}" alt="{{asset.savings-program-gradient-2x.alt}}" width="{{asset.savings-program-gradient-2x.width}}" height="{{asset.savings-program-gradient-2x.height}}"/>
-        </td>
-      </tr>
-    </table>
-    
-    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">  
-      <tr>
-        <td class="prl35">
+        <!-- Left column (Teal section) -->
+        <td class="column2 block" valign="middle" width="50%" style="background-color: #2D6E7D; border-radius: 26px 0 0 26px; text-align: center; padding: 30px 15px;">
           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td class="pb25">
-                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      
-                  <!-- ============================================
-                       SAVINGS CARD - NON-OUTLOOK VERSION
-                       ============================================ -->
-                  <!--[if !mso]><!-->
-                  <tr>
-                    <td class="plr35 two-columns card-shadow">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <!-- Left column (Teal section) -->
-                          <td class="column2 block" valign="middle" width="50%" style="background-color: #2D6E7D; border-radius: 26px 0 0 26px; text-align: center; padding: 30px 15px;">
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td align="center" style="color: #ffffff; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
-                                  Pay as<br>little as
-                                </td>
-                              </tr>
-                              <tr>
-                                <td align="center" style="color: #ffffff; font-size: 72px; line-height: 1; padding-bottom: 10px;">
-                                  <sup style="font-size: 36px;">$</sup>0
-                                </td>
-                              </tr>
-                              <tr>
-                                <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
-                                  per dose
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                          
-                          <!-- Yellow stripe -->
-                          <td width="6" style="background-color: #FFEE58;">&nbsp;</td>
-                          
-                          <!-- Right column (Card info) -->
-                          <td class="column2 block" valign="middle" width="50%" style="border-radius: 0 26px 26px 0; padding: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-left: none;">
-                            <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="light-grey" style="font-size: 16px; line-height: 1.4; padding-bottom: 20px;">
-                                  Here's your Savings Program&nbsp;card&nbsp;information:
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
-                                  &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span class="pink">[610020]</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
-                                  &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span class="pink">[99992553]</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="light-grey" style="font-size: 16px;">
-                                  &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span class="pink">[12345678910]</span>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!--<![endif]-->
-                  
-                  <!-- ============================================
-                       SAVINGS CARD - OUTLOOK VML VERSION
-                       ============================================ -->
-                  <!--[if mso]>
-                  <tr>
-                    <td align="center" style="padding: 0 35px;">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="530">
-                        <tr>
-                          <!-- Left column with VML rounded corners -->
-                          <td width="250" valign="top" align="center">
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="width:250px; height:200px; v-text-anchor:middle;" arcsize="10%" fillcolor="#2D6E7D" strokecolor="#2D6E7D" strokeweight="0">
-                              <w:anchorlock/>
-                              <v:textbox style="mso-fit-shape-to-text:false;" inset="10px,20px,10px,20px">
-                                <center>
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
-                                        Pay as<br>little as
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 72px; line-height: 1; padding-bottom: 10px;">
-                                        <sup style="font-size: 36px;">$</sup>0
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
-                                        per dose
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </center>
-                              </v:textbox>
-                            </v:roundrect>
-                          </td>
-                          
-                          <!-- Yellow stripe -->
-                          <td width="6" bgcolor="#FFEE58" style="background-color: #FFEE58; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                          
-                          <!-- Right column with VML rounded corners -->
-                          <td width="274" valign="top">
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="width:274px; height:200px; v-text-anchor:middle;" arcsize="10%" fillcolor="#ffffff" strokecolor="#e0e0e0" strokeweight="1pt">
-                              <w:anchorlock/>
-                              <v:textbox style="mso-fit-shape-to-text:false;" inset="20px,25px,20px,25px">
-                                <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr>
-                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; line-height: 1.4; padding-bottom: 15px;">
-                                      Here's your Savings Program card information:
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
-                                      &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span style="color: #d63384;">[610020]</span>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
-                                      &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span style="color: #d63384;">[99992553]</span>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px;">
-                                      &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span style="color: #d63384;">[12345678910]</span>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </v:textbox>
-                            </v:roundrect>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <![endif]-->
-                  
-                </table>
+              <td align="center" style="color: #ffffff; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
+                Pay as<br>little as
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="color: #ffffff; font-size: 72px; line-height: 1; padding-bottom: 10px;">
+                <sup style="font-size: 36px;">$</sup>0
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                per dose
+              </td>
+            </tr>
+          </table>
+        </td>
+        
+        <!-- Yellow stripe -->
+        <td width="6" style="background-color: #FFEE58;">&nbsp;</td>
+        
+        <!-- Right column (Card info) -->
+        <td class="column2 block" valign="middle" width="50%" style="border-radius: 0 26px 26px 0; padding: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-left: none;">
+          <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="light-grey" style="font-size: 16px; line-height: 1.4; padding-bottom: 20px;">
+                Here's your Savings Program&nbsp;card&nbsp;information:
+              </td>
+            </tr>
+            <tr>
+              <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
+                &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span class="pink">[610020]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="light-grey" style="font-size: 16px; padding-bottom: 12px;">
+                &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span class="pink">[99992553]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="light-grey" style="font-size: 16px;">
+                &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span class="pink">[12345678910]</span>
               </td>
             </tr>
           </table>
         </td>
       </tr>
-      
-      <tr>
-        <td class="pb20 prl25">Please provide this information to your specialty pharmacy to receive savings off your out-of-pocket costs for TREMFYA<sup>&reg;</sup>.</td>
-      </tr>
-      
-      <tr>
-        <td class="image pb20" align="center">
-          <a class="ghost-link" href="https://asset.jnjwithme.com/document/TREMFYA-withMe_Savings-Program-Web-Flashcard.pdf">
-            <img src="{{asset.learn-more-cta-2x.url}}" alt="{{asset.learn-more-cta-2x.alt}}" width="{{asset.learn-more-cta-2x.width}}" height="{{asset.learn-more-cta-2x.height}}"/>
-          </a>
-        </td>
-      </tr>
-      
-      <tr>  
-        <td class="prl25">
-          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td class="" style="vertical-align: top;"><sup>†</sup></td>
-              <td class="pb20 pr30">Maximum program benefit per calendar year shall apply. There may be a savings limit per dose. Terms expire at the end of each calendar year. Offer subject to change or end without notice. Restrictions, including monthly maximums, may apply.</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      
     </table>
   </td>
 </tr>
-<!-- END BLOCK D -->
+<!--<![endif]-->
+
+<!-- ============================================
+     SAVINGS CARD - OUTLOOK VML VERSION
+     Single outer roundrect container
+     ============================================ -->
+<!--[if mso]>
+<tr>
+  <td align="center" style="padding: 0 35px;">
+    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="width:530px; height:250px; v-text-anchor:middle;" arcsize="8%" fillcolor="#ffffff" strokecolor="#e0e0e0" strokeweight="1pt">
+      <w:anchorlock/>
+      <v:textbox style="mso-fit-shape-to-text:false;" inset="0,0,0,0">
+        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="530" style="width:530px;">
+          <tr>
+            <td width="250" height="250" bgcolor="#2D6E7D" valign="middle" align="center" style="background-color: #2D6E7D; padding: 20px 15px;">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 22px; line-height: 26px; padding-bottom: 10px;">
+                    Pay as<br>little as
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 72px; line-height: 1; padding-bottom: 10px;">
+                    <sup style="font-size: 36px;">$</sup>0
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                    per dose
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="6" bgcolor="#FFEE58" style="background-color: #FFEE58; font-size: 1px; line-height: 1px;">&nbsp;</td>
+            <td width="274" bgcolor="#ffffff" valign="middle" style="background-color: #ffffff; padding: 25px 20px;">
+              <table align="left" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; line-height: 1.4; padding-bottom: 15px;">
+                    Here's your Savings Program card information:
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
+                    &#8226;&nbsp;&nbsp;<strong>BIN:</strong> <span style="color: #d63384;">[610020]</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px; padding-bottom: 10px;">
+                    &#8226;&nbsp;&nbsp;<strong>GROUP:</strong> <span style="color: #d63384;">[99992553]</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #666D70; font-family: Verdana, Arial, sans-serif; font-size: 16px;">
+                    &#8226;&nbsp;&nbsp;<strong>ID:</strong> <span style="color: #d63384;">[12345678910]</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </v:textbox>
+    </v:roundrect>
+  </td>
+</tr>
+<![endif]-->
