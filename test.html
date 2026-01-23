@@ -1,36 +1,106 @@
-{% form 'product', product %}
-  <!-- Variants -->
-  {% unless product.has_only_default_variant %}
-    <div class="product-variants">
-      <label for="variant-select">Select Option</label>
-      <select name="id" id="variant-select">
-        {% for variant in product.variants %}
-          <option 
-            value="{{ variant.id }}"
-            {% unless variant.available %}disabled{% endunless %}>
-            {{ variant.title }} - {{ variant.price | money }}
-            {% unless variant.available %} (Sold Out){% endunless %}
-          </option>
-        {% endfor %}
-      </select>
+<div class="search-page">
+  <div class="container">
+    <div class="search-header">
+      <h1>Search</h1>
+      
+      {%- comment -%} Search form {%- endcomment -%}
+      <form action="{{ routes.search_url }}" method="get" class="search-form">
+        <input 
+          type="search" 
+          name="q" 
+          value="{{ search.terms | escape }}"
+          placeholder="Search products..."
+          class="search-input"
+        >
+        <button type="submit" class="search-button">Search</button>
+      </form>
     </div>
-  {% else %}
-    <!-- IMPORTANT: This hidden input is required for products with no variants -->
-    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-  {% endunless %}
 
-  <!-- Quantity -->
-  <div class="product-quantity">
-    <label for="quantity">Quantity</label>
-    <input type="number" name="quantity" id="quantity" value="1" min="1">
+    {%- if search.performed -%}
+      {%- comment -%} Search was performed {%- endcomment -%}
+      
+      {%- if search.results_count > 0 -%}
+        {%- comment -%} Show results {%- endcomment -%}
+        <div class="search-results">
+          <p class="search-count">{{ search.results_count }} result{% if search.results_count != 1 %}s{% endif %} for "{{ search.terms | escape }}"</p>
+          
+          <div class="product-grid">
+            {%- for item in search.results -%}
+              {%- case item.object_type -%}
+                {%- when 'product' -%}
+                  <div class="product-card">
+                    <a href="{{ item.url }}" class="product-card-link">
+                      {%- if item.featured_image -%}
+                        <img 
+                          src="{{ item.featured_image | image_url: width: 400 }}"
+                          alt="{{ item.featured_image.alt | escape }}"
+                          loading="lazy"
+                          class="product-image"
+                        >
+                      {%- else -%}
+                        <div class="product-image-placeholder">No image</div>
+                      {%- endif -%}
+                      
+                      <div class="product-info">
+                        <h3 class="product-title">{{ item.title }}</h3>
+                        <p class="product-price">{{ item.price | money }}</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                {%- when 'article' -%}
+                  {%- comment -%} You could add article/blog post results here if needed {%- endcomment -%}
+                  
+                {%- when 'page' -%}
+                  {%- comment -%} You could add page results here if needed {%- endcomment -%}
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          
+          {%- comment -%} Pagination if needed {%- endcomment -%}
+          {%- if paginate.pages > 1 -%}
+            <div class="pagination">
+              {%- if paginate.previous -%}
+                <a href="{{ paginate.previous.url }}">Previous</a>
+              {%- endif -%}
+              
+              <span>Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+              
+              {%- if paginate.next -%}
+                <a href="{{ paginate.next.url }}">Next</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+        
+      {%- else -%}
+        {%- comment -%} No results {%- endcomment -%}
+        <div class="search-empty">
+          <p>No results found for "{{ search.terms | escape }}"</p>
+          <p>Try different keywords or browse our <a href="/collections/all">catalog</a>.</p>
+        </div>
+      {%- endif -%}
+      
+    {%- else -%}
+      {%- comment -%} No search performed yet {%- endcomment -%}
+      <div class="search-empty">
+        <p>Enter a search term above to find products.</p>
+      </div>
+    {%- endif -%}
   </div>
+</div>
 
-  <!-- Add to Cart Button -->
-  <button type="submit" name="add" class="btn-add-to-cart">
-    {% if product.available %}
-      Add to Cart
-    {% else %}
-      Sold Out
-    {% endif %}
-  </button>
-{% endform %}
+{%- comment -%} Add pagination wrapper if you want to enable it later {%- endcomment -%}
+{% schema %}
+{
+  "name": "Search Results",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Search"
+    }
+  ]
+}
+{% endschema %}
