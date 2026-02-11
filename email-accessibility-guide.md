@@ -1,9 +1,5 @@
 # Email Accessibility & Dark Mode Guide
 
-## Overview
-This guide provides practical instructions for adding ARIA roles and dark mode support to our existing table-based email HTML. 
-
----
 
 ## ARIA Roles for Semantic Structure
 
@@ -123,45 +119,6 @@ Landmark roles help users navigate to major sections of the email.
 
 ---
 
-## Image Accessibility
-
-### Decision Tree: Alt Text vs. ARIA Label
-
-Use this workflow when handling images:
-
-1. **Is the image decorative (purely visual, no information)?**
-   - YES → Use `alt=""` (empty alt text)
-   - NO → Continue to step 2
-
-2. **Did the client provide alt text?**
-   - YES → Continue to step 3
-   - NO → Write descriptive alt text yourself
-
-3. **Is the client's alt text appropriate?**
-   - Appropriate = describes the image's purpose/content
-   - Inappropriate = too vague ("image"), decorative image with alt text, or misleading
-   - If appropriate → Use it
-   - If inappropriate → Revise or remove it
-
-### Examples
-
-#### Decorative Images
-Images used only for visual design (spacers, decorative borders, etc.) should have empty alt text.
-
-```html
-<img src="decorative-border.png" alt="" width="600" height="20"/>
-```
-
-#### Meaningful Images with Alt Text
-Product images, charts, photos that convey information need descriptive alt text.
-
-```html
-<!-- Good alt text: describes what's shown -->
-<img src="product-bottle.png" alt="VYLEESI pre-filled autoinjector pen" width="300" height="400"/>
-
-<!-- Good alt text: describes the data -->
-<img src="efficacy-chart.png" alt="Bar chart showing 60% of patients experienced improvement" width="500" height="300"/>
-```
 
 #### Background Images with ARIA
 When using background images that convey meaning (via CSS or table backgrounds), use a container with `role="img"` and `aria-label`.
@@ -172,53 +129,7 @@ When using background images that convey meaning (via CSS or table backgrounds),
 </td>
 ```
 
-### When Clients Don't Provide Alt Text
-
-If a client doesn't provide alt text for a meaningful image:
-
-1. **Best practice:** Request alt text from the client
-2. **If unavailable:** Write it yourself based on the image content and context
-3. **Document your decision:** Note in your workflow that you authored the alt text
-
-### When Clients Provide Bad Alt Text
-
-Common issues and fixes:
-
-**Too vague:**
-```html
-<!-- Client provides: -->
-<img src="doctor.jpg" alt="image" width="400" height="300"/>
-
-<!-- Fix it: -->
-<img src="doctor.jpg" alt="Healthcare provider discussing treatment options with patient" width="400" height="300"/>
-```
-
-**Decorative image with alt text:**
-```html
-<!-- Client provides: -->
-<img src="pink-gradient.png" alt="pink gradient background" width="600" height="100"/>
-
-<!-- Fix it: -->
-<img src="pink-gradient.png" alt="" width="600" height="100"/>
-```
-
-**Redundant information:**
-```html
-<!-- If there's a heading that says "Meet Our Panel" above the image: -->
-
-<!-- Client provides: -->
-<img src="panel.jpg" alt="Meet our panel of experts" width="500" height="400"/>
-
-<!-- Fix it (don't repeat the heading): -->
-<img src="panel.jpg" alt="Four medical professionals seated at a conference table" width="500" height="400"/>
-```
-
----
-
 ## Dark Mode Support
-
-### Why Dark Mode Matters
-Many email clients now support dark mode (Apple Mail, Outlook, Gmail). Without proper CSS, your carefully chosen colors may invert unexpectedly, causing readability issues.
 
 ### Basic Dark Mode CSS
 
