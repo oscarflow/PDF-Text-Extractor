@@ -1,14 +1,15 @@
 # Email Accessibility & Dark Mode Guide
 
 ## Overview
-This guide provides practical instructions for adding ARIA roles and dark mode support to our existing table-based email HTML. Our codebase uses `<td>` elements with classes like `.h1`, `.h2`, `.p`, and `.ul` rather than semantic HTML tags. ARIA roles help assistive technology understand the structure of our content.
+This guide provides practical instructions for adding ARIA roles and dark mode support to our existing table-based email HTML. 
 
 ---
 
 ## ARIA Roles for Semantic Structure
 
 ### Why Use ARIA in Email HTML?
-Email HTML relies on tables for layout compatibility across email clients. Since we can't use semantic tags like `<h1>`, `<p>`, or `<ul>`, ARIA roles communicate document structure to screen readers.
+
+We don't use semantic tags like `<h1>`, `<p>`, or `<ul>`, so ARIA roles provide another way to communicate document structure to screen readers.
 
 ### Heading Roles
 
