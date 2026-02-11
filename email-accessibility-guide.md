@@ -5,23 +5,16 @@
 
 ### Why Use ARIA in Email HTML?
 
-We don't use semantic tags like `<h1>`, `<p>`, or `<ul>`, so ARIA roles provide another way to communicate document structure to screen readers.
+We don't use semantic tags so ARIA roles provide another way to communicate document structure to screen readers.
 
 ### Heading Roles
 
 Add `role="heading"` and `aria-level` to `<td>` elements that function as headings.
 
-**Current code:**
-```html
-<td class="h1">
-  Welcome to Our Study
-</td>
-```
-
-**With ARIA:**
+**Example ARIA:**
 ```html
 <td class="h1" role="heading" aria-level="1">
-  Welcome to Our Study
+  Header
 </td>
 ```
 
@@ -40,14 +33,7 @@ Add `role="heading"` and `aria-level` to `<td>` elements that function as headin
 
 Add `role="paragraph"` to `<td>` elements containing body text.
 
-**Current code:**
-```html
-<td class="p">
-  This study examines the effects of the treatment on patients with HSDD.
-</td>
-```
-
-**Enhanced with ARIA:**
+**Example:**
 ```html
 <td class="p" role="paragraph">
   This study examines the effects of the treatment on patients with HSDD.
@@ -58,23 +44,9 @@ Add `role="paragraph"` to `<td>` elements containing body text.
 
 ### List Roles
 
-Our lists are table-based. Add `role="list"` to the container table and `role="listitem"` to each item row.
+Add `role="list"` to the container table and `role="listitem"` to each item row.
 
-**Current code:**
-```html
-<table class="ul" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="li" valign="top">•</td>
-    <td valign="top">First benefit of the treatment</td>
-  </tr>
-  <tr>
-    <td class="li" valign="top">•</td>
-    <td valign="top">Second benefit of the treatment</td>
-  </tr>
-</table>
-```
-
-**Enhanced with ARIA:**
+**Example:**
 ```html
 <table class="ul" role="list" border="0" cellpadding="0" cellspacing="0">
   <tr role="listitem">
@@ -87,8 +59,8 @@ Our lists are table-based. Add `role="list"` to the container table and `role="l
   </tr>
 </table>
 ```
-
 **Note:** `aria-hidden="true"` on the bullet prevents screen readers from announcing "bullet" before each item.
+
 
 ---
 
@@ -247,177 +219,6 @@ Check that:
 
 ---
 
-## Practical Examples from Your Codebase
-
-### Example 1: Hero Section with Heading
-
-**Before:**
-```html
-<tr>
-  <td class="content-1">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="h1 pb25">
-          Join Us for an Expert Panel Discussion
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
-
-**After (with ARIA):**
-```html
-<tr>
-  <td class="content-1" role="article">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="h1 pb25" role="heading" aria-level="1">
-          Join Us for an Expert Panel Discussion
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
-
----
-
-### Example 2: Body Text with Subheading
-
-**Before:**
-```html
-<tr>
-  <td class="h3 pb15">
-    Event Details
-  </td>
-</tr>
-<tr>
-  <td class="p">
-    Join us virtually on March 15th for an in-depth discussion about HSDD treatment options.
-  </td>
-</tr>
-```
-
-**After (with ARIA):**
-```html
-<tr>
-  <td class="h3 pb15" role="heading" aria-level="2">
-    Event Details
-  </td>
-</tr>
-<tr>
-  <td class="p" role="paragraph">
-    Join us virtually on March 15th for an in-depth discussion about HSDD treatment options.
-  </td>
-</tr>
-```
-
----
-
-### Example 3: Panelist Bio with Image
-
-**Before:**
-```html
-<tr>
-  <td class="pt15" valign="top" width="45%">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="image">
-          <img src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="200" height="200"/>
-        </td>
-      </tr>
-    </table>
-  </td>
-  <td valign="middle" width="55%">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="pb10">
-          <strong>Emily Morse, PhD</strong>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Sex Educator, <em>Sex With Emily</em>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
-
-**After (with ARIA and good alt text):**
-```html
-<tr>
-  <td class="pt15" valign="top" width="45%">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="image">
-          <img src="{{asset.morse-2x.url}}" alt="Headshot of Emily Morse" width="200" height="200"/>
-        </td>
-      </tr>
-    </table>
-  </td>
-  <td valign="middle" width="55%">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="pb10" role="heading" aria-level="3">
-          <strong>Emily Morse, PhD</strong>
-        </td>
-      </tr>
-      <tr>
-        <td role="paragraph">
-          Sex Educator, <em>Sex With Emily</em>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
-
-**Alt text note:** Instead of generic "{{asset.morse-2x.alt}}", use "Headshot of Emily Morse" - this is more useful for screen reader users.
-
----
-
-### Example 4: Footer with Legal Links
-
-**Before:**
-```html
-<tr>
-  <td class="footer">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="legal" align="center">
-          <a href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
-          <span class="link-divider">|</span>
-          <a href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a>
-          <span class="link-divider">|</span>
-          <a href="{{build.unsubscribeLink}}">Unsubscribe</a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
-
-**After (with ARIA landmark):**
-```html
-<tr>
-  <td class="footer" role="contentinfo">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="legal" align="center" role="paragraph">
-          <a href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
-          <span class="link-divider" aria-hidden="true">|</span>
-          <a href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a>
-          <span class="link-divider" aria-hidden="true">|</span>
-          <a href="{{build.unsubscribeLink}}">Unsubscribe</a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-```
 
 **Note:** `aria-hidden="true"` on the dividers prevents screen readers from announcing "vertical bar" between each link.
 
@@ -455,25 +256,6 @@ Never mix alt text with aria-label on the same image. Screen readers will read b
 
 ---
 
-## Accessibility Checklist
-
-Use this checklist before finalizing emails:
-
-- [ ] All `.h1`, `.h2`, `.h3`, `.h4`, `.h5` elements have `role="heading"` and appropriate `aria-level`
-- [ ] All `.p` elements have `role="paragraph"`
-- [ ] All list tables have `role="list"` and list items have `role="listitem"`
-- [ ] Main content area has `role="article"`
-- [ ] Footer has `role="contentinfo"`
-- [ ] All meaningful images have descriptive alt text
-- [ ] All decorative images have `alt=""`
-- [ ] Background images with meaning use `role="img"` and `aria-label`
-- [ ] No conflicting alt text and aria-label on same element
-- [ ] Decorative characters (bullets, dividers) have `aria-hidden="true"`
-- [ ] Dark mode CSS preserves readability
-- [ ] Links are visible in both light and dark mode
-- [ ] Brand colors are preserved in dark mode
-
----
 
 ## Additional Resources
 
@@ -492,38 +274,4 @@ Use this checklist before finalizing emails:
 ### Dark Mode for Email
 [https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers)
 
----
 
-## Getting Started
-
-### Quick Wins
-Start with these easy implementations:
-
-1. **Add heading roles** - Takes 30 seconds per email, huge accessibility impact
-2. **Fix decorative images** - Use `alt=""` for spacers and borders
-3. **Add footer landmark** - One `role="contentinfo"` on your footer `<td>`
-
-### Medium Effort
-Once comfortable with basics:
-
-1. **Add paragraph roles** - More time-consuming but improves document structure
-2. **Implement list roles** - Requires updating your list table pattern
-3. **Add dark mode CSS** - Test thoroughly across clients
-
-### Advanced
-For comprehensive accessibility:
-
-1. **Audit all alt text** - Review client-provided alt text for quality
-2. **Add article landmarks** - Structure main content areas
-3. **Implement comprehensive dark mode** - Fine-tune all colors and elements
-
----
-
-## Questions?
-
-If you have questions about implementing ARIA or dark mode, consult:
-- W3C ARIA documentation (linked above)
-- Litmus email accessibility resources
-- Email on Acid accessibility testing tools
-
-Remember: Any accessibility improvement is better than none. Start small and iterate.
