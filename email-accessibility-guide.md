@@ -22,7 +22,7 @@ Add `role="heading"` and `aria-level` to `<td>` elements that function as headin
 </td>
 ```
 
-**Enhanced with ARIA:**
+**With ARIA:**
 ```html
 <td class="h1" role="heading" aria-level="1">
   Welcome to Our Study
