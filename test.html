@@ -1,112 +1,1020 @@
-      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <td class="prl15">
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="560" style="max-width: 560px; width: 100%;" class="white-background">
-                                <tr>  
-                                  <td align="center" class="image prl10">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100" style="width: 100%; max-width: 100px;" >
-                                      <tr>
-                                        <td class="image pt20">
-                                          <img src="{{asset.goldstein-2x.url}}" alt="{{asset.goldstein-2x.alt}}" width="{{asset.goldstein-2x.width}}" height="{{asset.goldstein-2x.height}}"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="pink-background">
-                                          Moderator
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb5 pt5">
-                                          <strong>Irwin Goldstein, MD</strong>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb20">
-                                          Director, San Diego Sexual Medicine
-                                        </td>
-                                      </tr>
-                                    </table>
-                                    <!-- end table block -->
-                                  </td>
-                                  <td align="center">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100" style="width: 100%; max-width: 100px;">
-                                      <tr>
-                                        <td class="image">
-                                          <img src="{{asset.rubin-2x.url}}" alt="{{asset.rubin-2x.alt}}" width="{{asset.rubin-2x.width}}" height="{{asset.rubin-2x.height}}"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="pink-background">
-                                         Panelist
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb5 pt5">
-                                         <strong>Rachel Rubin, MD</strong>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb35">
-                                          Urology &amp; Sexual Medicine
-                                        </td>
-                                      </tr>
-                                    </table>
-                                   
-                                  </td>
-                                  <td class="image pl10" align="center">
-                                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="max-width: 120px; width: 100%">
-                                      <tr>
-                                        <td class="image">
-                                          <img src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="{{asset.morse-2x.width}}" height="{{asset.morse-2x.height}}"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="pink-background" >
-                                         Panelist
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb5 pt5">
-                                         <strong>Emily Morse, PhD</strong>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb35">
-                                          Sex Educator,<br><em>Sex With Emily</em>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                   
-                                  </td>
-                                  <td class="image prl10" align="center">
-                                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100" style="width: 100%; max-width: 100px;">
-                                      <tr>
-                                        <td class="image pt20">
-                                            <img src="{{asset.skyler-2x.url}}" alt="{{asset.skyler-2x.alt}}" width="{{asset.skyler-2x.width}}" height="{{asset.skyler-2x.height}}"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="pink-background">
-                                         Panelist
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb5 pt5">
-                                         <strong>Jenni Skyler, PhD LMFT, CST</strong>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="pb20">
-                                          Director,<br>The Intimacy Institute
-                                        </td>
-                                      </tr>
-                                    </table>
-                                 
-                                  </td>
-                                  </tr>
-                            </table>
-                            <!-- end table block -->
-                          </td>
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Target IE10 phones -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style type="text/css">
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+    .main-td {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #120D0E;
+      line-height: 18px;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+    }
+    .georgia { font-family: Georgia !important; }
+    .h1 { font-size: 24px; line-height: 28px; color: #006D6A; }
+    .h2 { font-size: 18px; line-height: 22px; color: #006D6A; font-weight: bold; }
+    .h3 { font-size: 18px; line-height: 22px; color: #000000; font-weight: bold; }
+    .h4 { font-size: 16px; line-height: 20px; color: #006D6A; font-weight: bold; }
+    .h5 { font-size: 14px; line-height: 18px; color: #003479; font-weight: bold; }
+    .fs12 { font-size: 12px; line-height: 16px; }
+    .fs16 { font-size: 16px; line-height: 20px; }
+    .fs18 { font-size: 18px; line-height: 20px; }
+    .fs22 { font-size: 22px; line-height: 24px; }
+    .fs24 { font-size: 24px; line-height: 26px; }
+    
+    a { text-decoration: underline; }
+    .content a { color: #1c75bc; }
+
+    /* Build Section Styling */
+
+    .webversion { 
+      background-color: #DFDFDF;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .webversion a {
+      color: #0078D4;
+      text-decoration: underline;
+    }
+    .preheader { 
+      padding-top: 16px;
+      padding-bottom: 16px; 
+    }
+    .preheader td {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    .preheader a {
+      color: #007EB3;
+    }
+    .header {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #ffc5d3;
+    }
+    .content-1 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 40px;
+    }
+    .content-2 { 
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .panelist-pink { 
+      background-color: #F9DDE6; 
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+    .safety {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #f1ffe8;
+    }
+    .cosette-footer {
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 30px;
+      background-color: #000000;
+    }
+    .cosette-footer .p {
+      font-size: 12px;
+      line-height: 14px; 
+      color: #ffffff; 
+    }
+    .cosette-footer a {
+      text-decoration: underline #F0ABC1;   
+    }
+    .footer {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background-color: #DFDFDF;
+    }
+    /* Default: stacked (desktop & Outlook) */
+    .column2 {
+      display: block !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Small screens: two-up */
+    @media only screen and (max-width: 320px) {
+      .two-columns { text-align: center !important; }
+      .two-columns .column2 {
+        display: inline-block !important;
+        vertical-align: top !important;
+        width: 50% !important;
+        max-width: 50% !important;
+      }
+      .two-columns .pr10 { padding-right: 10px !important; }
+      .two-columns .pl10 { padding-left: 10px !important; }
+    }
+
+    /* Legal Links */
+    .link-divider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
+    .legal a { text-decoration: none; }
+    .legal a span { text-decoration: underline; }
+
+    .references tr:first-child .li + td { width: auto; }
+    .references .li { width: 15px; }
+    /*fixes width issue in yahoo*/
+
+    .footnote,
+    .footnote td { font-size: 12px; line-height: 14px; }
+
+    /* Horizontal Rule */
+    .bt-color { border-top: 2px solid #001c71; }
+
+    .border-julep {
+      border: 1px solid #32AB94; 
+      border-radius: 16px; 
+    }
+    .lt-julep-bg {
+      background-color: #E7F5F3;
+    }
+
+    /* additional colors */
+    .dusty-rose { color: #B67B84; }
+    .pink { color: #F0ABC1; }
+    .pink-background { background-color: #FCEEF3; }
+    
+    .black { color: #120D0E !important; }
+    .black-background { background-color: #000000; }
+    .white { color: #ffffff; }
+    .white-background { background-color: #ffffff; }
+    .dk-julep, .dk-julep td { color: #006D6A; }
+    .aqua { color: #007EB3; }
+    .purple { background-color: #59267f; }
+    .gradient { background-color: #73429A; background: linear-gradient(90deg, #56217A, #73429A) }
+
+    /* Element Styling */
+    .p,
+    .ul { padding-bottom: 16px; }
+
+    .li { width: 1px; color: #006D6A; }
+    .ul .li { padding-right: 5px; }
+
+    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
+    .ul tr:first-child .li + td { width: 100%; }
+
+    sup, sub { line-height: 0; font-size: 75%; }
+
+    /* Additional formatting and styling */
+    .center { text-align: center; }
+    .center-block { margin: 0 auto; }
+    .no-underline { text-decoration: none; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+
+    .no-wrap { white-space: nowrap; }
+    a[href^="tel:"] { white-space: nowrap; }
+    
+    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
+    /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Button Styling */
+    .button { 
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 1px solid #00b2e2;
+      /*border-radius: 5px; */
+    }
+
+    .button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
+      /*border-radius: 5px;*/
+    }
+
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 2px solid #00b2e2;
+    }
+    .ns-button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px solid #00b2e2;
+    } */
+
+
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+    .ptb0  { padding-top: 0; padding-bottom: 0; }
+    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
+    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb16 { padding-top: 16px; padding-bottom: 16px;  }
+    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
+    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
+    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
+    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    /* Padding top and bottom */
+
+    .pt0  { padding-top: 0; }
+    .pt5  { padding-top: 5px; }
+    .pt10 { padding-top: 10px; }
+    .pt15 { padding-top: 15px; }
+    .pt16 { padding-top: 16px; }
+    .pt20 { padding-top: 20px; }
+    .pt24 { padding-top: 24px; }
+    .pt25 { padding-top: 25px; }
+    .pt30 { padding-top: 30px; }
+    .pt35 { padding-top: 35px; }
+    .pt40 { padding-top: 40px; }
+    /* padding top */
+
+    .pb0  { padding-bottom: 0; }
+    .pb5  { padding-bottom: 5px; }
+    .pb8  { padding-botom: 8px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb15 { padding-bottom: 15px; }
+    .pb16 { padding-bottom: 16px; }
+    .pb20 { padding-bottom: 20px; }
+    .pb24 { padding-bottom: 24px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    /* padding bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl24 { padding-right: 24px; padding-left: 24px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
+
+    .pr0  { padding-right: 0; }
+    .pr5  { padding-right: 5px; }
+    .pr10 { padding-right: 10px; }
+    .pr15 { padding-right: 15px; }
+    .pr20 { padding-right: 20px; }
+    .pr25 { padding-right: 25px; }
+    .pr30 { padding-right: 30px; }
+    .pr35 { padding-right: 35px; }
+    .pr40 { padding-right: 40px; }
+    /* padding right */
+
+    .pl0  { padding-left: 0; }
+    .pl5  { padding-left: 5px; }
+    .pl10 { padding-left: 10px; }
+    .pl15 { padding-left: 15px; }
+    .pl20 { padding-left: 20px; }
+    .pl25 { padding-left: 25px; }
+    .pl30 { padding-left: 30px; }
+    .pl35 { padding-left: 35px; }
+    .pl40 { padding-left: 40px; }
+    /* padding left */
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    #outlook a { padding: 0; }
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
+
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
+    a img { border: none; }
+    /* Some sensible defaults for images*/
+
+    .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
+
+    /***************************************
+                 SAFETY STYLES 
+    ****************************************/
+
+    .safety td {
+      color: #000000;
+    }
+
+    .safety .ul .ul {
+      padding-bottom: 0;
+    }
+
+  </style>
+  <!--[if gte mso 9]>
+    <xml>
+     <o:OfficeDocumentSettings>
+     <o:AllowPNG/>
+     <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+      sup, sub { font-size: 100% !important; }
+      table { border-collapse: collapse !important; border-spacing: 0 !important; }
+    </style> 
+  <![endif]-->
+  <style type="text/css" data-embed>
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    body,
+    td {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #120D0E;
+      line-height: 18px;
+    }
+    /* Render font family properly in Outlook */
+
+    table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+    * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+
+    .mobile-only {
+      display: none;
+      max-height: 0px;
+      overflow: hidden;
+      mso-hide: all;
+    }
+    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
+
+    .mobile-only table {
+      mso-hide: all;
+    }
+    /* Hides <table> elements in Outlook 2007-13 issue */
+
+    .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+      
+      .block,
+      .content,
+      .safety { display: block; }
+      /* place content you want stacked here */
+
+      .desktop-only { display: none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
+
+      .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
+
+      .m-center { text-align: center !important; margin: 0 auto !important; }
+
+      /*.main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }*/
+
+      /*.m-pt0  { padding-top: 0 !important; }*/
+      /*.m-pt5  { padding-top: 5px !important; }*/
+      /*.m-pt10 { padding-top: 10px !important; }*/
+        .m-pt15 { padding-top: 15px !important; }
+      /*.m-pt20 { padding-top: 20px !important; }*/
+      /*.m-pt25 { padding-top: 25px !important; }*/
+      /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
+
+      /*.m-pb0  { padding-bottom: 0 !important; } */
+      /*.m-pb5  { padding-bottom: 5px !important; }*/
+        .m-pb10 { padding-bottom: 10px !important; }
+        .m-pb15 { padding-bottom: 15px !important; }
+      /*.m-pb20 { padding-bottom: 20px !important; }*/
+      /*.m-pb25 { padding-bottom: 25px !important; }*/
+        .m-pb30 { padding-bottom: 30px !important; }
+      /*.m-pb35 { padding-bottom: 35px !important; }*/
+      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      /* mobile padding bottom */
+
+      .webversion, .content-1 { padding-right: 10px !important; padding-left: 10px !important; }
+      .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+      .m-prl20 {padding-right: 20px !important; padding-left: 20px !important;}
+      .m-prl24 { padding-right: 24px !important; padding-left: 24px !important; }
+      .m-prl40 { padding-right: 40px !important; padding-left: 40px !important; }
+      .m-pl20 { padding-left: 20px !important; }
+      .m-pb24 { padding-bottom: 24px !important; }
+      .m-fs20 { font-size: 20px !important; }
+      .m-fs14 { font-size: 14px !important; line-height: 16px !important; }
+      .m-fs12 { font-size: 12px !important; line-height: 14px !important; }
+    }
+  </style>
+</head>
+<body>
+  <div style="display: none; max-height: 0px; overflow: hidden;">
+  {{build.preheader}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+    <tr>
+      <td class="main-td">
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
+         <!-- Start Preheader -->
+          <tr>
+            <td>
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="pt10 pb10" align="center">
+                          <a class="no-underline" href="#placeholder"><span class="dusty-rose bold">View in browser</span></a>
+                        </td>
                       </tr>
-                      <!-- end image -->
-                     </table>
+                    </table>
+                  </td>
+                </tr>     
+              </table>
+            </td>
+          </tr>
+      <!-- End Preheader -->
+      <!--Start Content-->
+          <tr>
+            <td>
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="gradient" style="padding:0;margin:0;" width="100%">
+                      <center>
+                        <!--[if gte mso 9]>
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;" fillcolor="#73429A">  
+                        <v:fill type="gradient" color1="#56217A" color2="#73429A" colors="0% #56217A, 100% #73429A" angle="270"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                        <center>
+                        <![endif]-->
+                        <table style="margin: 0;padding: 0; width: 600px;" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" >                 
+                          <!-- Content inside gradient -->
+                          <tr>
+                            <td class="gradient-content">
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;">
+                                <tr>
+                                  <td class="m-prl24 pt30 pb5 fs18 white georgia bold" align="center">2026 ISSWSH Annual&nbsp;Scientific&nbsp;Meeting </td>
+                                </tr>
+                                <tr>
+                                  <td class="pb30 fs24 white georgia bold" align="center" >Innovation Showcase </td>
+                                </tr> 
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if gte mso 9]>
+                        </center>
+                        <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]-->
+                      </center>
+                    </td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="black black-background">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="georgia pt30 fs24 bold pink m-prl20" align="center">
+                    The Path Forward With HSDD:
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bold white m-fs14 fs16 pb15 pt10 m-prl40" align="center">
+                    Biology, Lived Experience, and&nbsp;Treatment Science
+                  </td>
+                </tr>                 
+                <tr>
+                  <td class="pb30 prl20 m-prl20">
+                    <table class="pink-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="550" style="width: 550px;">
+                      <tr>
+                        <td class="bold georgia m-fs20 fs22 pb10 pt15" align="center">
+                          Friday, February&nbsp;13,&nbsp;2026
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="h4 black pb10" align="center">
+                          7:25 a.m. - 7:55 a.m.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fs18 bold pb10 georgia" align="center">
+                          Regency Ballroom DEF
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>                             
+                              <td class="prl20">                            
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                  <tr>
+                                    <td height="1" bgcolor="#F0ABC1" style="font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                  </tr>
+                                </table> 
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fs16 m-fs14 m-prl20 prl40 black pt10 pb15" align="center">
+                        Join us for a panel discussion featuring leading voices in women's&nbsp;sexual health.&nbsp;Sponsored by Cosette&nbsp;Pharmaceuticals.
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>   
+              </table>
+               <!-- end table block -->
+            </td>
+          </tr>
+          <!--End Header-->
+          <!-- Start Content -->
+          <tr>
+            <td class="content pink-background pb30 m-pb30">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h1 georgia black pt30 pb15" align="center"><strong>Meet our panel</strong></td>
+                </tr>
+                <tr>
+                  <td class="desktop-only">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="prl15">
+                          <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="560" style="width: 560px;" >
+                            <tr>
+                              <td class="pt15">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>  
+                                    <td class="pl10" valign="top" align="center"  width="120" style="width: 120px;">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;" >
+                                        <tr>
+                                          <td class="image">
+                                            <img src="{{asset.goldstein-2x.url}}" alt="{{asset.goldstein-2x.alt}}" width="{{asset.goldstein-2x.width}}" height="{{asset.goldstein-2x.height}}"/>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
+                                            Moderator
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb5 pt5">
+                                            <strong>Irwin Goldstein, MD</strong>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb20">
+                                            Director, San Diego Sexual Medicine
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <!-- end table block -->
+                                    </td>
+                                    <td valign="top" align="center" width="120" style="width: 120px;">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
+                                        <tr>
+                                          <td class="image">
+                                            <img src="{{asset.rubin-2x.url}}" alt="{{asset.rubin-2x.alt}}" width="{{asset.rubin-2x.width}}" height="{{asset.rubin-2x.height}}"/>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
+                                          Panelist
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb5 pt5">
+                                          <strong>Rachel Rubin, MD</strong>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb35">
+                                            Urology &amp; Sexual Medicine
+                                          </td>
+                                        </tr>
+                                      </table>    
+                                    </td>
+                                    <td valign="top" align="center" width="120" style="width: 120px;">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
+                                        <tr>
+                                          <td class="image">
+                                            <img src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="{{asset.morse-2x.width}}" height="{{asset.morse-2x.height}}"/>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
+                                          Panelist
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb5 pt5">
+                                          <strong>Emily Morse, PhD</strong>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb35">
+                                            Sex Educator,<br><em>Sex With Emily</em>
+                                          </td>
+                                        </tr>
+                                      </table>            
+                                    </td>
+                                    <td class="pr10" valign="top" align="center" width="120" style="width: 120px;">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
+                                        <tr>
+                                          <td class="image">
+                                              <img src="{{asset.skyler-2x.url}}" alt="{{asset.skyler-2x.alt}}" width="{{asset.skyler-2x.width}}" height="{{asset.skyler-2x.height}}"/>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
+                                          Panelist
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb5 pt5">
+                                          <strong>Jenni Skyler, PhD,&nbsp;LMFT, CST</strong>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="fs12 pb20">
+                                            Director, The Intimacy Institute
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>        
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>   
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="m-prl20">
+                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="pt15 m-prl20" width="45%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="image">
+                                        <img class="width-auto" src="{{asset.goldstein-2x.url}}" alt="{{asset.goldstein-2x.alt}}" width="0" height="0"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="panelist-pink" align="center">
+                                        Moderator
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td align="center" valign="middle" width="55%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="m-fs12 pb10 pt20">
+                                        <strong>Irwin Goldstein, MD</strong>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="m-fs12">
+                                        Director, San Diego <br>Sexual Medicine
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>              
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="m-prl20">
+                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="pt15 m-prl20" valign="top" width="45%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="image">
+                                        <img class="width-auto" src="{{asset.rubin-2x.url}}" alt="{{asset.rubin-2x.alt}}" width="0" height="0"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="panelist-pink" align="center">
+                                        Panelist
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td align="center" valign="middle" width="55%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="m-fs12 pt10 pb10">
+                                        <strong>Rachel Rubin, MD</strong>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="m-fs12">
+                                        Urology & Sexual <br>Medicine
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="m-prl20">
+                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="pt15 m-prl20" valign="top" width="45%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="image">
+                                        <img class="width-auto" src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="0" height="0"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="panelist-pink" align="center">
+                                        Panelist
+                                      </td>
+                                    </tr>                              
+                                  </table>
+                                </td>
+                                <td align="center" valign="bottom" width="55%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="m-fs12 pb10">
+                                        <strong>Emily Morse, PhD</strong>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="m-fs12 pb30">
+                                      Sex Educator,<br> <em>Sex With Emily</em>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <!-- End right column -->
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="m-prl20">
+                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="m-prl20 pt15 m-pb15" valign="top" width="45%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="image">
+                                        <img class="width-auto" src="{{asset.skyler-2x.url}}" alt="{{asset.skyler-2x.alt}}" width="0" height="0"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="panelist-pink" align="center">
+                                        Panelist
+                                      </td>
+                                    </tr> 
+                                  </table>
+                                </td>
+                                <td align="center" valign="middle" width="55%">
+                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="m-fs12 pb10">
+                                        <strong>Jenni Skyler, PhD,<br> LMFT, CST</strong>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="m-fs12">
+                                        Director, <br>The Intimacy Institute
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>                                
+                              </tr>
+                            </table>
+                          </td>
+                        </tr> 
+                       
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="footnote m-pl20 pl25 pt15">
+                    HSDD=hypoactive sexual desire disorder.
+                  </td>
+                </tr>
+              </table> 
+            </td>
+          </tr>  
+          <!-- End Content -->
+          <!-- Start Footer -->
+          <tr>
+            <td class="cosette-footer">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="image pb25 m-pb15" align="center">
+                    <img src="{{asset.cosette-logo-2x.url}}" alt="{{asset.cosette-logo-2x.alt}}" width="{{asset.cosette-logo-2x.width}}" height="{{asset.cosette-logo-2x.height}}"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="desktop-only">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="bold pb10 pt10 pink" align="center" >
+                          <a class="pink" href="https://cosettepharma.com/our-company/">About Cosette Pharmaceuticals</a> 
+                            <span>|</span>  
+                            <a class="pink" href="https://vyleesipro.com/contact-us">Contact Us</a>
+                        </td>     
+                      </tr>
+                    </table>
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="bold pink" align="center">
+                          <a class="pink" href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
+                          <span>|</span>
+                          <a class="pink" href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a> 
+                          <span>|</span>   
+                          <a class="pink" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                        </td>   
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only bold">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="pb10" align="center">
+                            <a class="pink" href="https://cosettepharma.com/our-company/">About Cosette Pharmaceuticals</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pb10" align="center">
+                            <a class="pink" href="https://vyleesipro.com/contact-us">Contact Us</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pb10" align="center">
+                            <a class="pink" href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pb10" align="center">
+                            <a class="pink" href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <a class="pink" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                          </td>
+                        </tr>
+                      </table>                
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->             
+                <tr>
+                  <td align="center" class="address p pt25 pb25 m-pt15 m-pb15 m-prl20">
+                    Cosette Pharmaceuticals 200 Crossing Blvd, 4th Floor, Bridgewater, New Jersey 08807
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p pb30 m-prl20" align="center">©2026 Cosette Pharmaceuticals, Inc. All rights reserved. CP-US-VLS-248 02/26</td>
+                </tr>
+              </table> 
+            </td>
+          </tr>       
+          <!-- End Footer -->
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- end table wrapper -->
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+
+
+</body>
+</html>
