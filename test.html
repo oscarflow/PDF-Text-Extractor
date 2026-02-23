@@ -12,121 +12,134 @@
     /***************************************
                 GLOBAL STYLES
     ****************************************/
+
     .main-td {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #120D0E;
-      line-height: 18px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 16px;
+      color: #434445;
+      line-height: 20px;
       min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
     }
-    .georgia { font-family: Georgia !important; }
-    .h1 { font-size: 24px; line-height: 28px; color: #006D6A; }
-    .h2 { font-size: 18px; line-height: 22px; color: #006D6A; font-weight: bold; }
-    .h3 { font-size: 18px; line-height: 22px; color: #000000; font-weight: bold; }
-    .h4 { font-size: 16px; line-height: 20px; color: #006D6A; font-weight: bold; }
-    .h5 { font-size: 14px; line-height: 18px; color: #003479; font-weight: bold; }
-    .fs12 { font-size: 12px; line-height: 16px; }
-    .fs16 { font-size: 16px; line-height: 20px; }
-    .fs18 { font-size: 18px; line-height: 20px; }
-    .fs22 { font-size: 22px; line-height: 24px; }
-    .fs24 { font-size: 24px; line-height: 26px; }
-    
+
+    .h1 { font-size: 18px; line-height: 22px; color: #084E70; }
+    .h2 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
+    .h3 { font-size: 18px; line-height: 24px; color: #084E70; }
+    .h4 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
+    .h5 { font-size: 16px; line-height: 20px; color: #ffffff; font-weight: bold; }
+    .h6 { font-size: 24px; line-height: 30px; color: #084E70; font-weight: bold; }
+    .h7 { font-size: 20px; line-height: 26px; color: #0EA5AA; font-weight: bold; }
+    .h8 { font-size: 18px; line-height: 24px; color: #0EA5AA; font-weight: bold; }
+    .fs14, .fs14 td { font-size: 14px; line-height: 18px; }
+    .fslh14 { font-size: 14px; line-height: 14px; }
+    .footer-text { font-size: 14px; line-height: 18px; color: #434445; }
+    .fs24lh32 { font-size: 24px; line-height: 32px; color: #0EA5AA; }
+
     a { text-decoration: underline; }
-    .content a { color: #1c75bc; }
 
     /* Build Section Styling */
-
-    .webversion { 
-      background-color: #DFDFDF;
+    .header-links {
+      padding-left: 21px;
+      padding-right: 21px;
       padding-top: 16px;
       padding-bottom: 16px;
     }
-    .webversion a {
-      color: #0078D4;
-      text-decoration: underline;
+    .header-links td {
+      font-size: 14px;
+      line-height: 18px;
     }
-    .preheader { 
-      padding-top: 16px;
-      padding-bottom: 16px; 
+    .header-links a {
+      color: #F2685F;
+      font-weight: bold;
     }
     .preheader td {
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4C4C4C;
     }
-    .preheader a {
-      color: #007EB3;
+    .webversion a {
+      color: #4C4C4C;
+      text-decoration: underline;
     }
-    .header {
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #ffc5d3;
+    .preheader {
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #eaeeef;
     }
-    .content-1 {
-      padding-right: 40px;
-      padding-left: 40px;
-      padding-top: 40px;
+    .content {
+      padding-right: 21px;
+      padding-left: 21px;
+      padding-top: 24px;
     }
-    .content-2 { 
+    .lt-blue-section {
+      background-color: #EDFAFA;
       padding-right: 10px;
       padding-left: 10px;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
-    .panelist-pink { 
-      background-color: #F9DDE6; 
-      font-size: 12px;
-      font-weight: bold;
-      line-height: 14px;
-      padding-top: 3px;
-      padding-bottom: 3px;
+    .white-section {
+      background-color: #ffffff;
+      border-radius: 6px;
+      padding: 15px;
     }
-    .safety {
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #f1ffe8;
+    .co-pay-section {
+      background-color: #FDEEE8;
+      border-radius: 15px;
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
-    .cosette-footer {
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-top: 30px;
-      background-color: #000000;
+    .green-bg {
+      background-color: #0EA5AA;
+      padding: 24px 21px;
     }
-    .cosette-footer .p {
-      font-size: 12px;
-      line-height: 14px; 
-      color: #ffffff; 
+    .bg-teal {
+      background-color: #0EA5AA;
+      padding: 5px 5px 10px 5px;
+      border-radius: 10px;
     }
-    .cosette-footer a {
-      text-decoration: underline #F0ABC1;   
+    .bg-navy {
+      background-color: #084E70;
+      padding: 5px 5px 10px 5px;
+      border-radius: 10px;
     }
+    .lt-green-section {
+      background-color: #F1F8F1;
+      padding: 24px;
+      border-radius: 15px;
+    }
+    .lt-orange-section {
+      background-color: #FDEEE8;
+      padding: 24px;
+      border-radius: 15px;
+    }
+    .register-callout {
+      background-color: #ECF6ED; 
+      border-radius: 15px;
+      padding: 24px;
+    }
+    .dosing-legend { 
+    background-color: #ffffff; 
+    border-radius: 13px; 
+    padding: 16px; }
+
+    .gradient-bg { background-color: #084E70; background: linear-gradient(1deg, #0E5A7F 3.96%, #13B5BA 104.67%); border-radius: 15px; }
     .footer {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      background-color: #DFDFDF;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 24px;
+      padding-bottom: 19px;
+      background-color: #ECF6ED;
     }
-    /* Default: stacked (desktop & Outlook) */
-    .column2 {
-      display: block !important;
-      width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+    .footer-links,
+    .footer-links a,
+    .disclaimer a {
+      color: #F2685F;
+      font-weight: bold;
     }
-
-    /* Small screens: two-up */
-    @media only screen and (max-width: 320px) {
-      .two-columns { text-align: center !important; }
-      .two-columns .column2 {
-        display: inline-block !important;
-        vertical-align: top !important;
-        width: 50% !important;
-        max-width: 50% !important;
-      }
-      .two-columns .pr10 { padding-right: 10px !important; }
-      .two-columns .pl10 { padding-left: 10px !important; }
-    }
-
     /* Legal Links */
     .link-divider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
     .legal a { text-decoration: none; }
@@ -139,49 +152,51 @@
     .footnote,
     .footnote td { font-size: 12px; line-height: 14px; }
 
+    .lt-orange-section .footnote td { font-size: 14px; line-height: 18px; }
+
+    .footnote .li { color: #434445; }
+
     /* Horizontal Rule */
     .bt-color { border-top: 2px solid #001c71; }
-
-    .border-julep {
-      border: 1px solid #32AB94; 
-      border-radius: 16px; 
-    }
-    .lt-julep-bg {
-      background-color: #E7F5F3;
-    }
+    .bb-teal { border-bottom: 5px solid #0EA5AA; }
+    .bb-yellow { border-bottom: 4px solid #F0E933; }
+    .bb-yellow2 { border-bottom: 2px solid #F0E933; }
+    .bb-white { border-bottom: 3px solid #FFFFFF; }
 
     /* additional colors */
-    .dusty-rose { color: #B67B84; }
-    .pink { color: #F0ABC1; }
-    .pink-background { background-color: #FCEEF3; }
-    
-    .black { color: #120D0E !important; }
-    .black-background { background-color: #000000; }
+    .black { color: #000001; }
+    .black2 { color: #4C4C4C; }
     .white { color: #ffffff; }
-    .white-background { background-color: #ffffff; }
-    .dk-julep, .dk-julep td { color: #006D6A; }
-    .aqua { color: #007EB3; }
-    .purple { background-color: #59267f; }
-    .gradient { background-color: #73429A; background: linear-gradient(90deg, #56217A, #73429A) }
+    .pink { color: #FF5FDC; }
+    .blue,
+    .safety .blue { color: #084E70; }
+    .teal { color: #0EA5AA !important; }
+    .safety .gray { color: #6D6B6B; }
+    .orange { color: #F2685F; }
 
     /* Element Styling */
     .p,
-    .ul { padding-bottom: 16px; }
+    .ul { padding-bottom: 15px; }
 
-    .li { width: 1px; color: #006D6A; }
+    .li { color: #0EA5AA; width: 1px; }
     .ul .li { padding-right: 5px; }
+    .lt-green-section .ul .li { color: #000000; }
+    .lt-green-section .ul .li { padding-right: 6px; }
+    .lt-orange-section .ul .li { padding-right: 6px; }
 
     .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
     .ul tr:first-child .li + td { width: 100%; }
 
     sup, sub { line-height: 0; font-size: 75%; }
-
+    
     /* Additional formatting and styling */
     .center { text-align: center; }
     .center-block { margin: 0 auto; }
     .no-underline { text-decoration: none; }
     .underline { text-decoration: underline; }
     .bold { font-weight: bold; }
+    .normal { font-weight: normal; }
+    .word-break { word-break: break-word; }
 
     .no-wrap { white-space: nowrap; }
     a[href^="tel:"] { white-space: nowrap; }
@@ -202,25 +217,27 @@
     }
 
     /* Button Styling */
-    .button { 
-      font-size: 15px;
-      line-height: 19px;
+    .button-header { 
+      font-size: 14px;
+      line-height: 18px;
       font-weight: bold;
       text-align: center;
       color: #ffffff;
-      background-color: #00b2e2;
-      border: 1px solid #00b2e2;
-      /*border-radius: 5px; */
+      background-color: #084E70;
+      border: 1px solid #084E70;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
 
-    .button a {
+    .button-header a {
       color: #ffffff;
       text-decoration: none;
       display: block;
       padding-top: 10px;
       padding-bottom: 10px;
-      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
-      /*border-radius: 5px;*/
+      border: 1px solid #084E70; /*border hack needed for outlook clients*/
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
 
     /* Non-standard button code to be used with the tnon snippet */
@@ -251,8 +268,9 @@
     .ptb5  { padding-top: 5px; padding-bottom: 5px; }
     .ptb10 { padding-top: 10px; padding-bottom: 10px; }
     .ptb15 { padding-top: 15px; padding-bottom: 15px; }
-    .ptb16 { padding-top: 16px; padding-bottom: 16px;  }
+    .ptb16 { padding-top: 16px; padding-bottom: 16px; }
     .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
     .ptb25 { padding-top: 25px; padding-bottom: 25px; }
     .ptb30 { padding-top: 30px; padding-bottom: 30px; }
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
@@ -261,6 +279,8 @@
 
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
+    .pt6  { padding-top: 6px; }
+    .pt8  { padding-top: 8px; }
     .pt10 { padding-top: 10px; }
     .pt15 { padding-top: 15px; }
     .pt16 { padding-top: 16px; }
@@ -273,11 +293,17 @@
     /* padding top */
 
     .pb0  { padding-bottom: 0; }
+    .pb3  { padding-bottom: 3px; }
+    .pb4  { padding-bottom: 4px; }
     .pb5  { padding-bottom: 5px; }
-    .pb8  { padding-botom: 8px; }
+    .pb6  { padding-bottom: 6px; }
+    .pb7  { padding-bottom: 7px; }
+    .pb8  { padding-bottom: 8px; }
     .pb10 { padding-bottom: 10px; }
+    .pb12 { padding-bottom: 12px; }
     .pb15 { padding-bottom: 15px; }
     .pb16 { padding-bottom: 16px; }
+    .pb19 { padding-bottom: 19px; }
     .pb20 { padding-bottom: 20px; }
     .pb24 { padding-bottom: 24px; }
     .pb25 { padding-bottom: 25px; }
@@ -291,7 +317,7 @@
     .prl10 { padding-right: 10px; padding-left: 10px; }
     .prl15 { padding-right: 15px; padding-left: 15px; }
     .prl20 { padding-right: 20px; padding-left: 20px; }
-    .prl24 { padding-right: 24px; padding-left: 24px; }
+    .prl21 { padding-right: 21px; padding-left: 21px; }
     .prl25 { padding-right: 25px; padding-left: 25px; }
     .prl30 { padding-right: 30px; padding-left: 30px; }
     .prl35 { padding-right: 35px; padding-left: 35px; }
@@ -303,8 +329,11 @@
     .pr10 { padding-right: 10px; }
     .pr15 { padding-right: 15px; }
     .pr20 { padding-right: 20px; }
+    .pr21 { padding-right: 21px; }
     .pr25 { padding-right: 25px; }
+    .pr26 { padding-right: 26px; }
     .pr30 { padding-right: 30px; }
+    .pr32 { padding-right: 32px; }
     .pr35 { padding-right: 35px; }
     .pr40 { padding-right: 40px; }
     /* padding right */
@@ -347,13 +376,37 @@
                  SAFETY STYLES 
     ****************************************/
 
+    .safety .h2 {
+      color: #084E70;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: bold;
+    }
+
+    .safety .normal {
+      font-weight: normal;
+    }
+
     .safety td {
-      color: #000000;
+      color: #434445;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .safety .li {
+      color: #0EA5AA; 
+    }
+
+    .safety a {
+      color: #F2685F;
+      font-weight: bold;
     }
 
     .safety .ul .ul {
-      padding-bottom: 0;
+      padding-left: 15px;
     }
+
+
 
   </style>
   <!--[if gte mso 9]>
@@ -375,10 +428,10 @@
 
     body,
     td {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #120D0E;
-      line-height: 18px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 16px;
+      color: #434445;
+      line-height: 20px;
     }
     /* Render font family properly in Outlook */
 
@@ -401,6 +454,8 @@
       line-height: inherit !important;
     }
     /* Disguises iOS auto links */
+
+    .no-link a { text-decoration: none !important; color: #4C4C4C !important; }
 
     .mobile-only {
       display: none;
@@ -466,293 +521,103 @@
       /*add to image class to expand to full width*/
 
       .m-center { text-align: center !important; margin: 0 auto !important; }
+      .m-valign-top { vertical-align: top !important; }
 
       /*.main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }*/
+      .main-table .fw75 { width: 75px !important; margin: 0 auto !important; }
+      .main-table .fixed-width150 { width: 150px !important; margin: 0 auto !important; }
+      .main-table .fixed-width220 { width: 220px !important; margin: 0 auto !important; float: none !important; }
+      .main-table .fixed-width253 { width: 253px !important; margin: 0 auto !important; }
 
-      /*.m-pt0  { padding-top: 0 !important; }*/
-      /*.m-pt5  { padding-top: 5px !important; }*/
+      .m-pt0  { padding-top: 0 !important; }
+      .m-pt5  { padding-top: 5px !important; }
+      .m-pt8  { padding-top: 8px !important; }
       /*.m-pt10 { padding-top: 10px !important; }*/
-        .m-pt15 { padding-top: 15px !important; }
-      /*.m-pt20 { padding-top: 20px !important; }*/
-      /*.m-pt25 { padding-top: 25px !important; }*/
+      /*.m-pt15 { padding-top: 15px !important; }*/
+      .m-pt20 { padding-top: 20px !important; }
+      .m-pt25 { padding-top: 25px !important; }
       /*.m-pt30 { padding-top: 30px !important; }*/
       /*.m-pt35 { padding-top: 35px !important; }*/
       /*.m-pt40 { padding-top: 40px !important; }*/
+      /* mobile padding top */
 
-      /*.m-pb0  { padding-bottom: 0 !important; } */
+      .m-pb0  { padding-bottom: 0 !important; } 
       /*.m-pb5  { padding-bottom: 5px !important; }*/
-        .m-pb10 { padding-bottom: 10px !important; }
-        .m-pb15 { padding-bottom: 15px !important; }
-      /*.m-pb20 { padding-bottom: 20px !important; }*/
+      .m-pb10 { padding-bottom: 10px !important; }
+      .m-pb15 { padding-bottom: 15px !important; }
+      .m-pb16 { padding-bottom: 16px !important; }
+      .m-pb19 { padding-bottom: 19px !important; }
+      .m-pb20 { padding-bottom: 20px !important; }
+      .m-pb24 { padding-bottom: 24px !important; }
       /*.m-pb25 { padding-bottom: 25px !important; }*/
-        .m-pb30 { padding-bottom: 30px !important; }
+      /*.m-pb30 { padding-bottom: 30px !important; }*/
       /*.m-pb35 { padding-bottom: 35px !important; }*/
       /*.m-pb40 { padding-bottom: 40px !important; }*/
       /* mobile padding bottom */
 
-      .webversion, .content-1 { padding-right: 10px !important; padding-left: 10px !important; }
-      .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
-      .m-prl20 {padding-right: 20px !important; padding-left: 20px !important;}
-      .m-prl24 { padding-right: 24px !important; padding-left: 24px !important; }
-      .m-prl40 { padding-right: 40px !important; padding-left: 40px !important; }
-      .m-pl20 { padding-left: 20px !important; }
-      .m-pb24 { padding-bottom: 24px !important; }
-      .m-fs20 { font-size: 20px !important; }
-      .m-fs14 { font-size: 14px !important; line-height: 16px !important; }
-      .m-fs12 { font-size: 12px !important; line-height: 14px !important; }
+      .m-pr0 { padding-right: 0 !important; }
+      .m-pr5 { padding-right: 5px !important; }
+      .m-pl0 { padding-left: 0 !important; }
+      .m-pl10 { padding-left: 10px !important; }
+      .m-pl21 { padding-left: 21px !important; }
+      .m-pr10 { padding-right: 10px !important; }
+      .m-pr15 { padding-right: 15px !important; }
+      /* mobile padding right */
+
+      .m-prl15 { padding-left: 15px !important; padding-right: 15px !important; }
+
+      .header-links { padding-top: 16px !important; padding-bottom: 16px !important; padding-left: 15px !important; padding-right: 15px !important; }
+      .co-pay-section,
+      .content { padding-left: 15px !important; padding-right: 15px !important; }
+      .footer { padding-left: 15px !important; padding-right: 15px !important; }
+      /* section padding resets */
+
+      .green-bg {
+        padding: 24px 16px !important;
+      }
+      .lt-green-section { padding: 24px 16px !important;  }
+      .bg-teal {
+        padding: 10px 5px 16px 5px !important;
+      }
+      .bg-navy {
+        padding: 10px 5px 25px 5px !important;
+      }
+      .main-table .m-width-initial { width: initial !important; float: left !important; }
+      .m-rep-photo img { max-width: 94px !important; }
+      .m-width100 { width: 100% !important; }
+      .m-valign-mid { vertical-align: middle !important; }
+      /* other resets */
+      .min-width31 { min-width: 31px !important; }
+      .max-45 { max-width: 45px !important; }
+      .m-199 { width: 199px !important; }
+      .mfs11 { font-size: 11px !important; line-height: 15px !important; }
+
     }
   </style>
+
+
 </head>
 <body>
-  <div style="display: none; max-height: 0px; overflow: hidden;">
-  {{build.preheader}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-  </div>
-
+<div style="display: none; max-height: 0px; overflow: hidden;">
+{{build.preheader}}  &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
   <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+
     <tr>
       <td class="main-td">
         <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
-         <!-- Start Preheader -->
+
+      <!-- Start Header -->
           <tr>
-            <td>
+            <td class="header">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td align="center">
+                  <td class="header-links">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <td class="pt10 pb10" align="center">
-                          <a class="no-underline" href="#placeholder"><span class="dusty-rose bold">View in browser</span></a>
-                        </td>
+                        <td>Please see full <a href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a>, including <strong>BOXED WARNING</strong> on the risk of drug resistance with use of YEZTUGO in undiagnosed HIV-1 infection, and <a href="https://www.yeztugohcp.com/#important-safety-information">Important Safety Information</a> below.</td>
                       </tr>
-                    </table>
-                  </td>
-                </tr>     
-              </table>
-            </td>
-          </tr>
-      <!-- End Preheader -->
-      <!--Start Content-->
-          <tr>
-            <td>
-                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td class="gradient" style="padding:0;margin:0;" width="100%">
-                      <center>
-                        <!--[if gte mso 9]>
-                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;" fillcolor="#73429A">  
-                        <v:fill type="gradient" color1="#56217A" color2="#73429A" colors="0% #56217A, 100% #73429A" angle="270"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
-                        <center>
-                        <![endif]-->
-                        <table style="margin: 0;padding: 0; width: 600px;" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" >                 
-                          <!-- Content inside gradient -->
-                          <tr>
-                            <td class="gradient-content">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;">
-                                <tr>
-                                  <td class="m-prl24 pt30 pb5 fs18 white georgia bold" align="center">2026 ISSWSH Annual&nbsp;Scientific&nbsp;Meeting </td>
-                                </tr>
-                                <tr>
-                                  <td class="pb30 fs24 white georgia bold" align="center" >Innovation Showcase </td>
-                                </tr> 
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                        <!--[if gte mso 9]>
-                        </center>
-                        <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
-                        </v:textbox>
-                        </v:rect>
-                        <![endif]-->
-                      </center>
-                    </td>
-                  </tr>
-                </table>
-            </td>
-          </tr>
-          <tr>
-            <td class="black black-background">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="georgia pt30 fs24 bold pink m-prl20" align="center">
-                    The Path Forward With HSDD:
-                  </td>
-                </tr>
-                <tr>
-                  <td class="bold white m-fs14 fs16 pb15 pt10 m-prl40" align="center">
-                    Biology, Lived Experience, and&nbsp;Treatment Science
-                  </td>
-                </tr>                 
-                <tr>
-                  <td class="pb30 prl20 m-prl20">
-                    <table class="pink-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="550" style="width: 550px;">
-                      <tr>
-                        <td class="bold georgia m-fs20 fs22 pb10 pt15" align="center">
-                          Friday, February&nbsp;13,&nbsp;2026
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="h4 black pb10" align="center">
-                          7:25 a.m. - 7:55 a.m.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="fs18 bold pb10 georgia" align="center">
-                          Regency Ballroom DEF
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                            <tr>                             
-                              <td class="prl20">                            
-                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                                  <tr>
-                                    <td height="1" bgcolor="#F0ABC1" style="font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
-                                  </tr>
-                                </table> 
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="fs16 m-fs14 m-prl20 prl40 black pt10 pb15" align="center">
-                        Join us for a panel discussion featuring leading voices in women's&nbsp;sexual health.&nbsp;Sponsored by Cosette&nbsp;Pharmaceuticals.
-                        </td>
-                      </tr>
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>   
-              </table>
-               <!-- end table block -->
-            </td>
-          </tr>
-          <!--End Header-->
-          <!-- Start Content -->
-          <tr>
-            <td class="content pink-background pb30 m-pb30">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="h1 georgia black pt30 pb15" align="center"><strong>Meet our panel</strong></td>
-                </tr>
-                <tr>
-                  <td class="desktop-only">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="prl15">
-                          <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="560" style="width: 560px;" >
-                            <tr>
-                              <td class="pt15">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr>  
-                                    <td class="pl10" valign="top" align="center"  width="120" style="width: 120px;">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;" >
-                                        <tr>
-                                          <td class="image">
-                                            <img src="{{asset.goldstein-2x.url}}" alt="{{asset.goldstein-2x.alt}}" width="{{asset.goldstein-2x.width}}" height="{{asset.goldstein-2x.height}}"/>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
-                                            Moderator
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb5 pt5">
-                                            <strong>Irwin Goldstein, MD</strong>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb20">
-                                            Director, San Diego Sexual Medicine
-                                          </td>
-                                        </tr>
-                                      </table>
-                                      <!-- end table block -->
-                                    </td>
-                                    <td valign="top" align="center" width="120" style="width: 120px;">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
-                                        <tr>
-                                          <td class="image">
-                                            <img src="{{asset.rubin-2x.url}}" alt="{{asset.rubin-2x.alt}}" width="{{asset.rubin-2x.width}}" height="{{asset.rubin-2x.height}}"/>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
-                                          Panelist
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb5 pt5">
-                                          <strong>Rachel Rubin, MD</strong>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb35">
-                                            Urology &amp; Sexual Medicine
-                                          </td>
-                                        </tr>
-                                      </table>    
-                                    </td>
-                                    <td valign="top" align="center" width="120" style="width: 120px;">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
-                                        <tr>
-                                          <td class="image">
-                                            <img src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="{{asset.morse-2x.width}}" height="{{asset.morse-2x.height}}"/>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
-                                          Panelist
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb5 pt5">
-                                          <strong>Emily Morse, PhD</strong>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb35">
-                                            Sex Educator,<br><em>Sex With Emily</em>
-                                          </td>
-                                        </tr>
-                                      </table>            
-                                    </td>
-                                    <td class="pr10" valign="top" align="center" width="120" style="width: 120px;">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="120" style="width: 120px;">
-                                        <tr>
-                                          <td class="image">
-                                              <img src="{{asset.skyler-2x.url}}" alt="{{asset.skyler-2x.alt}}" width="{{asset.skyler-2x.width}}" height="{{asset.skyler-2x.height}}"/>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="panelist-pink" bgcolor="#F9DDE6" align="center">
-                                          Panelist
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb5 pt5">
-                                          <strong>Jenni Skyler, PhD,&nbsp;LMFT, CST</strong>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="fs12 pb20">
-                                            Director, The Intimacy Institute
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                                <!-- end table block -->
-                              </td>
-                            </tr>        
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>   
+                      <!-- end paragraph -->
                     </table>
                     <!-- end table block -->
                   </td>
@@ -763,152 +628,11 @@
                     <div class="mobile-only">
                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                          <td class="m-prl20">
-                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="pt15 m-prl20" width="45%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image">
-                                        <img class="width-auto" src="{{asset.goldstein-2x.url}}" alt="{{asset.goldstein-2x.alt}}" width="0" height="0"/>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="panelist-pink" align="center">
-                                        Moderator
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                                <td align="center" valign="middle" width="55%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="m-fs12 pb10 pt20">
-                                        <strong>Irwin Goldstein, MD</strong>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="m-fs12">
-                                        Director, San Diego <br>Sexual Medicine
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>              
-                              </tr>
-                            </table>
+                          <td class="image bb-teal">
+                            <a href="https://www.YEZTUGOhcp.com"><img class="width-auto" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/></a>
                           </td>
                         </tr>
-                        <tr>
-                          <td class="m-prl20">
-                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="pt15 m-prl20" valign="top" width="45%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image">
-                                        <img class="width-auto" src="{{asset.rubin-2x.url}}" alt="{{asset.rubin-2x.alt}}" width="0" height="0"/>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="panelist-pink" align="center">
-                                        Panelist
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                                <td align="center" valign="middle" width="55%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="m-fs12 pt10 pb10">
-                                        <strong>Rachel Rubin, MD</strong>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="m-fs12">
-                                        Urology & Sexual <br>Medicine
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                                
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="m-prl20">
-                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="pt15 m-prl20" valign="top" width="45%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image">
-                                        <img class="width-auto" src="{{asset.morse-2x.url}}" alt="{{asset.morse-2x.alt}}" width="0" height="0"/>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="panelist-pink" align="center">
-                                        Panelist
-                                      </td>
-                                    </tr>                              
-                                  </table>
-                                </td>
-                                <td align="center" valign="bottom" width="55%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="m-fs12 pb10">
-                                        <strong>Emily Morse, PhD</strong>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="m-fs12 pb30">
-                                      Sex Educator,<br> <em>Sex With Emily</em>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                                <!-- End right column -->
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="m-prl20">
-                            <table class="white-background" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="m-prl20 pt15 m-pb15" valign="top" width="45%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image">
-                                        <img class="width-auto" src="{{asset.skyler-2x.url}}" alt="{{asset.skyler-2x.alt}}" width="0" height="0"/>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="panelist-pink" align="center">
-                                        Panelist
-                                      </td>
-                                    </tr> 
-                                  </table>
-                                </td>
-                                <td align="center" valign="middle" width="55%">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="m-fs12 pb10">
-                                        <strong>Jenni Skyler, PhD,<br> LMFT, CST</strong>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="m-fs12">
-                                        Director, <br>The Intimacy Institute
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>                                
-                              </tr>
-                            </table>
-                          </td>
-                        </tr> 
-                       
+                        <!-- end image -->
                       </table>
                       <!-- end table block -->
                     </div>
@@ -916,104 +640,875 @@
                 </tr>
                 <!-- end mobile content -->
                 <tr>
-                  <td class="footnote m-pl20 pl25 pt15">
-                    HSDD=hypoactive sexual desire disorder.
+                  <td class="desktop-only bb-teal image">
+                    <a href="https://www.YEZTUGOhcp.com"><img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/></a>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="pr21 m-pr0" bgcolor="#ECF6ED" align="right">
+                    <table class="fixed-width220" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="261" style="width: 261px;">
+                      <tr>
+                        <td class="button-header">
+                          <a class="ghost-link" href="https://www.YEZTUGOhcp.com/patient-support">As little as $0 co-pay<sup style="font-weight:normal;">a</sup> <span style="color: #F0E933;">&#10140;</span></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr> 
+
+              </table>
+            </td>
+          </tr>
+      <!-- End Header -->
+
+      <!-- Start Safety -->
+          <tr>
+            <td class="safety prl21 pt24 m-prl15" bgcolor="#ECF6ED">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h2">Indication</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="p pb20">YEZTUGO is indicated for pre-exposure prophylaxis (PrEP) to reduce the risk of sexually acquired HIV-1 in adults and adolescents (≥35&nbsp;kg) who are at risk for HIV-1 acquisition. Individuals must have a negative HIV-1 test prior to initiating YEZTUGO.  </td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="h2 pb7">Important Safety Information</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="bold blue">BOXED WARNING: RISK OF DRUG RESISTANCE WITH USE OF YEZTUGO IN UNDIAGNOSED HIV-1 INFECTION</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb20">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="bold">Individuals must be tested for <span class="no-wrap">HIV-1</span> infection prior to initiating YEZTUGO, and with each subsequent injection of YEZTUGO, using a test approved or cleared by the FDA for the diagnosis of acute or primary <span class="no-wrap">HIV-1</span> infection. <span class="no-wrap">Drug-resistant</span> <span class="no-wrap">HIV-1</span> variants have been identified with use of YEZTUGO by individuals with undiagnosed <span class="no-wrap">HIV-1</span> infection. Do not initiate YEZTUGO unless negative infection status is confirmed. Individuals who acquire <span class="no-wrap">HIV-1</span> while receiving YEZTUGO must transition to a complete <span class="no-wrap">HIV-1</span> treatment regimen.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End Safety -->
+
+      <!-- Start Content -->
+          <tr>
+            <td class="content">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="fs24lh32 pb10 bold">
+                    {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+                
+                    {{'{{customText[Dear|Hello,|Hi,|Good morning,|Good afternoon,|Good evening,| ]}} '}} {{'{{customText[Dr.|Mr.|Mrs.|Ms.|Prof.| ]}} '}} {{'{{customText[##accFname## ##accLname##:|##accFname## ##accLname##, MD:|##accFname## ##accLname##, DO:|##accFname## ##accLname##, PharmD:|##accFname## ##accLname##, PA:|##accFname## ##accLname##, NP:|##accLname##:|##accFname##:| ]}} '}}
+                    
+                    {% else %}
+                    
+                    <span class="pink">[</span class="pink">Dear<span class="pink">]</span> <span class="pink">[</span class="pink">Dr.<span class="pink">]</span> <span class="pink">[</span class="pink">John&nbsp;Smith<span class="pink">]</span>:
+                    
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p pb24">YEZTUGO is the first-and-only PrEP option that offers twice-yearly, in-office subcutaneous injections.<sup>1,2</sup> I’ve included some information you may be interested in regarding YEZTUGO dosing.</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="pb24">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="lt-green-section">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb16">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="h3">
+                                      <strong>Initiation</strong><sup>1</sup>
+                                    </td>
+                                  </tr>
+                                  <!-- end h2 header -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                            <!-- start icon list -->
+                            <!-- To center images, add the CSS .icon-list img { margin: 0 auto; }. Outlook will only center it if the containing td has text-align center -->
+                            <!-- Change the image td width from 123 to the width of the widest image -->
+                            <tr>
+                              <td class="pb16">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="row bb-white pb8">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <!-- begin mobile content -->
+                                        <tr class="mobile-only">
+                                          <td class="mobile-only">
+                                            <div class="mobile-only">
+                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
+                                                    <img class="min-width31" src="{{asset.icon-day1-mobile-2x.url}}" alt="{{asset.icon-day1-mobile-2x.alt}}" width="0" height="0"/>
+                                                  </td>
+                                                  <td class="text pl15" valign="middle">
+                                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td class="h5 teal">
+                                                          DAY 1
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>
+                                                          Administer the first YEZTUGO initiation dose—2 injections and 2 tablets in your office.<sup>b</sup>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <!-- end table block -->
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                              <!-- end table block -->
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <!-- end mobile content -->
+                                        <tr>
+                                          <td class="desktop-only image" valign="middle" width="74" style="width: 74px;" align="center">
+                                            <img class="max-none" src="{{asset.icon-day1-2x.url}}" alt="{{asset.icon-day1-2x.alt}}" width="{{asset.icon-day1-2x.width}}" height="{{asset.icon-day1-2x.height}}"/>
+                                          </td>
+                                          <td class="desktop-only text pl15" valign="middle">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h5 teal">
+                                                  DAY 1
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  Administer the first YEZTUGO initiation <br />dose—2 injections and 2 tablets in your office.<sup>b</sup>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <!-- row -->
+                                  <tr>
+                                    <td class="row bb-white pt8 pb8">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
+                                            <img class="max-none" src="{{asset.icon-day2-2x.url}}" alt="{{asset.icon-day2-2x.alt}}" width="{{asset.icon-day2-2x.width}}" height="{{asset.icon-day2-2x.height}}"/>
+                                          </td>
+                                          <td class="text pl15" valign="middle">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h5 teal">
+                                                  DAY 2
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  The second oral dose (2 tablets) is taken the next day, at home.<sup>b</sup>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <!-- row -->
+                                  <tr>
+                                    <td>
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="h3 pt10">
+                                            <strong>Continuation</strong><sup>1</sup>
+                                          </td>
+                                        </tr>
+                                        <!-- end h2 header -->
+                                      </table>
+                                      <!-- end table block -->
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="row bb-white pt8 pb8">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
+                                            <img class="max-none" src="{{asset.icon-day3-2x.url}}" alt="{{asset.icon-day3-2x.alt}}" width="{{asset.icon-day3-2x.width}}" height="{{asset.icon-day3-2x.height}}"/>
+                                          </td>
+                                          <td class="text pl15" valign="middle">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h5 teal">
+                                                  EVERY 6 MONTHS<sup style="font-weight:normal;">c</sup>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  After that, it’s just 2 injections 2 times a year in your office.<sup>d</sup>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <!-- row -->
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end icon list -->
+                            <tr>
+                              <td class="dosing-legend">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <!-- start icon list -->
+                                  <tr>
+                                    <td class="icon-list">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="pb8">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="image m-valign-top" valign="middle" width="30" style="width: 30px;">
+                                                  <img class="max-none" src="{{asset.icon-pills-2x.url}}" alt="{{asset.icon-pills-2x.alt}}" width="{{asset.icon-pills-2x.width}}" height="{{asset.icon-pills-2x.height}}"/>
+                                                </td>
+                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle" width="15" style="width:15px;">
+                                                  =
+                                                </td>
+                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle">
+                                                   600 mg orally <br class="mobile-only">(2 x 300-mg tablets)
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                        <!-- row -->
+                                        <tr>
+                                          <td class="row">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="image m-valign-top" valign="middle" width="30" style="width: 30px;">
+                                                  <img class="max-none" src="{{asset.icon-injections-2x.url}}" alt="{{asset.icon-injections-2x.alt}}" width="20" height="27"/>
+                                                </td>
+                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle" width="15" style="width:15px;">
+                                                  =
+                                                </td>
+                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle">
+                                                  927-mg subcutaneous injection <br class="mobile-only">(2 x 1.5-mL injections)
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                        <!-- row -->
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <!-- end icon list -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="ul pt16 pb8 pl10">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="li teal" valign="top">•</td>
+                                    <td class="pb8">If an individual misses the Day 2 oral initiation dose (600 mg), have them take it as soon as possible. They should not take the Day 1 and Day 2 oral initiation doses on the same day</td>
+                                  </tr>
+                                  
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end unordered list -->
+                            <tr>
+                              <td class="pb16 bold">HIV-1–negative status must be confirmed prior to each YEZTUGO injection and additionally as clinically appropriate.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="footnote">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="li" valign="top"><sup>b</sup></td>
+                                    <td class="pb4">Tablets may be taken with or without food.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top"><sup>c</sup></td>
+                                    <td class="pb4">From the date of the last injection.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top"><sup>d</sup></td>
+                                    <td class="pb4">Unless the injection schedule is interrupted.</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end footnote list -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pb24">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="lt-green-section">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            
+                            <!-- start icon list -->
+                            <!-- To center images, add the CSS .icon-list img { margin: 0 auto; }. Outlook will only center it if the containing td has text-align center -->
+                            <!-- Change the image td width from 123 to the width of the widest image -->
+                            <tr>
+                              <td class="icon-list">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="row">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="m-pl0 m-pb16 m-center image pl5 block" valign="middle" width="110" style="width: 110px;" align="center">
+                                            <img class="max-none" src="{{asset.injection-window-2x.url}}" alt="{{asset.injection-window-2x.alt}}" width="{{asset.injection-window-2x.width}}" height="{{asset.injection-window-2x.height}}"/>
+                                          </td>
+                                          <td class="m-pl0 text pl30 block" valign="middle">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h3 pb8">
+                                                  <strong>Flexible continuation dosing</strong><sup>1</sup>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="pb10">
+                                                  YEZTUGO has a <span class="bold teal">±2-week range</span> on either side of the individual’s target continuation dose, which is 26 weeks (6 months) after the last injection, <strong>allowing for flexibility in scheduling for both your practice and the individuals you see</strong>.
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  Remind individuals that adherence to the injection dosing schedule is strongly recommended.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end icon list -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
                   </td>
                 </tr>
               </table> 
             </td>
-          </tr>  
-          <!-- End Content -->
-          <!-- Start Footer -->
+          </tr>
           <tr>
-            <td class="cosette-footer">
+            <td class="lt-blue-section">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td class="image pb25 m-pb15" align="center">
-                    <img src="{{asset.cosette-logo-2x.url}}" alt="{{asset.cosette-logo-2x.alt}}" width="{{asset.cosette-logo-2x.width}}" height="{{asset.cosette-logo-2x.height}}"/>
-                  </td>
+                  <td class="h1 pb16 m-pl21" style="padding-left:14px;"><strong>Deliver 6 months of HIV prevention with YEZTUGO</strong><sup>1</sup></td>
                 </tr>
-                <tr>
-                  <td class="desktop-only">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="bold pb10 pt10 pink" align="center" >
-                          <a class="pink" href="https://cosettepharma.com/our-company/">About Cosette Pharmaceuticals</a> 
-                            <span>|</span>  
-                            <a class="pink" href="https://vyleesipro.com/contact-us">Contact Us</a>
-                        </td>     
-                      </tr>
-                    </table>
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="bold pink" align="center">
-                          <a class="pink" href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
-                          <span>|</span>
-                          <a class="pink" href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a> 
-                          <span>|</span>   
-                          <a class="pink" href="{{build.unsubscribeLink}}">Unsubscribe</a>
-                        </td>   
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
+                <!-- end h6 header -->
                 <!-- begin mobile content -->
                 <tr class="mobile-only">
-                  <td class="mobile-only bold">
+                  <td class="mobile-only">
                     <div class="mobile-only">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <td class="pb10" align="center">
-                            <a class="pink" href="https://cosettepharma.com/our-company/">About Cosette Pharmaceuticals</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pb10" align="center">
-                            <a class="pink" href="https://vyleesipro.com/contact-us">Contact Us</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pb10" align="center">
-                            <a class="pink" href="https://cosettepharma.com/terms-of-use/">Terms &amp; Conditions</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pb10" align="center">
-                            <a class="pink" href="https://cosettepharma.com/privacy-policy/">Privacy Policy</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center">
-                            <a class="pink" href="{{build.unsubscribeLink}}">Unsubscribe</a>
-                          </td>
-                        </tr>
-                      </table>                
+                      <img class="width-auto" src="{{asset.injections-tablets-notepads-mobile-2x.url}}" alt="{{asset.injections-tablets-notepads-mobile-2x.alt}}" width="0" height="0"/>
                     </div>
                   </td>
                 </tr>
-                <!-- end mobile content -->             
+                <!-- end mobile content -->
                 <tr>
-                  <td align="center" class="address p pt25 pb25 m-pt15 m-pb15 m-prl20">
-                    Cosette Pharmaceuticals 200 Crossing Blvd, 4th Floor, Bridgewater, New Jersey 08807
+                  <td class="desktop-only image">
+                    <img src="{{asset.injections-tablets-notepads-desktop-2x.url}}" alt="{{asset.injections-tablets-notepads-desktop-2x.alt}}" width="{{asset.injections-tablets-notepads-desktop-2x.width}}" height="{{asset.injections-tablets-notepads-desktop-2x.height}}"/>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="ul fs14" style="padding-left:14px;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="blue">For initiation of YEZTUGO, both injections and tablets are required</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="blue">For continuation of YEZTUGO, only injections are required</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="footnote" style="padding-left:14px;">For illustrative purposes only.</td>
+                </tr>
+                <!-- end footnote -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td class="content">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="blue pb24 fs14 m-pl10" >
+                    See full <a class="orange underline bold" href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a> for dosage modification recommendations for individuals receiving YEZTUGO and initiating therapy with a strong or moderate CYP3A inducer.
                   </td>
                 </tr>
                 <tr>
-                  <td class="p pb30 m-prl20" align="center">©2026 Cosette Pharmaceuticals, Inc. All rights reserved. CP-US-VLS-248 02/26</td>
+                  <td class="lt-orange-section">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="pb16">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="block" valign="top">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="pt5 pr26 m-pr0 m-pt0 m-pb16">
+                                      <img class="m-center" src="{{asset.icon-copay-2x.url}}" alt="{{asset.icon-copay-2x.alt}}" width="{{asset.icon-copay-2x.width}}" height="{{asset.icon-copay-2x.height}}"/>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                              <td class="block h4" valign="top">
+                               Over 95% of Gilead Advancing Access<sup>®</sup> Co-pay Savings Program users <span class="teal">pay for $0 for YEZTUGO<sup style="font-weight: normal;">®a</sup></span> 
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                       <tr>
+                        <td>
+                          <table class="fixed-width150" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="150" style="width: 150px;">
+                            <tr>
+                              <td>
+                                <div><!--[if mso]>
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.YEZTUGOhcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:50px;v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F2685F">
+                                    <w:anchorlock/>
+                                    <center>
+                                  <![endif]-->
+                                      <a href="https://www.YEZTUGOhcp.com/patient-support"
+                                style="background-color:#F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana, sans-serif;font-size:13px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;">Enroll now <span style="color: #F0E933;">&#10140;</span></a>
+                                  <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]--></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>                   
+                      <tr>
+                        <td class="footnote pt24">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top"><sup>a</sup></td>
+                              <td class="pb4">Co-pay coupon support is available for commercially insured eligible patients only. Additional restrictions may apply. Subject to change; for full terms and conditions, visit <a class="orange no-underline bold word-break" href="https://www.GileadAdvancingAccess.com/copay-coupon-card">GileadAdvancingAccess.com/copay-coupon-card</a>. This is not health insurance.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end footnote list -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
                 </tr>
+                
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          
+      <!-- End Content -->
+
+      <!-- Start Safety -->
+          <tr>
+            <td class="safety prl21 m-prl15">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h2 pb10 pt24">Important Safety Information <span class="normal">(cont’d)</span></td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="bold blue">Contraindications</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb10">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>YEZTUGO is contraindicated in individuals with unknown or positive HIV-1 status.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="bold blue">Warnings and precautions</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb10">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="bold" width="100%">Comprehensive risk management:</td>
+                      </tr>
+                      <tr>
+                        <td class="ul" colspan="2">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Use YEZTUGO to reduce the risk of HIV-1 acquisition as part of a comprehensive prevention strategy including adherence to the administration schedule and safer sex practices, including condoms, to reduce the risk of sexually transmitted infections (STIs).</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>HIV-1 acquisition risk includes behavioral, biological, or epidemiologic factors including, but not limited to, condomless sex, past or present STIs, self-identified HIV risk, having sexual partners of unknown HIV-1 viremic status, or sexual activity in a high-prevalence area or network. Counsel individuals on the use of other prevention methods to help reduce their risk.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Use YEZTUGO only in individuals confirmed to be HIV-1 negative. Evaluate for current or recent signs or symptoms consistent with HIV-1 infection. Confirm HIV-1 negative status prior to initiating, prior to each subsequent injection, and as clinically appropriate.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Potential risk of resistance:</strong> </td>
+                      </tr>
+                      <tr>
+                        <td class="ul" colspan="2">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>There is a potential risk of developing resistance to YEZTUGO if an individual acquires HIV-1 before or when receiving YEZTUGO, or following discontinuation. HIV-1 resistance substitutions may emerge in individuals with undiagnosed HIV-1 infection taking only YEZTUGO, because YEZTUGO alone is not a complete regimen for HIV-1 treatment.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>To minimize this risk, it is essential to test before each injection and additionally as clinically appropriate. Individuals confirmed to have HIV-1 must immediately begin a complete HIV-1 treatment regimen.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Alternative forms of PrEP should be considered after discontinuation of YEZTUGO for those who are at continuing risk of HIV-1 acquisition and should be initiated within 28 weeks of the last YEZTUGO injection.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Long-acting properties and potential associated risks:</strong></td>
+                      </tr>
+                      <tr>
+                        <td class="ul" colspan="2">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Residual concentrations of YEZTUGO may remain in systemic circulation for up to 12 months or longer after the last injection.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Select individuals who agree to the required injection dosing schedule because nonadherence or missed doses could lead to HIV-1 acquisition and development of resistance.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Serious injection site reactions:</strong> Improper administration (intradermal injection) has been associated with serious injection site reactions, including necrosis and ulcer. Only administer YEZTUGO subcutaneously.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="bold blue">Adverse reactions</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb10">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td><strong>Most common adverse reactions</strong> (≥5%) in YEZTUGO clinical trials were injection site reactions, headache, and nausea.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="bold blue">Drug interactions</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb10">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Strong or moderate CYP3A inducers may significantly decrease YEZTUGO concentrations. Dosage modifications are recommended when initiating these inducers.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>It is not recommended to use YEZTUGO with combined P-gp, UGT1A1, and strong CYP3A inhibitors.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Coadministration of YEZTUGO with sensitive substrates of CYP3A or P-gp may increase their concentrations and result in the increased risk of their adverse events. YEZTUGO may increase the exposure of drugs primarily metabolized by CYP3A initiated within 9 months after the last injection of YEZTUGO.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="bold blue">Dosage and administration</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>HIV screening:</strong> Test for HIV-1 infection prior to initiating, prior to each subsequent injection, and as clinically appropriate using an approved or cleared test for the diagnosis of acute or primary HIV-1 infection.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Dosage:</strong> Initiation dosing (injections and tablets) followed by once-every-6-months continuation injection dosing. Tablets may be taken with or without food.</td>
+                      </tr>
+                      <tr>
+                        <td class="ul" colspan="2">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td><strong>Initiation:</strong> Day 1: 927 mg by subcutaneous injection (2 x 1.5-mL injections) and 600 mg orally (2 x 300-mg tablets). Day 2: 600 mg orally.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td><strong>Continuation:</strong> 927 mg by subcutaneous injection every 6 months (26 weeks) from date of last injection ±2 weeks.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Anticipated delayed injections:</strong> If scheduled 6-month injection is anticipated to be delayed by more than 2 weeks, YEZTUGO tablets may be taken on an interim basis (for up to 6 months) until injections resume. Dosage is 300 mg orally (1 x 300-mg tablet) once every 7 days. Resume continuation injections within 7 days of the last oral dose.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%"><strong>Missed injections:</strong> If more than 28 weeks have elapsed since the last injection and YEZTUGO tablets have not been taken, restart with initiation dosing if clinically appropriate.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%">Dosage modifications of YEZTUGO are recommended when initiating with strong or moderate CYP3A inducers. Consult the full Prescribing Information for recommendations.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="blue pb24">Please see full <a href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a> for <strong>YEZTUGO</strong>, including <strong>BOXED WARNING</strong>.</td>
+                </tr>
+                <!-- end paragraph -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End Safety -->
+
+      <!-- Start Content -->
+          <tr>
+            <td>
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="green-bg">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h3 bold white pb15">
+                          {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+                          {{'{{customText[Best,|Best regards,|Kind regards,|Sincerely,|Thanks,|Thank you,|Thanks again,]}}'}}
+                          {% else %}
+                          <span class="pink">[</span>Best regards,<span class="pink">]</span>
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <!-- end h3 header -->
+                      <!-- Start 2 columns -->
+                      <tr>
+                        <td class="two-columns">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <!-- Start left column -->
+                              <td class="column2 block">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+                                  <tr>
+                                    <td class="white bold">
+                                      {{'{{userName}}'}}
+                                    </td>
+                                  </tr>
+                                  <!-- end paragraph -->
+                                  <tr>
+                                    <td class="white bold">
+                                      {{'<a class="white no-underline" href="mailto:{{userEmailAddress}}">{{userEmailAddress}}</a>'}}
+                                    </td>
+                                  </tr>
+                                  <!-- end paragraph -->
+                                 <tr>
+                                    <td class="white bold">
+                                    {{'<a class="white no-underline" href="tel:{{User.Phone}}">{{User.Phone}}</a>'}}
+                                    </td>
+                                  </tr>
+                                  {% else %}
+                                  <tr>
+                                    <td class="h5">
+                                      <span class="pink">[</span>Rep name<span class="pink">]</span><br />
+                                      <span class="pink">[</span>Rep email<span class="pink">]</span><br />
+                                      <span class="pink">[</span>Rep&nbsp;cell&nbsp;number<span class="pink">]</span>
+                                    </td>
+                                  </tr>
+                                  {% endif %}
+                                </table>
+                              </td>
+                              <!-- End left column -->
+                              <td class="block m-pt20" align="right">
+                                <table class="m-width-initial" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="image pr30 m-pr15 m-rep-photo white">
+                                      {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+                                      {{'{{userPhoto}}'}}
+                                      {% else %}
+                                      <img src="{{asset.rep-photo-2x.url}}" alt="{{asset.rep-photo-2x.alt}}" width="{{asset.rep-photo-2x.width}}" height="{{asset.rep-photo-2x.height}}"/>
+                                      {% endif %}
+                                    </td>
+                                    <td>
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td>
+                                            <div><!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{'{{schedulerLink}}'}}" style="height:65px;v-text-anchor:middle;width:160px;" arcsize="89%" strokecolor="#F2685F" fillcolor="#F2685F">
+                                              <w:anchorlock/>
+                                              <center style="text-align:left;color:#ffffff;font-family:Verdana,sans-serif;font-size:14px;font-weight:bold;">Schedule appointment <span style="color: #F0E933;">&#10140;</span></center>
+                                            </v:roundrect>
+                                          <![endif]--><a href="{{'{{schedulerLink}}'}}"
+                                          style="background-color:#F2685F;border:1px solid #F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana,sans-serif;font-size:14px;font-weight:bold;line-height:18px;min-height:54px;padding-top:15px;text-align:left;padding-left:25px;text-decoration:none;width:146px;-webkit-text-size-adjust:none;mso-hide:all;">Schedule appointment&nbsp;<span style="color: #F0E933;">&#10140;</span></a></div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                    <!-- End right column -->
+                                  </tr>
+                                  <!-- end image -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                              <!-- Start right column -->
+                            </tr>
+                            
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- End 2 columns -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End Content -->
+
+      <!-- Start Footer -->
+          <tr>
+            <td class="footer">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="black2 pb24 fs14"><strong>References: 1.</strong> YEZTUGO. Prescribing information. Gilead Sciences, Inc.; 2025. <strong>2.</strong> Full efficacy and safety results for Gilead investigational twice-yearly lenacapavir for HIV prevention presented at AIDS 2024. News release. Gilead Sciences, Inc.; July 24, 2024. Accessed January 6, 2025. <span class="no-link">ht&zwj;tps:/&zwj;/ww&zwj;w.gi&zwj;lea&zwj;d.&zwj;co&zwj;m/&zwj;new&zwj;s/n&zwj;ews&zwj;-de&zwj;tai&zwj;ls&zwj;/20&zwj;24/&zwj;ful&zwj;l-e&zwj;ffi&zwj;ca&zwj;cy&zwj;-an&zwj;d-s&zwj;af&zwj;ety&zwj;-re&zwj;su&zwj;lts&zwj;-fo&zwj;r-&zwj;gil&zwj;ea&zwj;d-i&zwj;nve&zwj;sti&zwj;gat&zwj;i&zwj;ona&zwj;l-t&zwj;wi&zwj;ce&zwj;-y&zwj;ear&zwj;ly&zwj;-le&zwj;nac&zwj;ap&zwj;av&zwj;ir&zwj;-fo&zwj;r-&zwj;hiv&zwj;-pr&zwj;ev&zwj;en&zwj;tio&zwj;n-p&zwj;res&zwj;ent&zwj;ed-&zwj;at-&zwj;aid&zwj;s-2&zwj;024</span></td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="image pb19" align="center">
+                    <a class="ghost-link" href="https://www.YEZTUGOhcp.com"><img src="{{asset.yeztugo-logo-2x.url}}" alt="{{asset.yeztugo-logo-2x.alt}}" width="{{asset.yeztugo-logo-2x.width}}" height="{{asset.yeztugo-logo-2x.height}}"/></a>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="footer-links pb15" align="center">
+                    <a href="https://www.gilead.com">Gilead Corporate Website</a>&nbsp;|&nbsp;<a href="https://www.gilead.com/terms-of-use">Terms&nbsp;of&nbsp;Use</a>&nbsp;|&nbsp;<a href="https://www.gilead.com/privacy-statements">Privacy Policy</a><br /><a href="https://www.gilead.com/contact-us">Contact Us</a>&nbsp;|&nbsp;<a href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                  </td> 
+                </tr>
+                <tr>
+                  <td class="footer-text pb15 disclaimer" align="center">
+                    For Colorado, Connecticut, and Vermont prescribers: In compliance with the CO, CT, and VT price disclosure requirements, disclosure forms can be found here:<br />
+                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CO-YTG.pdf">Colorado Price Disclosure Form</a><br />
+                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CT-YTG.pdf">Connecticut Price Disclosure Form</a><br />
+                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/VT-YTG.pdf">Vermont Price Disclosure Form</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text pb15" align="center">YEZTUGO, the YEZTUGO Logo, ADVANCING ACCESS, GILEAD, and the GILEAD Logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks referenced herein are the property of their respective owners.</td>
+                </tr>
+
+                <!--PER ER 2, BOTH VERSIONS SHOULD HAVE SAME JOB CODE -->
+                <tr>
+                  <td class="footer-text pb15" align="center">©{{build.year}} Gilead Sciences, Inc. 333 Lakeside Drive, Foster City, CA 94404 <br />All rights reserved. US-YTGP-0037 09/25</td>
+                </tr>
+                <tr>
+                  <td class="image" align="center">
+                    <a class="ghost-link" href="https://www.gilead.com"><img src="{{asset.gilead-logo-2x.url}}" alt="{{asset.gilead-logo-2x.alt}}" width="{{asset.gilead-logo-2x.width}}" height="{{asset.gilead-logo-2x.height}}"/></a>
+                  </td>
+                </tr>
+                <!-- end image -->
+
               </table> 
             </td>
-          </tr>       
-          <!-- End Footer -->
+          </tr>
+      <!-- End Footer -->
+
         </table>
       </td>
     </tr>
+
   </table>
   <!-- end table wrapper -->
+
   <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div>
+  {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+  <span style="max-height:0;max-width:0;display:inline-block;mso-font-width:0%;mso-style-textfill-type: none; white-space: nowrap;font-size:1px;color:rgba(0,0,0,0);text-indent:9px;"> MFIx85QnhiHtFaCUwZHT4 </span>
+  {% endif %}
 
 
 </body>
