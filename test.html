@@ -1,145 +1,143 @@
-<!DOCTYPE html><html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <!-- Target IE10 phones -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Leave Blank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style media="screen" data-embed>
+    @media screen {
+      /* latin */
+      @font-face {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/worksans/v19/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/worksans/v19/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    }
+
+  </style>
   <style type="text/css">
     /***************************************
                 GLOBAL STYLES
     ****************************************/
 
     .main-td {
-      font-family: Verdana, Geneva, sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 16px;
-      color: #434445;
-      line-height: 20px;
-      min-width: 600PX;/*android fix*/
+      color: #222222;
+      line-height: 23px;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
     }
 
-    .h1 { font-size: 18px; line-height: 22px; color: #084E70; }
-    .h2 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
-    .h3 { font-size: 18px; line-height: 24px; color: #084E70; }
-    .h4 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
-    .h5 { font-size: 16px; line-height: 20px; color: #ffffff; font-weight: bold; }
-    .h6 { font-size: 24px; line-height: 30px; color: #084E70; font-weight: bold; }
-    .h7 { font-size: 20px; line-height: 26px; color: #0EA5AA; font-weight: bold; }
-    .h8 { font-size: 18px; line-height: 24px; color: #0EA5AA; font-weight: bold; }
-    .fs14, .fs14 td { font-size: 14px; line-height: 18px; }
-    .fslh14 { font-size: 14px; line-height: 14px; }
-    .footer-text { font-size: 14px; line-height: 18px; color: #434445; }
-    .fs24lh32 { font-size: 24px; line-height: 32px; color: #0EA5AA; }
+    .h1 { font-size: 22px; line-height: 25px; color: #25282A; font-weight: bold; }
+    .h2 { font-size: 26px; line-height: 30px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
+    .h3 { font-size: 16px; line-height: 23px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
+    .h4 { font-size: 23px; line-height: 28px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
+    .h5 { font-size: 10px; line-height: 14px; color: #003479; font-weight: bold; }
+
+    .work-sans { font-family: "Work Sans", Arial, sans-serif; }
 
     a { text-decoration: underline; }
+    .content a { color: #0066CC; font-weight: bold; text-decoration: none; }
+    .footer a { color: #0097C2; }
 
     /* Build Section Styling */
-    .header-links {
-      padding-left: 21px;
-      padding-right: 21px;
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
-    .header-links td {
-      font-size: 14px;
-      line-height: 18px;
-    }
-    .header-links a {
-      color: #F2685F;
-      font-weight: bold;
-    }
     .preheader td {
-      font-size: 16px;
-      line-height: 20px;
-      color: #4C4C4C;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
     }
     .webversion a {
-      color: #4C4C4C;
+      color: #0097C2;
       text-decoration: underline;
     }
     .preheader {
-      padding-left: 28px;
-      padding-right: 28px;
+      padding-right: 25px;
+      padding-left: 25px;
       padding-top: 10px;
-      padding-bottom: 10px;
-      background-color: #eaeeef;
+      padding-bottom: 20px;
+    }
+    .header {
+      padding-bottom: 35px;
+    }
+    .content-top {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-top: 40px;
+      padding-bottom: 25px;
     }
     .content {
-      padding-right: 21px;
-      padding-left: 21px;
-      padding-top: 24px;
+      border-right: 1px solid #830970;
     }
-    .lt-blue-section {
-      background-color: #EDFAFA;
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-top: 24px;
-      padding-bottom: 24px;
+    .content-outside {
+      padding-right: 25px;
+      padding-left: 25px;
     }
-    .white-section {
-      background-color: #ffffff;
-      border-radius: 6px;
-      padding: 15px;
+    .content-hanging {
+      padding-right: 20px;
+      padding-left: 20px;
     }
-    .co-pay-section {
-      background-color: #FDEEE8;
-      border-radius: 15px;
-      padding-left: 21px;
-      padding-right: 21px;
-      padding-top: 24px;
-      padding-bottom: 24px;
+    .doses-section {
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
-    .green-bg {
-      background-color: #0EA5AA;
-      padding: 24px 21px;
+    .doses-section td {
+      font-family: "Work Sans", Arial, sans-serif; 
     }
-    .bg-teal {
-      background-color: #0EA5AA;
-      padding: 5px 5px 10px 5px;
-      border-radius: 10px;
+    .content-bottom {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-top: 30px;
     }
-    .bg-navy {
-      background-color: #084E70;
-      padding: 5px 5px 10px 5px;
-      border-radius: 10px;
-    }
-    .lt-green-section {
-      background-color: #F1F8F1;
-      padding: 24px;
-      border-radius: 15px;
-    }
-    .lt-orange-section {
-      background-color: #FDEEE8;
-      padding: 24px;
-      border-radius: 15px;
-    }
-    .register-callout {
-      background-color: #ECF6ED; 
-      border-radius: 15px;
-      padding: 24px;
-    }
-    .dosing-legend { 
-    background-color: #ffffff; 
-    border-radius: 13px; 
-    padding: 16px; }
-
-    .gradient-bg { background-color: #084E70; background: linear-gradient(1deg, #0E5A7F 3.96%, #13B5BA 104.67%); border-radius: 15px; }
-    .footer {
-      padding-right: 15px;
-      padding-left: 15px;
-      padding-top: 24px;
-      padding-bottom: 19px;
-      background-color: #ECF6ED;
-    }
-    .footer-links,
-    .footer-links a,
-    .disclaimer a {
-      color: #F2685F;
+    .purple-box {
+      color: #ffffff;
       font-weight: bold;
+      font-family: "Work Sans", Arial, sans-serif;
+      padding-top: 40px;
+      padding-bottom: 55px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .rr-safety {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .safety-cont {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-top: 15px;
+      padding-bottom: 35px;
+    }
+    .footer {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-top: 30px;
+      padding-bottom: 35px;
+      background-color: #EDEDED;
+    }
+    .footer .p {
+      font-size: 15px;
+      line-height: 19px;
+      color: #444444;
     }
     /* Legal Links */
-    .link-divider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
+    .link-divider { font-weight: lighter; padding-left: 8px; padding-right: 8px; }
+    .legal td { font-size: 15px; line-height: 19px; }
     .legal a { text-decoration: none; }
     .legal a span { text-decoration: underline; }
 
@@ -148,59 +146,54 @@
     /*fixes width issue in yahoo*/
 
     .footnote,
-    .footnote td { font-size: 12px; line-height: 14px; }
-
-    .lt-orange-section .footnote td { font-size: 14px; line-height: 18px; }
-
-    .footnote .li { color: #434445; }
+    .footnote td { font-size: 11px; line-height: 14px; }
 
     /* Horizontal Rule */
-    .bt-color { border-top: 2px solid #001c71; }
-    .bb-teal { border-bottom: 5px solid #0EA5AA; }
-    .bb-yellow { border-bottom: 4px solid #F0E933; }
-    .bb-yellow2 { border-bottom: 2px solid #F0E933; }
-    .bb-white { border-bottom: 3px solid #FFFFFF; }
+    .bb-yellow { border-top: 4px solid #E3981B; }
 
     /* additional colors */
-    .black { color: #000001; }
-    .black2 { color: #4C4C4C; }
+    .black,
+    .content .black { color: #222222; }
     .white { color: #ffffff; }
-    .pink { color: #FF5FDC; }
-    .blue,
-    .safety .blue { color: #084E70; }
-    .teal { color: #0EA5AA !important; }
-    .safety .gray { color: #6D6B6B; }
-    .orange { color: #F2685F; }
 
     /* Element Styling */
     .p,
     .ul { padding-bottom: 15px; }
 
-    .li { color: #0EA5AA; width: 1px; }
+    .li { width: 1px; }
     .ul .li { padding-right: 5px; }
-    .lt-green-section .ul .li { color: #000000; }
-    .lt-green-section .ul .li { padding-right: 6px; }
-    .lt-orange-section .ul .li { padding-right: 6px; }
 
     .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
     .ul tr:first-child .li + td { width: 100%; }
 
     sup, sub { line-height: 0; font-size: 75%; }
-    
+
     /* Additional formatting and styling */
     .center { text-align: center; }
     .center-block { margin: 0 auto; }
     .no-underline { text-decoration: none; }
     .underline { text-decoration: underline; }
     .bold { font-weight: bold; }
-    .normal { font-weight: normal; }
-    .word-break { word-break: break-word; }
+    .normal,
+    .content .normal { font-weight: normal; }
+    .sm-caps { font-size: 13px; }
+
+    .br-gray { border-right: 1px solid #707070; }
 
     .no-wrap { white-space: nowrap; }
     a[href^="tel:"] { white-space: nowrap; }
     
     .mobile-only { display: none; max-height: 0px; overflow: hidden; }
     /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    .drop-shadow {
+      border-left: 1px solid #ececec;
+      border-right: 1px solid #ececec;
+      border-top: 1px solid #ececec;
+      -webkit-box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
+      -moz-box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
+      box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
+    }
 
     /* Callout styling */
     .callout {
@@ -215,27 +208,25 @@
     }
 
     /* Button Styling */
-    .button-header { 
-      font-size: 14px;
-      line-height: 18px;
+    .button {
+      font-size: 15px;
+      line-height: 19px;
       font-weight: bold;
       text-align: center;
       color: #ffffff;
-      background-color: #084E70;
-      border: 1px solid #084E70;
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      background-color: #00b2e2;
+      border: 1px solid #00b2e2;
+      /*border-radius: 5px; */
     }
 
-    .button-header a {
+    .button a {
       color: #ffffff;
       text-decoration: none;
       display: block;
       padding-top: 10px;
       padding-bottom: 10px;
-      border: 1px solid #084E70; /*border hack needed for outlook clients*/
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
+      /*border-radius: 5px;*/
     }
 
     /* Non-standard button code to be used with the tnon snippet */
@@ -266,9 +257,7 @@
     .ptb5  { padding-top: 5px; padding-bottom: 5px; }
     .ptb10 { padding-top: 10px; padding-bottom: 10px; }
     .ptb15 { padding-top: 15px; padding-bottom: 15px; }
-    .ptb16 { padding-top: 16px; padding-bottom: 16px; }
     .ptb20 { padding-top: 20px; padding-bottom: 20px; }
-    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
     .ptb25 { padding-top: 25px; padding-bottom: 25px; }
     .ptb30 { padding-top: 30px; padding-bottom: 30px; }
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
@@ -277,13 +266,9 @@
 
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
-    .pt6  { padding-top: 6px; }
-    .pt8  { padding-top: 8px; }
     .pt10 { padding-top: 10px; }
     .pt15 { padding-top: 15px; }
-    .pt16 { padding-top: 16px; }
     .pt20 { padding-top: 20px; }
-    .pt24 { padding-top: 24px; }
     .pt25 { padding-top: 25px; }
     .pt30 { padding-top: 30px; }
     .pt35 { padding-top: 35px; }
@@ -291,19 +276,10 @@
     /* padding top */
 
     .pb0  { padding-bottom: 0; }
-    .pb3  { padding-bottom: 3px; }
-    .pb4  { padding-bottom: 4px; }
     .pb5  { padding-bottom: 5px; }
-    .pb6  { padding-bottom: 6px; }
-    .pb7  { padding-bottom: 7px; }
-    .pb8  { padding-bottom: 8px; }
     .pb10 { padding-bottom: 10px; }
-    .pb12 { padding-bottom: 12px; }
     .pb15 { padding-bottom: 15px; }
-    .pb16 { padding-bottom: 16px; }
-    .pb19 { padding-bottom: 19px; }
     .pb20 { padding-bottom: 20px; }
-    .pb24 { padding-bottom: 24px; }
     .pb25 { padding-bottom: 25px; }
     .pb30 { padding-bottom: 30px; }
     .pb35 { padding-bottom: 35px; }
@@ -315,7 +291,6 @@
     .prl10 { padding-right: 10px; padding-left: 10px; }
     .prl15 { padding-right: 15px; padding-left: 15px; }
     .prl20 { padding-right: 20px; padding-left: 20px; }
-    .prl21 { padding-right: 21px; padding-left: 21px; }
     .prl25 { padding-right: 25px; padding-left: 25px; }
     .prl30 { padding-right: 30px; padding-left: 30px; }
     .prl35 { padding-right: 35px; padding-left: 35px; }
@@ -327,11 +302,8 @@
     .pr10 { padding-right: 10px; }
     .pr15 { padding-right: 15px; }
     .pr20 { padding-right: 20px; }
-    .pr21 { padding-right: 21px; }
     .pr25 { padding-right: 25px; }
-    .pr26 { padding-right: 26px; }
     .pr30 { padding-right: 30px; }
-    .pr32 { padding-right: 32px; }
     .pr35 { padding-right: 35px; }
     .pr40 { padding-right: 40px; }
     /* padding right */
@@ -357,13 +329,13 @@
     #outlook a { padding: 0; }
     /* Force Outlook to provide a "view in browser" menu link. */
 
-    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
 
     #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
     /* end reset */
 
-    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; } 
     a img { border: none; }
     /* Some sensible defaults for images*/
 
@@ -374,39 +346,36 @@
                  SAFETY STYLES 
     ****************************************/
 
-    .safety .h2 {
-      color: #084E70;
-      font-size: 18px;
-      line-height: 22px;
-      font-weight: bold;
-    }
-
-    .safety .normal {
-      font-weight: normal;
-    }
-
     .safety td {
-      color: #434445;
-      font-size: 16px;
-      line-height: 20px;
+      color: #25282A;
     }
 
-    .safety .li {
-      color: #0EA5AA; 
+    .safety .h2 {
+      font-size: 16px; 
+      line-height: 23px; 
+      color: #830070; 
+      font-weight: bold; 
+      font-family: Arial, sans-serif;
+    }
+
+    .safety .ul { padding-left: 20px; }
+
+    .safety .purple {
+      color: #830070;
     }
 
     .safety a {
-      color: #F2685F;
-      font-weight: bold;
+      color: #25282A;
+      text-decoration: none;
     }
 
-    .safety .ul .ul {
-      padding-left: 15px;
+    .safety a u {
+      color: #0097C2;
+      text-decoration: underline;
     }
-
-
 
   </style>
+
   <!--[if gte mso 9]>
     <xml>
      <o:OfficeDocumentSettings>
@@ -417,19 +386,20 @@
     <style>
       sup, sub { font-size: 100% !important; }
       table { border-collapse: collapse !important; border-spacing: 0 !important; }
-    </style> 
+    </style>
   <![endif]-->
-  <style type="text/css" data-embed="">
+
+  <style type="text/css" data-embed>
     /***************************************
                 GLOBAL STYLES
     ****************************************/
 
     body,
     td {
-      font-family: Verdana, Geneva, sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 16px;
-      color: #434445;
-      line-height: 20px;
+      color: #222222;
+      line-height: 23px;
     }
     /* Render font family properly in Outlook */
 
@@ -440,8 +410,7 @@
     /* Prevent Outlook.com from overriding line-height */
 
     table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
-    /* Outlook 07, 10 Padding issue fix
-    Bring inline: No.*/
+    /* Outlook 07, 10 Padding issue fix */
 
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -452,8 +421,6 @@
       line-height: inherit !important;
     }
     /* Disguises iOS auto links */
-
-    .no-link a { text-decoration: none !important; color: #4C4C4C !important; }
 
     .mobile-only {
       display: none;
@@ -489,17 +456,18 @@
       border: 1px solid #7fbf12 !important;
     } */
 
+
     /***************************************
                MOBILE STYLES
     ****************************************/
-
+    
     @media only screen and (max-width: 37.5em) {
 
       .main-table { width: 100% !important; }
       .main-td { min-width: initial !important; }
       .main-table table { width:100% !important; margin: 0 auto !important; }
       
-      .block,
+      .block, 
       .content,
       .safety { display: block; }
       /* place content you want stacked here */
@@ -519,76 +487,63 @@
       /*add to image class to expand to full width*/
 
       .m-center { text-align: center !important; margin: 0 auto !important; }
-      .m-valign-top { vertical-align: top !important; }
 
-      /*.main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }*/
-      .main-table .fw75 { width: 75px !important; margin: 0 auto !important; }
-      .main-table .fixed-width150 { width: 150px !important; margin: 0 auto !important; }
-      .main-table .fixed-width220 { width: 220px !important; margin: 0 auto !important; float: none !important; }
-      .main-table .fixed-width253 { width: 253px !important; margin: 0 auto !important; }
+      .main-table .fixed-width70 { width: 70px !important; margin: 0 auto !important; }
 
-      .m-pt0  { padding-top: 0 !important; }
-      .m-pt5  { padding-top: 5px !important; }
-      .m-pt8  { padding-top: 8px !important; }
+      /*.m-pt0  { padding-top: 0 !important; }*/
+      /*.m-pt5  { padding-top: 5px !important; }*/
       /*.m-pt10 { padding-top: 10px !important; }*/
       /*.m-pt15 { padding-top: 15px !important; }*/
-      .m-pt20 { padding-top: 20px !important; }
-      .m-pt25 { padding-top: 25px !important; }
+      /*.m-pt20 { padding-top: 20px !important; }*/
+      /*.m-pt25 { padding-top: 25px !important; }*/
       /*.m-pt30 { padding-top: 30px !important; }*/
       /*.m-pt35 { padding-top: 35px !important; }*/
       /*.m-pt40 { padding-top: 40px !important; }*/
       /* mobile padding top */
-
-      .m-pb0  { padding-bottom: 0 !important; } 
+      
+      /*.m-pb0  { padding-bottom: 0 !important; } */
       /*.m-pb5  { padding-bottom: 5px !important; }*/
       .m-pb10 { padding-bottom: 10px !important; }
       .m-pb15 { padding-bottom: 15px !important; }
-      .m-pb16 { padding-bottom: 16px !important; }
-      .m-pb19 { padding-bottom: 19px !important; }
       .m-pb20 { padding-bottom: 20px !important; }
-      .m-pb24 { padding-bottom: 24px !important; }
       /*.m-pb25 { padding-bottom: 25px !important; }*/
       /*.m-pb30 { padding-bottom: 30px !important; }*/
       /*.m-pb35 { padding-bottom: 35px !important; }*/
-      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      .m-pb40 { padding-bottom: 40px !important; }
       /* mobile padding bottom */
 
-      .m-pr0 { padding-right: 0 !important; }
-      .m-pr5 { padding-right: 5px !important; }
-      .m-pl0 { padding-left: 0 !important; }
-      .m-pl10 { padding-left: 10px !important; }
-      .m-pl21 { padding-left: 21px !important; }
-      .m-pr10 { padding-right: 10px !important; }
-      .m-pr15 { padding-right: 15px !important; }
-      /* mobile padding right */
+      .m-prl10 { padding-left: 10px !important; padding-right: 10px !important; }
+      .m-pr20 { padding-right: 40px;}
 
-      .m-prl15 { padding-left: 15px !important; padding-right: 15px !important; }
+      .preheader td { font-size: 11px !important; line-height: 14px !important; }
+      .preheader .webversion { font-size: 13px !important; line-height: 17px !important; }
+      /* preheader area resets */
 
-      .header-links { padding-top: 16px !important; padding-bottom: 16px !important; padding-left: 15px !important; padding-right: 15px !important; }
-      .co-pay-section,
-      .content { padding-left: 15px !important; padding-right: 15px !important; }
-      .footer { padding-left: 15px !important; padding-right: 15px !important; }
-      /* section padding resets */
+      .content { border-right: none !important; }
 
-      .green-bg {
-        padding: 24px 16px !important;
+      .rr-safety {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        padding-top: 35px !important;
       }
-      .lt-green-section { padding: 24px 16px !important;  }
-      .bg-teal {
-        padding: 10px 5px 16px 5px !important;
+
+      .footer td { 
+        font-size: 11px !important;
+        line-height: 15px !important;
       }
-      .bg-navy {
-        padding: 10px 5px 25px 5px !important;
+
+      .footer img { width: 100% !important; }
+
+      .main-table .m-width-initial { width: initial !important; }
+
+      .mobile-button { 
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        padding-top: 10px !important;
+        padding-bottom: 15px !important; 
       }
-      .main-table .m-width-initial { width: initial !important; float: left !important; }
-      .m-rep-photo img { max-width: 94px !important; }
-      .m-width100 { width: 100% !important; }
-      .m-valign-mid { vertical-align: middle !important; }
-      /* other resets */
-      .min-width31 { min-width: 31px !important; }
-      .max-45 { max-width: 45px !important; }
-      .m-199 { width: 199px !important; }
-      .mfs11 { font-size: 11px !important; line-height: 15px !important; }
+
+      
 
     }
   </style>
@@ -596,879 +551,533 @@
 
 </head>
 <body>
-<div style="display: none; max-height: 0px; overflow: hidden;">
-Are your patients looking for a flexible dosing window?  &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
-</div>
+  
   <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
 
-    <tbody><tr>
+    <tr>
       <td class="main-td">
-        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600PX;">
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
 
-      <!-- Start Header -->
-          <tbody><tr>
-            <td class="header">
+      <!-- Start Preheader -->
+          <tr>
+            <td class="preheader">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="header-links">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody><tr>
-                        <td>Please see full <a href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a>, including <strong>BOXED WARNING</strong> on the risk of drug resistance with use of YEZTUGO in undiagnosed HIV-1 infection, and <a href="https://www.yeztugohcp.com/#important-safety-information">Important Safety Information</a> below.</td>
-                      </tr>
-                      <!-- end paragraph -->
-                    </tbody></table>
-                    <!-- end table block -->
+                <tr>
+                  <td class="m-pr20" valign="top"><span id="preheader">{{build.preheader}}</span></td>
+                  <td class="webversion" align="right" width="110" valign="top" style="width: 110px;">
+                    <a href="{{token.permalink}}">View&nbsp;in&nbsp;browser</a>
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+      <!-- End Preheader -->
+
+      <!-- Start Header -->
+          <tr>
+            <td class="header">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <!-- begin mobile content -->
                 <tr class="mobile-only">
                   <td class="mobile-only">
                     <div class="mobile-only">
                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody><tr>
-                          <td class="image bb-teal">
-                            <a href="https://www.yeztugohcp.com/"><img class="width-auto" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/header-mobile-2x.png" alt="Yeztugo logo" width="0" height="0"></a>
+                        <tr>
+                          <td class="image">
+                            <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/></a>
                           </td>
                         </tr>
                         <!-- end image -->
-                      </tbody></table>
+                      </table>
                       <!-- end table block -->
                     </div>
                   </td>
                 </tr>
                 <!-- end mobile content -->
                 <tr>
-                  <td class="desktop-only bb-teal image">
-                    <a href="https://www.yeztugohcp.com/"><img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/header-desktop-2x.png" alt="Yeztugo logo" width="600" height="143"></a>
+                  <td class="image desktop-only">
+                    <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/></a>
                   </td>
                 </tr>
                 <!-- end image -->
-                <tr>
-                  <td class="pr21 m-pr0" bgcolor="#ECF6ED" align="right">
-                    <table class="fixed-width220" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="261" style="width: 261px;">
-                      <tbody><tr>
-                        <td class="button-header">
-                          <a class="ghost-link" href="https://www.yeztugohcp.com/patient-support">As little as $0 co-pay<sup style="font-weight:normal;">a</sup> <span style="color: #F0E933;">➜</span></a>
-                        </td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                </tr> 
 
-              </tbody></table>
+              </table>
             </td>
           </tr>
       <!-- End Header -->
 
-      <!-- Start Safety -->
+      <!-- Start 2 column content -->
           <tr>
-            <td class="safety prl21 pt24 m-prl15" bgcolor="#ECF6ED">
+            <td class="pb20">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="h2">Indication</td>
-                </tr>
-                <!-- end h2 header -->
                 <tr>
-                  <td class="p pb20">YEZTUGO is indicated for pre-exposure prophylaxis (PrEP) to reduce the risk of sexually acquired HIV-1 in adults and adolescents (≥35&nbsp;kg) who are at risk for HIV-1 acquisition. Individuals must have a negative HIV-1 test prior to initiating YEZTUGO.  </td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="h2 pb7">Important Safety Information</td>
-                </tr>
-                <!-- end h2 header -->
-                <tr>
-                  <td class="bold blue">BOXED WARNING: RISK OF DRUG RESISTANCE WITH USE OF YEZTUGO IN UNDIAGNOSED HIV-1 INFECTION</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="ul pb20">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="bold">Individuals must be tested for <span class="no-wrap">HIV-1</span> infection prior to initiating YEZTUGO, and with each subsequent injection of YEZTUGO, using a test approved or cleared by the FDA for the diagnosis of acute or primary <span class="no-wrap">HIV-1</span> infection. <span class="no-wrap">Drug-resistant</span> <span class="no-wrap">HIV-1</span> variants have been identified with use of YEZTUGO by individuals with undiagnosed <span class="no-wrap">HIV-1</span> infection. Do not initiate YEZTUGO unless negative infection status is confirmed. Individuals who acquire <span class="no-wrap">HIV-1</span> while receiving YEZTUGO must transition to a complete <span class="no-wrap">HIV-1</span> treatment regimen.</td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-              </tbody></table>
-              <!-- end table block -->
-            </td>
-          </tr>
-      <!-- End Safety -->
-
-      <!-- Start Content -->
-          <tr>
-            <td class="content">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="fs24lh32 pb10 bold">
-                    
-                    
-                    <span class="pink">[</span>Dear<span class="pink">]</span> <span class="pink">[</span>Dr.<span class="pink">]</span> <span class="pink">[</span>John&nbsp;Smith<span class="pink">]</span>:
-                    
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p pb24">YEZTUGO is the first-and-only PrEP option that offers twice-yearly, in-office subcutaneous injections.<sup>1,2</sup> I’ve included some information you may be interested in regarding YEZTUGO dosing.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb24">
+                  <!-- start left column -->
+                  <td class="content" valign="top">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody><tr>
-                        <td class="lt-green-section">
+                      <tr>
+                        <td class="content-outside">
                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody><tr>
-                              <td class="pb16">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tbody><tr>
-                                    <td class="h3">
-                                      <strong>Initiation</strong><sup>1</sup>
-                                    </td>
-                                  </tr>
-                                  <!-- end h2 header -->
-                                </tbody></table>
-                                <!-- end table block -->
+                            <tr>
+                              <td class="h1 pb25">
+                                {% if build.type == "GENE_ACM_BATCH" %}
+                                
+                                {{'<%if(recipient.firstName == ""){%>
+                                <%}else{%>
+                                  Dear <%= recipient.firstName%>,
+                                <%}%>'}}
+                                
+                                {% elsif build.type == "GENE_ACM_REALTIME" %}
+                                
+                                {{'<%if(rtEvent.ctx.firstName == ""){%>
+                                <%}else{%>
+                                  Dear <%= rtEvent.ctx.firstName%>,
+                                <%}%>'}}
+                                
+                                {% else %}
+                                
+                                Dear <span style="color: #FF0000;">[</span>First Name<span style="color: #FF0000;">]</span>,
+                                
+                                {% endif %}
                               </td>
                             </tr>
-                            <!-- start icon list -->
-                            <!-- To center images, add the CSS .icon-list img { margin: 0 auto; }. Outlook will only center it if the containing td has text-align center -->
-                            <!-- Change the image td width from 123 to the width of the widest image -->
+                            <!-- end h1 header -->
                             <tr>
-                              <td class="pb16">
+                              <td class="p work-sans">Now that you or your child has been prescribed XOLAIR, learn more about the options for self-injection or injection by a caregiver.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p pb35 work-sans">Once a treatment plan has been established, you and your doctor may determine that self-injection or injection by a caregiver is right for you or your child. This means that you or a caregiver can inject XOLAIR at home or while traveling—after initial training has been completed with your healthcare provider.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="content-outside">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0"  width="375" style="width: 375px;">
+                            <!-- Start Doses Section -->
+                            <tr>
+                              <td class="doses-section drop-shadow">
                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tbody><tr>
-                                    <td class="row bb-white pb8">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <!-- begin mobile content -->
-                                        <tbody><tr class="mobile-only">
-                                          <td class="mobile-only">
-                                            <div class="mobile-only">
-                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody><tr>
-                                                  <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
-                                                    <img class="min-width31" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-day1-mobile-2x.png" alt="" width="0" height="0">
-                                                  </td>
-                                                  <td class="text pl15" valign="middle">
-                                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                      <tbody><tr>
-                                                        <td class="h5 teal">
-                                                          DAY 1
-                                                        </td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>
-                                                          Administer the first YEZTUGO initiation dose—2 injections and 2 tablets in your office.<sup>b</sup>
-                                                        </td>
-                                                      </tr>
-                                                    </tbody></table>
-                                                    <!-- end table block -->
-                                                  </td>
-                                                </tr>
-                                              </tbody></table>
-                                              <!-- end table block -->
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <!-- end mobile content -->
+                                  <tr>
+                                    <td class="image pb25" align="center">
+                                      <img src="{{asset.icon-syringe-2x.url}}" alt="{{asset.icon-syringe-2x.alt}}" width="{{asset.icon-syringe-2x.width}}" height="{{asset.icon-syringe-2x.height}}"/>
+                                    </td>
+                                  </tr>
+                                  <!-- end image -->
+                                  <tr>
+                                    <td class="h3 prl40 pb25" align="center">XOLAIR is available as a prefilled&nbsp;syringe or autoinjector for <span class="no-wrap">self-injection</span> in doses of:</td>
+                                  </tr>
+                                  <!-- end h3 header -->
+                                  <tr>
+                                    <td class="pb25">
+                                      <table class="m-width-initial" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0">
                                         <tr>
-                                          <td class="desktop-only image" valign="middle" width="74" style="width: 74px;" align="center">
-                                            <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-day1-2x.png" alt="" width="76" height="36">
+                                          <td>
+                                            <img src="{{asset.icon-75-mg-2x.url}}" alt="{{asset.icon-75-mg-2x.alt}}" width="{{asset.icon-75-mg-2x.width}}" height="{{asset.icon-75-mg-2x.height}}"/>
                                           </td>
-                                          <td class="desktop-only text pl15" valign="middle">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="h5 teal">
-                                                  DAY 1
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                  Administer the first YEZTUGO initiation <br>dose—2 injections and 2 tablets in your office.<sup>b</sup>
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                            <!-- end table block -->
+                                          <td class="prl25 m-prl10">
+                                            <img src="{{asset.icon-150-mg-2x.url}}" alt="{{asset.icon-150-mg-2x.alt}}" width="{{asset.icon-150-mg-2x.width}}" height="{{asset.icon-150-mg-2x.height}}"/>
+                                          </td>
+                                          <td>
+                                            <img src="{{asset.icon-300-mg-2x.url}}" alt="{{asset.icon-300-mg-2x.alt}}" width="{{asset.icon-300-mg-2x.width}}" height="{{asset.icon-300-mg-2x.height}}"/>
                                           </td>
                                         </tr>
-                                      </tbody></table>
-                                    </td>
-                                  </tr>
-                                  <!-- row -->
-                                  <tr>
-                                    <td class="row bb-white pt8 pb8">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
-                                            <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-day2-2x.png" alt="" width="31" height="30">
-                                          </td>
-                                          <td class="text pl15" valign="middle">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="h5 teal">
-                                                  DAY 2
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                  The second oral dose (2 tablets) is taken the next day, at home.<sup>b</sup>
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                            <!-- end table block -->
-                                          </td>
-                                        </tr>
-                                      </tbody></table>
-                                    </td>
-                                  </tr>
-                                  <!-- row -->
-                                  <tr>
-                                    <td>
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td class="h3 pt10">
-                                            <strong>Continuation</strong><sup>1</sup>
-                                          </td>
-                                        </tr>
-                                        <!-- end h2 header -->
-                                      </tbody></table>
+                                      </table>
                                       <!-- end table block -->
                                     </td>
                                   </tr>
-                                  <tr>
-                                    <td class="row bb-white pt8 pb8">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td class="max-45 image" valign="middle" width="74" style="width: 74px;" align="center">
-                                            <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-day3-2x.png" alt="" width="28" height="36">
-                                          </td>
-                                          <td class="text pl15" valign="middle">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="h5 teal">
-                                                  EVERY 6 MONTHS<sup style="font-weight:normal;">c</sup>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                  After that, it’s just 2 injections 2 times a year in your office.<sup>d</sup>
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                            <!-- end table block -->
-                                          </td>
-                                        </tr>
-                                      </tbody></table>
-                                    </td>
-                                  </tr>
-                                  <!-- row -->
-                                </tbody></table>
+                                  
+                                </table>
+                                <!-- end table block -->
                               </td>
                             </tr>
-                            <!-- end icon list -->
+                            <!-- End Doses Section -->
                             <tr>
-                              <td class="dosing-legend">
+                              <td class="image">
+                                <img src="{{asset.divider-2x.url}}" alt="{{asset.divider-2x.alt}}" width="{{asset.divider-2x.width}}" height="{{asset.divider-2x.height}}"/>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                            <tr>
+                              <td style="background-color: #830070;">
                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <!-- start icon list -->
-                                  <tbody><tr>
-                                    <td class="icon-list">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td class="pb8">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="image m-valign-top" valign="middle" width="30" style="width: 30px;">
-                                                  <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-pills-2x.png" alt="" width="22" height="21">
-                                                </td>
-                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle" width="15">
-                                                  =
-                                                </td>
-                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle">
-                                                   600 mg orally <br class="mobile-only">(2 x 300-mg tablets)
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                          </td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                          <td class="row">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="image m-valign-top" valign="middle" width="30" style="width: 30px;">
-                                                  <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-injections-2x.png" alt="" width="20" height="27">
-                                                </td>
-                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle" width="15">
-                                                  =
-                                                </td>
-                                                <td class="m-valign-top" style="font-size:12px;line-height:16px;" valign="middle">
-                                                  927-mg subcutaneous injection <br class="mobile-only">(2 x 1.5-mL injections)
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                          </td>
-                                        </tr>
-                                        <!-- row -->
-                                      </tbody></table>
-                                    </td>
+                                  <tr>
+                                    <td class="purple-box" align="center">Learn more about XOLAIR and talk to&nbsp;your doctor about self-injection.</td>
                                   </tr>
-                                  <!-- end icon list -->
-                                </tbody></table>
+                                  <!-- end paragraph -->
+                                </table>
                                 <!-- end table block -->
                               </td>
                             </tr>
                             <tr>
-                              <td class="ul pt16 pb8 pl10">
+                              <td class="desktop-only pt25">
+                                <div><!--[if mso]>
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.xolair.com/food-allergies/injections/self-injection.html{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:337px;" arcsize="13%" strokecolor="#007CB1" fillcolor="#007CB1">
+                                    <w:anchorlock/>
+                                    <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">LEARN MORE ABOUT SELF-INJECTION</center>
+                                  </v:roundrect>
+                                <![endif]--><a href="https://www.xolair.com/food-allergies/injections/self-injection.html"
+                                style="background-color:#007CB1;border:1px solid #007CB1;border-radius:6px;color:#ffffff;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:337px;-webkit-text-size-adjust:none;mso-hide:all;">LEARN MORE ABOUT SELF-INJECTION</a></div>
+                              </td>
+                            </tr>
+
+
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                      
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                  <!-- end left column -->
+
+                  <!-- start right column -->
+                  <td class="safety" valign="top">
+                    
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="210" style="width: 210px;">
+                      <tr>
+                        <td class="rr-safety">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="h2 pb5 m-pb10">What is XOLAIR?</td>
+                            </tr>
+                            <!-- end h2 header -->
+                            <tr>
+                              <td class="p">XOLAIR<sup>®</sup> (omalizumab) for subcutaneous use is an injectable prescription medicine used to treat food allergy in people 1 year of age and older to reduce allergic reactions that may occur after accidentally eating one or more foods to which you are allergic. While taking XOLAIR you should continue to avoid all foods to which you are allergic. It is not known if XOLAIR is safe and effective in people with food allergy under 1&nbsp;year of age.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p">XOLAIR should not be used for the emergency treatment of any allergic reactions, including anaphylaxis.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="h2 pb15">IMPORTANT SAFETY INFORMATION</td>
+                            </tr>
+                            <!-- end h2 header -->
+                            <tr>
+                              <td class="h2">What is the most important information I should know about XOLAIR?</td>
+                            </tr>
+                            <!-- end h2 header -->
+                            <tr>
+                              <td class="p pb5"><span class="purple bold">Severe allergic reaction.</span> A severe allergic reaction called anaphylaxis can happen when you receive XOLAIR. The reaction can occur after the first dose, or after many doses. It may also occur right after a XOLAIR injection or days later. Anaphylaxis is a life-threatening condition and can lead to death. Go to the nearest emergency room right away if you have any of these symptoms of an allergic reaction:</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="ul pb10">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody><tr>
-                                    <td class="li teal" valign="top">•</td>
-                                    <td class="pb8">If an individual misses the Day 2 oral initiation dose (600 mg), have them take it as soon as possible. They should not take the Day 1 and Day 2 oral initiation doses on the same day</td>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td>wheezing, shortness of breath, cough, chest tightness, or trouble breathing</td>
                                   </tr>
-                                  
-                                </tbody></table>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td>low blood pressure, dizziness, fainting, rapid or weak heartbeat, anxiety, or feeling of "impending doom"</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td>flushing, itching, hives, or feeling warm</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td>swelling of the throat or tongue, throat tightness, hoarse voice, or trouble swallowing</td>
+                                  </tr>
+                                </table>
                               </td>
                             </tr>
                             <!-- end unordered list -->
                             <tr>
-                              <td class="pb16 bold">HIV-1–negative status must be confirmed prior to each YEZTUGO injection and additionally as clinically appropriate.</td>
+                              <td class="p">Your healthcare provider will monitor you closely for symptoms of an allergic reaction while you are receiving XOLAIR and for a period of time after treatment is initiated. Your healthcare provider should talk to you about getting medical treatment if you have symptoms of an allergic reaction.</td>
                             </tr>
                             <!-- end paragraph -->
                             <tr>
-                              <td class="footnote">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody><tr>
-                                    <td class="li" valign="top"><sup>b</sup></td>
-                                    <td class="pb4">Tablets may be taken with or without food.</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top"><sup>c</sup></td>
-                                    <td class="pb4">From the date of the last injection.</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top"><sup>d</sup></td>
-                                    <td class="pb4">Unless the injection schedule is interrupted.</td>
-                                  </tr>
-                                </tbody></table>
-                              </td>
+                              <td class="p"><span class="purple bold">Do not receive and use XOLAIR if you</span> are allergic to omalizumab or any of the ingredients in XOLAIR.</td>
                             </tr>
-                            <!-- end footnote list -->
-                          </tbody></table>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="h2">Please see Important Safety Information continued below.</td>
+                            </tr>
+                            <!-- end h2 header -->
+                          </table>
                           <!-- end table block -->
                         </td>
                       </tr>
-                    </tbody></table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb24">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody><tr>
-                        <td class="lt-green-section">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            
-                            <!-- start icon list -->
-                            <!-- To center images, add the CSS .icon-list img { margin: 0 auto; }. Outlook will only center it if the containing td has text-align center -->
-                            <!-- Change the image td width from 123 to the width of the widest image -->
-                            <tbody><tr>
-                              <td class="icon-list">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tbody><tr>
-                                    <td class="row">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td class="m-pl0 m-pb16 m-center image pl5 block" valign="middle" width="110" style="width: 110px;" align="center">
-                                            <img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/injection-window-2x.png" alt="" width="111" height="120">
-                                          </td>
-                                          <td class="m-pl0 text pl30 block" valign="middle">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tbody><tr>
-                                                <td class="h3 pb8">
-                                                  <strong>Flexible continuation dosing</strong><sup>1</sup>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="pb10">
-                                                  YEZTUGO has a <span class="bold teal">±2-week range</span> on either side of the individual’s target continuation dose, which is 26 weeks (6 months) after the last injection, <strong>allowing for flexibility in scheduling for both your practice and the individuals you see</strong>.
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                  Remind individuals that adherence to the injection dosing schedule is strongly recommended.
-                                                </td>
-                                              </tr>
-                                            </tbody></table>
-                                            <!-- end table block -->
-                                          </td>
-                                        </tr>
-                                      </tbody></table>
-                                    </td>
-                                  </tr>
-                                  
-                                </tbody></table>
-                              </td>
-                            </tr>
-                            <!-- end icon list -->
-                          </tbody></table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                    </tbody></table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </tbody></table> 
-            </td>
-          </tr>
-          <tr>
-            <td class="lt-blue-section">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="h1 pb16 m-pl21" style="padding-left:14px;"><strong>Deliver 6 months of HIV prevention with YEZTUGO</strong><sup>1</sup></td>
-                </tr>
-                <!-- end h6 header -->
-                <!-- begin mobile content -->
-                <tr class="mobile-only">
-                  <td class="mobile-only">
-                    <div class="mobile-only">
-                      <img class="width-auto" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/injections-tablets-notepads-mobile-2x.png" alt="" width="0" height="0">
-                    </div>
-                  </td>
-                </tr>
-                <!-- end mobile content -->
-                <tr>
-                  <td class="desktop-only image">
-                    <img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/injections-tablets-notepads-desktop-2x.png" alt="" width="582" height="292">
-                  </td>
-                </tr>
-                <!-- end image -->
-                <tr>
-                  <td class="ul fs14" style="padding-left:14px;">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="blue">For initiation of YEZTUGO, both injections and tablets are required</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="blue">For continuation of YEZTUGO, only injections are required</td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class="footnote" style="padding-left:14px;">For illustrative purposes only.</td>
-                </tr>
-                <!-- end footnote -->
-              </tbody></table>
-              <!-- end table block -->
-            </td>
-          </tr>
-          <tr>
-            <td class="content">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="blue pb24 fs14 m-pl10">
-                    See full <a class="orange underline bold" href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a> for dosage modification recommendations for individuals receiving YEZTUGO and initiating therapy with a strong or moderate CYP3A inducer.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="lt-orange-section">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody><tr>
-                        <td class="pb16">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody><tr>
-                              <td class="block" valign="top">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tbody><tr>
-                                    <td class="pt5 pr26 m-pr0 m-pt0 m-pb16">
-                                      <img class="m-center" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/icon-copay-2x.png" alt="" width="80" height="50">
-                                    </td>
-                                  </tr>
-                                </tbody></table>
-                                <!-- end table block -->
-                              </td>
-                              <td class="block h4" valign="top">
-                               Over 95% of Gilead Advancing Access<sup>&#174;</sup> Co-pay Savings Program users <span class="teal">pay for $0 for YEZTUGO<sup style="font-weight: normal;">&#174;a</sup></span> 
-                              </td>
-                            </tr>
-                          </tbody></table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                       <tr>
-                        <td>
-                          <table class="fixed-width150" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="150" style="width: 150px;">
-                            <tbody><tr>
-                              <td>
-                                <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.YEZTUGOhcp.com/patient-support?" style="height:50px;v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F2685F">
-                                    <w:anchorlock/>
-                                    <center>
-                                  <![endif]-->
-                                      <a href="https://www.yeztugohcp.com/patient-support" style="background-color:#F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana, sans-serif;font-size:13px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;">Enroll now <span style="color: #F0E933;">➜</span></a>
-                                  <!--[if mso]>
-                                    </center>
-                                  </v:roundrect>
-                                <![endif]--></div>
-                              </td>
-                            </tr>
-                          </tbody></table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>                   
-                      <tr>
-                        <td class="footnote pt24">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                              <td class="li" valign="top"><sup>a</sup></td>
-                              <td class="pb4">Co-pay coupon support is available for commercially insured eligible patients only. Additional restrictions may apply. Subject to change; for full terms and conditions, visit <a class="orange no-underline bold word-break" href="https://www.gileadadvancingaccess.com/copay-coupon-card">GileadAdvancingAccess.com/copay-coupon-card</a>. This is not health insurance.</td>
-                            </tr>
-                          </tbody></table>
-                        </td>
-                      </tr>
-                      <!-- end footnote list -->
-                    </tbody></table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-                
-              </tbody></table>
-              <!-- end table block -->
-            </td>
-          </tr>
-          
-      <!-- End Content -->
 
-      <!-- Start Safety -->
+                    </table>
+                  </td>
+                  <!-- end right column -->
+                </tr>
+              </table> 
+            </td>
+          </tr>
+      <!-- End 2 column Content -->
+
+      <!-- begin mobile content -->
+      <tr class="mobile-only">
+        <td class="mobile-only">
+          <div class="mobile-only">
+            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="mobile-button">
+                  <div>
+                    <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"
+                  style="background-color:#007CB1;border:1px solid #007CB1;border-radius:6px;color:#ffffff;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:337px;-webkit-text-size-adjust:none;mso-hide:all;">LEARN MORE ABOUT SELF-INJECTION</a></div>
+                </td>
+              </tr>
+            </table>
+            <!-- end table block -->
+          </div>
+        </td>
+      </tr>
+      <!-- end mobile content -->
+
+      <!-- Start ISI Continued-->
           <tr>
-            <td class="safety prl21 m-prl15">
+            <td class="safety safety-cont">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="h2 pb10 pt24">Important Safety Information <span class="normal">(cont’d)</span></td>
+                <tr>
+                  <td class="h2 pb20">IMPORTANT SAFETY INFORMATION (continued)</td>
                 </tr>
                 <!-- end h2 header -->
                 <tr>
-                  <td class="bold blue">Contraindications</td>
+                  <td class="h2">Before receiving XOLAIR, tell your healthcare provider about all of your medical conditions, including if you:</td>
                 </tr>
-                <!-- end paragraph -->
+                <!-- end h2 header -->
                 <tr>
-                  <td class="ul pb10">
+                  <td class="ul pb20">
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
+                      <tr>
                         <td class="li" valign="top">•</td>
-                        <td>YEZTUGO is contraindicated in individuals with unknown or positive HIV-1 status.</td>
+                        <td>have a latex allergy or any other allergies (such as seasonal allergies). The needle cap on the XOLAIR prefilled syringe contains a type of natural rubber latex.</td>
                       </tr>
-                    </tbody></table>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>have sudden breathing problems (bronchospasm)</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>have ever had a severe allergic reaction called anaphylaxis</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>have or have had a parasitic infection</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>have or have had cancer</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>are pregnant or plan to become pregnant. It is not known if XOLAIR may harm your unborn baby.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>are breastfeeding or plan to breastfeed. It is not known if XOLAIR passes into your breast milk. Talk with your healthcare provider about the best way to feed your baby while you receive and use XOLAIR.</td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
                 <!-- end unordered list -->
                 <tr>
-                  <td class="bold blue">Warnings and precautions</td>
+                  <td class="p pb20"><span class="purple bold">Tell your healthcare provider about all the medicines you take,</span> including prescription and over-the-counter medicines, vitamins, and herbal supplements.</td>
                 </tr>
                 <!-- end paragraph -->
                 <tr>
-                  <td class="ul pb10">
+                  <td class="h2">How should I receive and use XOLAIR?</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul pb20">
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="bold" width="100%">Comprehensive risk management:</td>
-                      </tr>
                       <tr>
-                        <td class="ul" colspan="2">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                              <td class="li" valign="top">–</td>
-                              <td>Use YEZTUGO to reduce the risk of HIV-1 acquisition as part of a comprehensive prevention strategy including adherence to the administration schedule and safer sex practices, including condoms, to reduce the risk of sexually transmitted infections (STIs).</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td>HIV-1 acquisition risk includes behavioral, biological, or epidemiologic factors including, but not limited to, condomless sex, past or present STIs, self-identified HIV risk, having sexual partners of unknown HIV-1 viremic status, or sexual activity in a high-prevalence area or network. Counsel individuals on the use of other prevention methods to help reduce their risk.</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td>Use YEZTUGO only in individuals confirmed to be HIV-1 negative. Evaluate for current or recent signs or symptoms consistent with HIV-1 infection. Confirm HIV-1 negative status prior to initiating, prior to each subsequent injection, and as clinically appropriate.</td>
-                            </tr>
-                          </tbody></table>
-                        </td>
+                        <td class="li" valign="top">•</td>
+                        <td>When starting treatment, XOLAIR should be given by your healthcare provider in a healthcare setting.</td>
                       </tr>
                       <tr>
                         <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Potential risk of resistance:</strong> </td>
-                      </tr>
-                      <tr>
-                        <td class="ul" colspan="2">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                              <td class="li" valign="top">–</td>
-                              <td>There is a potential risk of developing resistance to YEZTUGO if an individual acquires HIV-1 before or when receiving YEZTUGO, or following discontinuation. HIV-1 resistance substitutions may emerge in individuals with undiagnosed HIV-1 infection taking only YEZTUGO, because YEZTUGO alone is not a complete regimen for HIV-1 treatment.</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td>To minimize this risk, it is essential to test before each injection and additionally as clinically appropriate. Individuals confirmed to have HIV-1 must immediately begin a complete HIV-1 treatment regimen.</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td>Alternative forms of PrEP should be considered after discontinuation of YEZTUGO for those who are at continuing risk of HIV-1 acquisition and should be initiated within 28 weeks of the last YEZTUGO injection.</td>
-                            </tr>
-                          </tbody></table>
-                        </td>
+                        <td>If your healthcare provider decides that you or a caregiver may be able to give your own XOLAIR prefilled syringe or autoinjector injections, you should receive training on the right way to prepare and inject XOLAIR.</td>
                       </tr>
                       <tr>
                         <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Long-acting properties and potential associated risks:</strong></td>
-                      </tr>
-                      <tr>
-                        <td class="ul" colspan="2">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                              <td class="li" valign="top">–</td>
-                              <td>Residual concentrations of YEZTUGO may remain in systemic circulation for up to 12 months or longer after the last injection.</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td>Select individuals who agree to the required injection dosing schedule because nonadherence or missed doses could lead to HIV-1 acquisition and development of resistance.</td>
-                            </tr>
-                          </tbody></table>
-                        </td>
+                        <td>Do not try to inject XOLAIR until you have been shown the right way to give XOLAIR prefilled syringe or autoinjector injections by a healthcare provider. Use XOLAIR exactly as prescribed by your healthcare provider.</td>
                       </tr>
                       <tr>
                         <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Serious injection site reactions:</strong> Improper administration (intradermal injection) has been associated with serious injection site reactions, including necrosis and ulcer. Only administer YEZTUGO subcutaneously.</td>
+                        <td>The XOLAIR autoinjector (all doses) is intended for use only in adults and adolescents aged 12 years and older. For children 12 years of age and older, XOLAIR prefilled syringe or autoinjector may be self-injected under adult supervision. For children 1 to 11 years of age, XOLAIR prefilled syringe should be injected by a caregiver.</td>
                       </tr>
-                    </tbody></table>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>See the detailed Instructions for Use that comes with XOLAIR for information on the right way to prepare and inject XOLAIR.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>XOLAIR is given in 1 or more injections under the skin (subcutaneous), 1 time every 2 or 4 weeks.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>In people with food allergy, a blood test for a substance called IgE must be performed before starting XOLAIR to determine the appropriate dose and dosing frequency.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Do not decrease or stop taking any of your food allergy medicine or allergen immunotherapy, unless your healthcare providers tell you to.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>You may not see improvement in your symptoms right away after XOLAIR treatment. If your symptoms do not improve or get worse, call your healthcare provider.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>If you inject more XOLAIR than prescribed, call your healthcare provider right away.</td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
                 <!-- end unordered list -->
                 <tr>
-                  <td class="bold blue">Adverse reactions</td>
+                  <td class="h2 pb20">What are the possible side effects of XOLAIR?</td>
                 </tr>
-                <!-- end paragraph -->
+                <!-- end h2 header -->
                 <tr>
-                  <td class="ul pb10">
+                  <td class="h2 pb20">XOLAIR may cause serious side effects, including:</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul pb20">
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
+                      <tr>
                         <td class="li" valign="top">•</td>
-                        <td><strong>Most common adverse reactions</strong> (≥5%) in YEZTUGO clinical trials were injection site reactions, headache, and nausea.</td>
+                        <td><span class="purple bold">Cancer.</span> Cases of cancer were observed in some people who received XOLAIR.</td>
                       </tr>
-                    </tbody></table>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td><span class="purple bold">Fever, muscle aches, and rash.</span> Some people get these symptoms 1 to 5 days after receiving a XOLAIR injection. If you have any of these symptoms, tell your healthcare provider.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td><span class="purple bold">Parasitic infection.</span> Some people who are at a high risk for parasite (worm) infections, get a parasite infection after receiving XOLAIR. Your healthcare provider can test your stool to check if you have a parasite infection.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td><span class="purple bold">Heart and circulation problems.</span> Some people who receive XOLAIR have had chest pain, heart attack, blood clots in the lungs or legs, or temporary symptoms of weakness on one side of the body, slurred speech, or altered vision. It is not known whether these are caused by XOLAIR.</td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
                 <!-- end unordered list -->
                 <tr>
-                  <td class="bold blue">Drug interactions</td>
+                  <td class="pb20"><span class="h2">The most common side effects of XOLAIR in people with food allergy:</span> injection site reactions and fever.</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="p pb20">These are not all the possible side effects of XOLAIR. Call your doctor for medical advice about side effects.</td>
                 </tr>
                 <!-- end paragraph -->
                 <tr>
-                  <td class="ul pb10">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
-                        <td class="li" valign="top">•</td>
-                        <td>Strong or moderate CYP3A inducers may significantly decrease YEZTUGO concentrations. Dosage modifications are recommended when initiating these inducers.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td>It is not recommended to use YEZTUGO with combined P-gp, UGT1A1, and strong CYP3A inhibitors.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td>Coadministration of YEZTUGO with sensitive substrates of CYP3A or P-gp may increase their concentrations and result in the increased risk of their adverse events. YEZTUGO may increase the exposure of drugs primarily metabolized by CYP3A initiated within 9 months after the last injection of YEZTUGO.</td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class="bold blue">Dosage and administration</td>
+                  <td class="p pb20">You may report side effects to the FDA at <a href="tel:1-800-332-1088">(800) FDA-1088</a> or <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"><u>www.fda.gov/medwatch</u></a>. You may also report side effects to Genentech at <a href="tel:1-888-835-2555">(888) 835-2555</a> or Novartis Pharmaceuticals Corporation at <a href="tel:1-888-669-6682">(888) 669-6682</a>.</td>
                 </tr>
                 <!-- end paragraph -->
                 <tr>
-                  <td class="ul">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tbody><tr>
-                        <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>HIV screening:</strong> Test for HIV-1 infection prior to initiating, prior to each subsequent injection, and as clinically appropriate using an approved or cleared test for the diagnosis of acute or primary HIV-1 infection.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Dosage:</strong> Initiation dosing (injections and tablets) followed by once-every-6-months continuation injection dosing. Tablets may be taken with or without food.</td>
-                      </tr>
-                      <tr>
-                        <td class="ul" colspan="2">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
-                              <td class="li" valign="top">–</td>
-                              <td><strong>Initiation:</strong> Day 1: 927 mg by subcutaneous injection (2 x 1.5-mL injections) and 600 mg orally (2 x 300-mg tablets). Day 2: 600 mg orally.</td>
-                            </tr>
-                            <tr>
-                              <td class="li" valign="top">–</td>
-                              <td><strong>Continuation:</strong> 927 mg by subcutaneous injection every 6 months (26 weeks) from date of last injection ±2 weeks.</td>
-                            </tr>
-                          </tbody></table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Anticipated delayed injections:</strong> If scheduled 6-month injection is anticipated to be delayed by more than 2 weeks, YEZTUGO tablets may be taken on an interim basis (for up to 6 months) until injections resume. Dosage is 300 mg orally (1 x 300-mg tablet) once every 7 days. Resume continuation injections within 7 days of the last oral dose.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td width="100%"><strong>Missed injections:</strong> If more than 28 weeks have elapsed since the last injection and YEZTUGO tablets have not been taken, restart with initiation dosing if clinically appropriate.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td width="100%">Dosage modifications of YEZTUGO are recommended when initiating with strong or moderate CYP3A inducers. Consult the full Prescribing Information for recommendations.</td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class="blue pb24">Please see full <a href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a> for <strong>YEZTUGO</strong>, including <strong>BOXED WARNING</strong>.</td>
+                  <td class="p pb20 bold">Please see full <a href="https://www.gene.com/download/pdf/xolair_prescribing.pdf"><u>Prescribing Information</u></a>, including <a href="https://www.gene.com/download/pdf/xolair_medguide.pdf"><u>Medication Guide</u></a>, for additional Important Safety Information.</td>
                 </tr>
                 <!-- end paragraph -->
-              </tbody></table>
-              <!-- end table block -->
+                <tr>
+                  <td class="p pb0">Best,</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="h2">Your XOLAIR Support For You team</td>
+                </tr>
+                <!-- end h2 header -->
+              </table>
             </td>
           </tr>
-      <!-- End Safety -->
-
-      <!-- Start Content -->
-          <tr>
-            <td>
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="green-bg">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody><tr>
-                        <td class="h3 bold white pb15">
-                          
-                          <span class="pink">[</span>Best regards,<span class="pink">]</span>
-                          
-                        </td>
-                      </tr>
-                      <!-- end h3 header -->
-                      <!-- Start 2 columns -->
-                      <tr>
-                        <td class="two-columns">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody><tr>
-                              <!-- Start left column -->
-                              <td class="column2 block">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  
-                                  <tbody><tr>
-                                    <td class="h5">
-                                      <span class="pink">[</span>Rep name<span class="pink">]</span><br>
-                                      <span class="pink">[</span>Rep email<span class="pink">]</span><br>
-                                      <span class="pink">[</span>Rep&nbsp;cell&nbsp;number<span class="pink">]</span>
-                                    </td>
-                                  </tr>
-                                  
-                                </tbody></table>
-                              </td>
-                              <!-- End left column -->
-                              <td class="block m-pt20" align="right">
-                                <table class="m-width-initial" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody><tr>
-                                    <td class="image pr30 m-pr15 m-rep-photo white">
-                                      
-                                      <img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/rep-photo-2x.png" alt="" width="94" height="94">
-                                      
-                                    </td>
-                                    <td>
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody><tr>
-                                          <td>
-                                            <div><!--[if mso]>
-                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{schedulerLink}}" style="height:65px;v-text-anchor:middle;width:160px;" arcsize="89%" strokecolor="#F2685F" fillcolor="#F2685F">
-                                              <w:anchorlock/>
-                                              <center style="text-align:left;color:#ffffff;font-family:Verdana,sans-serif;font-size:14px;font-weight:bold;">Schedule appointment <span style="color: #F0E933;">&#10140;</span></center>
-                                            </v:roundrect>
-                                          <![endif]--><a href="{{schedulerLink}}" style="background-color:#F2685F;border:1px solid #F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana,sans-serif;font-size:14px;font-weight:bold;line-height:18px;min-height:54px;padding-top:15px;text-align:left;padding-left:25px;text-decoration:none;width:146px;-webkit-text-size-adjust:none;mso-hide:all;">Schedule appointment&nbsp;<span style="color: #F0E933;">➜</span></a></div>
-                                          </td>
-                                        </tr>
-                                      </tbody></table>
-                                    </td>
-                                    <!-- End right column -->
-                                  </tr>
-                                  <!-- end image -->
-                                </tbody></table>
-                                <!-- end table block -->
-                              </td>
-                              <!-- Start right column -->
-                            </tr>
-                            
-                          </tbody></table>
-                        </td>
-                      </tr>
-                      <!-- End 2 columns -->
-                    </tbody></table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </tbody></table>
-              <!-- end table block -->
-            </td>
-          </tr>
-      <!-- End Content -->
+      <!-- End ISI Continued -->
 
       <!-- Start Footer -->
           <tr>
             <td class="footer">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody><tr>
-                  <td class="black2 pb24 fs14"><strong>References: 1.</strong> YEZTUGO. Prescribing information. Gilead Sciences, Inc.; 2025. <strong>2.</strong> Full efficacy and safety results for Gilead investigational twice-yearly lenacapavir for HIV prevention presented at AIDS 2024. News release. Gilead Sciences, Inc.; July 24, 2024. Accessed January 6, 2025. <span class="no-link">ht‍tps:/‍/ww‍w.gi‍lea‍d.‍co‍m/‍new‍s/n‍ews‍-de‍tai‍ls‍/20‍24/‍ful‍l-e‍ffi‍ca‍cy‍-an‍d-s‍af‍ety‍-re‍su‍lts‍-fo‍r-‍gil‍ea‍d-i‍nve‍sti‍gat‍i‍ona‍l-t‍wi‍ce‍-y‍ear‍ly‍-le‍nac‍ap‍av‍ir‍-fo‍r-‍hiv‍-pr‍ev‍en‍tio‍n-p‍res‍ent‍ed-‍at-‍aid‍s-2‍024</span></td>
+                <tr>
+                  <td class="pb20">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="br-gray pr20" valign="top">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="ptb10">
+                                <a href="https://www.gene.com/"><img src="{{asset.genentech-logo-2x.url}}" alt="{{asset.genentech-logo-2x.alt}}" width="{{asset.genentech-logo-2x.width}}" height="{{asset.genentech-logo-2x.height}}"/></a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                        <td class="pl20" valign="top">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pt10">
+                                <a href="https://www.novartis.com/"><img src="{{asset.novartis-logo-2x.url}}" alt="{{asset.novartis-logo-2x.alt}}" width="{{asset.novartis-logo-2x.width}}" height="{{asset.novartis-logo-2x.height}}"/></a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                          
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="legal pb20">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="block m-pb15">
+                          <a href="https://www.xolair.com/contact-us.html"><span>Contact Us</span></a>
+                          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                          <a href="https://www.xolair.com/privacy-policy.html"><span>Privacy Policy</span></a>
+                        </td>
+                        <td class="desktop-only">
+                          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="block">
+                          <a href="https://www.xolair.com/terms-and-conditions.html"><span>Terms and Conditions</span></a>
+                          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                          <a href="{{build.unsubscribeLink}}"><span>Unsubscribe</span></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p pb0">This commercial email is brought to you by Genentech USA, Inc.</td>
                 </tr>
                 <!-- end paragraph -->
                 <tr>
-                  <td class="image pb19" align="center">
-                    <a class="ghost-link" href="https://www.yeztugohcp.com/"><img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/yeztugo-logo-2x.png" alt="Yeztugo logo" width="192" height="94"></a>
-                  </td>
+                  <td class="p pb20">This email is intended for US residents only.</td>
                 </tr>
-                <!-- end image -->
+                <!-- end paragraph -->
                 <tr>
-                  <td class="footer-links pb15" align="center">
-                    <a href="https://www.gilead.com/">Gilead Corporate Website</a>&nbsp;|&nbsp;<a href="https://www.gilead.com/terms-of-use">Terms&nbsp;of&nbsp;Use</a>&nbsp;|&nbsp;<a href="https://www.gilead.com/privacy-statements">Privacy Policy</a><br><a href="https://www.gilead.com/contact-us">Contact Us</a>&nbsp;|&nbsp;<a href="{{unsubscribe_product_link}}">Unsubscribe</a>
-                  </td> 
+                  <td class="p pb20">Genentech USA, Inc. 1 DNA Way, South San Francisco, CA 94080-4990</td>
                 </tr>
+                <!-- end paragraph -->
                 <tr>
-                  <td class="footer-text pb15 disclaimer" align="center">
-                    For Colorado, Connecticut, and Vermont prescribers: In compliance with the CO, CT, and VT price disclosure requirements, disclosure forms can be found here:<br>
-                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CO-YTG.pdf">Colorado Price Disclosure Form</a><br>
-                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CT-YTG.pdf">Connecticut Price Disclosure Form</a><br>
-                      <a href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/VT-YTG.pdf">Vermont Price Disclosure Form</a>
-                  </td>
+                  <td class="p pb0">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech USA, Inc. and Novartis Pharmaceuticals Corporation. All rights reserved.</td>
                 </tr>
-                <tr>
-                  <td class="footer-text pb15" align="center">YEZTUGO, the YEZTUGO Logo, ADVANCING ACCESS, GILEAD, and the GILEAD Logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks referenced herein are the property of their respective owners.</td>
-                </tr>
+                <!-- end paragraph -->
 
-                <!--PER ER 2, BOTH VERSIONS SHOULD HAVE SAME JOB CODE -->
-                <tr>
-                  <td class="footer-text pb15" align="center">&#169;2026 Gilead Sciences, Inc. 333 Lakeside Drive, Foster City, CA 94404 <br>All rights reserved. US-YTGP-0037 09/25</td>
-                </tr>
-                <tr>
-                  <td class="image" align="center">
-                    <a class="ghost-link" href="https://www.gilead.com/"><img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/c2d57d7c-ad9d-48e1-9392-dec36d58cb8f/gilead-logo-2x.png" alt="Gilead" width="108" height="29"></a>
-                  </td>
-                </tr>
-                <!-- end image -->
-
-              </tbody></table> 
+              </table> 
             </td>
           </tr>
       <!-- End Footer -->
 
-        </tbody></table>
+        </table>
       </td>
     </tr>
 
-  </tbody></table>
+  </table>
   <!-- end table wrapper -->
 
   <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
@@ -1476,9 +1085,7 @@ Are your patients looking for a flexible dosing window?  &nbsp;‌&nbsp;‌&nbsp
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div>
+
   
-
-
-
-
-</body></html>
+</body>
+</html>
