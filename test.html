@@ -39,13 +39,16 @@
       font-family: Arial, sans-serif;
       font-size: 16px;
       color: #222222;
+      background-color: #ffffff;
       line-height: 23px;
       min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
     }
 
     .h1 { font-size: 22px; line-height: 25px; color: #25282A; font-weight: bold; }
-    .h2 { font-size: 26px; line-height: 30px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
-    .h3 { font-size: 16px; line-height: 23px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
+    .h2 { font-size: 24px; line-height: 30px; color: #83156F; font-weight: bold; font-family: Arial, sans-serif; }
+    .h2-black { font-size: 24px; line-height: 30px; color: #000000; font-weight: bold; font-family: Arial, sans-serif;}
+    .h3 { font-size: 18px; line-height: 20px; color: #83156F; font-weight: bold; Arial, sans-serif; }
+    .h3-blue { font-size: 18px; line-height: 20px; color: #83156F; font-weight: bold; Arial, sans-serif; color: #007EAF; }
     .h4 { font-size: 23px; line-height: 28px; color: #830070; font-weight: bold; font-family: "Work Sans", Arial, sans-serif; }
     .h5 { font-size: 10px; line-height: 14px; color: #003479; font-weight: bold; }
 
@@ -72,7 +75,7 @@
       padding-bottom: 20px;
     }
     .header {
-      padding-bottom: 35px;
+      padding-bottom: 20px;
     }
     .content-top {
       padding-right: 25px;
@@ -84,8 +87,8 @@
       border-right: 1px solid #830970;
     }
     .content-outside {
-      padding-right: 25px;
-      padding-left: 25px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
     .content-hanging {
       padding-right: 20px;
@@ -114,8 +117,8 @@
       padding-right: 30px;
     }
     .rr-safety {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 15px;
+      padding-left: 15px;
     }
     .safety-cont {
       padding-right: 25px;
@@ -169,6 +172,7 @@
     sup, sub { line-height: 0; font-size: 75%; }
 
     /* Additional formatting and styling */
+    .blue-box-text { font-size: 16px; line-height: 20px;}
     .center { text-align: center; }
     .center-block { margin: 0 auto; }
     .no-underline { text-decoration: none; }
@@ -179,7 +183,8 @@
     .sm-caps { font-size: 13px; }
 
     .br-gray { border-right: 1px solid #707070; }
-
+    .bg-purple { background-color: #F2E7F0; border-radius: 15px }
+    .bg-blue { background-color: #E5F2F7; border-radius: 15px }
     .no-wrap { white-space: nowrap; }
     a[href^="tel:"] { white-space: nowrap; }
     
@@ -357,7 +362,14 @@
       font-weight: bold; 
       font-family: Arial, sans-serif;
     }
-
+    .safety .h2-black {
+       font-size: 16px; 
+      line-height: 20px; 
+      color: #000000; 
+      font-weight: bold; 
+      font-family: Arial, sans-serif;
+    }
+    
     .safety .ul { padding-left: 20px; }
 
     .safety .purple {
@@ -487,9 +499,12 @@
       /*add to image class to expand to full width*/
 
       .m-center { text-align: center !important; margin: 0 auto !important; }
-
+      .m-text {font-size: 14px; line-height: 18px;}
       .main-table .fixed-width70 { width: 70px !important; margin: 0 auto !important; }
-
+      .h3 { font-size: 16px !important; line-height: 18px; }
+      .h3-blue { font-size: 16px !important; line-height: 18px; }
+      .h2 { font-size: 22px; line-height: 28px; color: #83156F; font-weight: bold; font-family: Arial, sans-serif; }
+      .p { font-size: 14px; line-height: 18px;}
       /*.m-pt0  { padding-top: 0 !important; }*/
       /*.m-pt5  { padding-top: 5px !important; }*/
       /*.m-pt10 { padding-top: 10px !important; }*/
@@ -551,14 +566,12 @@
 
 </head>
 <body>
-  
-  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
-
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
     <tr>
       <td class="main-td">
         <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
 
-      <!-- Start Preheader -->
+          <!-- Start Preheader -->
           <tr>
             <td class="preheader">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -571,9 +584,8 @@
               </table>
             </td>
           </tr>
-      <!-- End Preheader -->
-
-      <!-- Start Header -->
+          <!-- End Preheader -->
+          <!-- Start Header -->
           <tr>
             <td class="header">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -584,7 +596,7 @@
                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                           <td class="image">
-                            <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/></a>
+                            <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.xolair-header-mobile-2x.url}}" alt="{{asset.xolair-header-mobile-2x.alt}}" width="0" height="0"/></a>
                           </td>
                         </tr>
                         <!-- end image -->
@@ -596,7 +608,7 @@
                 <!-- end mobile content -->
                 <tr>
                   <td class="image desktop-only">
-                    <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/></a>
+                    <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.xolair-header-desktop-2x.url}}" alt="{{asset.xolair-header-desktop-2x.alt}}" width="{{asset.xolair-header-desktop-2x.width}}" height="{{asset.xolair-header-desktop-2x.height}}"/></a>
                   </td>
                 </tr>
                 <!-- end image -->
@@ -604,9 +616,15 @@
               </table>
             </td>
           </tr>
-      <!-- End Header -->
-
-      <!-- Start 2 column content -->
+          <!-- End Header -->
+          <!--Header Copy-->
+          <tr>
+            <td class="h2 pl20 pr30 pb10">
+              Helpful Videos to Assist You as You Incorporate XOLAIR for IgE-Mediated Food Allergy Into Your Practice Workflow
+            </td>
+          </tr>
+          <!--End Header Copy-->
+          <!-- Start 2 column content -->
           <tr>
             <td class="pb20">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -617,118 +635,272 @@
                       <tr>
                         <td class="content-outside">
                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                           
                             <tr>
-                              <td class="h1 pb25">
-                                {% if build.type == "GENE_ACM_BATCH" %}
-                                
-                                {{'<%if(recipient.firstName == ""){%>
-                                <%}else{%>
-                                  Dear <%= recipient.firstName%>,
-                                <%}%>'}}
-                                
-                                {% elsif build.type == "GENE_ACM_REALTIME" %}
-                                
-                                {{'<%if(rtEvent.ctx.firstName == ""){%>
-                                <%}else{%>
-                                  Dear <%= rtEvent.ctx.firstName%>,
-                                <%}%>'}}
-                                
-                                {% else %}
-                                
-                                Dear <span style="color: #FF0000;">[</span>First Name<span style="color: #FF0000;">]</span>,
-                                
-                                {% endif %}
-                              </td>
-                            </tr>
-                            <!-- end h1 header -->
-                            <tr>
-                              <td class="p work-sans">Now that you or your child has been prescribed XOLAIR, learn more about the options for self-injection or injection by a caregiver.</td>
+                              <td class="p">Once the decision has been made to prescribe XOLAIR, access must be secured. This video series provides key logistical information to help your practice.</td>
                             </tr>
                             <!-- end paragraph -->
-                            <tr>
-                              <td class="p pb35 work-sans">Once a treatment plan has been established, you and your doctor may determine that self-injection or injection by a caregiver is right for you or your child. This means that you or a caregiver can inject XOLAIR at home or while traveling—after initial training has been completed with your healthcare provider.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="content-outside">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0"  width="375" style="width: 375px;">
-                            <!-- Start Doses Section -->
-                            <tr>
-                              <td class="doses-section drop-shadow">
+                             <tr>
+                              <td class="pb10">
                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr>
-                                    <td class="image pb25" align="center">
-                                      <img src="{{asset.icon-syringe-2x.url}}" alt="{{asset.icon-syringe-2x.alt}}" width="{{asset.icon-syringe-2x.width}}" height="{{asset.icon-syringe-2x.height}}"/>
+                                  <!-- begin mobile content -->
+                                  <tr class="mobile-only">
+                                    <td class="mobile-only">
+                                      <div class="mobile-only">
+                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td class="image pr10">
+                                              <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.rx-book-icon-m-2x.url}}" alt="{{asset.rx-book-icon-m-2x.alt}}" width="0" height="0"/></a>
+                                            </td>
+                                            <td class="bg-purple" width="55%">
+                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3 prl20 pb5">
+                                                    Getting Patients Started on Xolair
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20 pb20 m-pb10 m-text">
+                                                    Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            <!-- end table block -->
+                                            </td>
+                                          </tr>
+                                          <!-- end image -->
+                                        </table>
+                                        <!-- end table block -->
+                                      </div>
                                     </td>
                                   </tr>
-                                  <!-- end image -->
+                                  <!-- end mobile content -->
                                   <tr>
-                                    <td class="h3 prl40 pb25" align="center">XOLAIR is available as a prefilled&nbsp;syringe or autoinjector for <span class="no-wrap">self-injection</span> in doses of:</td>
-                                  </tr>
-                                  <!-- end h3 header -->
-                                  <tr>
-                                    <td class="pb25">
-                                      <table class="m-width-initial" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <td class="image desktop-only pr10">
+                                      <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.rx-book-icon-d-2x.url}}" alt="{{asset.rx-book-icon-d-2x.alt}}" width="{{asset.rx-book-icon-d-2x.width}}" height="{{asset.rx-book-icon-d-2x.height}}"/></a>
+                                    </td>
+                                    <td class="desktop-only bg-purple">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                         <tr>
-                                          <td>
-                                            <img src="{{asset.icon-75-mg-2x.url}}" alt="{{asset.icon-75-mg-2x.alt}}" width="{{asset.icon-75-mg-2x.width}}" height="{{asset.icon-75-mg-2x.height}}"/>
+                                          <td class="h3 prl20 pb5">
+                                           Getting Patients Started on XOLAIR
                                           </td>
-                                          <td class="prl25 m-prl10">
-                                            <img src="{{asset.icon-150-mg-2x.url}}" alt="{{asset.icon-150-mg-2x.alt}}" width="{{asset.icon-150-mg-2x.width}}" height="{{asset.icon-150-mg-2x.height}}"/>
-                                          </td>
-                                          <td>
-                                            <img src="{{asset.icon-300-mg-2x.url}}" alt="{{asset.icon-300-mg-2x.alt}}" width="{{asset.icon-300-mg-2x.width}}" height="{{asset.icon-300-mg-2x.height}}"/>
+                                        </tr>
+                                        <tr>
+                                          <td class="prl20">
+                                            Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
                                           </td>
                                         </tr>
                                       </table>
-                                      <!-- end table block -->
+                                    <!-- end table block -->
                                     </td>
                                   </tr>
-                                  
+                                  <!-- end image -->
+
                                 </table>
-                                <!-- end table block -->
                               </td>
                             </tr>
-                            <!-- End Doses Section -->
                             <tr>
-                              <td class="image">
-                                <img src="{{asset.divider-2x.url}}" alt="{{asset.divider-2x.alt}}" width="{{asset.divider-2x.width}}" height="{{asset.divider-2x.height}}"/>
-                              </td>
-                            </tr>
-                            <!-- end image -->
-                            <tr>
-                              <td style="background-color: #830070;">
+                              <td class="pb10">
                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr>
-                                    <td class="purple-box" align="center">Learn more about XOLAIR and talk to&nbsp;your doctor about self-injection.</td>
+                                  <!-- begin mobile content -->
+                                  <tr class="mobile-only">
+                                    <td class="mobile-only">
+                                      <div class="mobile-only">
+                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td class="bg-blue" width="54%">
+                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3-blue prl20 pt10 pb5">
+                                                   Securing Coverage for XOLAIR
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20 pb20. m-text">
+                                                    Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            <!-- end table block -->
+                                            </td>
+                                             <td class="image pl10">
+                                              <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.icon-bluebg-m-2x.url}}" alt="{{asset.icon-bluebg-m-2x.alt}}" width="0" height="0"/></a>
+                                            </td>
+                                          </tr>
+                                          <!-- end image -->
+                                        </table>
+                                        <!-- end table block -->
+                                      </div>
+                                    </td>
                                   </tr>
-                                  <!-- end paragraph -->
+                                  <!-- end mobile content -->
+                                  <tr>
+                                    <td class="desktop-only pr10">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                       <tr>
+                                          <td class="bg-blue ptb20">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3-blue prl20 pb5">
+                                                    Securing Coverage for XOLAIR
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20 blue-box-text">
+                                                    Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
+                                                  </td>
+                                                </tr>
+                                             </table>
+                                              <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table> 
+                                      <!-- end table block -->
+                                    </td>
+                                    <td class="image desktop-only pr10">
+                                      <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.icon-bluebg-d-2x.url}}" alt="{{asset.icon-bluebg-d-2x.alt}}" width="{{asset.	icon-bluebg-d-2x.width}}" height="{{asset.icon-bluebg-d-2x.height}}"/></a>
+                                    </td>
+                                    
+                                  </tr>
+                                  <!-- end image -->
+
                                 </table>
-                                <!-- end table block -->
                               </td>
                             </tr>
                             <tr>
-                              <td class="desktop-only pt25">
-                                <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.xolair.com/food-allergies/injections/self-injection.html{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:337px;" arcsize="13%" strokecolor="#007CB1" fillcolor="#007CB1">
-                                    <w:anchorlock/>
-                                    <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">LEARN MORE ABOUT SELF-INJECTION</center>
-                                  </v:roundrect>
-                                <![endif]--><a href="https://www.xolair.com/food-allergies/injections/self-injection.html"
-                                style="background-color:#007CB1;border:1px solid #007CB1;border-radius:6px;color:#ffffff;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:337px;-webkit-text-size-adjust:none;mso-hide:all;">LEARN MORE ABOUT SELF-INJECTION</a></div>
+                              <td class="pb20 m-pb10">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <!-- begin mobile content -->
+                                  <tr class="mobile-only">
+                                    <td class="mobile-only">
+                                      <div class="mobile-only">
+                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td class="image pr10">
+                                              <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.pillbottle-figure-m-2x.url}}" alt="{{asset.pillbottle-figure-m-2x.alt}}" width="0" height="0"/></a>
+                                            </td>
+                                            <td class="bg-purple" width="55%">
+                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3 prl20 pb5">
+                                                    Getting Patients Started on Xolair
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20 pb20 m-pb10 m-text">
+                                                   Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            <!-- end table block -->
+                                            </td>
+                                          </tr>
+                                          <!-- end image -->
+                                        </table>
+                                        <!-- end table block -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <!-- end mobile content -->
+                                  <tr>
+                                    <td class="image desktop-only pr10">
+                                      <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.pillbottle-figure-d-2x.url}}" alt="{{asset.pillbottle-figure-d-2x.alt}}" width="{{asset.pillbottle-figure-d-2x.width}}" height="{{asset.pillbottle-figure-d-2x.height}}"/></a>
+                                    </td>
+                                    <td class="desktop-only bg-purple">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="h3 prl20 pb5">
+                                          Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="prl20">
+                                                    Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    <!-- end table block -->
+                                    </td>
+                                  </tr>
+                                  <!-- end image -->
+
+                                </table>
                               </td>
                             </tr>
+                            <tr>
+                              <td class="pb20">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <!-- begin mobile content -->
+                                  <tr class="mobile-only">
+                                    <td class="mobile-only">
+                                      <div class="mobile-only">
+                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td class="bg-blue" width="54%">
+                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3-blue prl20 pt10 pb5">
+                                                   Administration Options for XOLAIR
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20 pb20. m-text">
+                                                    Provides an overview of the administration options available for XOLAIR after it has been prescribed.
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            <!-- end table block -->
+                                            </td>
+                                             <td class="image pl10">
+                                              <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img class="width-auto" src="{{asset.patient-doctor-m-2x.url}}" alt="{{asset.patient-doctor-m-2x.alt}}" width="0" height="0"/></a>
+                                            </td>
+                                          </tr>
+                                          <!-- end image -->
+                                        </table>
+                                        <!-- end table block -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <!-- end mobile content -->
+                                  <tr>
+                                    <td class="desktop-only pr10">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="bg-blue ptb20">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                  <td class="h3-blue prl20 pb5">
+                                                    Administration Options for XOLAIR
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="prl20">
+                                                    Provides an overview of the administration options available for XOLAIR after it has been prescribed.
+                                                  </td>
+                                                </tr>
+                                             </table>
+                                              <!-- end table block -->
+                                          </td>
+                                        </tr>
+                                      </table> 
+                                      <!-- end table block -->
+                                    </td>
+                                    <td class="image desktop-only pr10">
+                                      <a href="https://www.xolair.com/food-allergies/injections/self-injection.html"><img src="{{asset.patient-doctor-d-2x.url}}" alt="{{asset.patient-doctor-d-2x.alt}}" width="{{asset.	patient-doctor-d-2x.width}}" height="{{asset.patient-doctor-icon-d-2x.height}}"/></a>
+                                    </td>
+                                    
+                                  </tr>
+                                  <!-- end image -->
 
-
+                                </table>
+                              </td>
+                            </tr>
                           </table>
                           <!-- end table block -->
                         </td>
                       </tr>
-                      
+                    
                     </table>
                     <!-- end table block -->
                   </td>
@@ -737,67 +909,32 @@
                   <!-- start right column -->
                   <td class="safety" valign="top">
                     
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="210" style="width: 210px;">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="160" style="width: 160px;">
                       <tr>
                         <td class="rr-safety">
                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                              <td class="h2 pb5 m-pb10">What is XOLAIR?</td>
+                              <td class="h2 pb5 m-pb10">INDICATION</td>
                             </tr>
                             <!-- end h2 header -->
                             <tr>
-                              <td class="p">XOLAIR<sup>®</sup> (omalizumab) for subcutaneous use is an injectable prescription medicine used to treat food allergy in people 1 year of age and older to reduce allergic reactions that may occur after accidentally eating one or more foods to which you are allergic. While taking XOLAIR you should continue to avoid all foods to which you are allergic. It is not known if XOLAIR is safe and effective in people with food allergy under 1&nbsp;year of age.</td>
+                              <td class="p">XOLAIR<sup>®</sup> (omalizumab) is indicated for the reduction of allergic reactions (Type I), including anaphylaxis, that may occur with accidental exposure to one or more foods in adult and pediatric patients aged 1 year and older with IgE-mediated food allergy.</td>
                             </tr>
                             <!-- end paragraph -->
                             <tr>
-                              <td class="p">XOLAIR should not be used for the emergency treatment of any allergic reactions, including anaphylaxis.</td>
+                              <td class="p">XOLAIR is to be used in conjunction with food allergen avoidance.</td>
                             </tr>
                             <!-- end paragraph -->
                             <tr>
-                              <td class="h2 pb15">IMPORTANT SAFETY INFORMATION</td>
+                              <td class="h2">Limitations of Use: </td>
                             </tr>
                             <!-- end h2 header -->
                             <tr>
-                              <td class="h2">What is the most important information I should know about XOLAIR?</td>
-                            </tr>
-                            <!-- end h2 header -->
-                            <tr>
-                              <td class="p pb5"><span class="purple bold">Severe allergic reaction.</span> A severe allergic reaction called anaphylaxis can happen when you receive XOLAIR. The reaction can occur after the first dose, or after many doses. It may also occur right after a XOLAIR injection or days later. Anaphylaxis is a life-threatening condition and can lead to death. Go to the nearest emergency room right away if you have any of these symptoms of an allergic reaction:</td>
+                              <td class="p">XOLAIR is not indicated for the emergency treatment of allergic reactions, including anaphylaxis.</td>
                             </tr>
                             <!-- end paragraph -->
                             <tr>
-                              <td class="ul pb10">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td class="li" valign="top">•</td>
-                                    <td>wheezing, shortness of breath, cough, chest tightness, or trouble breathing</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top">•</td>
-                                    <td>low blood pressure, dizziness, fainting, rapid or weak heartbeat, anxiety, or feeling of "impending doom"</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top">•</td>
-                                    <td>flushing, itching, hives, or feeling warm</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top">•</td>
-                                    <td>swelling of the throat or tongue, throat tightness, hoarse voice, or trouble swallowing</td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <!-- end unordered list -->
-                            <tr>
-                              <td class="p">Your healthcare provider will monitor you closely for symptoms of an allergic reaction while you are receiving XOLAIR and for a period of time after treatment is initiated. Your healthcare provider should talk to you about getting medical treatment if you have symptoms of an allergic reaction.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                            <tr>
-                              <td class="p"><span class="purple bold">Do not receive and use XOLAIR if you</span> are allergic to omalizumab or any of the ingredients in XOLAIR.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                            <tr>
-                              <td class="h2">Please see Important Safety Information continued below.</td>
+                              <td class="h2-black">Please see additional Important Safety Information continued below.</td>
                             </tr>
                             <!-- end h2 header -->
                           </table>
@@ -812,7 +949,7 @@
               </table> 
             </td>
           </tr>
-      <!-- End 2 column Content -->
+          <!-- End 2 column Content -->
 
       <!-- begin mobile content -->
       <tr class="mobile-only">
@@ -1076,7 +1213,6 @@
         </table>
       </td>
     </tr>
-
   </table>
   <!-- end table wrapper -->
 
