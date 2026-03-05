@@ -1,0 +1,114 @@
+"For PRC submissions only links and alt text should be included:
+- Do not delete any rows as it will break formulas on other tabs
+- Hide rows that should not be included with submission by right clicking on the row and select ""Hide row""
+- Download tab as a PDF by opening up ""File"", select ""Download"" and select ""PDF Document""
+- Once complete remember to unhide all rows",,,,,,
+HANDOFF PACKAGES,,,,,,
+,Answers ,,Notes ,,,Owner 
+House/3rd Party Email,,,,,,
+"Related Epic Number
+Note: do not format as link to Jira ticket",,,"DEM to populate for AOR to use in the Digital Handoff form submission
+Example: RMEM-345",,,DEM
+Delivery Objective,,,"AOR to populate based on campaign delivery objective, as defined with Marketing in the Brand ICT.  Values should be ""Driver"" or ""Stand-alone""",,,AOR
+Google Drive Folder for Dev-Ready House Email Package,,,Pulls through to Production Details tab,,,DEM
+Google Drive Folder for House Email's AFD File,,,"Pulls through to Production Details tab
+Specify VVPM code for this email asset if you have multiple files in your folder
+Can be same location Google Drive Folder for Dev-Ready Package",,,DEM
+Veeva Approved Email (VAE),,,,,,
+"Related Epic Number
+Note: do not format as link to Jira ticket",RMEM-8138,,"DEM to populate for AOR to use in the Digital Handoff form submission
+Example: RMEM-345",,,DEM
+Delivery Objective,Stand-alone,,"AOR to populate based on campaign delivery objective, as defined with Marketing in the Brand ICT.  Values should be ""Driver"" or ""Stand-alone""",,,AOR
+VAE Template Name,XOLAIR Workflow Video Series VAE,,"This is what will appear in VAE that users (field teams) see and identify the email by
+Collaborate with Marketing + RM DEM to pull through template name best practices",,,AOR
+Maximum Number of Email Fragments (Optional) ,,,Enter the maximum number of email fragments allowed to be included in one VAE. We recommend not including more than 8.,,,AOR
+VAE Email Fragment 1 Name ,,,This is what users (field teams) see and identify the email fragment by. Collaborate with Marketing + RM DEM to align on a user-friendly name. Limit is 100 characters. List in the order that they should appear. Duplicate row as needed. ,,,AOR
+VAE Email Fragment 2 Name,,,This is what users (field teams) see and identify the email fragment by. Collaborate with Marketing + RM DEM to align on a user-friendly name. Limit is 100 characters. List in the order that they should appear. Duplicate row as needed. ,,,AOR
+Google Drive Folder for Dev-Ready VAE Package,https://drive.google.com/drive/folders/1z-Je4pINxwTyDRd13LDG6MOtJkPlEQ6R,,Pulls through to Production Details tab,,,DEM
+Google Drive Folder for VAE's AFD File,https://drive.google.com/drive/folders/1Z_aiJYQnfA0hC_nKZwHiLelrWe8TlGaD,,"Pulls through to Production Details tab
+Specify VVPM code for this email asset if you have multiple files in your folder
+Can be same location Google Drive Folder for Dev-Ready Package",,,DEM
+ACCESSIBILITY: This section should only be completed for emails with visual accessibility as a focus. Discuss with your DEM prior to completing. ,,,,,,
+,Answers,,Notes ,,,Owner
+"Apply Hover State to Buttons
+Note: Recommended for emails where visual accessibility is a priority",no,,"If yes is selected, hover state will be applied to all buttons in email
+Coordinate with DEM & Inizio ",,,AOR
+Hover State Color - Hex Value ,NA,,"Provide hex value for the color that the buttons should be when hovered over. The pre-hover state color should be indicated in the PSD.
+Example: #FF5733",,,AOR
+LINK MATRIX,,,,,,
+"Text of Link 
+Add/delete lines to capture all text links within the email. 
+All links included below must be specified and present in your email and email fragments.
+
+Image links should be added under alt text section.","Final Destination URL 
+Provide full URL of where the link drives to
+Links should represent final destination and not redirect
+
+Important: Indicate if Links are http:// or https://",,"Link Location 
+Indicate everywhere in the email an item should be linked. 
+
+For email fragments, 
+indicate the fragment # with the fragment name, e.g. ""Fragment 1 Fragment Name""
+",Notes ,,Owner
+Text Links: Header,,,,,,
+[View in web browser],No action needed - Dev and deploy agency to manage,,,DO NOT REMOVE THIS LINE,,"Inizio/
+Epsilon"
+,,,,,,AOR
+,,,,,,AOR
+,,,,,,AOR
+Text Links: Body,,,,,,
+Watch the videos,https://www.xolairhcp.com/food-allergies/resources/printable-resources.html,,,,,AOR
+Download the resource,https://www.xolairhcp.com/content/dam/gene/xolairhcp/fa/pdfs/XOLAIR-for-IgE-Mediated-Food-Allergy-Into-Your-Practice-Workflow.pdf,,,,,AOR
+,,,,,,AOR
+Text Links: Rep Connect URL,,,,,,
+"Remove option that is not being used
+GET PERSONAL ASSISTANCE >
+REQUEST REP FOLLOW-UP >",#REF!,,,"Hide or delete row if not using Rep Connect CTA
+Remove if 3P Email",,DEM
+https://www.gene.com/privacy-policy,https://www.gene.com/privacy-policy,,,"Hide or delete row if not using Rep Connect CTA
+Remove if 3P Email",,DEM
+Text Links: Safety,,,,,,
+www.fda.gov/medwatch,www.fda.gov/medwatch,,,,,AOR
+800-FDA-1088,tel:1-800-332-1088,,,,,AOR
+888-835-2555,tel:1-888-835-2555,,,,,AOR
+Text Links: References,,,,,,
+,,,,,,AOR
+,,,,,,AOR
+Text Links: Footer,,,,,,
+Privacy Policy,,,,,,DEM
+Terms and Conditions,,,,,,DEM
+Contact Us,,,,,,DEM
+Unsubscribe - House Patient Email Ad Hoc/Cadenced,<Inizio to provide>,,House Patient Ad Hoc/Cadenced Only,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+Unsubscribe - House Patient Email Real-Time,<Inizio to provide>,,House Patient Real-Time Only,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+Unsubscribe - House HCP Email Adhoc/Cadenced,https://interactive.genentech.com/subscription/?email=<%= recipient.email %>&prog-code=<%= message.delivery.progCode %>,,House HCP Ad Hoc/Cadenced Only,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+Unsubscribe - House HCP Email Real-Time,https://interactive.genentech.com/subscription/?email=<%= rtEvent.email %>&prog-code=<%= rtEvent.delivery.progCode %>,,House HCP Real-Time Only,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+Unsubscribe - Veeva Approved Emails (VAEs),"{{unsubscribe_product_link[,CommercialEmailUnsubscribe]}}",,VAE Only ,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+Unsubscribe - Speaker Bureau Invite Emails,https://unsubscribe.genentech.com/?source=speaker-bureau,,Speaker Bureau Invites Only,DO NOT REMOVE THIS LINE,,"Inizio to populate, DEM to validate"
+ALT-TEXT,,,,,,
+"Images 
+
+Add/delete lines to capture all images larger than an icon within the email and email fragments. 
+All images must be specified and present in your email.","ALT-TEXT 
+
+Must be AFD'd if different than image
+
+~5-7 words max. 15 characters or less for logo/small images and 
+35 characters or less for larger images. Spaces count towards character limit.
+",Character Count,"IMAGE Link
+If image should be linked, indicate destination URL
+
+Important: Indicate if Links are http:// or https://
+","Image Location 
+
+Indicate everywhere in the email an item should be tagged.
+
+For email fragments, 
+indicate the fragment # with the fragment name, e.g. ""Fragment 1 Fragment Name""",Notes ,
+Xolair logo banner,Xolair® (omalizumab) logo,25,,Header,,AOR
+RX Book and Doctor graphic,,0,,Body,Decorative,AOR
+Doctor with Unbrella graphic,,0,,Body,Decorative,AOR
+Health professional in front on Ipad graphic ,,0,,Body,Decorative,AOR
+Patient and Health aid graphic ,,0,,Body,Decorative,AOR
+Laptop graphic - Getting Patients Started with Xolair,,,,Body,Decorative,AOR
+Laptop graphic - Considerations for Incorporating Xolair,,,,Body,Decorative,AOR
+Genentech logo,Genentech logo,,https://www.gene.com/,Footer,,AOR
