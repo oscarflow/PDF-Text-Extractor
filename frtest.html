@@ -19,11 +19,11 @@
         src: url(https://fonts.gstatic.com/s/worksans/v19/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2) format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
               }
-                    @font-face {
-                            
-                                    font-style: normal;
-                                            font-weight: 700;
-                                            -02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        @font-face {
+
+        font-style: normal;
+                font-weight: 700;
+                -02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
       @font-face {
         
@@ -56,11 +56,7 @@
     .h3 { font-size: 18px; line-height: 22px; color: #000000; font-weight: bold; Arial, sans-serif; }
     .h3-purple { font-size: 18px; line-height: 20px; color: #83156F; font-weight: bold; Arial, sans-serif;}
     .h3-blue { font-size: 18px; line-height: 20px; font-weight: bold; Arial, sans-serif; color: #007EAF; }
-    .h4 { font-size: 23px; line-height: 28px; color: #830070; font-weight: bold; font-family: Arial, sans-serif; }
-    .h5 { font-size: 10px; line-height: 14px; color: #003479; font-weight: bold; }
-
-   
-
+  
     a { text-decoration: underline; }
     .content a { color: #0066CC; font-weight: bold; text-decoration: none; }
     .footer a { color: #0097C2; }
@@ -101,14 +97,6 @@
       padding-right: 25px;
       padding-left: 20px;
     }
-    .doses-section {
-      padding-top: 35px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .doses-section td {
-      font-family: Arial, sans-serif; 
-    }
     .content-bottom {
       padding-right: 25px;
       padding-left: 25px;
@@ -116,8 +104,7 @@
     }
     .purple-box {
       color: #ffffff;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
+      font-weight: bold; 
       padding-top: 40px;
       padding-bottom: 55px;
       padding-left: 30px;
@@ -201,27 +188,6 @@
     .mobile-only { display: none; max-height: 0px; overflow: hidden; }
     /*Hides mobile only elements. Needs to be inlined for Gmail*/
 
-    .drop-shadow {
-      border-left: 1px solid #ececec;
-      border-right: 1px solid #ececec;
-      border-top: 1px solid #ececec;
-      -webkit-box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
-      -moz-box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
-      box-shadow: 0px -11px 15px 5px rgba(236,236,236,1);
-    }
-
-    /* Callout styling */
-    .callout {
-      font-size: 15px;
-      line-height: 19px;
-      color: #ffffff;
-      background-color: #79cd3f;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-
     /* Button Styling */
     .button {
       font-size: 15px;
@@ -243,26 +209,6 @@
       border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
       /*border-radius: 5px;*/
     }
-
-    /* Non-standard button code to be used with the tnon snippet */
-    /* .ns-button{
-      font-size: 15px;
-      line-height: 19px;
-      font-weight: bold;x
-      text-align: center;
-      color: #ffffff;
-      background-color: #00b2e2;
-      border: 2px solid #00b2e2;
-    }
-    .ns-button a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 0px solid #00b2e2;
-    } */
-
 
     /***************************************
                  SPACING STYLES 
@@ -459,25 +405,6 @@
     /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
 
     /***************************************
-                Hover State Button
-    ****************************************/
-
-    /* uncomment below for hover state button */
-    /* .button:hover {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-      border: 1px solid #7fbf12 !important;
-    }
-    .button:hover a {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-      color: #ffffff !important;
-      transition: color 200ms;
-      border: 1px solid #7fbf12 !important;
-    } */
-
-
-    /***************************************
                MOBILE STYLES
     ****************************************/
     
@@ -489,7 +416,7 @@
       
       .block, 
       .content,
-      .safety { display: block; }
+      .safety { display: block !important; }
       /* place content you want stacked here */
       
       .desktop-only { display: none !important; }
@@ -509,8 +436,8 @@
       .m-center { text-align: center !important; margin: 0 auto !important; }
       .p {font-size: 14px !important; line-height: 18px !important;}
       .main-table .fixed-width70 { width: 70px !important; margin: 0 auto !important; }
-      .h3 { font-size: 16px !important; line-height: 20px; }
-      .h3-blue { font-size: 16px !important; line-height: 18px !important; color: #007EAF; }
+      .h3 { font-size: 16px !important; line-height: 20px !important; }
+      .h3-blue { font-size: 16px !important; line-height: 18px !important; color: #007EAF !important; }
       .h3-purple { font-size: 16px !important; line-height: 18px !important; color: #83156F !important; font-weight: bold !important;}
       .h2 { font-size: 22px !important; line-height: 28px !important; color: #83156F !important; font-weight: bold !important;}
       .safety .h2 {font-size: 14px !important;}
@@ -521,12 +448,10 @@
       /*.m-pt20 { padding-top: 20px !important; }*/
       /*.m-pt25 { padding-top: 25px !important; }*/
       /*.m-pt30 { padding-top: 30px !important; }*/
-      /*.m-pt35 { padding-top: 35px !important; }*/
-      /*.m-pt40 { padding-top: 40px !important; }*/
       /* mobile padding top */
       
       .m-pb0  { padding-bottom: 0 !important; }
-      /*.m-pb5  { padding-bottom: 5px !important; }*/
+      .m-pb5  { padding-bottom: 5px !important; }
       .m-pb10 { padding-bottom: 10px !important; }
       .m-pb15 { padding-bottom: 15px !important; }
       .m-pb20 { padding-bottom: 20px !important; }
@@ -551,8 +476,6 @@
         padding-top: 25px !important;
       }
 
-      
-
       .main-table .m-width-initial { width: initial !important; }
 
       .mobile-button { 
@@ -561,8 +484,6 @@
         padding-top: 10px !important;
         padding-bottom: 15px !important; 
       }
-
-      
 
     }
     
@@ -576,361 +497,359 @@
       <td class="main-td">
         <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
           <!-- Start Message -->
+          <tr>
+            <td class="message prl25">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  
                 <tr>
-                  <td class="message prl25">
+                  <td>
+                    {{token.gne-custom-rich-text}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-title}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-organization}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-phone}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-email}}
+                  </td>
+                </tr>
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+        <!-- End Message -->
+        <!-- Start Header -->
+        <tr>
+          <td class="header">
+            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <!-- begin mobile content -->
+              <tr class="mobile-only">
+                <td class="mobile-only">
+                  <div class="mobile-only">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                       
                       <tr>
-                        <td>
-                          {{token.gne-custom-rich-text}}
+                        <td class="image">
+                        <img class="width-auto" src="{{asset.xolair-header-mobile-2x.url}}" alt="{{asset.xolair-header-mobile-2x.alt}}" width="0" height="0"/>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          {{token.gne-rep-name}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          {{token.gne-rep-title}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          {{token.gne-rep-organization}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          {{token.gne-rep-phone}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          {{token.gne-rep-email}}
-                        </td>
-                      </tr>
+                      <!-- end image -->
                     </table>
                     <!-- end table block -->
-                  </td>
-                </tr>
-        <!-- End Message -->
-         
-          <!-- Start Header -->
-          <tr>
-            <td class="header">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <!-- begin mobile content -->
-                <tr class="mobile-only">
-                  <td class="mobile-only">
-                    <div class="mobile-only">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <td class="image">
-                          <img class="width-auto" src="{{asset.xolair-header-mobile-2x.url}}" alt="{{asset.xolair-header-mobile-2x.alt}}" width="0" height="0"/>
-                          </td>
-                        </tr>
-                        <!-- end image -->
-                      </table>
-                      <!-- end table block -->
-                    </div>
-                  </td>
-                </tr>
-                <!-- end mobile content -->
-                <tr>
-                  <td class="image desktop-only">
-                <img src="{{asset.xolair-header-desktop-2x.url}}" alt="{{asset.xolair-header-desktop-2x.alt}}" width="{{asset.xolair-header-desktop-2x.width}}" height="{{asset.xolair-header-desktop-2x.height}}"/>
-                  </td>
-                </tr>
-                <!-- end image -->
+                  </div>
+                </td>
+              </tr>
+              <!-- end mobile content -->
+              <tr>
+                <td class="image desktop-only">
+              <img src="{{asset.xolair-header-desktop-2x.url}}" alt="{{asset.xolair-header-desktop-2x.alt}}" width="{{asset.xolair-header-desktop-2x.width}}" height="{{asset.xolair-header-desktop-2x.height}}"/>
+                </td>
+              </tr>
+              <!-- end image -->
 
-              </table>
-            </td>
-          </tr>
-          <!-- End Header -->
-          <!--Header Copy-->
-          <tr>
-            <td class="h2 prl25 pb10">
-              Helpful Videos to Assist You as You Incorporate XOLAIR for IgE-Mediated Food Allergy Into Your Practice Workflow
-            </td>
-          </tr>
-          <!--End Header Copy-->
-          <!-- Start 2 column content -->
-          <tr>
-            <td>
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <!-- start left column -->
-                  <td class="content" valign="top">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="content-outside">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                           
+            </table>
+          </td>
+        </tr>
+        <!-- End Header -->
+        <!--Header Copy-->
+        <tr>
+          <td class="h2 prl25 pb10">
+            Helpful Videos to Assist You as You Incorporate XOLAIR for IgE-Mediated Food Allergy Into Your Practice Workflow
+          </td>
+        </tr>
+        <!--End Header Copy-->
+        <!-- Start 2 column content -->
+        <tr>
+          <td>
+            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <!-- start left column -->
+                <td class="content" valign="top">
+                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="content-outside">
+                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          
+                          <tr>
+                            <td class="p pb15">Once the decision has been made to prescribe XOLAIR, access must be secured. This video series provides key logistical information to help your practice.</td>
+                          </tr>
+                          <!-- end paragraph -->
                             <tr>
-                              <td class="p pb15">Once the decision has been made to prescribe XOLAIR, access must be secured. This video series provides key logistical information to help your practice.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                             <tr>
-                              <td class="pb10">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="image pr10">
-                                             <img class="width-auto" src="{{asset.rx-book-icon-m-2x.url}}" alt="{{asset.rx-book-icon-m-2x.alt}}" width="0" height="0"/>
-                                            </td>
-                                            <td class="bg-purple" width="64%">
-                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-purple prl20 pb5">
-                                                    Getting Patients Started on XOLAIR
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20 p">
-                                                    Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
-                                                  </td>
-                                                </tr>
-                                              </table>
-                                            <!-- end table block -->
-                                            </td>
-                                          </tr>
-                                          <!-- end image -->
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <!-- end mobile content -->
-                                  <tr>
-                                    <td class="image desktop-only pr10">
-                                    <img src="{{asset.rx-book-icon-d-2x.url}}" alt="{{asset.rx-book-icon-d-2x.alt}}" width="{{asset.rx-book-icon-d-2x.width}}" height="{{asset.rx-book-icon-d-2x.height}}"/>
-                                    </td>
-                                    <td class="desktop-only bg-purple">
+                            <td class="pb10">
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- begin mobile content -->
+                                <tr class="mobile-only">
+                                  <td class="mobile-only">
+                                    <div class="mobile-only">
                                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                         <tr>
-                                          <td class="h3-purple prl20 pb5">
-                                           Getting Patients Started on XOLAIR
+                                          <td class="image pr10">
+                                            <img class="width-auto" src="{{asset.rx-book-icon-m-2x.url}}" alt="{{asset.rx-book-icon-m-2x.alt}}" width="0" height="0"/>
                                           </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="prl20">
-                                            Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    <!-- end table block -->
-                                    </td>
-                                  </tr>
-                                  <!-- end image -->
-
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="pb10">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="bg-blue" width="60%">
-                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-blue prl20 pt10 pb5">
-                                                   Securing Coverage for XOLAIR
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20 pb20 p">
-                                                    Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
-                                                  </td>
-                                                </tr>
-                                              </table>
-                                            <!-- end table block -->
-                                            </td>
-                                             <td class="image pl10">
-                                               <img class="width-auto" src="{{asset.icon-bluebg-m-2x.url}}" alt="{{asset.icon-bluebg-m-2x.alt}}" width="0" height="0"/>
-                                            </td>
-                                          </tr>
-                                          <!-- end image -->
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <!-- end mobile content -->
-                                  <tr>
-                                    <td class="desktop-only pr10">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                       <tr>
-                                          <td class="bg-blue ptb20">
+                                          <td class="bg-purple" width="64%">
                                             <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-blue prl20 pb5">
-                                                    Securing Coverage for XOLAIR
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20">
-                                                    Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
-                                                  </td>
-                                                </tr>
-                                             </table>
-                                              <!-- end table block -->
+                                              <tr>
+                                                <td class="h3-purple prl20 pb5">
+                                                  Getting Patients Started on XOLAIR
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20 p">
+                                                  Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          <!-- end table block -->
                                           </td>
                                         </tr>
-                                      </table> 
+                                        <!-- end image -->
+                                      </table>
                                       <!-- end table block -->
-                                    </td>
-                                    <td class="image desktop-only">
-                                   <img src="{{asset.icon-bluebg-d-2x.url}}" alt="{{asset.icon-bluebg-d-2x.alt}}" width="{{asset.icon-bluebg-d-2x.width}}" height="{{asset.icon-bluebg-d-2x.height}}"/>
-                                    </td>
-                                    
-                                  </tr>
-                                  <!-- end image -->
+                                    </div>
+                                  </td>
+                                </tr>
+                                <!-- end mobile content -->
+                                <tr>
+                                  <td class="image desktop-only pr10">
+                                  <img src="{{asset.rx-book-icon-d-2x.url}}" alt="{{asset.rx-book-icon-d-2x.alt}}" width="{{asset.rx-book-icon-d-2x.width}}" height="{{asset.rx-book-icon-d-2x.height}}"/>
+                                  </td>
+                                  <td class="desktop-only bg-purple">
+                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                        <td class="h3-purple prl20 pb5">
+                                          Getting Patients Started on XOLAIR
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="prl20">
+                                          Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  <!-- end table block -->
+                                  </td>
+                                </tr>
+                                <!-- end image -->
 
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="pb10">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="image pr10">
-                                              <img class="width-auto" src="{{asset.pillbottle-figure-m-2x.url}}" alt="{{asset.pillbottle-figure-m-2x.alt}}" width="0" height="0"/>
-                                            </td>
-                                            <td class="bg-purple" width="62%">
-                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-purple pt20 prl20 pb5">
-                                                    Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
-
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20 pb20 p">
-                                                   Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
-                                                  </td>
-                                                </tr>
-                                              </table>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="pb10">
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- begin mobile content -->
+                                <tr class="mobile-only">
+                                  <td class="mobile-only">
+                                    <div class="mobile-only">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="bg-blue" width="60%">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h3-blue prl20 pt10 pb5">
+                                                  Securing Coverage for XOLAIR
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20 pb20 p">
+                                                  Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          <!-- end table block -->
+                                          </td>
+                                            <td class="image pl10">
+                                              <img class="width-auto" src="{{asset.icon-bluebg-m-2x.url}}" alt="{{asset.icon-bluebg-m-2x.alt}}" width="0" height="0"/>
+                                          </td>
+                                        </tr>
+                                        <!-- end image -->
+                                      </table>
+                                      <!-- end table block -->
+                                    </div>
+                                  </td>
+                                </tr>
+                                <!-- end mobile content -->
+                                <tr>
+                                  <td class="desktop-only pr10">
+                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                        <td class="bg-blue ptb20">
+                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h3-blue prl20 pb5">
+                                                  Securing Coverage for XOLAIR
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20">
+                                                  Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
+                                                </td>
+                                              </tr>
+                                            </table>
                                             <!-- end table block -->
-                                            </td>
-                                          </tr>
-                                          <!-- end image -->
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
+                                        </td>
+                                      </tr>
+                                    </table> 
+                                    <!-- end table block -->
+                                  </td>
+                                  <td class="image desktop-only">
+                                  <img src="{{asset.icon-bluebg-d-2x.url}}" alt="{{asset.icon-bluebg-d-2x.alt}}" width="{{asset.icon-bluebg-d-2x.width}}" height="{{asset.icon-bluebg-d-2x.height}}"/>
+                                  </td>
                                   
-                                  <!-- end mobile content -->
-                                  <tr>
-                                    <td class="image desktop-only pr10">
-                                    <img src="{{asset.pillbottle-figure-d-2x.url}}" alt="{{asset.pillbottle-figure-d-2x.alt}}" width="{{asset.pillbottle-figure-d-2x.width}}" height="{{asset.pillbottle-figure-d-2x.height}}"/>
-                                    </td>
-                                    <td class="desktop-only bg-purple">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td class="h3-purple prl20 pb5">
-                                          Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td class="prl20">
-                                                    Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    <!-- end table block -->
-                                    </td>
-                                  </tr>
-                                  <!-- end image -->
+                                </tr>
+                                <!-- end image -->
 
-                                </table>
-                              </td>
-                            </tr>
-                            
-                            <tr>
-                              <td>
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="bg-blue" width="60%">
-                                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-blue prl20 pt20 pb5">
-                                                   Administration Options for XOLAIR
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20 pb20 p">
-                                                    Provides an overview of the administration options available for XOLAIR after it has been prescribed.
-                                                  </td>
-                                                </tr>
-                                              </table>
-                                            <!-- end table block -->
-                                            </td>
-                                             <td class="image pl10">
-                                            <img class="width-auto" src="{{asset.patient-doctor-m-2x.url}}" alt="{{asset.patient-doctor-m-2x.alt}}" width="0" height="0"/>
-                                            </td>
-                                          </tr>
-                                          <!-- end image -->
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <!-- end mobile content -->
-                                  <tr>
-                                    <td class="desktop-only pr10">
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="pb10">
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- begin mobile content -->
+                                <tr class="mobile-only">
+                                  <td class="mobile-only">
+                                    <div class="mobile-only">
                                       <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                       <tr>
-                                          <td class="bg-blue ptb30">
+                                        <tr>
+                                          <td class="image pr10">
+                                            <img class="width-auto" src="{{asset.pillbottle-figure-m-2x.url}}" alt="{{asset.pillbottle-figure-m-2x.alt}}" width="0" height="0"/>
+                                          </td>
+                                          <td class="bg-purple" width="62%">
                                             <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                  <td class="h3-blue prl20 pb5">
-                                                   Administration Options for XOLAIR
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td class="prl20">
-                                                    Provides an overview of the administration options available for XOLAIR after it has been prescribed.
-                                                  </td>
-                                                </tr>
-                                             </table>
-                                              <!-- end table block -->
+                                              <tr>
+                                                <td class="h3-purple pt20 prl20 pb5">
+                                                  Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
+
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20 pb20 p">
+                                                  Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          <!-- end table block -->
                                           </td>
                                         </tr>
-                                      </table> 
+                                        <!-- end image -->
+                                      </table>
                                       <!-- end table block -->
-                                    </td>
-                                    <td class="image desktop-only">
-                                   <img src="{{asset.patient-doctor-d-2x.url}}" alt="{{asset.patient-doctor-d-2x.alt}}" width="{{asset.patient-doctor-d-2x.width}}" height="{{asset.patient-doctor-d-2x.height}}"/>
-                                    </td>
-                                    
-                                  </tr>
-                                  <!-- end image -->
+                                    </div>
+                                  </td>
+                                </tr>
                                 
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
+                                <!-- end mobile content -->
+                                <tr>
+                                  <td class="image desktop-only pr10">
+                                  <img src="{{asset.pillbottle-figure-d-2x.url}}" alt="{{asset.pillbottle-figure-d-2x.alt}}" width="{{asset.pillbottle-figure-d-2x.width}}" height="{{asset.pillbottle-figure-d-2x.height}}"/>
+                                  </td>
+                                  <td class="desktop-only bg-purple">
+                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                        <td class="h3-purple prl20 pb5">
+                                        Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="prl20">
+                                                  Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  <!-- end table block -->
+                                  </td>
+                                </tr>
+                                <!-- end image -->
+
+                              </table>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- begin mobile content -->
+                                <tr class="mobile-only">
+                                  <td class="mobile-only">
+                                    <div class="mobile-only">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td class="bg-blue" width="60%">
+                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h3-blue prl20 pt20 pb5">
+                                                  Administration Options for XOLAIR
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20 pb20 p">
+                                                  Provides an overview of the administration options available for XOLAIR after it has been prescribed.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          <!-- end table block -->
+                                          </td>
+                                            <td class="image pl10">
+                                          <img class="width-auto" src="{{asset.patient-doctor-m-2x.url}}" alt="{{asset.patient-doctor-m-2x.alt}}" width="0" height="0"/>
+                                          </td>
+                                        </tr>
+                                        <!-- end image -->
+                                      </table>
+                                      <!-- end table block -->
+                                    </div>
+                                  </td>
+                                </tr>
+                                <!-- end mobile content -->
+                                <tr>
+                                  <td class="desktop-only pr10">
+                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                        <td class="bg-blue ptb30">
+                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                              <tr>
+                                                <td class="h3-blue prl20 pb5">
+                                                  Administration Options for XOLAIR
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="prl20">
+                                                  Provides an overview of the administration options available for XOLAIR after it has been prescribed.
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <!-- end table block -->
+                                        </td>
+                                      </tr>
+                                    </table> 
+                                    <!-- end table block -->
+                                  </td>
+                                  <td class="image desktop-only">
+                                  <img src="{{asset.patient-doctor-d-2x.url}}" alt="{{asset.patient-doctor-d-2x.alt}}" width="{{asset.patient-doctor-d-2x.width}}" height="{{asset.patient-doctor-d-2x.height}}"/>
+                                  </td>
+                                  
+                                </tr>
+                                <!-- end image -->                             
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
                             <td class="ptb10">
                               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
@@ -961,26 +880,13 @@
                                   </tr>
                                   <!-- end mobile content -->
                                   
-                                  <tr>
-                                    <td class="pb30" align="center" valign="top">
-                                      
-                                        <!--[if mso]>
-                                        <v:roundrect arcsize="50" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.xolairhcp.com/food-allergies/resources/printable-resources.html" style="height:50px; v-text-anchor:middle; width:240px;" strokecolor="#83156F" fillcolor="#83156F">
-                                          <w:anchorlock/>
-                                          <center style="color:#ffffff; font-size: 16px; line-height: 20px; font-weight:bold;">Watch the videos&nbsp;&nbsp;&nbsp;&#8594;</center>
-                                        </v:roundrect>
-                                      <![endif]-->
-                                      <!--[if !mso]><!-->
-                                        <div style="mso-hide:all; display:inline-block; background:#83156F;color:#ffffff; border-radius:999px;-webkit-border-radius:999px; box-shadow:0 6px 14px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.12);-webkit-box-shadow:0 6px 14px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.12);">
-
-                                              <a href="https://www.xolairhcp.com/food-allergies/resources/printable-resources.html" target="_blank" style="mso-hide:all; background-color:#83156F;  color:#ffffff; display:inline-block; border-radius:50px; font-size: 16px;padding-left: 24px;">
-                                                Watch the videos
-                                                <img style="display: inline-block; vertical-align: middle; border: 0;" border="0" src="{{asset.button-arrow-2x.url}}" alt="{{asset.button-arrow-2x.alt}}" width="{{asset.button-arrow-2x.width}}" height="{{asset.button-arrow-2x.height}}"/>
-                                              </a>
-                                      </div>
-                                      <!--<![endif]-->
-                                    </td>
-                                  </tr>
+                                <tr>
+                                  <td class="image pb20" align="center">
+                                    <img src="{{asset.purple-button-2x.url}}" alt="{{asset.purple-button-2x.alt}}" width="{{asset.purple-button-2x.width}}" height="{{asset.purple-button-2x.height}}"/>
+                                  </td>
+                                </tr>
+                                <!-- end image -->
+                                  
                               </table>
                               <!-- end table block -->
                             </td>
@@ -988,280 +894,264 @@
                             </table>
                             <!-- end table block -->
                             </td>
-                            </tr>
-                            <tr>
-                              <td class="bg-blue">
-                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr>      
-                                    <td class="image desktop-only pt20 pb10" align="center">
-                                    <img src="{{asset.xolair-resource-d-2x.url}}" alt="{{asset.xolair-resource-d-2x.alt}}" width="{{asset.xolair-resource-d-2x.width}}" height="{{asset.xolair-resource-d-2x.height}}"/>
-                                    </td>
-                                  </tr>
-                                  <!-- end image -->
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                              <td class="image pt20 pb10" align="center">
-                                                <img src="{{asset.xolair-resource-m-2x.url}}" alt="{{asset.xolair-resource-m-2x.alt}}" width="{{asset.xolair-resource-m-2x.width}}" height="{{asset.xolair-resource-m-2x.height}}"/>
-                                              </td>           
-                                            </tr>
-                                            <!-- end image -->
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <!-- end mobile content -->
-                                  <tr>
-                                    <td class="h3 bold pb10 prl25" align="center">
-                                      You can also download a comprehensive resource detailing considerations for each step of the access process.
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                      <td class="pb30" align="center" valign="top">
-                                        <!--[if mso]>
-                                          <v:roundrect arcsize="50" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.xolairhcp.com/content/dam/gene/xolairhcp/fa/pdfs/XOLAIR-for-IgE-Mediated-Food-Allergy-Into-Your-Practice-Workflow.pdf" style="height:50px; v-text-anchor:middle; width:300px;" strokecolor="#007EAF" fillcolor="#007EAF">
-                                            <w:anchorlock/>
-                                            <center style="color:#ffffff; font-size: 16px; line-height: 20px; font-weight:bold;">Download the resource&nbsp;&nbsp;&nbsp;&#8594;</center>
-                                          </v:roundrect>
-                                        <![endif]-->
-                                        <!--[if !mso]><!-->
-                                          <div style="mso-hide:all; display:inline-block; background:#007EAF; color:#ffffff; border-radius:999px;-webkit-border-radius:999px; box-shadow:0 6px 14px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.12);-webkit-box-shadow:0 6px 14px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.12);">
-                                        <a href="https://www.xolairhcp.com/content/dam/gene/xolairhcp/fa/pdfs/XOLAIR-for-IgE-Mediated-Food-Allergy-Into-Your-Practice-Workflow.pdf" target="_blank" style="mso-hide:all;background-color:#007EAF;  color:#ffffff;display:inline-block;border-radius:50px; font-size: 16px;padding-left: 20px;">
-                                          Download the resource
-                                          <img style="display: inline-block; vertical-align: middle; border: 0;" border="0" src="{{asset.blue-arrow-button-2x.url}}" alt="{{asset.blue-arrow-button-2x.alt}}" width="{{asset.blue-arrow-button-2x.width}}" height="{{asset.blue-arrow-button-2x.height}}"/>
-                                        </a>
-                                        </div>
-                                        <!--<![endif]-->
-                                      </td>
-                                    </tr>
-                              
-                                </table>
-                                <!-- end table block -->
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                      
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                  <!-- end left column -->
-
-                  <!-- start right column -->
-                  <td class="safety" valign="top">
+                          </tr>
+                          <tr>
+                            <td class="bg-blue">
+                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>      
+                                  <td class="image desktop-only pt20 pb10" align="center">
+                                  <img src="{{asset.xolair-resource-d-2x.url}}" alt="{{asset.xolair-resource-d-2x.alt}}" width="{{asset.xolair-resource-d-2x.width}}" height="{{asset.xolair-resource-d-2x.height}}"/>
+                                  </td>
+                                </tr>
+                                <!-- end image -->
+                                <!-- begin mobile content -->
+                                <tr class="mobile-only">
+                                  <td class="mobile-only">
+                                    <div class="mobile-only">
+                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td class="image pt20 pb10" align="center">
+                                              <img src="{{asset.xolair-resource-m-2x.url}}" alt="{{asset.xolair-resource-m-2x.alt}}" width="{{asset.xolair-resource-m-2x.width}}" height="{{asset.xolair-resource-m-2x.height}}"/>
+                                            </td>           
+                                          </tr>
+                                          <!-- end image -->
+                                      </table>
+                                      <!-- end table block -->
+                                    </div>
+                                  </td>
+                                </tr>
+                                <!-- end mobile content -->
+                                <tr>
+                                  <td class="h3 bold pb10 prl25" align="center">
+                                    You can also download a comprehensive resource detailing considerations for each step of the access process.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="image pb20" align="center">
+                                    <img src="{{asset.blue-button-2x.url}}" alt="{{asset.blue-button-2x.alt}}" width="{{asset.blue-button-2x.width}}" height="{{asset.blue-button-2x.height}}"/>
+                                  </td>
+                                </tr>
+                                <!-- end image -->
+                            
+                              </table>
+                              <!-- end table block -->
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- end table block -->
+                      </td>
+                    </tr>
                     
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="190" style="width: 190px;">
-                      <tr>
-                        <td class="rr-safety">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                              <td class="h2 pb5 m-pb10">INDICATION</td>
-                            </tr>
-                            <!-- end h2 header -->
-                            <tr>
-                              <td class="pb10 p">XOLAIR<sup>®</sup> (omalizumab) is indicated for the reduction of allergic reactions (Type I), including anaphylaxis, that may occur with accidental exposure to one or more foods in adult and pediatric patients aged 1 year and older with IgE-mediated food allergy.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                            <tr>
-                              <td class="p pb10">XOLAIR is to be used in conjunction with food allergen avoidance.</td>
-                            </tr>
-                            <!-- end paragraph -->
-                            <tr>
-                              <td class="p pb10 m-pb0"><strong class="purple">Limitations of Use:</strong> XOLAIR is not indicated for the emergency treatment of allergic reactions, including anaphylaxis.</td>
-                            </tr>
-                            <!-- end h2 header -->
-                            <tr>
-                              <td class="desktop-only bold p">
-                                Please see additional Important Safety Information below
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
+                  </table>
+                  <!-- end table block -->
+                </td>
+                <!-- end left column -->
 
-                    </table>
-                  </td>
-                  <!-- end right column -->
-                </tr>
-              </table> 
-            </td>
-          </tr>
-          <!-- End 2 column Content -->
-          <!-- Start ISI Continued-->
-          <tr>
-            <td class="safety safety-cont">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="h2 pb10">IMPORTANT SAFETY INFORMATION</td>
-                </tr>
-                <!-- end h2 header -->
-                <tr>
-                  <td class="safety-warning">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="pt10 pb5 p bold"align="center">
-                          WARNING: Anaphylaxis
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="prl20 pb10 p bold">
-                          Anaphylaxis presenting as bronchospasm, hypotension, syncope, urticaria, and/or angioedema of the throat or tongue, has been reported to occur after administration of XOLAIR. Anaphylaxis has occurred as early as after the first dose of XOLAIR, but also has occurred beyond 1 year after beginning regularly administered treatment. Because of the risk of anaphylaxis, initiate XOLAIR therapy in a healthcare setting and closely observe patients for an appropriate period of time after XOLAIR administration. Health care providers administering XOLAIR should be prepared to manage anaphylaxis which can be life-threatening. Inform patients of the signs and symptoms of anaphylaxis and instruct them to seek immediate medical care should symptoms occur. Selection of patients for self-administration of XOLAIR should be based on criteria to mitigate risk from anaphylaxis.
-                        </td>
-                      </tr>
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pt15 pb5 h2">CONTRAINDICATIONS</td>
-                </tr>
-                <!-- end h2 header -->
-               
-                <tr>
-                  <td class="p pb10"> XOLAIR is contraindicated in patients with a severe hypersensitivity reaction to XOLAIR or to any ingredient of XOLAIR.</td>
-                </tr>
-                <!-- end paragraph -->
-                
-                <tr>
-                  <td class="h2 pb5">WARNINGS AND PRECAUTIONS</td>
-                </tr>
-                <!-- end h2 header -->
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Anaphylaxis:</strong> Anaphylaxis has been reported to occur after administration of XOLAIR in premarketing clinical trials and in postmarketing spontaneous reports. In premarketing clinical trials in patients for a different indication, anaphylaxis was reported in 3 of 3507 (0.1%) patients. Anaphylaxis occurred with the first dose of XOLAIR in two patients and with the fourth dose in one patient. The time to onset of anaphylaxis was 90 minutes after administration in two patients and 2 hours after administration in one patient.
+                <!-- start right column -->
+                <td class="safety" valign="top">
+                  
+                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="190" style="width: 190px;">
+                    <tr>
+                      <td class="rr-safety">
+                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="h2 pb5">INDICATION</td>
+                          </tr>
+                          <!-- end h2 header -->
+                          <tr>
+                            <td class="pb10 p">XOLAIR<sup>®</sup> (omalizumab) is indicated for the reduction of allergic reactions (Type I), including anaphylaxis, that may occur with accidental exposure to one or more foods in adult and pediatric patients aged 1 year and older with IgE-mediated food allergy.</td>
+                          </tr>
+                          <!-- end paragraph -->
+                          <tr>
+                            <td class="p pb10">XOLAIR is to be used in conjunction with food allergen avoidance.</td>
+                          </tr>
+                          <!-- end paragraph -->
+                          <tr>
+                            <td class="p pb10 m-pb0"><strong class="purple">Limitations of Use:</strong> XOLAIR is not indicated for the emergency treatment of allergic reactions, including anaphylaxis.</td>
+                          </tr>
+                          <!-- end h2 header -->
+                          <tr>
+                            <td class="desktop-only bold p">
+                              Please see additional Important Safety Information below
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- end table block -->
+                      </td>
+                    </tr>
 
-                  </td>
-                </tr>
-                 <tr>
-                  <td class="pb10 p">
-                    A case-control study in asthma patients showed that, among XOLAIR users, patients with a history of anaphylaxis to foods, medications, or other causes were at increased risk of anaphylaxis associated with XOLAIR, compared to those with no prior history of anaphylaxis.
-                  </td>
-                </tr>
-                 <tr>
-                  <td class="pb10 p">
-                  In postmarketing spontaneous reports, the frequency of anaphylaxis attributed to XOLAIR use was estimated to be at least 0.2% of patients based on an estimated exposure of about 57,300 patients from June 2003 through December 2006. Approximately 60% to 70% of anaphylaxis cases have been reported to occur within the first three doses of XOLAIR, with additional cases occurring sporadically beyond the third dose.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    Initiate XOLAIR only in a healthcare setting equipped to manage anaphylaxis which can be life-threatening. Observe patients closely for an appropriate period of time after administration of XOLAIR, taking into account the time to onset of anaphylaxis seen in premarketing clinical trials and postmarketing spontaneous reports. Inform patients of the signs and symptoms of anaphylaxis, and instruct them to seek immediate medical care should signs or symptoms occur.
+                  </table>
+                </td>
+                <!-- end right column -->
+              </tr>
+            </table> 
+          </td>
+        </tr>
+        <!-- End 2 column Content -->
+        <!-- Start ISI Continued-->
+        <tr>
+          <td class="safety safety-cont">
+            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="h2 pb10">IMPORTANT SAFETY INFORMATION</td>
+              </tr>
+              <!-- end h2 header -->
+              <tr>
+                <td class="safety-warning">
+                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="pt10 pb5 p bold"align="center">
+                        WARNING: Anaphylaxis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="prl20 pb10 p bold">
+                        Anaphylaxis presenting as bronchospasm, hypotension, syncope, urticaria, and/or angioedema of the throat or tongue, has been reported to occur after administration of XOLAIR. Anaphylaxis has occurred as early as after the first dose of XOLAIR, but also has occurred beyond 1 year after beginning regularly administered treatment. Because of the risk of anaphylaxis, initiate XOLAIR therapy in a healthcare setting and closely observe patients for an appropriate period of time after XOLAIR administration. Health care providers administering XOLAIR should be prepared to manage anaphylaxis which can be life-threatening. Inform patients of the signs and symptoms of anaphylaxis and instruct them to seek immediate medical care should symptoms occur. Selection of patients for self-administration of XOLAIR should be based on criteria to mitigate risk from anaphylaxis.
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- end table block -->
+                </td>
+              </tr>
+              <tr>
+                <td class="pt15 pb5 h2">CONTRAINDICATIONS</td>
+              </tr>
+              <!-- end h2 header -->
+              
+              <tr>
+                <td class="p pb10"> XOLAIR is contraindicated in patients with a severe hypersensitivity reaction to XOLAIR or to any ingredient of XOLAIR.</td>
+              </tr>
+              <!-- end paragraph -->
+              
+              <tr>
+                <td class="h2 pb5">WARNINGS AND PRECAUTIONS</td>
+              </tr>
+              <!-- end h2 header -->
+              <tr>
+                <td class="pb10 p">
+                  <strong>Anaphylaxis:</strong> Anaphylaxis has been reported to occur after administration of XOLAIR in premarketing clinical trials and in postmarketing spontaneous reports. In premarketing clinical trials in patients for a different indication, anaphylaxis was reported in 3 of 3507 (0.1%) patients. Anaphylaxis occurred with the first dose of XOLAIR in two patients and with the fourth dose in one patient. The time to onset of anaphylaxis was 90 minutes after administration in two patients and 2 hours after administration in one patient.
 
-                  </td>
-                </tr>
-               <tr>
-                 <td class="p">
-                   Once XOLAIR therapy has been established, administration of XOLAIR prefilled syringe or autoinjector outside of a healthcare setting by a patient or a caregiver may be appropriate for selected patients. Patient selection, determined by the healthcare provider in consultation with the patient, should take into account the pattern of anaphylaxis events seen in premarketing clinical trials and postmarketing spontaneous reports, as well as individual patient risk factors (e.g. prior history of anaphylaxis), ability to recognize signs and symptoms of anaphylaxis, and ability to perform subcutaneous injections with XOLAIR prefilled syringe or autoinjector with proper technique according to the prescribed dosing regimen and Instructions for Use.
+                </td>
+              </tr>
+                <tr>
+                <td class="pb10 p">
+                  A case-control study in asthma patients showed that, among XOLAIR users, patients with a history of anaphylaxis to foods, medications, or other causes were at increased risk of anaphylaxis associated with XOLAIR, compared to those with no prior history of anaphylaxis.
+                </td>
+              </tr>
+                <tr>
+                <td class="pb10 p">
+                In postmarketing spontaneous reports, the frequency of anaphylaxis attributed to XOLAIR use was estimated to be at least 0.2% of patients based on an estimated exposure of about 57,300 patients from June 2003 through December 2006. Approximately 60% to 70% of anaphylaxis cases have been reported to occur within the first three doses of XOLAIR, with additional cases occurring sporadically beyond the third dose.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  Initiate XOLAIR only in a healthcare setting equipped to manage anaphylaxis which can be life-threatening. Observe patients closely for an appropriate period of time after administration of XOLAIR, taking into account the time to onset of anaphylaxis seen in premarketing clinical trials and postmarketing spontaneous reports. Inform patients of the signs and symptoms of anaphylaxis, and instruct them to seek immediate medical care should signs or symptoms occur.
 
-                 </td>
-               </tr>
-                <tr>
-                  <td class="pb10 p">
-                    Discontinue XOLAIR in patients who experience a severe hypersensitivity reaction.
+                </td>
+              </tr>
+              <tr>
+                <td class="p">
+                  Once XOLAIR therapy has been established, administration of XOLAIR prefilled syringe or autoinjector outside of a healthcare setting by a patient or a caregiver may be appropriate for selected patients. Patient selection, determined by the healthcare provider in consultation with the patient, should take into account the pattern of anaphylaxis events seen in premarketing clinical trials and postmarketing spontaneous reports, as well as individual patient risk factors (e.g. prior history of anaphylaxis), ability to recognize signs and symptoms of anaphylaxis, and ability to perform subcutaneous injections with XOLAIR prefilled syringe or autoinjector with proper technique according to the prescribed dosing regimen and Instructions for Use.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Malignancy:</strong> Malignant neoplasms were observed in 20 of 4127 (0.5%) XOLAIR-treated patients compared with 5 of 2236 (0.2%) control patients in clinical studies of adults and adolescents (≥12 years of age) for a different indication and other allergic disorders. The observed malignancies in XOLAIR-treated patients were a variety of types, with breast, non-melanoma skin, prostate, melanoma, and parotid occurring more than once, and five other types occurring once each. The majority of patients were observed for less than 1 year. The impact of longer exposure to XOLAIR or use in patients at higher risk for malignancy (e.g., elderly, current smokers) is not known.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  Discontinue XOLAIR in patients who experience a severe hypersensitivity reaction.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    A subsequent 5-year observational study of 5007 XOLAIR-treated and 2829 non-XOLAIR-treated adolescent and adult patients for a different indication found that the incidence rates of primary malignancies (per 1000 patient years) were similar in both groups (12.3 vs 13.0, respectively). Study limitations which include the observational study design, the bias introduced by allowing enrollment of patients previously exposed to XOLAIR (88%), enrollment of patients (56%) while a history of cancer or a premalignant condition were study exclusion criteria, and the high study discontinuation rate (44%) preclude definitively ruling out a malignancy risk with XOLAIR.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Malignancy:</strong> Malignant neoplasms were observed in 20 of 4127 (0.5%) XOLAIR-treated patients compared with 5 of 2236 (0.2%) control patients in clinical studies of adults and adolescents (≥12 years of age) for a different indication and other allergic disorders. The observed malignancies in XOLAIR-treated patients were a variety of types, with breast, non-melanoma skin, prostate, melanoma, and parotid occurring more than once, and five other types occurring once each. The majority of patients were observed for less than 1 year. The impact of longer exposure to XOLAIR or use in patients at higher risk for malignancy (e.g., elderly, current smokers) is not known.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Fever, Arthralgia, and Rash:</strong> In post-approval use, some patients have experienced a constellation of signs and symptoms, including arthritis/arthralgia, rash, fever, and lymphadenopathy with an onset 1 to 5 days after the first or subsequent injections of XOLAIR. These signs and symptoms have recurred after additional doses in some patients. Physicians should stop XOLAIR if a patient develops this constellation of signs and symptoms.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Parasitic (Helminth) Infection:</strong> Monitor patients at high risk of geohelminth infection while on XOLAIR therapy. Insufficient data are available to determine the length of monitoring required for geohelminth infections after stopping XOLAIR treatment.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  A subsequent 5-year observational study of 5007 XOLAIR-treated and 2829 non-XOLAIR-treated adolescent and adult patients for a different indication found that the incidence rates of primary malignancies (per 1000 patient years) were similar in both groups (12.3 vs 13.0, respectively). Study limitations which include the observational study design, the bias introduced by allowing enrollment of patients previously exposed to XOLAIR (88%), enrollment of patients (56%) while a history of cancer or a premalignant condition were study exclusion criteria, and the high study discontinuation rate (44%) preclude definitively ruling out a malignancy risk with XOLAIR.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                     <strong> Laboratory Tests:</strong> Due to formation of XOLAIR:IgE complexes, serum total IgE levels increase following administration of XOLAIR and may remain elevated for up to 1 year following discontinuation of XOLAIR. Do not use serum total IgE levels obtained less than 1 year following discontinuation to reassess the dosing regimen for IgE-mediated food allergy patients, because these levels may not reflect steady state free IgE levels.
-                  </td>
-                </tr>
-                <tr>
-                   <td class="pb10 p">
-                    <strong>Potential Medication Error Related to Emergency Treatment of Anaphylaxis</strong> XOLAIR should not be used for the emergency treatment of allergic reactions, including anaphylaxis. In studies to simulate use, some patients and caregivers did not understand that XOLAIR is not intended for the emergency treatment of allergic reactions, including anaphylaxis. The safety and effectiveness of XOLAIR for emergency treatment of allergic reactions, including anaphylaxis, have not been established. Instruct patients that XOLAIR is for maintenance use to reduce allergic reactions, including anaphylaxis, while avoiding food allergens.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="h2 pb5">
-                    ADVERSE REACTIONS
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Fever, Arthralgia, and Rash:</strong> In post-approval use, some patients have experienced a constellation of signs and symptoms, including arthritis/arthralgia, rash, fever, and lymphadenopathy with an onset 1 to 5 days after the first or subsequent injections of XOLAIR. These signs and symptoms have recurred after additional doses in some patients. Physicians should stop XOLAIR if a patient develops this constellation of signs and symptoms.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Parasitic (Helminth) Infection:</strong> Monitor patients at high risk of geohelminth infection while on XOLAIR therapy. Insufficient data are available to determine the length of monitoring required for geohelminth infections after stopping XOLAIR treatment.
 
-                  </td>
-                </tr>
-                <tr>
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                    <strong> Laboratory Tests:</strong> Due to formation of XOLAIR:IgE complexes, serum total IgE levels increase following administration of XOLAIR and may remain elevated for up to 1 year following discontinuation of XOLAIR. Do not use serum total IgE levels obtained less than 1 year following discontinuation to reassess the dosing regimen for IgE-mediated food allergy patients, because these levels may not reflect steady state free IgE levels.
+                </td>
+              </tr>
+              <tr>
                   <td class="pb10 p">
-                   <strong> IgE-Mediated Food Allergy:</strong> The most common adverse reactions (≥3% incidence in XOLAIR-treated patients) included: injection site reaction (15.5%) and pyrexia (6.4%). Safety data obtained from adults (n=3) in this trial was limited.
+                  <strong>Potential Medication Error Related to Emergency Treatment of Anaphylaxis</strong> XOLAIR should not be used for the emergency treatment of allergic reactions, including anaphylaxis. In studies to simulate use, some patients and caregivers did not understand that XOLAIR is not intended for the emergency treatment of allergic reactions, including anaphylaxis. The safety and effectiveness of XOLAIR for emergency treatment of allergic reactions, including anaphylaxis, have not been established. Instruct patients that XOLAIR is for maintenance use to reduce allergic reactions, including anaphylaxis, while avoiding food allergens.
+                </td>
+              </tr>
+              <tr>
+                <td class="h2 pb5">
+                  ADVERSE REACTIONS
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Injection Site Reactions:</strong> Injection site reactions occurred at a rate of 15.5% in XOLAIR-treated patients compared with 10.9% in placebo-treated patients. The types of injection site reactions included: urticaria, discomfort, erythema, pain, and rash. All injection site reactions were mild to moderate severity and none resulted in study discontinuation.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong> IgE-Mediated Food Allergy:</strong> The most common adverse reactions (≥3% incidence in XOLAIR-treated patients) included: injection site reaction (15.5%) and pyrexia (6.4%). Safety data obtained from adults (n=3) in this trial was limited.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Injection Site Reactions in Healthy Adults: </strong>In an open label trial in healthy adults, in which the 300 mg/2 mL autoinjector was compared to the 300 mg/2 mL prefilled syringe, injection site reactions (e.g., induration, pain, erythema, hemorrhage, swelling, discomfort, bruising, hypoesthesia, edema, pruritus) were observed in 24% (16/66) of subjects treated with the autoinjector compared with 14% (9/64) of subjects treated with the prefilled syringe.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Injection Site Reactions:</strong> Injection site reactions occurred at a rate of 15.5% in XOLAIR-treated patients compared with 10.9% in placebo-treated patients. The types of injection site reactions included: urticaria, discomfort, erythema, pain, and rash. All injection site reactions were mild to moderate severity and none resulted in study discontinuation.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong style="text-decoration: underline;">Cardiovascular and Cerebrovascular Events from Clinical Studies in Patients for a Different Indication:</strong> A 5-year observational study was conducted in 5007 XOLAIR-treated and 2829 non-XOLAIR-treated patients ≥12 years of age for a different indication to evaluate the long term safety of XOLAIR, including the risk of malignancy. The results suggest a potential increased risk of serious cardiovascular and cerebrovascular events in patients treated with XOLAIR, however the observational study design, the inclusion of patients previously exposed to XOLAIR (88% for a mean of 8 months), baseline imbalances in cardiovascular risk factors between the treatment groups, an inability to adjust for unmeasured risk factors, and the high study discontinuation rate (44%) limit the ability to quantify the magnitude of the risk.
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Injection Site Reactions in Healthy Adults: </strong>In an open label trial in healthy adults, in which the 300 mg/2 mL autoinjector was compared to the 300 mg/2 mL prefilled syringe, injection site reactions (e.g., induration, pain, erythema, hemorrhage, swelling, discomfort, bruising, hypoesthesia, edema, pruritus) were observed in 24% (16/66) of subjects treated with the autoinjector compared with 14% (9/64) of subjects treated with the prefilled syringe.
 
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pb10 p">
-                    <strong>Pregnancy:</strong> Data with XOLAIR use in pregnant women are insufficient to inform on drug associated risk.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p pb20">You may report side effects to the FDA at <a class="blue bold" href="tel:1-800-332-1088"><u>(800) FDA-1088</u></a> or <a class="bold" href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"><u>www.fda.gov/medwatch</u></a>. You may also report side effects to Genentech at <a class="bold" href="tel:1-888-835-2555"><u>(888) 835-2555</u></a>.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="p pb20 bold">Please see full <a href="https://www.gene.com/download/pdf/xolair_prescribing.pdf"><span class="blue">Prescribing Information</span></a>, including Boxed WARNING and <a href="https://www.gene.com/download/pdf/xolair_medguide.pdf"><span class="blue">Medication Guide</span></a>, for additional Important Safety Information.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="p bold">This commercial email is brought to you by Genentech USA, Inc.</td>
-                </tr>
-                <!-- end paragraph -->
-                
-              </table>
-            </td>
-          </tr>
-      <!-- End ISI Continued -->
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong style="text-decoration: underline;">Cardiovascular and Cerebrovascular Events from Clinical Studies in Patients for a Different Indication:</strong><br class="mobile-only"/> A 5-year observational study was conducted in 5007 XOLAIR-treated and 2829 non-XOLAIR-treated patients ≥12 years of age for a different indication to evaluate the long term safety of XOLAIR, including the risk of malignancy. The results suggest a potential increased risk of serious cardiovascular and cerebrovascular events in patients treated with XOLAIR, however the observational study design, the inclusion of patients previously exposed to XOLAIR (88% for a mean of 8 months), baseline imbalances in cardiovascular risk factors between the treatment groups, an inability to adjust for unmeasured risk factors, and the high study discontinuation rate (44%) limit the ability to quantify the magnitude of the risk.
+
+                </td>
+              </tr>
+              <tr>
+                <td class="pb10 p">
+                  <strong>Pregnancy:</strong> Data with XOLAIR use in pregnant women are insufficient to inform on drug associated risk.
+                </td>
+              </tr>
+              <tr>
+                <td class="p pb20">You may report side effects to the FDA at <a class="blue bold" href="tel:1-800-332-1088"><u>(800) FDA-1088</u></a> or <a class="bold" href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"><u>www.fda.gov/medwatch</u></a>. You may also report side effects to Genentech at <a class="bold" href="tel:1-888-835-2555"><u>(888) 835-2555</u></a>.</td>
+              </tr>
+              <!-- end paragraph -->
+              <tr>
+                <td class="p pb20 bold">Please see full <a href="https://www.gene.com/download/pdf/xolair_prescribing.pdf"><span class="blue">Prescribing Information</span></a>, including Boxed WARNING and <a href="https://www.gene.com/download/pdf/xolair_medguide.pdf"><span class="blue">Medication Guide</span></a>, for additional Important Safety Information.</td>
+              </tr>
+              <!-- end paragraph -->
+              <tr>
+                <td class="p bold m-pb5">This commercial email is brought to you by Genentech USA, Inc.</td>
+              </tr>
+              <!-- end paragraph -->
+              
+            </table>
+          </td>
+        </tr>
+        <!-- End ISI Continued -->
 
      <!-- Start Footer -->
      {% if build.type != "THIRD_PARTY" %}
-     <!-- You will still need to add the CO/CT/VT disclaimer, brand specific language, and commercial email line above the footer. These three lines should be body copy size -->
-     <!-- For the footer class, ensure left and right padding is consistent with design, change inline styles if needed. Leave top and bottom blank -->
-     <!-- Ensure you have the .block class in your media queries -->
      <tr>
        <td class="footer" style="padding-left: 25px; padding-right: 25px; border-top: 2px solid #BBBBBB; background-color: #ffffff;">
          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-           
            <tr>
              <td class="m-center image" style="line-height:1; font-family: Arial, sans-serif; padding-bottom: 30px;">
                <a style="display:inline-block;" href="https://www.gene.com/"><img src="{{asset.gene-logo-black-2x.url}}" alt="{{asset.gene-logo-black-2x.alt}}" width="{{asset.gene-logo-black-2x.width}}" height="{{asset.gene-logo-black-2x.height}}" /></a>
