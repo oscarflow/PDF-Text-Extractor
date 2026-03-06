@@ -1,0 +1,439 @@
+**trtd**
+<tr>
+  <td>
+    ${0}
+  </td>
+</tr>
+**tfl**
+<tr>
+  <td class="footnote">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="li" valign="top"><sup>§</sup></td>
+        <td>${1:Footnote List Example}</td>
+      </tr>
+      <tr>
+        <td class="li" valign="top"><sup>§</sup></td>
+        <td>${2:Footnote List Example}</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- end footnote list -->
+**vml-button**
+{% 
+    render "vml-button",
+      width: '200',
+      vml_add_width: '0',
+      height: '50',
+      text: 'Button Text',
+      font: 'Arial, sans-serif',
+      font_size: '16',
+      font_weight: 'bold',
+      color: '#000000',
+      background_color: '#ffffff',
+      border_color: '#000000',
+      border_size: '1',
+      border_radius: '30',
+      href: '#placeholder',
+      class: '',
+      align: 'left',
+%}
+**tmi**
+<!-- begin mobile content -->
+<tr class="mobile-only">
+  <td class="mobile-only">
+    <div class="mobile-only">
+      <img class="width-auto" src="{{asset.ImgName.url}}" alt="{{asset.ImgName.alt}}" width="0" height="0"/>
+    </div>
+  </td>
+</tr>
+<!-- end mobile content -->
+**tmo**
+<!-- begin mobile content -->
+<tr class="mobile-only">
+  <td class="mobile-only">
+    <div class="mobile-only">
+      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        ${0:Insert Mobile HTML Here}
+      </table>
+      <!-- end table block -->
+    </div>
+  </td>
+</tr>
+<!-- end mobile content -->
+**tref**
+<tr>
+  <td class="references">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="li" valign="top"><strong>1.</strong></td>
+        <td>${1:Reference}</td>
+      </tr>
+      <tr>
+        <td class="li" valign="top"><strong>2.</strong></td>
+        <td>${2:Reference}</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- end references list -->
+**non standard button tnon**
+<tr>
+  <td>
+    <table class="fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="300" style="width:300px;">
+      <tr>
+        <td class="ns-button">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td><a href="#placeholder">BUTTON TEXT</a></td>
+              <td>
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="image" align="right">
+                      <a href="#placeholder"><img src="https://www.pngmagic.com/product_images/arrow-png-download.png" alt="" width="30" height="23"/></a>
+                    </td>
+                  </tr>
+                </table>
+                </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+**mobile and desktop image timd**
+<!-- begin mobile img -->
+<tr class="mobile-only">
+  <td class="mobile-only">
+    <div class="mobile-only">
+      <img class="width-auto" src="{{asset.ImgName-mobile-2x.url}}" alt="{{asset.ImgName-mobile-2x.alt}}" width="0" height="0"/>
+    </div>
+  </td>
+</tr>
+<!-- end mobile img -->
+<tr>
+  <td class="desktop-only image">
+    <img src="{{asset.ImgName-desktop-2x.url}}" alt="{{asset.ImgName-desktop-2x.alt}}" width="{{asset.ImgName-desktop-2x.width}}" height="{{asset.ImgName-desktop-2x.height}}"/>
+  </td>
+</tr>
+<!-- end desktop img -->
+**vml gradient tgrad**
+<!-- GRADIENT SECTION -->
+<tr>
+  <td width="100%" bgcolor="#FF7500" style="background:linear-gradient(90deg, #00b2e2 10%, #ee2a7b 100%); padding:0;margin:0">
+  <center>
+  <!--[if gte mso 9]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px" fillcolor="#ee2a7b">
+  <v:fill type="gradient" color1="#00b2e2" color2="#00b2e2" colors="15% #69549E,10% #00b2e2" angle="90" />
+  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+  <center>
+  <![endif]-->
+  <table cellspacing="0" cellpadding="0" border="0" width="650" style="margin:0; padding:0; width:650px" align="center">
+  ${0:Insert Snippet Here}
+  </table>
+  <!--[if gte mso 9]>
+  </center>
+  </v:textbox>
+  </v:rect>
+  <![endif]-->
+  </center>
+  </td>
+</tr>
+<!-- GRADIENT SECTION - ENDS-->
+**t3c**
+<!-- Start 3 columns -->
+<tr>
+  <td class="three-columns">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <!-- Start left column -->
+        <td class="column3 block pr10" valign="top" width="33%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <!-- Delete these instructions after reading: -->
+            <!-- Add this CSS to mobile styles for stacking: .column3 { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; } -->
+            <!-- If doing a 3-column ul, add m-pb0 to the first 2 columns' uls so it looks like one list in mobile -->
+            Insert Snippet Here
+          </table>
+        </td>
+        <!-- End left column, start middle column -->
+        <td class="column3 block prl5" valign="top" width="33%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            Insert Snippet Here
+          </table>
+        </td>
+        <!-- End middle column, start right column -->
+        <td class="column3 block pl10" valign="top" width="33%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            Insert Snippet Here
+          </table>
+        </td>
+        <!-- End right column -->
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- End 3 columns -->
+**tlegal**
+<tr>
+  <td class="legal">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="pr40 block m-pr0 m-pb15">
+          <a href="https://www.gene.com/contact-us">Contact Us</a>
+        </td>
+        <td class="pr40 block m-pr0 m-pb15">
+          <a href="https://www.gene.com/privacy-policy">Privacy Policy</a>
+        </td>
+        <td class="pr40 block m-pr0 m-pb15">
+          <a href="https://www.gene.com/terms-conditions">Terms and Conditions</a>
+        </td>
+        <td class="block">
+          <a href="{{build.unsubscribeLink}}">Unsubscribe</a>
+        </td>
+      </tr>
+    </table>
+    <!-- end table block -->
+  </td>
+</tr>
+**thr**
+<tr>
+  <td class="${1:Add padding here}">
+    <table class="bb-color fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="${2:Enter width}" style="${3:Enter width}">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table> 
+  </td>
+</tr>
+<!-- end horizontal rule -->
+**tbg**
+<!-- add to mobile css: .m-bg { background: url('{{asset.background-header-mobile-2x.url}}') no-repeat 0 0 !important; background-size: 100% 100% !important; background-color: #ffffff !important; } -->
+
+<tr>
+  <td class="m-bg" background="{{asset.background-header-desktop-2x.url}}" width="{{asset.background-header-desktop-2x.width}}" height="{{asset.background-header-desktop-2x.height}}" valign="top" style="background-color: #ffffff; background-size: contain; background-repeat: no-repeat; width: {{asset.background-header-desktop-2x.width}}px;">
+    <!--[if gte mso 9]>
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:{{asset.background-header-desktop-2x.width}}px;height:{{asset.background-header-desktop-2x.height}}px;">
+      <v:fill type="frame" src="{{asset.background-header-desktop-2x.url}}" color="#ffffff" />
+      <v:textbox inset="0,0,0,0">
+    <![endif]-->
+    <div>
+      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="h1" align="center">${0}</td>
+        </tr>
+      </table>
+      <!-- end table block -->
+    </div>
+    <!--[if gte mso 9]>
+      </v:textbox>
+    </v:rect>
+    <![endif]-->
+  </td>
+</tr>
+**timg**
+<tr>
+  <td class="image">
+    <img src="{{asset.ImgName.url}}" alt="{{asset.ImgName.alt}}" width="{{asset.ImgName.width}}" height="{{asset.ImgName.height}}"/>
+  </td>
+</tr>
+<!-- end image -->
+**tul table unordered list **
+<tr>
+  <td class="ul">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="li" valign="top">•</td>
+        <td>List Example</td>
+      </tr>
+      <tr>
+        <td class="li" valign="top">•</td>
+        <td>List Example</td>
+      </tr>
+      <tr>
+        <td class="li" valign="top">•</td>
+        <td>List Example</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- end unordered list -->
+**tbtn**
+<tr>
+  <td>
+    <table class="fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="300" style="width:300px;">
+      <tr>
+        <td class="button" align="center"><a href="#placeholder">BUTTON TEXT</a></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- end button -->
+table nested unoredered list tulul **
+<tr>
+  <td class="ul">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="li" valign="top">•</td>
+        <td width="100%">List Example</td>
+      </tr>
+      <tr>
+        <td class="ul" colspan="2">
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="li" valign="top">–</td>
+              <td>Sub-list Example</td>
+            </tr>
+            <tr>
+              <td class="li" valign="top">–</td>
+              <td>Sub-list Example</td>
+            </tr>
+            <tr>
+              <td class="li" valign="top">–</td>
+              <td>Sub-list Example</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- end unordered list -->
+**pre hidden pre header text **
+<div style="display: none; max-height: 0px; overflow: hidden;">
+{{build.preheader}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+**tufooter**
+<!-- Start Footer -->
+{% if build.type != "THIRD_PARTY" %}
+<!-- You will still need to add the CO/CT/VT disclaimer, brand specific language, and commercial email line above the footer. These three lines should be body copy size -->
+<!-- For the footer class, ensure left and right padding is consistent with design, change inline styles if needed. Leave top and bottom blank -->
+<!-- Ensure you have the .block class in your media queries -->
+<tr>
+  <td class="footer" style="padding-left: 25px; padding-right: 25px; border-top: 2px solid #BBBBBB; background-color: #ffffff;">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="image" style="line-height:1; font-family: Arial, sans-serif; padding-top: 25px; padding-bottom: 30px;">
+          <a style="display:inline-block;" href="https://www.gene.com/"><img src="{{asset.logo-gene-2x.url}}" alt="{{asset.logo-gene-2x.alt}}" width="{{asset.logo-gene-2x.width}}" height="{{asset.logo-gene-2x.height}}" /></a>
+        </td>
+      </tr>
+      <!-- end image -->
+      <tr>
+        <td class="legal" style="padding-bottom: 35px;">
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/contact-us">Contact Us</a>
+              </td>
+              <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/privacy-policy">Privacy Policy</a>
+              </td>
+              <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/terms-conditions">Terms and Conditions</a>
+              </td>
+              <td class="block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px;">
+                <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+              </td>
+            </tr>
+          </table>
+          <!-- end table block -->
+        </td>
+      </tr>
+      <!-- end paragraph -->
+      <tr>
+        <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">This email is intended for US residents only.</td>
+      </tr>
+      <!-- end paragraph -->
+      <tr>
+        <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech USA, Inc. All rights reserved.</td>
+      </tr>
+      <!-- end paragraph -->
+      <tr>
+        <td style="font-family: Arial, sans-serif; color: #182628; font-size: 12px; line-height: 14px; padding-bottom: 25px;">
+          Genentech USA, Inc. 1 DNA Way, South San Francisco, CA <span style="white-space: nowrap;">94080-4990</span>
+        </td>
+      </tr>
+    </table> 
+  </td>
+</tr>
+{% endif %}
+<!-- End Footer -->
+**img**
+<img src="{{asset.ImgName.url}}" alt="{{asset.ImgName.alt}}" width="{{asset.ImgName.width}}" height="{{asset.ImgName.height}}"/>
+**tint**
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+  ${0:Insert Snippet Here}
+</table>
+<!-- end table block -->
+**icon list**
+<!-- start icon list -->
+<!-- To center images, add the CSS .icon-list img { margin: 0 auto; }. Outlook will only center it if the containing td has text-align center. -->
+<!-- When you add padding, add it to the text td -->
+<!-- Change the image td width from 123 to the width of the widest image -->
+<tr>
+  <td class="icon-list">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="row">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="image" valign="middle" width="123" style="width: 123px;">
+                <img class="max-none" src="{{asset.ImgName1.url}}" alt="{{asset.ImgName1.alt}}" width="{{asset.ImgName1.width}}" height="{{asset.ImgName1.height}}"/>
+              </td>
+              <td class="text" valign="middle">
+                Content goes here
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- row -->
+      <tr>
+        <td class="row">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="image" valign="middle" width="123" style="width: 123px;">
+                <img class="max-none" src="{{asset.ImgName2.url}}" alt="{{asset.ImgName2.alt}}" width="{{asset.ImgName2.width}}" height="{{asset.ImgName2.height}}"/>
+              </td>
+              <td class="text" valign="middle">
+                Content goes here
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- row -->
+    </table>
+  </td>
+</tr>
+<!-- end icon list -->
+**t2c**
+<!-- Start 2 columns -->
+<tr>
+  <td class="two-columns">
+    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <!-- Start left column -->
+        <td class="column2 block pr10" valign="top" width="50%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <!-- Delete these instructions after reading: -->
+            <!-- Do these things to avoid weird formatting/gaps on mobile. -->
+            <!-- Add this CSS to mobile styles: .column2 { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; } -->
+            <!-- If doing a 2-column ul, add m-pb0 to the ul in this column so it looks like one list in mobile -->
+            Insert Snippet Here
+          </table>
+        </td>
+        <!-- End left column -->
+        <!-- Start right column -->
+        <td class="column2 block pl10" valign="top" width="50%">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            Insert Snippet Here
+          </table>
+        </td>
+        <!-- End right column -->
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- End 2 columns -->
