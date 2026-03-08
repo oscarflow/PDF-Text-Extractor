@@ -1,30 +1,3 @@
-
-Changes made:
-
-Asset code → US-YES-00846 in footer
-Tracking appends → utm_source=yescarta&utm_medium=email&utm_campaign=yes-hcp-man3 on all http/https links (PI, header images, Learn more button, stacked logos, Kite logo)
-Unsubscribe → {{unsubscribe_product_link}} (per link matrix)
-ISI study names → ZUMA-1 → Study 1, ZUMA-7 → Study 2, ZUMA-5 → Study 3 throughout
-New PCNSL paragraph added under Neurologic Toxicities (Study 4 data)
-NHL neuro text → added "(excluding central nervous system lymphoma)" and "in Study 1, Study 2, and Study 3"
-Adverse Reactions → completely rewritten with Study 1 LBCL (≥30%), new PCNSL Study 4 section, and Grade 3-4 lab abnormalities
-New ¶ footnote added for the systematic literature review/meta-analysis
-References → Ref 1 year updated to 2026, refs 2 and 3 swapped to match PDF order
-Footer restructured → trademarks/copyright first, then unsubscribe line, then Kite address (2400 Broadway, Santa Monica CA 90404)
-Body copy → removed the duplicate "Reliable manufacturing..." paragraphs. The rep greeting options from the PDF are Salesforce merge fields — the Liquid conditional for %%LASTNAME%% is already in place
-H3 superscript → updated from <sup>2</sup> to <sup>1,2</sup> per PDF
-INDICATION → INDICATIONS (plural per PDF)
-Removed Limitations of Use paragraph (not present in PDF design)
-
-Flags for your review:
-
-The PDF shows multiple selectable greeting/closing paragraphs for the rep — these would typically be handled by Salesforce dynamic content blocks. I kept the existing Liquid conditional but you may need to add more variants.
-The PDF shows a rep sign-off section (Sincerely, [Rep Name], [Rep Email], [Rep Phone]) — I didn't add this since it would be Salesforce merge fields. Let me know if you want it included.
-The class="4 safety" on the original reference had a stray "4" — I cleaned that up to just class="safety".
-Body copy superscript on the intro paragraph changed from <sup>1,2</sup> to <sup>1</sup> per the PDF.
-Couldn't confirm exact mobile image asset names from the Figma — kept the same token pattern from the reference.
-
-
 <!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
 <head>
@@ -200,6 +173,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .ptb30 { padding-top: 30px; padding-bottom: 30px; }
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
     .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    /* Padding top and bottom */
 
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
@@ -210,6 +184,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .pt30 { padding-top: 30px; }
     .pt35 { padding-top: 35px; }
     .pt40 { padding-top: 40px; }
+    /* padding top */
 
     .pb0  { padding-bottom: 0; }
     .pb2  { padding-bottom: 2px; }
@@ -223,6 +198,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .pb35 { padding-bottom: 35px; }
     .pb40 { padding-bottom: 40px; }
     .pb50 { padding-bottom: 50px; }
+    /* padding bottom */
 
     .prl0  { padding-right: 0; padding-left: 0; }
     .prl5  { padding-right: 5px; padding-left: 5px; }
@@ -234,6 +210,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .prl35 { padding-right: 35px; padding-left: 35px; }
     .prl40 { padding-right: 40px; padding-left: 40px; }
     .prl45 { padding-right: 45px; padding-left: 45px; }
+    /* Padding left and right */
 
     .pr0  { padding-right: 0; }
     .pr5  { padding-right: 5px; }
@@ -244,6 +221,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .pr30 { padding-right: 30px; }
     .pr35 { padding-right: 35px; }
     .pr40 { padding-right: 40px; }
+    /* padding right */
 
     .pl0  { padding-left: 0; }
     .pl5  { padding-left: 5px; }
@@ -254,23 +232,30 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
     .pl30 { padding-left: 30px; }
     .pl35 { padding-left: 35px; }
     .pl40 { padding-left: 40px; }
+    /* padding left */
 
     /***************************************
             CLIENT SPECIFIC STYLES
     ****************************************/
 
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
     .mso-exact { mso-line-height-rule: exactly; }
 
     #outlook a { padding: 0; } 
+    /* Force Outlook to provide a "view in browser" menu link. */
 
     body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
 
     #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
 
     img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
     a img { border: none; }
+    /* Some sensible defaults for images*/
 
     .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
 
     /***************************************
                  SAFETY STYLES 
@@ -316,12 +301,16 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       color: #000000;
       line-height: 18px;
     }
+    /* Render font family properly in Outlook */
 
     table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
 
     * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
 
-    table td { border-collapse: collapse; }
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix */
 
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -331,6 +320,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       font-weight: inherit !important;
       line-height: inherit !important;
     }
+    /* Disguises iOS auto links */
 
     .mobile-only {
       display: none;
@@ -338,12 +328,19 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       overflow: hidden;
       mso-hide: all;
     }
+    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
 
     .mobile-only table {
       mso-hide: all; 
     }
+    /* Hides <table> elements in Outlook 2007-13 issue */
 
     .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
 
     /***************************************
                MOBILE STYLES
@@ -361,16 +358,21 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       .block,
       .content,
       .safety { display: block; }
+      /* place content you want stacked here */
 
       .desktop-only { display: none !important; }
+      /* hide elements for mobile */
 
       img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
 
       .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
 
       .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
 
       .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
 
       .m-center { text-align: center !important; margin: 0 auto !important; }
 
@@ -383,6 +385,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       .m-pt20 { padding-top: 20px !important; }
       .m-pt25 { padding-top: 25px !important; }
       .m-pt30 { padding-top: 30px !important; }
+      /* mobile padding top */
 
       .m-pb5  { padding-bottom: 5px !important; }
       .m-pb10 { padding-bottom: 10px !important; }
@@ -391,6 +394,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
       .m-pb25 { padding-bottom: 25px !important; }
       .m-pb30 { padding-bottom: 30px !important; }
       .m-pb40 { padding-bottom: 40px !important; }
+      /* mobile padding bottom */
 
       .m-prl15 { padding-right: 15px !important; padding-left: 15px !important; }
 
@@ -472,16 +476,16 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
 
                 <tr>
                   <td class="pb15 pl5">
-                    See how Kite is redefining CAR T therapy with industry-leading manufacturing for YESCARTA<sup>1</sup>—a one-time, potentially definitive treatment for adult patients with 2L R/R large B-cell lymphoma (LBCL).
+                    See how Kite is redefining CAR T therapy with industry-leading manufacturing for YESCARTA—a one-time, potentially definitive treatment for adult patients with 2L R/R large B-cell lymphoma (LBCL).<sup>1,2</sup>
                   </td>
                 </tr>
-                
+
                 <tr>
-                  <td class="safety pb30 pl5">
+                  <td class="4 safety pb30 pl5">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td class="h1 pb5">
-                          INDICATIONS
+                          INDICATION
                         </td>
                       </tr>
                       <tr>
@@ -501,6 +505,12 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                         </td>
                       </tr>
                       <!-- end unordered list -->
+                      <tr>
+                        <td class="pb10">
+                          <span class="underline">Limitations of Use</span>: YESCARTA is not indicated for the treatment of patients with primary central nervous system lymphoma.
+                        </td>
+                      </tr>
+                      <!-- end paragraph -->
                       <tr>
                         <td class="h1 pb10">
                           IMPORTANT SAFETY INFORMATION
@@ -549,7 +559,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                   </td>
                 </tr>
                 <tr>
-                  <td class="h2 pl5">Choose a treatment with best-in-class manufacturing</td>
+                  <td class="h2 pl5">Choose a treatment with best-in-class manufacturing<sup>2</sup></td>
                 </tr>
                 <!-- end h2 header -->
                 <tr>
@@ -563,7 +573,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                 </tr>
                 <!-- end horizontal rule -->
                 <tr>
-                  <td class="h3 pl5 pb30 m-pb20">Rapid initiation of CAR T therapy may contribute to improved patient experience<sup>1,2</sup></td>
+                  <td class="h3 pl5 pb30 m-pb20">Rapid initiation of CAR T therapy may contribute to improved patient experience<sup>2</sup></td>
                 </tr>
                 <!-- end h3 header -->
                 <!-- begin mobile content -->
@@ -663,10 +673,6 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                         <td class="pb2">Real-world manufacturing data as of October 2024.</td>
                       </tr>
                       <tr>
-                        <td class="li" valign="top"><sup>¶</sup></td>
-                        <td class="pb2">In an analysis of 29 studies from a systematic literature review and meta-analysis of studies describing vein-to-vein time in patients with R/R LBCL who had received 1 or more treatment(s) prior to CAR T therapy.<sup>3</sup></td>
-                      </tr>
-                      <tr>
                         <td class="li" valign="top"><sup>§</sup></td>
                         <td>Global commercial and clinical trial data in patients across the entire YESCARTA product line as of August 2025.</td>
                       </tr>
@@ -731,7 +737,7 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                       <!-- end h1 header -->
                       <tr>
                         <td class="pb5">
-                          Neurologic toxicities including immune effector cell-associated neurotoxicity syndrome (ICANS) that were fatal or life-threatening occurred following treatment with YESCARTA. Neurologic toxicities occurred in 78% (330/422) of patients with NHL (excluding central nervous system lymphoma) receiving YESCARTA, including ≥ Grade 3 in 25% in Study 1, Study 2, and Study 3.
+                          Neurologic toxicities including immune effector cell-associated neurotoxicity syndrome (ICANS) that were fatal or life-threatening occurred following treatment with YESCARTA. Neurologic toxicities occurred in 78% (330/422) of patients with NHL receiving YESCARTA, including ≥ Grade 3 in 25%.
                         </td>
                       </tr>
                       <!-- end paragraph -->
@@ -927,7 +933,23 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                 </tr>
                 <!-- end image -->
                 <tr>
-                  <td class="footnote white pb10" align="center">YESCARTA, the Yescarta Logo, KITE, and the Kite Logo are trademarks of <br class="desktop-only" />Kite Pharma, Inc.</td>
+                  <td class="footnote white pb10" align="center">If you no longer wish to receive professional marketing email communications from Kite Pharma, Inc., unsubscribe <a class="underline white" href="{{unsubscribe_product_link[,CommercialEmailUnsubscribe]}}">here</a>.</td>
+                </tr>
+                <!-- end footnote -->
+                <tr>
+                   <td class="footnote white pb10" align="center">Please do not reply, as this email address cannot accept replies. If you wish to contact Kite Pharma, Inc., click <a class="underline white" href="https://www.kitepharma.com/utility/contact-us?utm_source=yescarta&utm_medium=email&utm_campaign=yes-hcp-man3">here</a>.</td>
+                </tr>
+                <!-- end footnote -->
+                <tr>
+                   <td class="footnote white pb10" align="center">View the Privacy Policy <a class="underline white" href="https://www.kitepharma.com/privacy-policy?utm_source=yescarta&utm_medium=email&utm_campaign=yes-hcp-man3">here</a>.</td>
+                </tr>
+                <!-- end footnote -->
+                <tr>
+                   <td class="footnote white pb10" align="center">This advertisement is intended for US healthcare professionals only. The content within this advertisement may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</td>
+                </tr>
+                <!-- end footnote -->
+                <tr>
+                   <td class="footnote white pb10" align="center">YESCARTA, the Yescarta Logo, KITE, and the Kite Logo are trademarks of <br class="desktop-only" />Kite Pharma, Inc.</td>
                 </tr>
                 <!-- end footnote -->
                 <tr>
@@ -940,14 +962,6 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
                 <!-- end footnote -->
                 <tr>
                    <td class="footnote white pb10" align="center">© 2026 Kite Pharma, Inc. All rights reserved. <span class="desktop-only">|</span> <span class="no-wrap">US-YES-00846&nbsp;02/2026</span></td>
-                </tr>
-                <!-- end footnote -->
-                <tr>
-                   <td class="footnote white pb10" align="center">If you have received this in error or to decline receiving further message from Kite, please <a class="underline white" href="{{unsubscribe_product_link}}">unsubscribe</a>.</td>
-                </tr>
-                <!-- end footnote -->
-                <tr>
-                   <td class="footnote white pb10 address" align="center">Kite Pharma, Inc.<br />2400 Broadway, Santa Monica CA <span style="white-space: nowrap;">90404</span></td>
                 </tr>
                 <!-- end footnote -->
               </table> 
@@ -968,4 +982,3 @@ Couldn't confirm exact mobile image asset names from the Figma — kept the same
   </div>
 </body>
 </html>
- 
