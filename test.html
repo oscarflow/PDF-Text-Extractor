@@ -7,109 +7,190 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  <title>{{build.title}}</title>
+  <title></title>
   <style type="text/css">
     /***************************************
                 GLOBAL STYLES
     ****************************************/
 
     .main-td {
-      font-family: Arial, sans-serif;
+      font-family: Verdana, Geneva, sans-serif;
       font-size: 16px;
-      color: #25282A;
+      color: #434445;
       background-color: #ffffff;
       line-height: 20px;
       min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
     }
 
-    .h1 { font-size: 22px; line-height: 25px; color: #25282A; font-weight: bold; }
-    .h2 { font-size: 24px; line-height: 30px; color: #83156F; font-weight: bold; font-family: Arial, sans-serif; }
-    .h3 { font-size: 18px; line-height: 22px; color: #000000; font-weight: bold; Arial, sans-serif; }
-    .h3-purple { font-size: 18px; line-height: 20px; color: #83156F; font-weight: bold; Arial, sans-serif;}
-    .h3-blue { font-size: 18px; line-height: 20px; font-weight: bold; Arial, sans-serif; color: #007EAF; }
-  
+    .h1 { font-size: 18px; line-height: 22px; color: #ffffff; font-weight: bold; }
+    .h2 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
+    .h3 { font-size: 18px; line-height: 24px; color: #084E70; font-weight: bold; }
+    .h4 { font-size: 20px; line-height: 26px; color: #084E70; font-weight: bold; }
+    .h5 { font-size: 16px; line-height: 20px; color: #ffffff; font-weight: bold; }
+    .h6 { font-size: 24px; line-height: 30px; color: #084E70; font-weight: bold; }
+    .h7 { font-size: 20px; line-height: 26px; color: #ffffff; font-weight: bold; }
+    .h8 { font-size: 18px; line-height: 24px; color: #0EA5AA; font-weight: bold; }
+    .fs18lh24 { font-size: 18px; line-height: 24px;}
+    .fs16lh22 { font-size: 16px; line-height: 22px; }
+    .fs24lh30 { font-size: 24px; line-height: 30px; }
+    .footer-text {  font-size: 12px; line-height: 14px; }
+    .fs24lh32 { font-size: 24px; line-height: 32px; color: #0EA5AA; }
+
     a { text-decoration: underline; }
-    .content a { color: #0066CC; font-weight: bold; text-decoration: none; }
-    .footer a { color: #0097C2; }
 
     /* Build Section Styling */
-    .message td {
+    .webversion-link {
+      background-color: #EAEEEF;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .webversion-link a {
+      color: #4C4C4C; 
+    }
+    .header-links {
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .header-links td {
       font-size: 14px;
-      line-height: 16px;
-      color: #000000;
+      line-height: 18px;
+    }
+    .header-links a {
+      color: #F2685F;
+      font-weight: bold;
+    }
+    .header-gradient {
+      background-color: #0EA5AA;
+      background: linear-gradient(264deg, #E0F6E1 -30.87%, #B5DCB7 -12.04%, #64C2B1 10.48%, #0EA6AA 34.49%, #0B8292 55.13%);
+    }
+    .preheader td {
+      font-size: 16px;
+      line-height: 20px;
+      color: #4C4C4C;
     }
     .webversion a {
-      color: #0097C2;
+      color: #4C4C4C;
       text-decoration: underline;
     }
-    .message {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-    .header {
-      padding-bottom: 20px;
-    }
-    .content-top {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-top: 40px;
-      padding-bottom: 25px;
+    .preheader {
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #eaeeef;
     }
     .content {
-      border-right: 1px solid #707070;
+      padding-right: 24px;
+      padding-left: 24px;
+      padding-top: 24px;
+    }  
+    .br-teal { 
+      border-right: 1px solid #0EA5AA;
     }
-    .content-outside {
-      padding-right: 25px;
-      padding-left: 25px;
+    .bg-lt-teal td {
+      background-color: #EDFAFA;
     }
-    .content-hanging {
-      padding-right: 25px;
-      padding-left: 20px;
-    }
-    .content-bottom {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-top: 30px;
-    }
-    .purple-box {
+    .teal-header td {
+      background-color: #0EA5AA;
       color: #ffffff;
-      font-weight: bold; 
-      padding-top: 40px;
-      padding-bottom: 55px;
-      padding-left: 30px;
-      padding-right: 30px;
+      font-weight: bold;
     }
-    .rr-safety {
-      padding-right: 25px;
-      padding-left: 15px;
+    .national-header td {
+      background-color: #DCEEEE;
+      color: #0EA5AA;
+      font-weight: bold;
     }
-    .safety-cont {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-top: 20px;
-      padding-bottom: 15px;
+    .state-region-header td {
+      background-color: #DCEEEE;
+    }
+    .lt-blue-section {
+      background-color: #EDFAFA;
+      padding-right: 24px;
+      padding-left: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    .white-section {
+      background-color: #ffffff;
+      border-radius: 6px;
+      padding: 15px;
+    }
+    .co-pay-section {
+      background-color: #FDEEE8;
+      border-radius: 15px;
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
     
+     .lt-blue-section-top {
+      background-color: #EDFAFA;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 24px;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
     }
-    .safety-warning {
-      border: 2px solid #000000;
+    .lt-blue-section-bottom {
+      background-color: #EDFAFA;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
+    .lt-orange-section-top {
+      background-color: #FDEEE8;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 24px;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    .lt-orange-section-bottom {
+      background-color: #FDEEE8;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    .register-callout {
+      background-color: #ECF6ED; 
+      border-radius: 15px;
+      padding: 24px;
+    }
+    .gradient-bg { background-color: #084E70; background: linear-gradient(1deg, #0E5A7F 3.96%, #13B5BA 104.67%); border-radius: 15px; }
     .footer {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-top: 30px;
-      padding-bottom: 35px;
-      background-color: #EDEDED;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 24px;
+      padding-bottom: 19px;
+      background-color: #ECF6ED;
     }
-    .footer .p {
-      font-size: 15px;
-      line-height: 19px;
-      color: #444444;
-    }
+    .footer-links,
+    .footer-links a,
+    .disclaimer a {
+      color: #F2685F;
+      font-weight: bold;
+     
+    } 
+    .footer-copy { 
+      font-size: 14px;
+      line-height: 18px;
+      }
     /* Legal Links */
-    .link-divider { font-weight: lighter; padding-left: 8px; padding-right: 8px; }
-    .legal td { font-size: 15px; line-height: 19px; }
+    .link-divider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
     .legal a { text-decoration: none; }
     .legal a span { text-decoration: underline; }
 
@@ -117,69 +198,118 @@
     .references .li { width: 15px; }
     /*fixes width issue in yahoo*/
 
+    .fs12 { font-size: 12px; line-height: 14px; }
+
     .footnote,
-    .footnote td { font-size: 11px; line-height: 14px; }
+    .footnote td { font-size: 12px; line-height: 14px; }
+
+    .lt-orange-section-bottom .footnote, 
+    .lt-orange-section-bottom .footnote td { font-size: 12px; line-height: 14px; }
+
+    .footnote .li { color: #434445; }
 
     /* Horizontal Rule */
-    .bb-yellow { border-top: 4px solid #E3981B; }
+    .bt-color { border-top: 2px solid #001c71; }
+    .bb-teal { border-bottom: 5px solid #0EA5AA; }
+    .bb-yellow { border-bottom: 4px solid #F0E933; }
+    .bb-yellow2 { border-bottom: 2px solid #F0E933; }
 
     /* additional colors */
-    .black,
-    .content .black { color: #222222; }
+    .black { color: #000001; }
     .white { color: #ffffff; }
-    .blue { color: #007EAF;}
+    .pink { color: #F200FF; }
+    .blue,
+    .safety .blue { color: #084E70; }
+    .teal { color: #0EA5AA; }
+    .safety .gray { color: #6D6B6B; }
+    .orange { color: #F2685F; }
+
     /* Element Styling */
-    
+    .p,
     .ul { padding-bottom: 15px; }
 
-    .li { width: 1px; }
+    .li { color: #0EA5AA; width: 1px; }
     .ul .li { padding-right: 5px; }
+    .lt-orange-section-top .ul .li { padding-right: 6px; }
 
     .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
     .ul tr:first-child .li + td { width: 100%; }
 
     sup, sub { line-height: 0; font-size: 75%; }
-
+    
     /* Additional formatting and styling */
     .center { text-align: center; }
     .center-block { margin: 0 auto; }
     .no-underline { text-decoration: none; }
     .underline { text-decoration: underline; }
     .bold { font-weight: bold; }
-    .normal,
-    .content .normal { font-weight: normal; }
-    .sm-caps { font-size: 13px; }
-
-    .br-gray { border-right: 1px solid #707070; }
-    .bg-purple { background-color: #F2E7F0; border-radius: 15px }
-    .bg-blue { background-color: #E5F2F7; border-radius: 15px }
+    .normal { font-weight: normal; }
+    .word-break { word-break: break-word; }
+    .word-break-all { word-break: break-all; }
+    .lt-blue-section, .text { font-size: 24px; line-height: 30px; }
     .no-wrap { white-space: nowrap; }
     a[href^="tel:"] { white-space: nowrap; }
     
     .mobile-only { display: none; max-height: 0px; overflow: hidden; }
     /*Hides mobile only elements. Needs to be inlined for Gmail*/
 
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
     /* Button Styling */
-    .button {
+    .button-header { 
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #084E70;
+      border: 1px solid #084E70;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .button-width {
+     width: 300px;
+    }
+    .button-header a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #084E70; /*border hack needed for outlook clients*/
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
       font-size: 15px;
       line-height: 19px;
       font-weight: bold;
       text-align: center;
       color: #ffffff;
       background-color: #00b2e2;
-      border: 1px solid #00b2e2;
-      /*border-radius: 5px; */
+      border: 2px solid #00b2e2;
     }
-
-    .button a {
+    .ns-button a {
       color: #ffffff;
       text-decoration: none;
       display: block;
       padding-top: 10px;
       padding-bottom: 10px;
-      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
-      /*border-radius: 5px;*/
-    }
+      border: 0px solid #00b2e2;
+    } */
+
 
     /***************************************
                  SPACING STYLES 
@@ -189,7 +319,9 @@
     .ptb5  { padding-top: 5px; padding-bottom: 5px; }
     .ptb10 { padding-top: 10px; padding-bottom: 10px; }
     .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb16 { padding-top: 16px; padding-bottom: 16px; }
     .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
     .ptb25 { padding-top: 25px; padding-bottom: 25px; }
     .ptb30 { padding-top: 30px; padding-bottom: 30px; }
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
@@ -198,9 +330,12 @@
 
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
+    .pt6  { padding-top: 6px; }
     .pt10 { padding-top: 10px; }
     .pt15 { padding-top: 15px; }
+    .pt16 { padding-top: 16px; }
     .pt20 { padding-top: 20px; }
+    .pt24 { padding-top: 24px; }
     .pt25 { padding-top: 25px; }
     .pt30 { padding-top: 30px; }
     .pt35 { padding-top: 35px; }
@@ -208,14 +343,26 @@
     /* padding top */
 
     .pb0  { padding-bottom: 0; }
+    .pb3  { padding-bottom: 3px; }
+    .pb4  { padding-bottom: 4px; }
     .pb5  { padding-bottom: 5px; }
+    .pb6  { padding-bottom: 6px; }
+    .pb7  { padding-bottom: 7px; }
+    .pb8  { padding-bottom: 8px; }
+    .pb9  { padding-bottom: 9px; }
     .pb10 { padding-bottom: 10px; }
+    .pb14 { padding-bottom: 14px; }
     .pb15 { padding-bottom: 15px; }
+    .pb16 { padding-bottom: 16px; }
+    .pb19 { padding-bottom: 19px; }
     .pb20 { padding-bottom: 20px; }
+    .pb24 { padding-bottom: 24px; }
     .pb25 { padding-bottom: 25px; }
     .pb30 { padding-bottom: 30px; }
     .pb35 { padding-bottom: 35px; }
+    .pb33 { padding-bottom: 33px; }
     .pb40 { padding-bottom: 40px; }
+    .pb50 { padding-bottom: 50px; }
     /* padding bottom */
 
     .prl0  { padding-right: 0; padding-left: 0; }
@@ -223,6 +370,7 @@
     .prl10 { padding-right: 10px; padding-left: 10px; }
     .prl15 { padding-right: 15px; padding-left: 15px; }
     .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl21 { padding-right: 21px; padding-left: 21px; }
     .prl25 { padding-right: 25px; padding-left: 25px; }
     .prl30 { padding-right: 30px; padding-left: 30px; }
     .prl35 { padding-right: 35px; padding-left: 35px; }
@@ -234,14 +382,18 @@
     .pr10 { padding-right: 10px; }
     .pr15 { padding-right: 15px; }
     .pr20 { padding-right: 20px; }
+    .pr21 { padding-right: 21px; }
     .pr25 { padding-right: 25px; }
+    .pr26 { padding-right: 26px; }
     .pr30 { padding-right: 30px; }
+    .pr32 { padding-right: 32px; }
     .pr35 { padding-right: 35px; }
     .pr40 { padding-right: 40px; }
     /* padding right */
 
     .pl0  { padding-left: 0; }
     .pl5  { padding-left: 5px; }
+    .pl8  { padding-left: 8px; }
     .pl10 { padding-left: 10px; }
     .pl15 { padding-left: 15px; }
     .pl20 { padding-left: 20px; }
@@ -261,13 +413,13 @@
     #outlook a { padding: 0; }
     /* Force Outlook to provide a "view in browser" menu link. */
 
-    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
 
     #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
     /* end reset */
 
-    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; } 
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
     a img { border: none; }
     /* Some sensible defaults for images*/
 
@@ -278,34 +430,41 @@
                  SAFETY STYLES 
     ****************************************/
 
-    .safety td {
-      color: #25282A;
-    }
-
     .safety .h2 {
-      font-size: 16px; 
-      line-height: 20px; 
-      color: #83156F; 
-      font-weight: bold; 
-      font-family: Arial, sans-serif;
+      color: #084E70;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: bold;
     }
-    .safety .ul { padding-left: 20px; }
 
-    .safety .purple {
-      color: #830070;
+    .safety .normal {
+      font-weight: normal;
     }
+
+    .safety td {
+      color: #434445;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .safety .li {
+      color: #0EA5AA; 
+    }
+
+    .safety .fs15 { font-size: 15px; line-height: 19px; }
+
     .safety a {
-      color: #25282A;
-      text-decoration: none;
+      color: #F2685F;
+      font-weight: bold;
     }
 
-    .safety a u {
-      color: #0097C2;
-      text-decoration: underline;
+    .safety .ul .ul {
+      padding-left: 15px;
     }
+
+
 
   </style>
-
   <!--[if gte mso 9]>
     <xml>
      <o:OfficeDocumentSettings>
@@ -316,9 +475,8 @@
     <style>
       sup, sub { font-size: 100% !important; }
       table { border-collapse: collapse !important; border-spacing: 0 !important; }
-    </style>
+    </style> 
   <![endif]-->
-
   <style type="text/css" data-embed>
     /***************************************
                 GLOBAL STYLES
@@ -326,9 +484,9 @@
 
     body,
     td {
-      font-family: Arial, sans-serif;
+      font-family: Verdana, Geneva, sans-serif;
       font-size: 16px;
-      color: #25282A;
+      color: #434445;
       line-height: 20px;
     }
     /* Render font family properly in Outlook */
@@ -340,7 +498,8 @@
     /* Prevent Outlook.com from overriding line-height */
 
     table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
-    /* Outlook 07, 10 Padding issue fix */
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
 
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -369,23 +528,40 @@
     /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
 
     /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+    /***************************************
                MOBILE STYLES
     ****************************************/
-    
+
     @media only screen and (max-width: 37.5em) {
-       
+
       .main-table { width: 100% !important; }
       .main-td { min-width: initial !important; }
       .main-table table { width:100% !important; margin: 0 auto !important; }
       
-      .block, 
+      .block,
       .content,
-      .safety { display: block !important; }
+      .safety { display: block; }
       /* place content you want stacked here */
-      
+
       .desktop-only { display: none !important; }
       /* hide elements for mobile */
-
       img { max-width: 100% !important; height: auto !important; }
       /* large images resize down according to their parent container size */
 
@@ -396,778 +572,423 @@
 
       .max-none { max-width: none !important; }
       /*add to image class to expand to full width*/
-      .card-icon {width: 37% !important;}
+
       .m-center { text-align: center !important; margin: 0 auto !important; }
-      .p {font-size: 14px !important; line-height: 18px !important;}
-      .main-table .fixed-width70 { width: 70px !important; margin: right 0 auto !important; }
-      .h3 { font-size: 16px !important; line-height: 20px !important; }
-      .h3-blue { font-size: 16px !important; line-height: 18px !important;  }
-      .h3-purple { font-size: 16px !important; line-height: 18px !important; }
-      .h2 { font-size: 22px !important; line-height: 28px !important; color: #83156F !important; font-weight: bold !important;}
-      .safety .h2 {font-size: 14px !important;}
-      /*.m-pt0  { padding-top: 0 !important; }*/
-      /*.m-pt5  { padding-top: 5px !important; }*/
+      .button-width {width: 200px !important;}
+      /*.main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }*/
+      .main-table .fw75 { width: 75px !important; margin: 0 auto !important; }
+      .main-table .fixed-width150 { width: 150px !important; margin: 0 auto !important; }
+      .main-table .fixed-width200 { width: 200px !important; margin: 0 auto !important; float: none !important; }
+      .main-table .fixed-width253 { width: 253px !important; margin: 0 auto !important; }
+
+      .m-pt0  { padding-top: 0 !important; }
+      .m-pt5  { padding-top: 5px !important; }
       /*.m-pt10 { padding-top: 10px !important; }*/
       /*.m-pt15 { padding-top: 15px !important; }*/
-      /*.m-pt20 { padding-top: 20px !important; }*/
-      /*.m-pt25 { padding-top: 25px !important; }*/
+      .m-pt20 { padding-top: 20px !important; }
+      .m-pt25 { padding-top: 25px !important; }
       /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
       /* mobile padding top */
-      
-      .m-pb0  { padding-bottom: 0 !important; }
-      .m-pb5  { padding-bottom: 5px !important; }
-      .m-pb10 { padding-bottom: 10px !important; }
+
+      .m-pb0  { padding-bottom: 0 !important; } 
+      /*.m-pb5  { padding-bottom: 5px !important; }*/
+      /*.m-pb10 { padding-bottom: 10px !important; }*/
       .m-pb15 { padding-bottom: 15px !important; }
+      .m-pb16 { padding-bottom: 16px !important; }
+      .m-pb19 { padding-bottom: 19px !important; }
       .m-pb20 { padding-bottom: 20px !important; }
+      .m-pb24 { padding-bottom: 24px !important; }
       /*.m-pb25 { padding-bottom: 25px !important; }*/
+      .m-pb27 { padding-bottom: 27px !important; }
       /*.m-pb30 { padding-bottom: 30px !important; }*/
       /*.m-pb35 { padding-bottom: 35px !important; }*/
-      .m-pb40 { padding-bottom: 40px !important; }
+      /*.m-pb40 { padding-bottom: 40px !important; }*/
       /* mobile padding bottom */
-      .m-pr0 { padding-right: 0px !important; }
-      .m-prl10 { padding-left: 10px !important; padding-right: 10px !important; }
-      .m-pr20 { padding-right: 20px !important;}
-      .m-pl5 { padding-left: 5px !important;}
-      /* preheader area resets */
 
-      .content { border-right: none !important; }
+      .m-pr0 { padding-right: 0 !important; }
+      .m-pr10 { padding-right: 10px !important; }
+      .m-pr15 { padding-right: 15px !important; }
+      .m-pr24 { padding-right: 24px !important; }
+      /* mobile padding right */
 
-      .rr-safety {
-        padding-left: 25px !important;
-        padding-right: 25px !important;
-        padding-top: 25px !important;
+      .m-prl0 { padding-left: 0 !important; padding-right: 0 !important; }
+      .m-prl15 { padding-left: 15px !important; padding-right: 15px !important; }
+      .fs16lh22 { font-size: 16px; line-height: 18px; }
+      .disclosure-link {font-size: 12px; line-height: 14px; }
+      .footer-links,
+      .footer-links a,
+      {
+      color: #F2685F;
+      font-weight: bold;
+      font-size: 14px; 
+      line-height: 18px;
+     
+    } 
+      .header-links {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
       }
+      .co-pay-section,
+      .lt-blue-section, .text { font-size: 18px; line-height: 24px; }
+      .lt-blue-section,
+      .content { padding-left: 15px !important; padding-right: 15px !important; }
+      .footer { padding-left: 15px !important; padding-right: 15px !important; }
+      /* section padding resets */
+      .fs16 { font-size: 16px !important; line-height: 18px !important; }
+      .main-table .m-width-initial { width: initial !important; float: left !important; }
+      .m-rep-photo img { max-width: 94px !important; }
+      .m-width100 { width: 100% !important; }
+      .m-width53 { max-width: 53px !important; height: auto !important; }
+      .m-width74 { width: 74px !important; height: auto !important; }
+      .m-width230 { width: 230px !important; height: auto !important; }
+      .m-calendar-icon { width: 75px !important; }
+      .m-valign-mid { vertical-align: middle !important; }
+      .chart td { font-size: 10px !important; line-height: 12px !important; padding-top: 4px !important; padding-bottom: 4px !important; padding-left: 7px !important; padding-right: 7px !important; }
+      .teal-header td { font-size: 11px !important; line-height: 13px !important; }
+      /* other resets */
 
-      .main-table .m-width-initial { width: initial !important; }
-
-      .mobile-button { 
-        padding-left: 25px !important;
-        padding-right: 25px !important;
-        padding-top: 10px !important;
-        padding-bottom: 15px !important; 
-      }
-
-    }
-    @media only screen and (max-width: 400px) {
-      .h3-purple { font-size: 13px !important; line-height: 17px !important; }
-      .h3-blue { font-size: 13px !important; line-height: 17px !important; }
-      .block-content .p { font-size: 12px !important; line-height: 16px !important; }
-      .card-icon { width: 42% !important; }
     }
   </style>
 
 
 </head>
 <body>
-<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+<div style="display: none; max-height: 0px; overflow: hidden;">
+{{build.preheader}}  &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+
     <tr>
       <td class="main-td">
         <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
-          <!-- Start Message -->
+
+      <!-- Start Header -->
           <tr>
-            <td class="message">
+            <td class="header">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                  
                 <tr>
-                  <td>
-                    {{token.gne-custom-rich-text}}
+                  <td class="webversion-link" align="center">
+                    <a alias="View in Browser" href="{{token.permalink}}">View in browser</a>.
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{token.gne-rep-name}}
+                  <td class="header-links">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td>
+                          Please see full <a alias="Prescribing Information" href="https://www.gilead.com/-/media/files/pdfs/medicines/hiv/yeztugo/yeztugo_pi.pdf">Prescribing Information</a>, for <strong>YEZTUGO</strong> including <strong>BOXED WARNING</strong>.
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              
+                <!-- start gradient -->
+                <tr>
+                  <td class="header-gradient bb-teal" style="padding:0;margin:0;" width="100%">
+                    <center>
+                      <!--[if gte mso 9]>
+                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;" fillcolor="#0B8292">  
+                      <v:fill type="gradient" color1="#0B8292" color2="#80CCB7" colors="45% #0B8292, 100% #80CCB7" angle="270"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+                      <center>
+                      <![endif]-->
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="margin:0;padding:0;width:600px;">
+                    
+                        <!-- Content inside gradient -->
+                        <tr>
+                          <td>
+                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="552" style="width:552px;">
+                              <tr>
+                                <td class="image pt15 pb5" align="center">
+                                  <a alias="YEZTUGO logo" class="ghost-link" href="https://www.YEZTUGOhcp.com"><img class="white" src="{{asset.header-logo-2x.url}}" alt="{{asset.header-logo-2x.alt}}" width="275" height="110" /></a>
+                                </td>
+                              </tr>
+                              <!-- end image -->
+                              <tr>
+                                <td class="h7 pb16 fs16" align="center">
+                                  COVERAGE UPDATES IN
+                                  {% if build.type == "SALESFORCE" %}%%=v(@area)=%%{% else %}<span class="pink">[STATE/THE US]</span>{% endif %}
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        
+                      </table>
+                      <!--[if gte mso 9]>
+                      </center>
+                      <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                      </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                    </center>
+                  </td>
+                </tr>
+                <!-- end gradient -->
+                
+               
+              </table>
+            </td>
+          </tr>
+      <!-- End Header -->
+
+      <!-- Start Content -->
+          <tr>
+            <td class="content">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="lt-blue-section">
+                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            {% if build.type == "SALESFORCE" %}
+                            <tr>
+                              <td class="pb24 blue bold">
+                                %%=v(@status1)=%%
+                              </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                              <td class="text blue pb24"><strong><span class="pink">[The majority/XX%]</span> of lives in the US across all channels (Commercial, HIX, Medicaid, and Medicare) are covered for YEZTUGO</strong><sup><span class="pink">[a,b]</span></sup></td>
+                            </tr>
+                            {% endif %}
+                            <!-- end paragraph -->
+                           <tr>
+                             <td class="pb20">
+                               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <!-- begin mobile content -->
+                                  <tr class="mobile-only">
+                                    <td class="mobile-only" align="center">
+                                      <div class="mobile-only">
+                                        <img class="image " style="width: 100px;" src="{{asset.mobile-phone-2x.url}}" alt="{{asset.mobile-phone-2x.alt}}" width="0" height="0"/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                   <tr>
+                                    <td class="mobile-only pt24 fs16lh22 blue pb8 bold">
+                                      Use the dedicated YEZTUGO coverage finder to discover plans in your area and to learn about coverage types, if prior authorizations are needed, and more.
+                                    </td>
+                                  </tr>
+                                  <!-- end mobile content -->
+                                 <tr>
+                                   <td class="pr10 pt20 desktop-only" valign="top">
+                                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                       <tr>
+                                         <td class="image desktop-only" align="center">
+                                           <img src="{{asset.mac-book-pro-2x.url}}" alt="{{asset.mac-book-pro-2x.alt}}" width="{{asset.mac-book-pro-2x.width}}" height="{{asset.mac-book-pro-2x.height}}"/>
+                                         </td>
+                                       </tr>
+                                      
+                                       <!-- end image -->                  
+                                     </table>
+                                   </td>
+                            
+                                   <td class="pl10 desktop-only" valign="top">
+                                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                       <tr>
+                                         <td class="blue fs18lh24 bold">
+                                           Use the dedicated YEZTUGO coverage finder to discover plans in your area and to learn about coverage types, if prior authorizations are needed, and more.
+                                         </td>
+                                       </tr>
+                                     </table>
+                                   </td>
+                                  
+                                 </tr>
+                               </table>
+                             </td>
+                           </tr>
+                            <!-- end paragraph -->
+                           <tr>
+                            <td class="pb24" ">
+                              <table  align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;" >
+                                <tr>
+                                  <td align="center">
+                                    <div><!--[if mso]>
+                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:350px;" arcsize="120%" stroke="f" fillcolor="#F0E933">
+                                        <w:anchorlock/>
+                                        <center>
+                                      <![endif]-->
+                                          <a class="fixed-width200" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support"
+                                    style="background-color:#F0E933;border-radius:60px;color:#084E70;display:inline-block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;width:350px;padding-left: 20px; padding-right: 20px; padding-top: 16px; padding-bottom: 16px; -webkit-text-size-adjust:none;">Search now &amp; be ready to prescribe today <span style="color: #F2685F ">&#10140;</span></a>
+                                      <!--[if mso]>
+                                        </center>
+                                      </v:roundrect>
+                                    <![endif]--></div>
+                                  </td>
+                                </tr>
+                              </table>
+                              <!-- end table block -->
+                            </td>
+                          </tr>
+                            <tr>
+                              <td class="footnote pb15">
+                                {% if build.type == "SALESFORCE" %}
+                                %%=v(@footnote)=%%
+                                {% else %}
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="li" valign="top"><span class="pink">[<sup>a</sup></span></td>
+                                    <td class="pb4">Data on file. Gilead Sciences, Inc.<span class="pink">]</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top"><span class="pink">[<sup>b</sup></span></td>
+                                    <td>Managed Markets Insight & Technology, LLC, database.<span class="pink">]</span>  <span class="pink">[October 2025.]</span></td>
+                                  </tr>
+                                </table>
+                                {% endif %}
+                              </td>
+                            </tr>
+                        </table>
+                    </td>
+                  </tr>
+              
+                </table> 
+            </td>
+          </tr>        
+          <tr>
+            <td class="content pb24">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="lt-orange-section-top">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="pb24">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="block" valign="top">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="pt5 pr26 m-pr24 m-prl0 m-pb16">
+                                      <img class="m-width74 m-center" src="{{asset.icon-copay-2x.url}}" alt="{{asset.icon-copay-2x.alt}}" width="{{asset.icon-copay-2x.width}}" height="{{asset.icon-copay-2x.height}}"/>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                              <td class="h4 block" valign="top">
+                              Over 95% of Gilead Advancing Access<sup>®</sup>  Co-pay Savings Program <span class="teal">users pay $0</span> for YEZTUGO<span class="pink"><sup>[c,d]</sup></span>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table class="fixed-width150" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="150" style="width: 150px;">
+                            <tr>
+                              <td>
+                                <div><!--[if mso]>
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F2685F">
+                                    <w:anchorlock/>
+                                    <center>
+                                  <![endif]-->
+                                      <a alias="Enroll now" href="https://www.yeztugohcp.com/patient-support"
+                                style="background-color:#F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;">Enroll now <span style="color: #F0E933;">&#10140;</span></a>
+                                  <!--[if mso]>
+                                    </center>
+                                  </v:roundrect>
+                                <![endif]--></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                      
+                    </table>
+                    <!-- end table block -->
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    {{token.gne-rep-title}}
+                  <td class="lt-orange-section-bottom">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="footnote">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">
+                                <span class="pink"><sup>[c]</sup></span></td>
+                                <td class="pb5">Co-pay Savings Program support is available for commercially insured, eligible patients only. Additional restrictions may apply. Subject to change; for full terms and conditions, visit <a class="word-break-all orange underline bold" alias="Gilead Advancing Access" href="https://www.gileadadvancingaccess.com/copay-coupon-card">GileadAdvancingAccess.com/copay-coupon-card</a>. This is not health insurance.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top"><span class="pink"><sup>[d]</sup></span>
+                              </td>
+                              <td>Source: Data on File; as of 12/2025.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end footnote list -->
+                    </table>
+                    <!-- end table block -->
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    {{token.gne-rep-organization}}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    {{token.gne-rep-phone}}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    {{token.gne-rep-email}}
-                  </td>
-                </tr>
+                
               </table>
               <!-- end table block -->
             </td>
           </tr>
-        <!-- End Message -->
-        <!-- Start Header -->
-        <tr>
-          <td class="header">
-            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <!-- begin mobile content -->
-              <tr class="mobile-only">
-                <td class="mobile-only">
-                  <div class="mobile-only">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="image">
-                        <img class="width-auto" src="{{asset.xolair-header-mobile-2x.url}}" alt="{{asset.xolair-header-mobile-2x.alt}}" width="0" height="0"/>
-                        </td>
-                      </tr>
-                      <!-- end image -->
-                    </table>
-                    <!-- end table block -->
-                  </div>
-                </td>
-              </tr>
-              <!-- end mobile content -->
-              <tr>
-                <td class="image desktop-only">
-              <img src="{{asset.xolair-header-desktop-2x.url}}" alt="{{asset.xolair-header-desktop-2x.alt}}" width="{{asset.xolair-header-desktop-2x.width}}" height="{{asset.xolair-header-desktop-2x.height}}"/>
-                </td>
-              </tr>
-              <!-- end image -->
+          
+      <!-- End Content -->
 
-            </table>
-          </td>
-        </tr>
-        <!-- End Header -->
-        <!--Header Copy-->
-        <tr>
-          <td class="h2 prl25 pb10">
-            Helpful Videos to Assist You as You Incorporate XOLAIR for IgE-Mediated Food Allergy Into Your Practice Workflow
-          </td>
-        </tr>
-        <!--End Header Copy-->
-        <!-- Start 2 column content -->
-        <tr>
-          <td>
-            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tr>
-                <!-- start left column -->
-                <td class="content" valign="top">
-                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                      <td class="content-outside">
-                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                          
-                          <tr>
-                            <td class="p pb15">Once the decision has been made to prescribe XOLAIR, access must be secured. This video series provides key logistical information to help your practice.</td>
-                          </tr>
-                          <!-- end paragraph -->
-                          <tr>
-                            <td class="pb10">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <!-- begin mobile content -->
-                                <tr class="mobile-only">
-                                  <td class="mobile-only block-content">
-                                    <div class="mobile-only">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td class="image pr10 card-icon">
-                                            <img class="width-auto" src="{{asset.rx-book-icon-m-2x.url}}" alt="{{asset.rx-book-icon-m-2x.alt}}" width="0" height="0"/>
-                                          </td>
-                                          <td class="bg-purple">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-purple prl20 pb5">
-                                                  Getting Patients Started on XOLAIR
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20 p">
-                                                  Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                          <!-- end table block -->
-                                          </td>
-                                        </tr>
-                                        <!-- end image -->
-                                      </table>
-                                      <!-- end table block -->
-                                    </div>
-                                  </td>
-                                </tr>
-                                <!-- end mobile content -->
-                                <tr>
-                                  <td class="image desktop-only pr10">
-                                  <img src="{{asset.rx-book-icon-d-2x.url}}" alt="{{asset.rx-book-icon-d-2x.alt}}" width="{{asset.rx-book-icon-d-2x.width}}" height="{{asset.rx-book-icon-d-2x.height}}"/>
-                                  </td>
-                                  <td class="desktop-only bg-purple">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr>
-                                        <td class="h3-purple prl20 pb5">
-                                          Getting Patients Started on XOLAIR
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="prl20">
-                                          Provides an overview of the in-office process workflow that office staff may follow once XOLAIR is prescribed.
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  <!-- end table block -->
-                                  </td>
-                                </tr>
-                                <!-- end image -->
-
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="pb10">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <!-- begin mobile content -->
-                                <tr class="mobile-only">
-                                  <td class="mobile-only block-content">
-                                    <div class="mobile-only">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td class="bg-blue ">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-blue prl20 pt10 pb5">
-                                                  Securing Coverage for XOLAIR
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20 pb20 p">
-                                                  Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                          <!-- end table block -->
-                                          </td>
-                                            <td class="image pl10 card-icon">
-                                              <img class="width-auto" src="{{asset.icon-bluebg-m-2x.url}}" alt="{{asset.icon-bluebg-m-2x.alt}}" width="0" height="0"/>
-                                          </td>
-                                        </tr>
-                                        <!-- end image -->
-                                      </table>
-                                      <!-- end table block -->
-                                    </div>
-                                  </td>
-                                </tr>
-                                <!-- end mobile content -->
-                                <tr>
-                                  <td class="desktop-only pr10">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr>
-                                        <td class="bg-blue ptb20">
-                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-blue prl20 pb5">
-                                                  Securing Coverage for XOLAIR
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20">
-                                                  Walks through the steps required to secure coverage, from submitting the correct documentation to a brief overview of common prior authorization (PA) criteria.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                            <!-- end table block -->
-                                        </td>
-                                      </tr>
-                                    </table> 
-                                    <!-- end table block -->
-                                  </td>
-                                  <td class="image desktop-only">
-                                  <img src="{{asset.icon-bluebg-d-2x.url}}" alt="{{asset.icon-bluebg-d-2x.alt}}" width="{{asset.icon-bluebg-d-2x.width}}" height="{{asset.icon-bluebg-d-2x.height}}"/>
-                                  </td>
-                                  
-                                </tr>
-                                <!-- end image -->
-
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="pb10">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <!-- begin mobile content -->
-                                <tr class="mobile-only">
-                                  <td class="mobile-only block-content">
-                                    <div class="mobile-only">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td class="image pr10 card-icon">
-                                            <img class="width-auto" src="{{asset.pillbottle-figure-m-2x.url}}" alt="{{asset.pillbottle-figure-m-2x.alt}}" width="0" height="0"/>
-                                          </td>
-                                          <td class="bg-purple">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-purple pt10 prl20 pb5">
-                                                  Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
-
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20 pb10 p">
-                                                  Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                          <!-- end table block -->
-                                          </td>
-                                        </tr>
-                                        <!-- end image -->
-                                      </table>
-                                      <!-- end table block -->
-                                    </div>
-                                  </td>
-                                </tr>
-                                
-                                <!-- end mobile content -->
-                                <tr>
-                                  <td class="image desktop-only pr10">
-                                  <img src="{{asset.pillbottle-figure-d-2x.url}}" alt="{{asset.pillbottle-figure-d-2x.alt}}" width="{{asset.pillbottle-figure-d-2x.width}}" height="{{asset.pillbottle-figure-d-2x.height}}"/>
-                                  </td>
-                                  <td class="desktop-only bg-purple">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr>
-                                        <td class="h3-purple prl20 pb5">
-                                        Acquiring XOLAIR Through Buy and Bill or Specialty Pharmacies
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="prl20">
-                                          Discusses how to acquire XOLAIR—either through buy and bill or a specialty pharmacy—including which acquisition steps are the responsibility of the payer or practice, depending on the option chosen.
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  <!-- end table block -->
-                                  </td>
-                                </tr>
-                                <!-- end image -->
-
-                              </table>
-                            </td>
-                          </tr>                       
-                          <tr>
-                            <td>
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <!-- begin mobile content -->
-                                <tr class="mobile-only">
-                                  <td class="mobile-only block-content">
-                                    <div class="mobile-only">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td class="bg-blue">
-                                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-blue prl20 pt20 pb5">
-                                                  Administration Options for XOLAIR
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20 pb20 p">
-                                                  Provides an overview of the administration options available for XOLAIR after it has been prescribed.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                          <!-- end table block -->
-                                          </td>
-                                            <td class="image pl10 card-icon">
-                                          <img class="width-auto" src="{{asset.patient-doctor-m-2x.url}}" alt="{{asset.patient-doctor-m-2x.alt}}" width="0" height="0"/>
-                                          </td>
-                                        </tr>
-                                        <!-- end image -->
-                                      </table>
-                                      <!-- end table block -->
-                                    </div>
-                                  </td>
-                                </tr>
-                                <!-- end mobile content -->
-                                <tr>
-                                  <td class="desktop-only pr10">
-                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr>
-                                        <td class="bg-blue ptb30">
-                                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                              <tr>
-                                                <td class="h3-blue prl20 pb5">
-                                                  Administration Options for XOLAIR
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td class="prl20">
-                                                  Provides an overview of the administration options available for XOLAIR after it has been prescribed.
-                                                </td>
-                                              </tr>
-                                            </table>
-                                            <!-- end table block -->
-                                        </td>
-                                      </tr>
-                                    </table> 
-                                    <!-- end table block -->
-                                  </td>
-                                  <td class="image desktop-only">
-                                  <img src="{{asset.patient-doctor-d-2x.url}}" alt="{{asset.patient-doctor-d-2x.alt}}" width="{{asset.patient-doctor-d-2x.width}}" height="{{asset.patient-doctor-d-2x.height}}"/>
-                                  </td>
-                                  
-                                </tr>
-                                <!-- end image -->                             
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="ptb10">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="bg-purple">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                  <tr> 
-                                    <td class="image desktop-only pt10" align="center">
-                                      <img src="{{asset.laptop-desktop-2x.url}}" alt="{{asset.laptop-desktop-2x.alt}}" width="{{asset.laptop-desktop-2x.width}}" height="{{asset.laptop-desktop-2x.height}}"/>
-                                    </td>
-                                    
-                                  </tr>
-                                  <!-- end image -->
-                                  <!-- begin mobile content -->
-                                  <tr class="mobile-only">
-                                    <td class="mobile-only">
-                                      <div class="mobile-only">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr> 
-                                            <td class="image pt10" align="center">
-                                            <img src="{{asset.laptop-mobile-2x.url}}" alt="{{asset.laptop-mobile-2x.alt}}" width="{{asset.laptop-mobile-2x.width}}" height="{{asset.laptop-mobile-2x.height}}"/>
-                                            </td>
-                                            
-                                          </tr>
-                                        </table>
-                                        <!-- end table block -->
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <!-- end mobile content -->
-                                  
-                                <tr>
-                                  <td class="image pb20" align="center">
-                                    <a href="https://www.xolairhcp.com/food-allergies/resources/printable-resources.html"><img src="{{asset.purple-button-2x.url}}" alt="{{asset.purple-button-2x.alt}}" width="{{asset.purple-button-2x.width}}" height="{{asset.purple-button-2x.height}}"/></a>
-                                  </td>
-                                </tr>
-                                <!-- end image -->
-                                  
-                              </table>
-                              <!-- end table block -->
-                            </td>
-                              </tr>
-                            </table>
-                            <!-- end table block -->
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="bg-blue">
-                              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>      
-                                  <td class="image desktop-only pt20 pb10" align="center">
-                                  <img src="{{asset.xolair-resource-d-2x.url}}" alt="{{asset.xolair-resource-d-2x.alt}}" width="{{asset.xolair-resource-d-2x.width}}" height="{{asset.xolair-resource-d-2x.height}}"/>
-                                  </td>
-                                </tr>
-                                <!-- end image -->
-                                <!-- begin mobile content -->
-                                <tr class="mobile-only">
-                                  <td class="mobile-only">
-                                    <div class="mobile-only">
-                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="image pt20 pb10" align="center">
-                                              <img src="{{asset.xolair-resource-m-2x.url}}" alt="{{asset.xolair-resource-m-2x.alt}}" width="{{asset.xolair-resource-m-2x.width}}" height="{{asset.xolair-resource-m-2x.height}}"/>
-                                            </td>           
-                                          </tr>
-                                          <!-- end image -->
-                                      </table>
-                                      <!-- end table block -->
-                                    </div>
-                                  </td>
-                                </tr>
-                                <!-- end mobile content -->
-                                <tr>
-                                  <td class="h3 bold pb10 prl25" align="center">
-                                    You can also download a comprehensive resource detailing considerations for each step of the access process.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="image pb20" align="center">
-                                   <a href="https://www.xolairhcp.com/content/dam/gene/xolairhcp/fa/pdfs/XOLAIR-for-IgE-Mediated-Food-Allergy-Into-Your-Practice-Workflow.pdf	"><img src="{{asset.blue-button-2x.url}}" alt="{{asset.blue-button-2x.alt}}" width="{{asset.blue-button-2x.width}}" height="{{asset.blue-button-2x.height}}"/></a>
-                                  </td>
-                                </tr>
-                                <!-- end image -->
-                            
-                              </table>
-                              <!-- end table block -->
-                            </td>
-                          </tr>
-                        </table>
-                        <!-- end table block -->
-                      </td>
-                    </tr>
-                    
-                  </table>
-                  <!-- end table block -->
-                </td>
-                <!-- end left column -->
-
-                <!-- start right column -->
-                <td class="safety" valign="top">
-                  
-                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="190" style="width: 190px;">
-                    <tr>
-                      <td class="rr-safety">
-                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                          <tr>
-                            <td class="h2 pb5">INDICATION</td>
-                          </tr>
-                          <!-- end h2 header -->
-                          <tr>
-                            <td class="pb10 p">XOLAIR<sup>®</sup> (omalizumab) is indicated for the reduction of allergic reactions (Type I), including anaphylaxis, that may occur with accidental exposure to one or more foods in adult and pediatric patients aged 1 year and older with IgE-mediated food allergy.</td>
-                          </tr>
-                          <!-- end paragraph -->
-                          <tr>
-                            <td class="p pb10">XOLAIR is to be used in conjunction with food allergen avoidance.</td>
-                          </tr>
-                          <!-- end paragraph -->
-                          <tr>
-                            <td class="p pb10 m-pb0"><strong class="purple">Limitations of Use:</strong> XOLAIR is not indicated for the emergency treatment of allergic reactions, including anaphylaxis.</td>
-                          </tr>
-                          <!-- end h2 header -->
-                          <tr>
-                            <td class="desktop-only bold p">
-                              Please see additional Important Safety Information below
-                            </td>
-                          </tr>
-                        </table>
-                        <!-- end table block -->
-                      </td>
-                    </tr>
-
-                  </table>
-                </td>
-                <!-- end right column -->
-              </tr>
-            </table> 
-          </td>
-        </tr>
-        <!-- End 2 column Content -->
-        <!-- Start ISI Continued-->
-        <tr>
-          <td class="safety safety-cont">
-            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tr>
-                <td class="h2 pb10">IMPORTANT SAFETY INFORMATION</td>
-              </tr>
-              <!-- end h2 header -->
-              <tr>
-                <td class="safety-warning">
-                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                      <td class="pt10 pb5 p bold"align="center">
-                        WARNING: Anaphylaxis
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="prl20 pb10 p bold">
-                        Anaphylaxis presenting as bronchospasm, hypotension, syncope, urticaria, and/or angioedema of the throat or tongue, has been reported to occur after administration of XOLAIR. Anaphylaxis has occurred as early as after the first dose of XOLAIR, but also has occurred beyond 1 year after beginning regularly administered treatment. Because of the risk of anaphylaxis, initiate XOLAIR therapy in a healthcare setting and closely observe patients for an appropriate period of time after XOLAIR administration. Health care providers administering XOLAIR should be prepared to manage anaphylaxis which can be life-threatening. Inform patients of the signs and symptoms of anaphylaxis and instruct them to seek immediate medical care should symptoms occur. Selection of patients for self-administration of XOLAIR should be based on criteria to mitigate risk from anaphylaxis.
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- end table block -->
-                </td>
-              </tr>
-              <tr>
-                <td class="pt15 pb5 h2">CONTRAINDICATIONS</td>
-              </tr>
-              <!-- end h2 header -->
-              
-              <tr>
-                <td class="p pb10"> XOLAIR is contraindicated in patients with a severe hypersensitivity reaction to XOLAIR or to any ingredient of XOLAIR.</td>
-              </tr>
-              <!-- end paragraph -->
-              
-              <tr>
-                <td class="h2 pb5">WARNINGS AND PRECAUTIONS</td>
-              </tr>
-              <!-- end h2 header -->
-              <tr>
-                <td class="pb10 p">
-                  <strong>Anaphylaxis:</strong> Anaphylaxis has been reported to occur after administration of XOLAIR in premarketing clinical trials and in postmarketing spontaneous reports. In premarketing clinical trials in patients for a different indication, anaphylaxis was reported in 3 of 3507 (0.1%) patients. Anaphylaxis occurred with the first dose of XOLAIR in two patients and with the fourth dose in one patient. The time to onset of anaphylaxis was 90 minutes after administration in two patients and 2 hours after administration in one patient.
-
-                </td>
-              </tr>
+      <!-- Start Footer -->
+          <tr>
+            <td class="footer">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                <td class="pb10 p">
-                  A case-control study in asthma patients showed that, among XOLAIR users, patients with a history of anaphylaxis to foods, medications, or other causes were at increased risk of anaphylaxis associated with XOLAIR, compared to those with no prior history of anaphylaxis.
-                </td>
-              </tr>
+                  <td class="fs12 pb14">
+                 HIX=Health Insurance Exchange.
+                  </td>
+                </tr>
                 <tr>
-                <td class="pb10 p">
-                In postmarketing spontaneous reports, the frequency of anaphylaxis attributed to XOLAIR use was estimated to be at least 0.2% of patients based on an estimated exposure of about 57,300 patients from June 2003 through December 2006. Approximately 60% to 70% of anaphylaxis cases have been reported to occur within the first three doses of XOLAIR, with additional cases occurring sporadically beyond the third dose.
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  Initiate XOLAIR only in a healthcare setting equipped to manage anaphylaxis which can be life-threatening. Observe patients closely for an appropriate period of time after administration of XOLAIR, taking into account the time to onset of anaphylaxis seen in premarketing clinical trials and postmarketing spontaneous reports. Inform patients of the signs and symptoms of anaphylaxis, and instruct them to seek immediate medical care should signs or symptoms occur.
+                  <td class="fs12 pb24">This customized reference document includes a selection of regional formulary information from Managed Markets Insight & Technology, LLC, database. It is current as of {% if build.type == "SALESFORCE" %}%%=v(@date)=%%{% else %}<span class="pink">[03/2026]</span>{% endif %}. This information may not be comprehensive. Please check with the health plan directly to confirm this formulary information, since plans periodically update their policies and many health plans offer more than one formulary. The information provided is not a guarantee of coverage or payment (partial or full). Individual coverage may vary. Please consult the health plan for patient-specific coverage details. Actual benefits are determined by each plan administrator in accordance with its respective policy and procedures. YEZTUGO status reported is representative of the coverage for the majority of members covered by the plan. Access messages, including the list of plans reported, based only on geography, such as your area, state, or nation, correspond to the insured population of the entire geography. Your area is determined as the geography associated with all zip codes around you that are in the same Core-Based Statistical Area (CBSA). The references above do not, in any manner, imply an endorsement of YEZTUGO by the referenced companies/plans. Placement on the formulary is not intended to imply that coverage is available, or that any claims regarding safety, efficacy, or comparability of the products referenced are being made.</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="image pb24" align="center">
+                    <a alias="YEZTUGO logo" class="ghost-link" href="https://www.YEZTUGOhcp.com"><img class="m-width230" src="{{asset.yeztugo-logo-2x.url}}" alt="{{asset.yeztugo-logo-2x.alt}}" width="{{asset.yeztugo-logo-2x.width}}" height="{{asset.yeztugo-logo-2x.height}}"/></a>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="footer-links pb16" align="center">
+                    <a alias="Gilead" href="https://www.gilead.com">Gilead Corporate Website</a>&nbsp;|&nbsp;<a alias="Terms of Use" href="https://www.gilead.com/terms-of-use">Terms&nbsp;of&nbsp;Use</a>&nbsp;|&nbsp;<a alias="Privacy Policy" href="https://www.gilead.com/privacy-statement">Privacy Policy</a><br /><a alias="Contact Us" href="https://www.gilead.com/contact-us">Contact Us</a>&nbsp;|&nbsp;<a alias="Unsubscribe" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td class="footer-text pb16 disclaimer" align="center">
+                    For Colorado, Connecticut, and Vermont prescribers: In compliance with the CO, CT, and VT price disclosure requirements, disclosure forms can be found here:<br />
+                    <a alias="Colorado" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CO-YTG.pdf">Colorado Price Disclosure Form</a><br />
+                    <a alias="Connecticut" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CT-YTG.pdf">Connecticut Price Disclosure Form</a><br />
+                    <a alias="Vermont" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/VT-YTG.pdf">Vermont Price Disclosure Form</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-copy pb16" align="center">YEZTUGO, the YEZTUGO Logo, ADVANCING ACCESS, GILEAD, and the GILEAD Logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks referenced herein are the property of their respective owners.</td>
+                </tr>
+                <tr>
+                  <td class="footer-copy pb16" align="center">©{{build.year}} Gilead Sciences, Inc. {% if build.type == "SALESFORCE" %}%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%%{% else %}333 Lakeside Dr, Foster City, CA 94404{% endif %} <br />All rights reserved. US-YTGP-0397&nbsp;03/26</td>
+                </tr>
+                
+                <tr>
+                  <td class="image" align="center">
+                    <a alias="Gilead logo" class="ghost-link" href="https://www.gilead.com"><img src="{{asset.gilead-logo-2x.url}}" alt="{{asset.gilead-logo-2x.alt}}" width="{{asset.gilead-logo-2x.width}}" height="{{asset.gilead-logo-2x.height}}"/></a>
+                  </td>
+                </tr>
+                <!-- end image -->
 
-                </td>
-              </tr>
-              <tr>
-                <td class="p">
-                  Once XOLAIR therapy has been established, administration of XOLAIR prefilled syringe or autoinjector outside of a healthcare setting by a patient or a caregiver may be appropriate for selected patients. Patient selection, determined by the healthcare provider in consultation with the patient, should take into account the pattern of anaphylaxis events seen in premarketing clinical trials and postmarketing spontaneous reports, as well as individual patient risk factors (e.g. prior history of anaphylaxis), ability to recognize signs and symptoms of anaphylaxis, and ability to perform subcutaneous injections with XOLAIR prefilled syringe or autoinjector with proper technique according to the prescribed dosing regimen and Instructions for Use.
+              </table> 
+            </td>
+          </tr>
+      <!-- End Footer -->
 
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  Discontinue XOLAIR in patients who experience a severe hypersensitivity reaction.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Malignancy:</strong> Malignant neoplasms were observed in 20 of 4127 (0.5%) XOLAIR-treated patients compared with 5 of 2236 (0.2%) control patients in clinical studies of adults and adolescents (≥12 years of age) for a different indication and other allergic disorders. The observed malignancies in XOLAIR-treated patients were a variety of types, with breast, non-melanoma skin, prostate, melanoma, and parotid occurring more than once, and five other types occurring once each. The majority of patients were observed for less than 1 year. The impact of longer exposure to XOLAIR or use in patients at higher risk for malignancy (e.g., elderly, current smokers) is not known.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  A subsequent 5-year observational study of 5007 XOLAIR-treated and 2829 non-XOLAIR-treated adolescent and adult patients for a different indication found that the incidence rates of primary malignancies (per 1000 patient years) were similar in both groups (12.3 vs 13.0, respectively). Study limitations which include the observational study design, the bias introduced by allowing enrollment of patients previously exposed to XOLAIR (88%), enrollment of patients (56%) while a history of cancer or a premalignant condition were study exclusion criteria, and the high study discontinuation rate (44%) preclude definitively ruling out a malignancy risk with XOLAIR.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Fever, Arthralgia, and Rash:</strong> In post-approval use, some patients have experienced a constellation of signs and symptoms, including arthritis/arthralgia, rash, fever, and lymphadenopathy with an onset 1 to 5 days after the first or subsequent injections of XOLAIR. These signs and symptoms have recurred after additional doses in some patients. Physicians should stop XOLAIR if a patient develops this constellation of signs and symptoms.
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Parasitic (Helminth) Infection:</strong> Monitor patients at high risk of geohelminth infection while on XOLAIR therapy. Insufficient data are available to determine the length of monitoring required for geohelminth infections after stopping XOLAIR treatment.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                    <strong> Laboratory Tests:</strong> Due to formation of XOLAIR:IgE complexes, serum total IgE levels increase following administration of XOLAIR and may remain elevated for up to 1 year following discontinuation of XOLAIR. Do not use serum total IgE levels obtained less than 1 year following discontinuation to reassess the dosing regimen for IgE-mediated food allergy patients, because these levels may not reflect steady state free IgE levels.
-                </td>
-              </tr>
-              <tr>
-                  <td class="pb10 p">
-                  <strong>Potential Medication Error Related to Emergency Treatment of Anaphylaxis</strong> XOLAIR should not be used for the emergency treatment of allergic reactions, including anaphylaxis. In studies to simulate use, some patients and caregivers did not understand that XOLAIR is not intended for the emergency treatment of allergic reactions, including anaphylaxis. The safety and effectiveness of XOLAIR for emergency treatment of allergic reactions, including anaphylaxis, have not been established. Instruct patients that XOLAIR is for maintenance use to reduce allergic reactions, including anaphylaxis, while avoiding food allergens.
-                </td>
-              </tr>
-              <tr>
-                <td class="h2 pb5">
-                  ADVERSE REACTIONS
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong> IgE-Mediated Food Allergy:</strong> The most common adverse reactions (≥3% incidence in XOLAIR-treated patients) included: injection site reaction (15.5%) and pyrexia (6.4%). Safety data obtained from adults (n=3) in this trial was limited.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Injection Site Reactions:</strong> Injection site reactions occurred at a rate of 15.5% in XOLAIR-treated patients compared with 10.9% in placebo-treated patients. The types of injection site reactions included: urticaria, discomfort, erythema, pain, and rash. All injection site reactions were mild to moderate severity and none resulted in study discontinuation.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Injection Site Reactions in Healthy Adults: </strong>In an open label trial in healthy adults, in which the 300 mg/2 mL autoinjector was compared to the 300 mg/2 mL prefilled syringe, injection site reactions (e.g., induration, pain, erythema, hemorrhage, swelling, discomfort, bruising, hypoesthesia, edema, pruritus) were observed in 24% (16/66) of subjects treated with the autoinjector compared with 14% (9/64) of subjects treated with the prefilled syringe.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong style="text-decoration: underline;">Cardiovascular and Cerebrovascular Events from Clinical Studies in Patients for a Different Indication:</strong><br class="mobile-only"/> A 5-year observational study was conducted in 5007 XOLAIR-treated and 2829 non-XOLAIR-treated patients ≥12 years of age for a different indication to evaluate the long term safety of XOLAIR, including the risk of malignancy. The results suggest a potential increased risk of serious cardiovascular and cerebrovascular events in patients treated with XOLAIR, however the observational study design, the inclusion of patients previously exposed to XOLAIR (88% for a mean of 8 months), baseline imbalances in cardiovascular risk factors between the treatment groups, an inability to adjust for unmeasured risk factors, and the high study discontinuation rate (44%) limit the ability to quantify the magnitude of the risk.
-
-                </td>
-              </tr>
-              <tr>
-                <td class="pb10 p">
-                  <strong>Pregnancy:</strong> Data with XOLAIR use in pregnant women are insufficient to inform on drug associated risk.
-                </td>
-              </tr>
-              <tr>
-                <td class="p pb20">You may report side effects to the FDA at <a class="blue bold" href="tel:1-800-332-1088"><u>(800) FDA-1088</u></a> or <a class="bold" href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"><u>www.fda.gov/medwatch</u></a>. You may also report side effects to Genentech at <a class="bold" href="tel:1-888-835-2555"><u>(888) 835-2555</u></a>.</td>
-              </tr>
-              <!-- end paragraph -->
-              <tr>
-                <td class="p pb20 bold">Please see full <a href="https://www.gene.com/download/pdf/xolair_prescribing.pdf"><span class="blue">Prescribing Information</span></a>, including Boxed WARNING and <a href="https://www.gene.com/download/pdf/xolair_medguide.pdf"><span class="blue">Medication Guide</span></a>, for additional Important Safety Information.</td>
-              </tr>
-              <!-- end paragraph -->
-              <tr>
-                <td class="p bold m-pb5">This commercial email is brought to you by Genentech USA, Inc.</td>
-              </tr>
-              <!-- end paragraph -->
-              
-            </table>
-          </td>
-        </tr>
-        <!-- End ISI Continued -->
-
-     <!-- Start Footer -->
-     {% if build.type != "THIRD_PARTY" %}
-     <tr>
-       <td class="footer" style="padding-left: 25px; padding-right: 25px; border-top: 2px solid #BBBBBB; background-color: #ffffff;">
-         <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-           <tr>
-             <td class="m-center image" style="line-height:1; font-family: Arial, sans-serif; padding-bottom: 30px;">
-               <a style="display:inline-block;" href="https://www.gene.com/"><img src="{{asset.gene-logo-black-2x.url}}" alt="{{asset.gene-logo-black-2x.alt}}" width="{{asset.gene-logo-black-2x.width}}" height="{{asset.gene-logo-black-2x.height}}" /></a>
-             </td>
-           </tr>
-           <tr>
-             <td class="legal m-center" style="padding-bottom: 25px;">
-               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                 <tr>
-                   <td class="m-pb15 m-pr0 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;" align="center">
-                     <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/contact-us">Contact Us</a>
-                   </td>
-                   <td class="m-pb15 m-pr0 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;" align="center">
-                     <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/privacy-policy">Privacy Policy</a>
-                   </td>
-                   <td class="m-pb15 m-pr0 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;" align="center">
-                     <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/terms-conditions">Terms and Conditions</a>
-                   </td>
-                   <td class="block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px;" align="center">
-                     <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="{{build.unsubscribeLink}}">Unsubscribe</a>
-                   </td>
-                 </tr>
-               </table>
-               <!-- end table block -->
-             </td>
-           </tr>
-           <!-- end paragraph -->
-            {{token.gne-co-disclaimer}}
-           <tr>
-             <td class="pb10 m-center" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 14px; line-height: 18px;">This email is intended for US residents only.</td>
-           </tr>
-           <!-- end paragraph -->
-           
-           <tr>
-             <td class="pb10 m-center" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 14px; line-height: 18px;">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech USA, Inc. All rights reserved.</td>
-           </tr>
-           <!-- end paragraph -->
-           <tr>
-             <td class="m-center" style="font-family: Arial, sans-serif; color: #182628; font-size: 14px; line-height: 18px; padding-bottom: 25px;">
-               Genentech USA, Inc. 1 DNA Way, South San Francisco, CA <span style="white-space: nowrap;">94080-4990</span>
-             </td>
-           </tr>
-         </table> 
-       </td>
-     </tr>
-     {% endif %}
-     <!-- End Footer -->
         </table>
       </td>
     </tr>
+
   </table>
   <!-- end table wrapper -->
 
@@ -1177,6 +998,6 @@
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div>
 
-  
+
 </body>
 </html>
