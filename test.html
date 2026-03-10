@@ -752,8 +752,8 @@
             <td class="content">
                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td class="lt-blue-section" bgcolor="#EDFAFA" style="background-color:#EDFAFA; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
-                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#EDFAFA" style="background-color:#EDFAFA;">
+                    <td class="lt-blue-section" bgcolor="#EDFAFA" style="background-color:#EDFAFA;">
+                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             {% if build.type == "SALESFORCE" %}
                             <tr>
                               <td class="pb24 blue bold">
@@ -771,7 +771,7 @@
                              <td class="pb24">
                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                   <!-- begin mobile content -->
-                                  <tr class="mobile-only" style="mso-hide:all; display:none; height:0; line-height:0; font-size:0;">
+                                  <tr class="mobile-only" style="display:none; height:0; line-height:0; font-size:0;">
                                     <td class="mobile-only" align="center">
                                       <div class="mobile-only">
                                         <img class="image " style="width: 100px;" src="{{asset.mobile-phone-2x.url}}" alt="{{asset.mobile-phone-2x.alt}}" width="0" height="0"/>
@@ -813,25 +813,20 @@
                           </tr>
                             <!-- end paragraph -->                          
                           <tr>
-                            <td class="pb24" bgcolor="#EDFAFA">
-                              <table  align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;"">
+                            <td class="pb24">
+                              <table  align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;">
                                 <tr>
                                   <td align="center">
                                     <div><!--[if mso]>
-                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" 
+                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Search now" 
                                         href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" 
                                         style="height:48px; v-text-anchor:middle; width:400px;"
-                                       arcsize="120%" stroke="f" fillcolor="#F0E933>               
-                                        <v:textbox inset="0,0,0,0">
-                                          <center style="color:#084E70; font-family:Verdana, sans-serif; font-size:14px; font-weight:bold; mso-line-height-rule:exactly;">
-                                            Search now &amp; be ready to prescribe today <span style="color:#F2685F;">➜</span>
-                                          </center>
-                                        </v:textbox>
-                                      </v:roundrect>
-
+                                        v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F0E933">   
+                                    <w:anchorlock/>
+                                    <center>                      
                                       <![endif]-->
-                                          <a class="fixed-width200" alias="Enroll now" href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder"
-                                    style="background-color:#F0E933;border-radius:60px;color:#084E70;display:block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;width:350px;padding-left: 20px; padding-right: 20px; padding-top: 16px; padding-bottom: 16px; -webkit-text-size-adjust:none;  mso-hide:all; mso-padding-alt:16px 20px 16px 20px;">Search now &amp; be ready to prescribe today <span style="color: #F2685F ">&#10140;</span></a>
+                                          <a class="fixed-width200" alias="Search now" href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder"
+                                    style="background-color:#F0E933;border-radius:60px;color:#084E70;display:block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;width:350px;padding-left: 20px; padding-right: 20px; padding-top: 16px; padding-bottom: 16px; -webkit-text-size-adjust:none;">Search now &amp; be ready to prescribe today <span style="color: #F2685F ">&#10140;</span></a>
                                       <!--[if mso]>
                                         </center>
                                       </v:roundrect>
@@ -845,7 +840,7 @@
                           <!-- Outlook Spacer above footnotes -->
                          
                           <tr>
-                            <td class="footnote pb15" bgcolor="#EDFAFA" style="background-color:#EDFAFA;">
+                            <td class="footnote pb15">
                               {% if build.type == "SALESFORCE" %}
                               %%=v(@footnote)=%%
                               {% else %} 
