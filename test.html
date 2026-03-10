@@ -19,7 +19,8 @@
       color: #434445;
       background-color: #ffffff;
       line-height: 20px;
-      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};
+      /*android fix*/
     }
 
     .h1 { font-size: 18px; line-height: 22px; color: #ffffff; font-weight: bold; }
@@ -34,7 +35,6 @@
     .fs16lh22 { font-size: 16px; line-height: 22px; }
     .fs24lh30 { font-size: 24px; line-height: 30px; }
     .footer-text {  font-size: 12px; line-height: 14px; }
-    .fs24lh32 { font-size: 24px; line-height: 32px; color: #0EA5AA; }
 
     a { text-decoration: underline; }
 
@@ -583,28 +583,28 @@
 
       .m-pt0  { padding-top: 0 !important; }
       .m-pt5  { padding-top: 5px !important; }
-      /*.m-pt10 { padding-top: 10px !important; }*/
-      /*.m-pt15 { padding-top: 15px !important; }*/
+      /* .m-pt10 { padding-top: 10px !important; } */
+      /* .m-pt15 { padding-top: 15px !important; } */
       .m-pt20 { padding-top: 20px !important; }
       .m-pt25 { padding-top: 25px !important; }
-      /*.m-pt30 { padding-top: 30px !important; }*/
-      /*.m-pt35 { padding-top: 35px !important; }*/
-      /*.m-pt40 { padding-top: 40px !important; }*/
+      /* .m-pt30 { padding-top: 30px !important; } */
+      /* .m-pt35 { padding-top: 35px !important; } */
+      /* .m-pt40 { padding-top: 40px !important; } */
       /* mobile padding top */
 
       .m-pb0  { padding-bottom: 0 !important; } 
-      /*.m-pb5  { padding-bottom: 5px !important; }*/
-      /*.m-pb10 { padding-bottom: 10px !important; }*/
+      /* .m-pb5  { padding-bottom: 5px !important; } */
+      /* .m-pb10 { padding-bottom: 10px !important; } */
       .m-pb15 { padding-bottom: 15px !important; }
       .m-pb16 { padding-bottom: 16px !important; }
       .m-pb19 { padding-bottom: 19px !important; }
       .m-pb20 { padding-bottom: 20px !important; }
       .m-pb24 { padding-bottom: 24px !important; }
-      /*.m-pb25 { padding-bottom: 25px !important; }*/
+      /* .m-pb25 { padding-bottom: 25px !important; } */
       .m-pb27 { padding-bottom: 27px !important; }
-      /*.m-pb30 { padding-bottom: 30px !important; }*/
-      /*.m-pb35 { padding-bottom: 35px !important; }*/
-      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      /* .m-pb30 { padding-bottom: 30px !important; } */
+      /* .m-pb35 { padding-bottom: 35px !important; } */
+      /* .m-pb40 { padding-bottom: 40px !important; } */
       /* mobile padding bottom */
 
       .m-pr0 { padding-right: 0 !important; }
@@ -618,14 +618,12 @@
       .fs16lh22 { font-size: 16px; line-height: 18px; }
       .disclosure-link {font-size: 12px; line-height: 14px; }
       .footer-links,
-      .footer-links a,
-      {
+      .footer-links a {
       color: #F2685F;
       font-weight: bold;
       font-size: 14px; 
-      line-height: 18px;
-     
-    } 
+      line-height: 18px;  
+      } 
       .header-links {
         padding-left: 10px !important;
         padding-right: 10px !important;
@@ -684,8 +682,8 @@
                     </table>
                     <!-- end table block -->
                   </td>
-                </tr>
-              
+                </tr>              
+               
                 <!-- start gradient -->
                 <tr>
                   <td class="header-gradient bb-teal" style="padding:0;margin:0;" width="100%">
@@ -700,19 +698,33 @@
                         <!-- Content inside gradient -->
                         <tr>
                           <td>
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="552" style="width:552px;">
+                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td class="image pt15 pb5" align="center">
-                                  <a alias="YEZTUGO logo" class="ghost-link" href="https://www.YEZTUGOhcp.com"><img class="white" src="{{asset.header-logo-2x.url}}" alt="{{asset.header-logo-2x.alt}}" width="275" height="110" /></a>
+                                <!-- This line is for fixing the gradient padding on outlook since the gradient is making it ignore padding-->
+                                <td height="16" style="height:16px; font-size:0; line-height:0; mso-line-height-rule:exactly;">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="image pb5" style="padding-bottom: 5px;" align="center">
+                                  
+                                  <a alias="YEZTUGO logo" class="ghost-link" href="https://www.YEZTUGOhcp.com"><img class="white" src="{{asset.header-logo-2x.url}}" alt="{{asset.header-logo-2x.alt}}" width="{{asset.header-logo-2x.width}}" height="{{asset.header-logo-2x.height}}" /></a>
                                 </td>
                               </tr>
                               <!-- end image -->
                               <tr>
-                                <td class="h7 pb16 fs16" align="center">
+                                <td class="h7 fs16" align="center">
                                   COVERAGE UPDATES IN
                                   {% if build.type == "SALESFORCE" %}%%=v(@area)=%%{% else %}<span class="pink">[STATE/THE US]</span>{% endif %}
                                 </td>
                               </tr>
+                              <!-- This line is for fixing the gradient padding on outlook since the gradient is making it ignore padding-->
+                                <tr>
+                                  <td height="16" style="height:16px; font-size:0; line-height:0; mso-line-height-rule:exactly;">
+                                    &nbsp;
+                                  </td>
+                                </tr>
+
                             </table>
                           </td>
                         </tr>
@@ -740,8 +752,8 @@
             <td class="content">
                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td class="lt-blue-section">
-                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <td class="lt-blue-section" bgcolor="#EDFAFA" style="background-color:#EDFAFA; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#EDFAFA" style="background-color:#EDFAFA;">
                             {% if build.type == "SALESFORCE" %}
                             <tr>
                               <td class="pb24 blue bold">
@@ -750,15 +762,16 @@
                             </tr>
                             {% else %}
                             <tr>
-                              <td class="text blue pb24"><strong><span class="pink">[The majority/XX%]</span> of lives in the US across all channels (Commercial, HIX, Medicaid, and Medicare) are covered for YEZTUGO</strong><sup><span class="pink">[a,b]</span></sup></td>
+                              <td class="text blue pb24" style="color: #084E70"><strong><span class="pink">[The majority/XX%]</span> of lives in the US across all channels (Commercial, HIX, Medicaid, and Medicare) are covered for YEZTUGO</strong><sup><span class="pink">[a,b]</span></sup></td>
                             </tr>
                             {% endif %}
-                            <!-- end paragraph -->
-                           <tr>
-                             <td class="pb20">
+                            <!-- end paragraph -->                       
+                          
+                          <tr>
+                             <td class="pb24">
                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                   <!-- begin mobile content -->
-                                  <tr class="mobile-only">
+                                  <tr class="mobile-only" style="mso-hide:all; display:none; height:0; line-height:0; font-size:0;">
                                     <td class="mobile-only" align="center">
                                       <div class="mobile-only">
                                         <img class="image " style="width: 100px;" src="{{asset.mobile-phone-2x.url}}" alt="{{asset.mobile-phone-2x.alt}}" width="0" height="0"/>
@@ -772,10 +785,10 @@
                                   </tr>
                                   <!-- end mobile content -->
                                  <tr>
-                                   <td class="pr10 pt20 desktop-only" valign="top">
+                                   <td class="pr10 desktop-only">
                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                        <tr>
-                                         <td class="image desktop-only" align="center">
+                                         <td class="image block desktop-only" align="center" style="width: 200px;">
                                            <img src="{{asset.mac-book-pro-2x.url}}" alt="{{asset.mac-book-pro-2x.alt}}" width="{{asset.mac-book-pro-2x.width}}" height="{{asset.mac-book-pro-2x.height}}"/>
                                          </td>
                                        </tr>
@@ -784,11 +797,11 @@
                                      </table>
                                    </td>
                             
-                                   <td class="pl10 desktop-only" valign="top">
+                                   <td class="pl10 desktop-only">
                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                        <tr>
-                                         <td class="blue fs18lh24 bold">
-                                           Use the dedicated YEZTUGO coverage finder to discover plans in your area and to learn about coverage types, if prior authorizations are needed, and more.
+                                         <td class="blue fs18lh24 bold" style="font-size: 18px; line-height: 24px;">
+                                          <strong> Use the dedicated YEZTUGO coverage finder to discover plans in your area and to learn about coverage types, if prior authorizations are needed, and more.</strong>
                                          </td>
                                        </tr>
                                      </table>
@@ -797,20 +810,28 @@
                                  </tr>
                                </table>
                              </td>
-                           </tr>
-                            <!-- end paragraph -->
-                           <tr>
-                            <td class="pb24" ">
-                              <table  align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;" >
+                          </tr>
+                            <!-- end paragraph -->                          
+                          <tr>
+                            <td class="pb24" bgcolor="#EDFAFA">
+                              <table  align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;"">
                                 <tr>
                                   <td align="center">
                                     <div><!--[if mso]>
-                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:350px;" arcsize="120%" stroke="f" fillcolor="#F0E933">
-                                        <w:anchorlock/>
-                                        <center>
+                                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" 
+                                        href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" 
+                                        style="height:48px; v-text-anchor:middle; width:400px;"
+                                       arcsize="120%" stroke="f" fillcolor="#F0E933>               
+                                        <v:textbox inset="0,0,0,0">
+                                          <center style="color:#084E70; font-family:Verdana, sans-serif; font-size:14px; font-weight:bold; mso-line-height-rule:exactly;">
+                                            Search now &amp; be ready to prescribe today <span style="color:#F2685F;">➜</span>
+                                          </center>
+                                        </v:textbox>
+                                      </v:roundrect>
+
                                       <![endif]-->
-                                          <a class="fixed-width200" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support"
-                                    style="background-color:#F0E933;border-radius:60px;color:#084E70;display:inline-block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;width:350px;padding-left: 20px; padding-right: 20px; padding-top: 16px; padding-bottom: 16px; -webkit-text-size-adjust:none;">Search now &amp; be ready to prescribe today <span style="color: #F2685F ">&#10140;</span></a>
+                                          <a class="fixed-width200" alias="Enroll now" href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder"
+                                    style="background-color:#F0E933;border-radius:60px;color:#084E70;display:block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;width:350px;padding-left: 20px; padding-right: 20px; padding-top: 16px; padding-bottom: 16px; -webkit-text-size-adjust:none;  mso-hide:all; mso-padding-alt:16px 20px 16px 20px;">Search now &amp; be ready to prescribe today <span style="color: #F2685F ">&#10140;</span></a>
                                       <!--[if mso]>
                                         </center>
                                       </v:roundrect>
@@ -821,24 +842,27 @@
                               <!-- end table block -->
                             </td>
                           </tr>
-                            <tr>
-                              <td class="footnote pb15">
-                                {% if build.type == "SALESFORCE" %}
-                                %%=v(@footnote)=%%
-                                {% else %}
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td class="li" valign="top"><span class="pink">[<sup>a</sup></span></td>
-                                    <td class="pb4">Data on file. Gilead Sciences, Inc.<span class="pink">]</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top"><span class="pink">[<sup>b</sup></span></td>
-                                    <td>Managed Markets Insight & Technology, LLC, database.<span class="pink">]</span>  <span class="pink">[October 2025.]</span></td>
-                                  </tr>
-                                </table>
-                                {% endif %}
-                              </td>
-                            </tr>
+                          <!-- Outlook Spacer above footnotes -->
+                         
+                          <tr>
+                            <td class="footnote pb15" bgcolor="#EDFAFA" style="background-color:#EDFAFA;">
+                              {% if build.type == "SALESFORCE" %}
+                              %%=v(@footnote)=%%
+                              {% else %} 
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td class="li" valign="top"><span class="pink">[<sup>a</sup></span></td>
+                                  <td class="pb4" style="font-size: 12px; line-height: 14px;">Data on file. Gilead Sciences, Inc.<span class="pink">]</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="li" valign="top"><span class="pink">[<sup>b</sup></span></td>
+                                  <td style="font-size: 12px; line-height: 14px;">Managed Markets Insight & Technology, LLC, database.<span class="pink">]</span> <span class="pink">[October 2025.]</span></td>
+                                </tr>
+                              </table>
+                              
+                              {% endif %}
+                            </td>
+                          </tr>
                         </table>
                     </td>
                   </tr>
@@ -850,17 +874,17 @@
             <td class="content pb24">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td class="lt-orange-section-top">
+                  <td class="lt-orange-section-top"  bgcolor="#FDEEE8" style="background-color:#FDEEE8;">
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td class="pb24">
                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                              <td class="block" valign="top">
+                              <td class="block" align="center">
                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                   <tr>
-                                    <td class="pt5 pr26 m-pr24 m-prl0 m-pb16">
-                                      <img class="m-width74 m-center" src="{{asset.icon-copay-2x.url}}" alt="{{asset.icon-copay-2x.alt}}" width="{{asset.icon-copay-2x.width}}" height="{{asset.icon-copay-2x.height}}"/>
+                                    <td class="m-pr24 m-prl0 m-pb16" style="padding-top: 5px; padding-right:26px;" valign="middle" align="center">
+                                      <img class="m-width74 m-center" src="{{asset.icon-copay-2x.url}}" alt="{{asset.icon-copay-2x.alt}}" width="{{asset.icon-copay-2x.width}}" height="{{asset.icon-copay-2x.height}}" />
                                     </td>
                                   </tr>
                                 </table>
@@ -880,11 +904,11 @@
                             <tr>
                               <td>
                                 <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" href="https://www.yeztugohcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F2685F">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Enroll now" href="https://www.YEZTUGOhcp.com/patient-support{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F2685F">
                                     <w:anchorlock/>
                                     <center>
                                   <![endif]-->
-                                      <a alias="Enroll now" href="https://www.yeztugohcp.com/patient-support"
+                                      <a alias="Enroll now" href="https://www.YEZTUGOhcp.com/patient-support"
                                 style="background-color:#F2685F;border-radius:60px;color:#ffffff;display:inline-block;font-family:Verdana, sans-serif;font-size:14px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;">Enroll now <span style="color: #F0E933;">&#10140;</span></a>
                                   <!--[if mso]>
                                     </center>
@@ -910,7 +934,7 @@
                             <tr>
                               <td class="li" valign="top">
                                 <span class="pink"><sup>[c]</sup></span></td>
-                                <td class="pb5">Co-pay Savings Program support is available for commercially insured, eligible patients only. Additional restrictions may apply. Subject to change; for full terms and conditions, visit <a class="word-break-all orange underline bold" alias="Gilead Advancing Access" href="https://www.gileadadvancingaccess.com/copay-coupon-card">GileadAdvancingAccess.com/copay-coupon-card</a>. This is not health insurance.</td>
+                                <td>Co-pay Savings Program support is available for commercially insured, eligible patients only. Additional restrictions may apply. Subject to change; for full terms and conditions, visit <a class="word-break-all orange underline bold" style="color: #F2685F; font-weight: 700;" alias="Gilead Advancing Access" href="https://www.gileadadvancingaccess.com/copay-savings-card">GileadAdvancingAccess.com/copay-coupon-card</a>. This is not health insurance.</td>
                             </tr>
                             <tr>
                               <td class="li" valign="top"><span class="pink"><sup>[d]</sup></span>
@@ -938,44 +962,44 @@
             <td class="footer">
               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td class="fs12 pb14">
+                  <td class="fs12 pb14" style="padding-bottom: 14px;">
                  HIX=Health Insurance Exchange.
                   </td>
                 </tr>
                 <tr>
-                  <td class="fs12 pb24">This customized reference document includes a selection of regional formulary information from Managed Markets Insight & Technology, LLC, database. It is current as of {% if build.type == "SALESFORCE" %}%%=v(@date)=%%{% else %}<span class="pink">[03/2026]</span>{% endif %}. This information may not be comprehensive. Please check with the health plan directly to confirm this formulary information, since plans periodically update their policies and many health plans offer more than one formulary. The information provided is not a guarantee of coverage or payment (partial or full). Individual coverage may vary. Please consult the health plan for patient-specific coverage details. Actual benefits are determined by each plan administrator in accordance with its respective policy and procedures. YEZTUGO status reported is representative of the coverage for the majority of members covered by the plan. Access messages, including the list of plans reported, based only on geography, such as your area, state, or nation, correspond to the insured population of the entire geography. Your area is determined as the geography associated with all zip codes around you that are in the same Core-Based Statistical Area (CBSA). The references above do not, in any manner, imply an endorsement of YEZTUGO by the referenced companies/plans. Placement on the formulary is not intended to imply that coverage is available, or that any claims regarding safety, efficacy, or comparability of the products referenced are being made.</td>
+                  <td class="fs12 pb24" style="padding-bottom: 24px;">This customized reference document includes a selection of regional formulary information from Managed Markets Insight & Technology, LLC, database. It is current as of {% if build.type == "SALESFORCE" %}%%=v(@date)=%%{% else %}<span class="pink">[03/2026]</span>{% endif %}. This information may not be comprehensive. Please check with the health plan directly to confirm this formulary information, since plans periodically update their policies and many health plans offer more than one formulary. The information provided is not a guarantee of coverage or payment (partial or full). Individual coverage may vary. Please consult the health plan for patient-specific coverage details. Actual benefits are determined by each plan administrator in accordance with its respective policy and procedures. YEZTUGO status reported is representative of the coverage for the majority of members covered by the plan. Access messages, including the list of plans reported, based only on geography, such as your area, state, or nation, correspond to the insured population of the entire geography. Your area is determined as the geography associated with all zip codes around you that are in the same Core-Based Statistical Area (CBSA). The references above do not, in any manner, imply an endorsement of YEZTUGO by the referenced companies/plans. Placement on the formulary is not intended to imply that coverage is available, or that any claims regarding safety, efficacy, or comparability of the products referenced are being made.</td>
                 </tr>
                 <!-- end paragraph -->
                 <tr>
-                  <td class="image pb24" align="center">
+                  <td class="image pb24" style="padding-bottom: 24px;" align="center">
                     <a alias="YEZTUGO logo" class="ghost-link" href="https://www.YEZTUGOhcp.com"><img class="m-width230" src="{{asset.yeztugo-logo-2x.url}}" alt="{{asset.yeztugo-logo-2x.alt}}" width="{{asset.yeztugo-logo-2x.width}}" height="{{asset.yeztugo-logo-2x.height}}"/></a>
                   </td>
                 </tr>
                 <!-- end image -->
                 <tr>
-                  <td class="footer-links pb16" align="center">
-                    <a alias="Gilead" href="https://www.gilead.com">Gilead Corporate Website</a>&nbsp;|&nbsp;<a alias="Terms of Use" href="https://www.gilead.com/terms-of-use">Terms&nbsp;of&nbsp;Use</a>&nbsp;|&nbsp;<a alias="Privacy Policy" href="https://www.gilead.com/privacy-statement">Privacy Policy</a><br /><a alias="Contact Us" href="https://www.gilead.com/contact-us">Contact Us</a>&nbsp;|&nbsp;<a alias="Unsubscribe" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                  <td class="footer-links pb16" style="padding-bottom: 16px;" align="center">
+                    <a alias="Gilead" style="color: #F2685F" href="https://www.gilead.com">Gilead Corporate Website</a>&nbsp;|&nbsp;<a alias="Terms of Use" style="color: #F2685F" href="https://www.gilead.com/terms-of-use">Terms&nbsp;of&nbsp;Use</a>&nbsp;|&nbsp;<a alias="Privacy Policy" style="color: #F2685F" href="https://www.gilead.com/privacy-statement">Privacy Policy</a><br /><a alias="Contact Us" style="color: #F2685F" href="https://www.gilead.com/contact-us">Contact Us</a>&nbsp;|&nbsp;<a alias="Unsubscribe" style="color: #F2685F" href="{{build.unsubscribeLink}}">Unsubscribe</a>
                   </td>
                 </tr>
                 
                 <tr>
-                  <td class="footer-text pb16 disclaimer" align="center">
+                  <td class="footer-text pb16 disclaimer" style="padding-bottom: 16px;" align="center">
                     For Colorado, Connecticut, and Vermont prescribers: In compliance with the CO, CT, and VT price disclosure requirements, disclosure forms can be found here:<br />
-                    <a alias="Colorado" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CO-YTG.pdf">Colorado Price Disclosure Form</a><br />
-                    <a alias="Connecticut" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CT-YTG.pdf">Connecticut Price Disclosure Form</a><br />
-                    <a alias="Vermont" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/VT-YTG.pdf">Vermont Price Disclosure Form</a>
+                    <a alias="Colorado" style="color: #F2685F; font-weight: 700;" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CO-YTG.pdf">Colorado Price Disclosure Form</a><br />
+                    <a alias="Connecticut" style="color: #F2685F; font-weight: 700;" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/CT-YTG.pdf">Connecticut Price Disclosure Form</a><br />
+                    <a alias="Vermont" style="color: #F2685F; font-weight: 700;" href="https://www.gileadpriceinfo.com/-/media/project/price-info/files/VT-YTG.pdf">Vermont Price Disclosure Form</a>
                   </td>
                 </tr>
                 <tr>
-                  <td class="footer-copy pb16" align="center">YEZTUGO, the YEZTUGO Logo, ADVANCING ACCESS, GILEAD, and the GILEAD Logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks referenced herein are the property of their respective owners.</td>
+                  <td class="footer-copy pb16" style="padding-bottom: 16px;" align="center">YEZTUGO, the YEZTUGO Logo, ADVANCING ACCESS, GILEAD, and the GILEAD Logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks referenced herein are the property of their respective owners.</td>
                 </tr>
                 <tr>
-                  <td class="footer-copy pb16" align="center">©{{build.year}} Gilead Sciences, Inc. {% if build.type == "SALESFORCE" %}%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%%{% else %}333 Lakeside Dr, Foster City, CA 94404{% endif %} <br />All rights reserved. US-YTGP-0397&nbsp;03/26</td>
+                  <td class="footer-copy pb16" style="padding-bottom: 16px;" align="center">©{{build.year}} Gilead Sciences, Inc. {% if build.type == "SALESFORCE" %}%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%%{% else %}333 Lakeside Dr, Foster City, CA 94404{% endif %} <br />All rights reserved. US-YTGP-0397&nbsp;03/26</td>
                 </tr>
                 
                 <tr>
                   <td class="image" align="center">
-                    <a alias="Gilead logo" class="ghost-link" href="https://www.gilead.com"><img src="{{asset.gilead-logo-2x.url}}" alt="{{asset.gilead-logo-2x.alt}}" width="{{asset.gilead-logo-2x.width}}" height="{{asset.gilead-logo-2x.height}}"/></a>
+                    <a alias="Gilead logo" class="ghost-link" href="https://www.gilead.com"><img src="{{asset.gilead-logo-2x.url}}" alt="{{asset.gilead-logo-2x.alt}}" width="{{asset.gilead-logo-2x.width}}" height="{{asset.gilead-logo-2x.height}}" style="line-height: 14px;"/></a>
                   </td>
                 </tr>
                 <!-- end image -->
