@@ -785,10 +785,11 @@
                                   </tr>
                                   <!-- end mobile content -->
                                  <tr>
-                                   <td class="pr10 desktop-only">
+                                   <!--added to fix padding issues on outlook-->
+                                   <td class="pr10 desktop-only" width="200" style="width: 200px;">
                                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                        <tr>
-                                         <td class="image block desktop-only" align="center" style="width: 200px;">
+                                         <td class="image block desktop-only" align="center">
                                            <img src="{{asset.mac-book-pro-2x.url}}" alt="{{asset.mac-book-pro-2x.alt}}" width="{{asset.mac-book-pro-2x.width}}" height="{{asset.mac-book-pro-2x.height}}"/>
                                          </td>
                                        </tr>
@@ -821,7 +822,7 @@
                                       <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Search now" 
                                         href="https://www.yeztugohcp.com/coverage-acquisition#coverage-finder{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" 
                                         style="height:48px; v-text-anchor:middle; width:400px;"
-                                        v-text-anchor:middle;width:150px;" arcsize="120%" stroke="f" fillcolor="#F0E933">   
+                                        arcsize="120%" stroke="f" fillcolor="#F0E933">   
                                     <w:anchorlock/>
                                     <center>                      
                                       <![endif]-->
