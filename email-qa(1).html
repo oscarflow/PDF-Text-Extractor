@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email QA</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0e0e0f;
+    --surface: #161618;
+    --border: #2a2a2e;
+    --accent: #c8f135;
+    --accent-dim: rgba(200,241,53,0.12);
+    --accent-dimmer: rgba(200,241,53,0.06);
+    --text: #e8e8e8;
+    --text-dim: #666;
+    --text-mid: #999;
+    --red: #ff4d4d;
+    --red-dim: rgba(255,77,77,0.1);
+    --green: #c8f135;
+    --green-dim: rgba(200,241,53,0.1);
+    --panel: 280px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── TOPBAR ── */
+  #topbar {
+    height: 48px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 0;
+    flex-shrink: 0;
+    z-index: 100;
+  }
+
+  .tb-logo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-right: 24px;
+    white-space: nowrap;
+  }
+
+  .tb-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+    margin: 0 12px;
+  }
+
+  .tb-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+
+  /* Breakpoint toggle */
+  .bp-toggle {
+    display: flex;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .bp-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    color: var(--text-dim);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .bp-btn.active {
+    background: var(--accent);
+    color: #000;
+    font-weight: 500;
+  }
+
+  /* Width input */
+  .width-input {
+    width: 56px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+  }
+  .width-input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+
+  /* Opacity */
+  input[type=range] {
+    width: 80px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  #opacityVal {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    min-width: 30px;
+  }
+
+  /* Toggle overlay btn */
+  .tb-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .tb-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .tb-btn.on { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  /* Status pill */
+  #statusPill {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    white-space: nowrap;
+    transition: all 0.3s;
+  }
+  #statusPill.pass { border-color: var(--green); color: var(--green); background: var(--green-dim); }
+  #statusPill.fail { border-color: var(--red); color: var(--red); background: var(--red-dim); }
+  #statusPill.unchecked { border-color: var(--border); color: var(--text-dim); }
+
+  /* ── BODY LAYOUT ── */
+  #body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ── LEFT PANEL ── */
+  #panel {
+    width: var(--panel);
+    min-width: var(--panel);
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .panel-section {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px;
+  }
+
+  .panel-section:last-child { border-bottom: none; flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* Drop zones */
+  .drop-zone {
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .drop-zone:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dimmer); }
+  .drop-zone.loaded { border-color: var(--accent); border-style: solid; color: var(--accent); background: var(--accent-dimmer); }
+  .drop-zone.over { border-color: var(--accent); background: var(--accent-dim); }
+  .drop-zone input[type=file] { display: none; }
+
+  .dz-icon { font-size: 18px; margin-bottom: 4px; }
+  .dz-label { font-size: 11px; font-family: 'IBM Plex Mono', monospace; }
+  .dz-sub { font-size: 10px; color: var(--text-dim); margin-top: 2px; }
+
+  /* HTML textarea */
+  #htmlTextarea {
+    flex: 1;
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 11px;
+    font-family: 'IBM Plex Mono', monospace;
+    resize: none;
+    line-height: 1.5;
+    min-height: 0;
+  }
+  #htmlTextarea:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+  #htmlTextarea::placeholder { color: var(--text-dim); }
+
+  .load-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .load-btn:hover { opacity: 0.85; }
+
+  /* Copy textarea */
+  #copySection { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+  #copyTextarea {
+    flex: 1;
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 11px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    resize: none;
+    line-height: 1.6;
+    min-height: 0;
+  }
+  #copyTextarea:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+  #copyTextarea::placeholder { color: var(--text-dim); }
+
+  .copy-note {
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── TABS ── */
+  .tab-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .tab {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 8px 16px;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ── MAIN AREA ── */
+  #main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #previewArea {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    background: #1a1a1c;
+    background-image: radial-gradient(circle, #2a2a2e 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  #copyDiffArea {
+    flex: 1;
+    overflow: auto;
+    padding: 24px 32px;
+    display: none;
+  }
+
+  /* ── STAGE ── */
+  #stage {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 20px 60px rgba(0,0,0,0.6);
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  #emailFrame {
+    display: block;
+    border: none;
+    width: 100%;
+  }
+
+  /* ── OVERLAY IMAGE ── */
+  #overlayImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    display: none;
+    z-index: 10;
+  }
+
+  /* Corner handles */
+  .handle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border: 2px solid #000;
+    border-radius: 2px;
+    z-index: 20;
+    cursor: nwse-resize;
+    display: none;
+  }
+  #hTL { top: -6px; left: -6px; cursor: nwse-resize; }
+  #hTR { top: -6px; right: -6px; cursor: nesw-resize; }
+  #hBL { bottom: -6px; left: -6px; cursor: nesw-resize; }
+  #hBR { bottom: -6px; right: -6px; cursor: nwse-resize; }
+
+  /* ── COPY DIFF ── */
+  .diff-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+
+  .diff-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .diff-stat {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  .diff-stat.good { border-color: var(--green); color: var(--green); background: var(--green-dim); }
+  .diff-stat.bad { border-color: var(--red); color: var(--red); background: var(--red-dim); }
+
+  .diff-output {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .diff-missing { background: var(--red-dim); color: var(--red); border-radius: 2px; padding: 0 2px; text-decoration: line-through; }
+  .diff-extra { background: rgba(255,165,0,0.15); color: #ffaa33; border-radius: 2px; padding: 0 2px; }
+  .diff-ok { color: var(--text-mid); }
+
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  /* ── BOTTOM BAR ── */
+  #bottomBar {
+    height: 28px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+  #bottomBar span b { color: var(--text-mid); }
+
+  /* scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #444; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <span class="tb-logo">EMAIL·QA</span>
+
+  <div class="tb-divider"></div>
+
+  <span class="tb-label">breakpoint</span>
+  <div class="bp-toggle">
+    <button class="bp-btn active" id="btnDesktop" onclick="setBreakpoint('desktop')">DESKTOP</button>
+    <button class="bp-btn" id="btnMobile" onclick="setBreakpoint('mobile')">MOBILE</button>
+  </div>
+
+  <div class="tb-divider"></div>
+
+  <span class="tb-label">width</span>
+  <input type="number" class="width-input" id="canvasWidth" value="600" min="200" max="1400" oninput="applyWidth()">
+  <span class="tb-label" style="margin-left:4px">px</span>
+
+  <div class="tb-divider"></div>
+
+  <span class="tb-label">overlay</span>
+  <input type="range" id="opacitySlider" min="0" max="100" value="50" oninput="setOpacity(this.value)">
+  <span id="opacityVal">50%</span>
+
+  <div class="tb-divider"></div>
+
+  <button class="tb-btn on" id="btnToggle" onclick="toggleOverlay()">OVERLAY ON</button>
+
+  <span id="statusPill" class="unchecked">— copy not checked</span>
+</div>
+
+<!-- BODY -->
+<div id="body">
+
+  <!-- LEFT PANEL -->
+  <div id="panel">
+
+    <!-- Design images -->
+    <div class="panel-section">
+      <div class="section-label">Design Export</div>
+
+      <div class="drop-zone" id="dzDesktop" onclick="document.getElementById('fileDesktop').click()"
+        ondragover="dzOver(event,'dzDesktop')" ondragleave="dzLeave('dzDesktop')" ondrop="dzDrop(event,'desktop')">
+        <input type="file" id="fileDesktop" accept="image/*" onchange="loadImage(this.files[0],'desktop')">
+        <div class="dz-icon">🖥</div>
+        <div class="dz-label">Desktop PNG</div>
+        <div class="dz-sub">drop or click · export 1x</div>
+      </div>
+
+      <div class="drop-zone" id="dzMobile" onclick="document.getElementById('fileMobile').click()"
+        ondragover="dzOver(event,'dzMobile')" ondragleave="dzLeave('dzMobile')" ondrop="dzDrop(event,'mobile')">
+        <input type="file" id="fileMobile" accept="image/*" onchange="loadImage(this.files[0],'mobile')">
+        <div class="dz-icon">📱</div>
+        <div class="dz-label">Mobile PNG</div>
+        <div class="dz-sub">drop or click · export 1x</div>
+      </div>
+    </div>
+
+    <!-- HTML input -->
+    <div class="panel-section" style="flex:1;display:flex;flex-direction:column;min-height:0">
+      <div class="section-label">Email HTML</div>
+      <textarea id="htmlTextarea" placeholder="Paste full email HTML here including &lt;html&gt; tag..."></textarea>
+      <button class="load-btn" onclick="loadHTML()">RENDER EMAIL</button>
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <!-- Tab bar -->
+    <div class="tab-bar">
+      <div class="tab active" id="tabPreview" onclick="showTab('preview')">VISUAL</div>
+      <div class="tab" id="tabCopy" onclick="showTab('copy')">COPY CHECK</div>
+    </div>
+
+    <!-- Preview area -->
+    <div id="previewArea">
+      <div id="stage">
+        <iframe id="emailFrame" scrolling="no"></iframe>
+        <img id="overlayImg" alt="">
+        <div class="handle" id="hTL"></div>
+        <div class="handle" id="hTR"></div>
+        <div class="handle" id="hBL"></div>
+        <div class="handle" id="hBR"></div>
+      </div>
+    </div>
+
+    <!-- Copy diff area -->
+    <div id="copyDiffArea">
+      <div id="copyDiffContent">
+        <div class="empty-state">
+          <span>⟶</span>
+          <span>Paste expected copy in the side panel and render your HTML to run the check</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div id="bottomBar">
+      <span>canvas <b id="bCanvas">600px</b></span>
+      <span>overlay <b id="bOverlay">—</b></span>
+      <span id="bCopyStatus">copy <b>—</b></span>
+      <span style="margin-left:auto;color:#333">O · toggle overlay &nbsp;|&nbsp; ← → ↑ ↓ · nudge overlay 1px &nbsp;|&nbsp; shift+arrows · 10px</span>
+    </div>
+
+  </div>
+
+  <!-- COPY PANEL (right side, only on copy tab) -->
+  <div id="copyPanel" style="display:none;width:260px;min-width:260px;background:var(--surface);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;">
+    <div style="padding:14px 16px;border-bottom:1px solid var(--border);">
+      <div class="section-label">Expected Copy</div>
+      <div class="copy-note">Paste copy from Figma or the brief once. It stays locked while you re-render HTML.</div>
+    </div>
+    <div style="flex:1;padding:14px 16px;display:flex;flex-direction:column;min-height:0;overflow:hidden;">
+      <textarea id="copyTextarea" placeholder="Paste expected copy here — headlines, body text, CTAs, disclaimers..." style="flex:1;min-height:0;"></textarea>
+      <button class="load-btn" style="margin-top:8px" onclick="runCopyCheck()">RUN COPY CHECK</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ── STATE ── */
+const images = { desktop: null, mobile: null };
+let currentBP = 'desktop';
+let overlayOn = true;
+let overlayOffsetX = 0, overlayOffsetY = 0;
+let overlayW = null, overlayH = null; // current rendered size
+let isResizing = false;
+let resizeCorner = '';
+let resizeStart = {};
+let currentTab = 'preview';
+
+const desktopWidth = () => parseInt(document.getElementById('canvasWidth').value) || 600;
+const mobileWidth  = () => parseInt(document.getElementById('mobileWidth')?.value) || 375;
+
+const stage      = document.getElementById('stage');
+const frame      = document.getElementById('emailFrame');
+const overlayImg = document.getElementById('overlayImg');
+const handles    = ['hTL','hTR','hBL','hBR'].map(id => document.getElementById(id));
+
+/* ── INIT ── */
+applyWidth();
+
+/* ── BREAKPOINT ── */
+function setBreakpoint(bp) {
+  currentBP = bp;
+  document.getElementById('btnDesktop').classList.toggle('active', bp === 'desktop');
+  document.getElementById('btnMobile').classList.toggle('active', bp === 'mobile');
+
+  if (bp === 'desktop') {
+    document.getElementById('canvasWidth').value = 600;
+  } else {
+    document.getElementById('canvasWidth').value = 375;
+  }
+  applyWidth();
+  updateOverlayImage();
+}
+
+/* ── WIDTH ── */
+function applyWidth() {
+  const w = parseInt(document.getElementById('canvasWidth').value) || 600;
+  stage.style.width = w + 'px';
+  frame.style.width = w + 'px';
+  document.getElementById('bCanvas').textContent = w + 'px';
+  autoHeight();
+}
+
+/* ── IFRAME HEIGHT ── */
+function autoHeight() {
+  try {
+    const doc = frame.contentDocument || frame.contentWindow?.document;
+    if (!doc || !doc.body) return;
+    const h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight, 200);
+    frame.style.height = h + 'px';
+    stage.style.height = h + 'px';
+    if (overlayImg.style.display !== 'none' && overlayW) {
+      // keep overlay height proportional if not manually resized
+    }
+    updateHandles();
+  } catch(e) {}
+}
+
+/* ── LOAD HTML ── */
+function loadHTML() {
+  const html = document.getElementById('htmlTextarea').value.trim();
+  if (!html) return;
+
+  const blob = new Blob([html], { type: 'text/html' });
+  const url  = URL.createObjectURL(blob);
+  frame.src  = url;
+  frame.onload = () => {
+    setTimeout(autoHeight, 100);
+    setTimeout(() => { autoHeight(); updateHandles(); }, 500);
+    if (document.getElementById('copyTextarea').value.trim()) runCopyCheck();
+  };
+}
+
+/* ── DROP ZONES ── */
+function dzOver(e, id) {
+  e.preventDefault();
+  document.getElementById(id).classList.add('over');
+}
+function dzLeave(id) {
+  document.getElementById(id).classList.remove('over');
+}
+function dzDrop(e, bp) {
+  e.preventDefault();
+  const id = bp === 'desktop' ? 'dzDesktop' : 'dzMobile';
+  document.getElementById(id).classList.remove('over');
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) loadImage(file, bp);
+}
+
+/* ── LOAD IMAGE ── */
+function loadImage(file, bp) {
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.onload = () => {
+    images[bp] = { url, naturalW: img.naturalWidth, naturalH: img.naturalHeight };
+    const id = bp === 'desktop' ? 'dzDesktop' : 'dzMobile';
+    const dz = document.getElementById(id);
+    dz.classList.add('loaded');
+    dz.querySelector('.dz-label').textContent = bp === 'desktop' ? '✓ Desktop loaded' : '✓ Mobile loaded';
+    dz.querySelector('.dz-sub').textContent = img.naturalWidth + ' × ' + img.naturalHeight + 'px';
+    if (bp === currentBP) updateOverlayImage();
+  };
+  img.src = url;
+}
+
+/* ── UPDATE OVERLAY ── */
+function updateOverlayImage() {
+  const img = images[currentBP];
+  if (!img) {
+    overlayImg.style.display = 'none';
+    handles.forEach(h => h.style.display = 'none');
+    document.getElementById('bOverlay').textContent = '—';
+    return;
+  }
+
+  overlayImg.src = img.url;
+
+  // Default: fit to canvas width, maintain aspect ratio
+  const canvasW = parseInt(stage.style.width) || 600;
+  overlayW = canvasW;
+  overlayH = Math.round(canvasW * (img.naturalH / img.naturalW));
+  overlayOffsetX = 0;
+  overlayOffsetY = 0;
+
+  applyOverlayTransform();
+  overlayImg.style.display = overlayOn ? 'block' : 'none';
+  handles.forEach(h => h.style.display = overlayOn ? 'block' : 'none');
+  document.getElementById('bOverlay').textContent = img.naturalW + ' × ' + img.naturalH + 'px';
+}
+
+function applyOverlayTransform() {
+  if (!overlayW) return;
+  overlayImg.style.width  = overlayW + 'px';
+  overlayImg.style.height = overlayH + 'px';
+  overlayImg.style.left   = overlayOffsetX + 'px';
+  overlayImg.style.top    = overlayOffsetY + 'px';
+  updateHandles();
+}
+
+function updateHandles() {
+  if (!overlayW) return;
+  const x = overlayOffsetX, y = overlayOffsetY;
+  const w = overlayW, h = overlayH;
+  const hTL = document.getElementById('hTL');
+  const hTR = document.getElementById('hTR');
+  const hBL = document.getElementById('hBL');
+  const hBR = document.getElementById('hBR');
+  hTL.style.left = (x - 6) + 'px'; hTL.style.top = (y - 6) + 'px';
+  hTR.style.left = (x + w - 6) + 'px'; hTR.style.top = (y - 6) + 'px';
+  hBL.style.left = (x - 6) + 'px'; hBL.style.top = (y + h - 6) + 'px';
+  hBR.style.left = (x + w - 6) + 'px'; hBR.style.top = (y + h - 6) + 'px';
+}
+
+/* ── CORNER RESIZE ── */
+['hTL','hTR','hBL','hBR'].forEach(id => {
+  document.getElementById(id).addEventListener('mousedown', e => {
+    if (!overlayW) return;
+    isResizing = true;
+    resizeCorner = id;
+    resizeStart = {
+      mx: e.clientX, my: e.clientY,
+      x: overlayOffsetX, y: overlayOffsetY,
+      w: overlayW, h: overlayH
+    };
+    e.preventDefault();
+    e.stopPropagation();
+  });
+});
+
+document.addEventListener('mousemove', e => {
+  if (!isResizing) return;
+  const dx = e.clientX - resizeStart.mx;
+  const dy = e.clientY - resizeStart.my;
+
+  let nx = resizeStart.x, ny = resizeStart.y;
+  let nw = resizeStart.w, nh = resizeStart.h;
+
+  // Free resize (no aspect lock) so user can stretch to fit
+  if (resizeCorner === 'hBR') {
+    nw = Math.max(50, resizeStart.w + dx);
+    nh = Math.max(50, resizeStart.h + dy);
+  } else if (resizeCorner === 'hBL') {
+    nw = Math.max(50, resizeStart.w - dx);
+    nh = Math.max(50, resizeStart.h + dy);
+    nx = resizeStart.x + (resizeStart.w - nw);
+  } else if (resizeCorner === 'hTR') {
+    nw = Math.max(50, resizeStart.w + dx);
+    nh = Math.max(50, resizeStart.h - dy);
+    ny = resizeStart.y + (resizeStart.h - nh);
+  } else if (resizeCorner === 'hTL') {
+    nw = Math.max(50, resizeStart.w - dx);
+    nh = Math.max(50, resizeStart.h - dy);
+    nx = resizeStart.x + (resizeStart.w - nw);
+    ny = resizeStart.y + (resizeStart.h - nh);
+  }
+
+  overlayW = nw; overlayH = nh;
+  overlayOffsetX = nx; overlayOffsetY = ny;
+  applyOverlayTransform();
+});
+
+document.addEventListener('mouseup', () => { isResizing = false; });
+
+/* ── OPACITY ── */
+function setOpacity(v) {
+  overlayImg.style.opacity = v / 100;
+  document.getElementById('opacityVal').textContent = v + '%';
+}
+
+/* ── TOGGLE OVERLAY ── */
+function toggleOverlay() {
+  overlayOn = !overlayOn;
+  overlayImg.style.display = overlayOn ? 'block' : 'none';
+  handles.forEach(h => h.style.display = overlayOn ? 'block' : 'none');
+  const btn = document.getElementById('btnToggle');
+  btn.classList.toggle('on', overlayOn);
+  btn.textContent = overlayOn ? 'OVERLAY ON' : 'OVERLAY OFF';
+}
+
+/* ── KEYBOARD ── */
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+  const step = e.shiftKey ? 10 : 1;
+  if (e.key === 'o' || e.key === 'O') { toggleOverlay(); return; }
+  if (!overlayW) return;
+  if (e.key === 'ArrowLeft')  { overlayOffsetX -= step; applyOverlayTransform(); e.preventDefault(); }
+  if (e.key === 'ArrowRight') { overlayOffsetX += step; applyOverlayTransform(); e.preventDefault(); }
+  if (e.key === 'ArrowUp')    { overlayOffsetY -= step; applyOverlayTransform(); e.preventDefault(); }
+  if (e.key === 'ArrowDown')  { overlayOffsetY += step; applyOverlayTransform(); e.preventDefault(); }
+});
+
+/* ── TABS ── */
+function showTab(tab) {
+  currentTab = tab;
+  document.getElementById('tabPreview').classList.toggle('active', tab === 'preview');
+  document.getElementById('tabCopy').classList.toggle('active', tab === 'copy');
+  document.getElementById('previewArea').style.display   = tab === 'preview' ? 'flex' : 'none';
+  document.getElementById('copyDiffArea').style.display  = tab === 'copy'    ? 'block' : 'none';
+  document.getElementById('copyPanel').style.display     = tab === 'copy'    ? 'flex' : 'none';
+  if (tab === 'copy' && document.getElementById('copyTextarea').value.trim()) runCopyCheck();
+}
+
+/* ── COPY CHECK ── */
+function extractTextFromHTML(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  // Remove script and style
+  doc.querySelectorAll('script,style,head').forEach(el => el.remove());
+  const text = doc.body ? doc.body.innerText || doc.body.textContent : '';
+  return normalizeText(text);
+}
+
+function normalizeText(t) {
+  return t
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .replace(/[ \t]+/g, ' ')         // collapse spaces/tabs
+    .replace(/\n{3,}/g, '\n\n')      // max 2 consecutive newlines
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l.length > 0)
+    .join('\n')
+    .trim();
+}
+
+function tokenize(text) {
+  // Split into words preserving punctuation as separate tokens
+  return text.match(/\S+/g) || [];
+}
+
+function runCopyCheck() {
+  const expectedRaw = document.getElementById('copyTextarea').value.trim();
+  const htmlRaw     = document.getElementById('htmlTextarea').value.trim();
+
+  const diffArea = document.getElementById('copyDiffContent');
+
+  if (!expectedRaw || !htmlRaw) {
+    diffArea.innerHTML = '<div class="empty-state"><span>⟶</span><span>Paste expected copy and render HTML first</span></div>';
+    return;
+  }
+
+  const expectedText = normalizeText(expectedRaw);
+  const actualText   = extractTextFromHTML(htmlRaw);
+
+  const expectedTokens = tokenize(expectedText);
+  const actualTokens   = tokenize(actualText);
+
+  // LCS-based diff
+  const diff = lcsWordDiff(expectedTokens, actualTokens);
+
+  const missing = diff.filter(d => d.type === 'removed').length;
+  const extra   = diff.filter(d => d.type === 'added').length;
+  const matched = diff.filter(d => d.type === 'equal').length;
+  const total   = expectedTokens.length;
+  const pct     = total > 0 ? Math.round((matched / total) * 100) : 0;
+
+  // Update status
+  const pill = document.getElementById('statusPill');
+  const bCopy = document.getElementById('bCopyStatus');
+  if (missing === 0 && extra === 0) {
+    pill.className = 'pass';
+    pill.textContent = '✓ copy match';
+    bCopy.innerHTML = 'copy <b style="color:var(--green)">✓ match</b>';
+  } else {
+    pill.className = 'fail';
+    pill.textContent = `✗ ${missing} missing · ${extra} extra`;
+    bCopy.innerHTML = `copy <b style="color:var(--red)">${missing} issues</b>`;
+  }
+
+  // Build diff HTML
+  let html = '';
+  html += `<div class="diff-stats">`;
+  html += `<div class="diff-stat ${missing===0?'good':'bad'}">${missing} missing word${missing!==1?'s':''}</div>`;
+  html += `<div class="diff-stat ${extra===0?'good':'bad'}">${extra} extra word${extra!==1?'s':''}</div>`;
+  html += `<div class="diff-stat good">${pct}% match</div>`;
+  html += `</div>`;
+
+  if (missing === 0 && extra === 0) {
+    html += `<div class="diff-output" style="color:var(--green);border-color:var(--green)">✓ Copy matches exactly. All ${matched} words accounted for.</div>`;
+  } else {
+    html += `<div class="diff-header">Expected copy vs HTML — <span style="color:var(--red)">red = missing from HTML</span> · <span style="color:#ffaa33">orange = extra in HTML</span></div>`;
+    html += `<div class="diff-output">`;
+    let inLine = '';
+    diff.forEach((token, i) => {
+      const word = escapeHTML(token.value);
+      const space = i < diff.length - 1 ? ' ' : '';
+      if (token.type === 'equal')   inLine += `<span class="diff-ok">${word}</span>${space}`;
+      if (token.type === 'removed') inLine += `<span class="diff-missing">${word}</span>${space}`;
+      if (token.type === 'added')   inLine += `<span class="diff-extra">${word}</span>${space}`;
+    });
+    html += inLine;
+    html += `</div>`;
+  }
+
+  diffArea.innerHTML = html;
+}
+
+function escapeHTML(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ── LCS WORD DIFF ── */
+function lcsWordDiff(a, b) {
+  const m = a.length, n = b.length;
+  // Build LCS table
+  const dp = Array.from({length: m+1}, () => new Array(n+1).fill(0));
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      dp[i][j] = a[i-1].toLowerCase() === b[j-1].toLowerCase()
+        ? dp[i-1][j-1] + 1
+        : Math.max(dp[i-1][j], dp[i][j-1]);
+
+  // Backtrack
+  const result = [];
+  let i = m, j = n;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && a[i-1].toLowerCase() === b[j-1].toLowerCase()) {
+      result.unshift({ type: 'equal', value: a[i-1] });
+      i--; j--;
+    } else if (j > 0 && (i === 0 || dp[i][j-1] >= dp[i-1][j])) {
+      result.unshift({ type: 'added', value: b[j-1] });
+      j--;
+    } else {
+      result.unshift({ type: 'removed', value: a[i-1] });
+      i--;
+    }
+  }
+  return result;
+}
+
+/* ── DRAG OVERLAY (click and drag image itself) ── */
+let isDraggingOverlay = false;
+let dragStart = {};
+overlayImg.style.pointerEvents = 'auto';
+overlayImg.style.cursor = 'move';
+
+overlayImg.addEventListener('mousedown', e => {
+  if (isResizing) return;
+  isDraggingOverlay = true;
+  dragStart = { mx: e.clientX, my: e.clientY, ox: overlayOffsetX, oy: overlayOffsetY };
+  e.preventDefault();
+});
+document.addEventListener('mousemove', e => {
+  if (!isDraggingOverlay) return;
+  overlayOffsetX = dragStart.ox + (e.clientX - dragStart.mx);
+  overlayOffsetY = dragStart.oy + (e.clientY - dragStart.my);
+  applyOverlayTransform();
+});
+document.addEventListener('mouseup', () => { isDraggingOverlay = false; });
+</script>
+</body>
+</html>
