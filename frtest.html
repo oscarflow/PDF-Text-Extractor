@@ -1,1284 +1,221 @@
 <!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-  <!-- Target IE10 phones -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  <title>{{build.title}}</title>
-  <style type="text/css">
-    /***************************************
-                GLOBAL STYLES
-    ****************************************/
-
-    .main-td {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #000000;
-      line-height: 20px;
-      background-color: #ffffff;
-      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
-    }
-
-    .h1 { font-size: 22px; line-height: 22px; color: #00809E; font-weight: bold; }
-    .h2 { font-size: 16px; line-height: 20px; color: #C7376C; font-weight: bold; }
-    .h3 { font-size: 20px; line-height: 24px; color: #007591; font-weight: bold; }
-    .h4 { font-size: 16px; line-height: 20px; color: #007591; font-weight: bold; }
-    .h5 { font-size: 22px; line-height: 26px; color: #00809E; font-weight: bold; }
-    .lh14 { line-height: 14px; }
-
-    a { text-decoration: underline; }
-
-    /* Build Section Styling */
-    
-    .preheader {
-      padding-right: 23px;
-      padding-left: 23px;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #E0E0E0;
-    }
-    .preheader a { color: #5D5D5D; }
-    .preheader td {
-      font-size: 14px;
-      line-height: 16px;
-    }
-    .br-black { border-right: 1px solid #5D5D5D; }
-    .header {
-      padding-right: 23px;
-      padding-left: 23px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .content {
-      padding-right: 45px;
-      padding-left: 45px;
-      padding-top: 25px;
-    }
-    .gray-callout {
-      background-color: #F8F8F8;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .boxed-section {
-      border: 1px solid #000000; 
-      border-radius: 4px;
-      padding: 7px;
-    }
-    .safety {
-      padding-right: 40px;
-      padding-left: 40px;
-      padding-bottom: 20px;
-    }
-    .blue-section {
-      background-color: #DEF2EF;
-      padding-left: 35px;
-      padding-right: 35px;
-      padding-top: 30px;
-      padding-bottom: 15px;
-    }
-    .three-columns td {
-      font-size: 14px;
-      line-height:18px;
-    }
-    .footer {
-      padding-right: 60px;
-      padding-left: 60px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-      background-color: #EBEBEB;
-    }
-    .footer td { font-size: 14px; line-height: 18px; }
-    .footer-links {
-      background-color: #DCDCDC; 
-      padding: 10px 5px;
-    }
-    /* Legal Links */
-    .legal a { text-decoration: underline; color: #000000; }
-
-    .references tr:first-child .li + td { width: auto; }
-    .references .li { width: 15px; }
-    /*fixes width issue in yahoo*/
-
-    .footnote,
-    .footnote td { font-size: 12px; line-height: 16px; }
-
-    /* Horizontal Rule */
-    .bt-gray { border-top: 1px solid #D9D9D9; }
-
-    /* additional colors */
-    .black { color: #000001; }  
-    .white { color: #ffffff; }
-    .pink { color: #C7376C !important; }
-    .blue { color: #007591; }
-
-    /* Element Styling */
-    .p,
-    .ul { padding-bottom: 15px; }
-
-    .li { width: 1px; }
-    .ul .li { padding-right: 5px; }
-
-    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
-    .ul tr:first-child .li + td { width: 100%; }
-
-    sup, sub { line-height: 0; font-size: 75%; }
-
-    /* Additional formatting and styling */
-    .center { text-align: center; }
-    .center-block { margin: 0 auto; }
-    .no-underline { text-decoration: none; }
-    .underline { text-decoration: underline; }
-    .bold { font-weight: bold; }
-
-    .no-wrap { white-space: nowrap; }
-    a[href^="tel:"] { white-space: nowrap; }
-    
-    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
-    /*Hides mobile only elements. Needs to be inlined for Gmail*/
-
-    /* Callout styling */
-    .callout {
-      font-size: 15px;
-      line-height: 19px;
-      color: #ffffff;
-      background-color: #79cd3f;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-        
-    /* Button Styling */
-    .button { 
-      font-size: 15px;
-      line-height: 19px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffffff;
-      background-color: #00b2e2;
-      border: 1px solid #00b2e2;
-      /*border-radius: 5px; */
-    }
-
-    .button a { 
-      color: #ffffff;  
-      text-decoration: none; 
-      display: block; 
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
-      /*border-radius: 5px;*/ 
-    }
-
-    /* Non-standard button code to be used with the tnon snippet */
-    /* .ns-button{
-      font-size: 15px;
-      line-height: 19px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffffff;
-      background-color: #00b2e2;
-      border: 2px solid #00b2e2;
-    }
-    .ns-button a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block; 
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 0px solid #00b2e2;
-    } */
-
-
-    /***************************************
-                 SPACING STYLES 
-    ****************************************/
-
-    .ptb0  { padding-top: 0; padding-bottom: 0; }
-    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
-    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
-    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
-    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
-    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
-    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
-    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
-    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
-    /* Padding top and bottom */
-
-    .pt0  { padding-top: 0; }
-    .pt5  { padding-top: 5px; }
-    .pt10 { padding-top: 10px; }
-    .pt15 { padding-top: 15px; }
-    .pt20 { padding-top: 20px; }
-    .pt25 { padding-top: 25px; }
-    .pt30 { padding-top: 30px; }
-    .pt35 { padding-top: 35px; }
-    .pt40 { padding-top: 40px; }
-    .pt50 { padding-top: 50px; }
-    /* padding top */
-
-    .pb0  { padding-bottom: 0 !important; }
-    .pb5  { padding-bottom: 5px; }
-    .pb8 { padding-bottom: 8px !important; }
-    .pb10 { padding-bottom: 10px; }
-    .pb15 { padding-bottom: 15px; }
-    .pb20 { padding-bottom: 20px; }
-    .pb25 { padding-bottom: 25px; }
-    .pb30 { padding-bottom: 30px; }
-    .pb35 { padding-bottom: 35px; }
-    .pb40 { padding-bottom: 40px; }
-    /* padding bottom */
-
-    .prl0  { padding-right: 0; padding-left: 0; }
-    .prl5  { padding-right: 5px; padding-left: 5px; }
-    .prl10 { padding-right: 10px; padding-left: 10px; }
-    .prl15 { padding-right: 15px; padding-left: 15px; }
-    .prl20 { padding-right: 20px; padding-left: 20px; }
-    .prl25 { padding-right: 25px; padding-left: 25px; }
-    .prl30 { padding-right: 30px; padding-left: 30px; }
-    .prl35 { padding-right: 35px; padding-left: 35px; }
-    .prl40 { padding-right: 40px; padding-left: 40px; }
-    /* Padding left and right */
-
-    .pr0  { padding-right: 0; }
-    .pr5  { padding-right: 5px; }
-    .pr10 { padding-right: 10px; }
-    .pr15 { padding-right: 15px; }
-    .pr20 { padding-right: 20px; }
-    .pr25 { padding-right: 25px; }
-    .pr30 { padding-right: 30px; }
-    .pr35 { padding-right: 35px; }
-    .pr40 { padding-right: 40px; }
-    /* padding right */
-
-    .pl0  { padding-left: 0; }
-    .pl5  { padding-left: 5px; }
-    .pl10 { padding-left: 10px; }
-    .pl13 { padding-left: 13px; }
-    .pl15 { padding-left: 15px; }
-    .pl20 { padding-left: 20px; }
-    .pl25 { padding-left: 25px; }
-    .pl30 { padding-left: 30px; }
-    .pl35 { padding-left: 35px; }
-    .pl40 { padding-left: 40px; }
-    /* padding left */
-
-    /***************************************
-            CLIENT SPECIFIC STYLES
-    ****************************************/
-
-    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
-    .mso-exact { mso-line-height-rule: exactly; }
-
-    #outlook a { padding: 0; } 
-    /* Force Outlook to provide a "view in browser" menu link. */
-
-    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
-
-    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
-    /* end reset */
-
-    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
-    a img { border: none; }
-    /* Some sensible defaults for images*/
-
-    .ghost-link img { display: inline-block; }
-    /* Removes unwanted linked space - only links the image */
-
-    /***************************************
-                 SAFETY STYLES 
-    ****************************************/
-
-    .safety a { color: #000000; }
-    .safety .p, .safety .ul { padding-bottom: 10px; }
-    .safety .li { color: #C7376C; }
-
-  </style>
-
-  <!--[if gte mso 9]>
-    <xml>
-     <o:OfficeDocumentSettings>
-     <o:AllowPNG/>
-     <o:PixelsPerInch>96</o:PixelsPerInch>
-     </o:OfficeDocumentSettings>
-    </xml>
-    <style>
-      sup, sub { font-size: 100% !important; }
-      table { border-collapse: collapse !important; border-spacing: 0 !important; }
-    </style> 
-  <![endif]-->
-
-  <style type="text/css" data-embed>
-    /***************************************
-                GLOBAL STYLES
-    ****************************************/
-
-    body,
-    td {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #000000;
-      line-height: 20px;
-    }
-    /* Render font family properly in Outlook */
-
-    table { font-size: inherit; }
-    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
-
-    * { line-height: inherit; }
-    /* Prevent Outlook.com from overriding line-height */
-
-    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
-    /* Outlook 07, 10 Padding issue fix
-    Bring inline: No.*/
-
-    a[x-apple-data-detectors] {
-      color: inherit !important;
-      text-decoration: none !important;
-      font-size: inherit !important;
-      font-family: inherit !important;
-      font-weight: inherit !important;
-      line-height: inherit !important;
-    }
-    /* Disguises iOS auto links */
-
-    .mobile-only { 
-      display: none; 
-      max-height: 0px; 
-      overflow: hidden; 
-      mso-hide: all;
-    }
-    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
-
-    .mobile-only table { 
-      mso-hide: all; 
-    }
-    /* Hides <table> elements in Outlook 2007-13 issue */
-
-    .address a { color: #ffffff !important; text-decoration: none !important; }
-    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color.  */
-
-    /***************************************
-                Hover State Button
-    ****************************************/
-
-    /* uncomment below for hover state button */
-    /* .button:hover {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-    }
-    .button:hover a {
-      background: #7fbf12 !important;
-      transition: background 200ms;
-      color: #ffffff !important;
-      transition: color 200ms;
-    } */
-
-
-    /***************************************
-               MOBILE STYLES
-    ****************************************/
-    
-    @media only screen and (max-width: 37.5em) {
-
-      .main-table { width: 100% !important; }
-      .main-td { min-width: initial !important; }
-      .main-table table { width: 100% !important; margin: 0 auto !important; }
-      
-      .block, 
-      .content, 
-      .safety { display: block; }
-      /* place content you want stacked here */
-
-      .desktop-only { display: none !important; }
-      /* hide elements for mobile */
-
-      img { max-width: 100% !important; height: auto !important; }
-      /* large images resize down according to their parent container size */
-      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
-      .mobile-stack { display: block !important; width:100% !important; }
-      .width-auto { width: auto !important; height: auto !important; }
-      /*add to mobile-only images and make sure width and height values are set to zero*/
-      .w100 { width: 100% !important; }
-      .gray-callout {
-     
-      padding-top: 10px;
-      padding-bottom: 5px;
-      }
-      .max-none { max-width: none !important; }
-      /*add to image class to expand to full width*/
-
-      .m-center { text-align: center !important; margin: 0 auto !important; }
-
-      .main-table .fixed-width170 { width: 170px !important; margin: 0 auto !important; }
-      .main-table .fixed-width200 { width: 200px !important; margin: 0 auto !important; }
-      .main-table .fixed-width80 { width: 80px !important; margin: 0 auto !important; }
-      .main-table .fixed-width245 { width: 245px !important; margin: 0 auto !important; }
-
-      .m-pt0  { padding-top: 0 !important; }
-      .m-pt5  { padding-top: 5px !important; }
-      /*.m-pt10 { padding-top: 10px !important; }*/
-      /*.m-pt15 { padding-top: 15px !important; }*/
-      /*.m-pt20 { padding-top: 20px !important; }*/
-      .m-pt25 { padding-top: 25px !important; }
-      /*.m-pt30 { padding-top: 30px !important; }*/
-      /*.m-pt35 { padding-top: 35px !important; }*/
-      /*.m-pt40 { padding-top: 40px !important; }*/
-      .m-pt45 { padding-top: 45px !important; }
-      /* mobile padding top */
-      
-      .m-pb0  { padding-bottom: 0 !important; }
-      /*.m-pb5  { padding-bottom: 5px !important; }*/
-      .m-pb10 { padding-bottom: 10px !important; }
-      .m-pb15 { padding-bottom: 15px !important; }
-      .m-pb20 { padding-bottom: 20px !important; }
-      .m-pb25 { padding-bottom: 25px !important; }
-      .m-pb30 { padding-bottom: 30px !important; }
-      .m-pb35 { padding-bottom: 35px !important; }
-      /*.m-pb40 { padding-bottom: 40px !important; }*/
-      /* mobile padding bottom */
-      .m-pl5  { padding-left: 5px !important; }
-      .m-pl10 { padding-left: 10px !important; }
-      .m-pl15 { padding-left: 15px !important; }
-      .m-pr0 { padding-right: 0 !important; }
-      .m-pr5 { padding-right: 5px !important; }
-      .m-pr10 { padding-right: 10px !important; }
-      .m-prl0 { padding-right: 0 !important; padding-left: 0 !important; }
-      .m-prl15 { padding-right: 15px !important; padding-left: 15px !important; }
-      .m-prl30 { padding-right: 30px !important;  padding-left: 30px !important; }
-      /* mobile padding right and left */
-
-      .preheader { padding-right: 15px !important; padding-left: 15px !important; }
-      .header,
-      .content,
-      .m-prl20,
-      .blue-section { padding-left: 20px !important; padding-right: 20px !important; }
-      .footer { padding-left: 20px !important; padding-right: 20px !important; padding-top: 30px !important; }
-      .content { padding-top: 25px !important; }
-      .safety { padding-bottom: 15px !important; padding-right: 32px !important; padding-left: 32px !important; }
-      /* mobile section resets */
-
-      .m-mq-logo { width: 140px !important; height: auto !important; }
-      /* other resets */
-
-      /*Fat footer resets*/
-      .fat-footer { padding-right: 40px !important; padding-left: 40px !important; }
-      .fat-footer td { font-size: 14px !important; line-height: 18px !important; }
-      .m-bb-gray { border-bottom: 1px solid #D9D9D9 !important; }
-      
-    }
-  </style>
-  
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>MYQOMMUNITY</title>
+<style type="text/css">
+.footer-links {
+  background-color: #DCDCDC;
+  padding: 10px 5px;
+}
+.ghost-link img {
+  display: inline-block;
+}
+</style>
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<style>sup,sub{font-size:100% !important;}table{border-collapse:collapse !important;border-spacing:0 !important;}
+</style>
+<![endif]-->
+<style type="text/css">body,td{font-family:Arial,sans-serif;font-size:16px;color:#000000;line-height:20px;}table{font-size:inherit;}*{line-height:inherit;}table td{border-collapse:collapse;}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important;}.mobile-only{display:none;max-height:0px;overflow:hidden;mso-hide:all;}.mobile-only table{mso-hide:all;}
+@media only screen and (max-width:37.5em){.main-table{width:100%!important;}.main-td{min-width:initial!important;}.main-table table{width:100%!important;margin:0 auto!important;}.block,.content,.safety{display:block;}.desktop-only{display:none!important;}img{max-width:100%!important;height:auto!important;}.mobile-only{display:block!important;max-height:none!important;overflow:visible!important;}.mobile-stack{display:block!important;width:100%!important;}.w100{width:100%!important;}.gray-callout{padding-top:10px;padding-bottom:5px;}.max-none{max-width:none!important;}.m-center{text-align:center!important;margin:0 auto!important;}.main-table .fixed-width170{width:170px!important;margin:0 auto!important;}.main-table .fixed-width200{width:200px!important;margin:0 auto!important;}.main-table .fixed-width80{width:80px!important;margin:0 auto!important;}.main-table .fixed-width245{width:245px!important;margin:0 auto!important;}.m-pt0{padding-top:0!important;}.m-pt5{padding-top:5px!important;}.m-pb10{padding-bottom:10px!important;}.m-pb15{padding-bottom:15px!important;}.m-pb25{padding-bottom:25px!important;}.m-pb30{padding-bottom:30px!important;}.m-pl5{padding-left:5px!important;}.m-pl10{padding-left:10px!important;}.m-pl15{padding-left:15px!important;}.m-pr5{padding-right:5px!important;}.m-prl0{padding-right:0!important;padding-left:0!important;}.m-prl15{padding-right:15px!important;padding-left:15px!important;}.m-prl30{padding-right:30px!important;padding-left:30px!important;}.preheader{padding-right:15px!important;padding-left:15px!important;}.header,.content,.m-prl20,.blue-section{padding-left:20px!important;padding-right:20px!important;}.footer{padding-left:20px!important;padding-right:20px!important;padding-top:30px!important;}.content{padding-top:25px!important;}.safety{padding-bottom:15px!important;padding-right:32px!important;padding-left:32px!important;}.fat-footer{padding-right:40px!important;padding-left:40px!important;}.fat-footer td{font-size:14px!important;line-height:18px!important;}.m-bb-gray{border-bottom:1px solid #D9D9D9!important;} }
+</style>
 </head>
-<body>
-  {% if build.type != "THIRD_PARTY" %}<custom name="opencounter" type="tracking"/></custom>{% endif %}
-  <div style="display: none; max-height: 0px; overflow: hidden;">{{build.preheader}}
-  &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-  </div>
-  
-  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
-
-    <tr>
-      <td class="main-td">
-        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
-
-      <!-- Start Preheader -->
-          <tr>
-            <td class="preheader">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td>
-                    <a target="_blank" alias="MYQORZO logo" class="ghost-link" href="https://www.myqorzo.com/"><img src="{{asset.myqorzo-logo-2x.url}}" alt="{{asset.myqorzo-logo-2x.alt}}" width="{{asset.myqorzo-logo-2x.width}}" height="{{asset.myqorzo-logo-2x.height}}"/></a>
-                  </td>
-                  <td class="pl5" align="right">
-                    <table class="fixed-width170" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="170" style="width:170px;">
-                      <tr>
-                        <td class="br-black pr10">
-                          <a target="_blank" alias="Prescribing Information" href="https://cytokinetics.com/wp-content/uploads/2025/12/MYQORZO_US_Prescribing_Information_and_Med_Guide.pdf">Prescribing <br />Information</a>
-                        </td>
-                        <td class="pl13">
-                          <a target="_blank" alias="Medication Guide" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf">Medication <br />Guide</a>
-                        </td>
-                      </tr>
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-      <!-- End Preheader -->
-
-      <!-- Start Header -->
-          <tr>
-            <td class="header">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="image lh14" align="center">
-                    <img src="{{asset.my-qommunity-logo-2x.url}}" alt="{{asset.my-qommunity-logo-2x.alt}}" width="{{asset.my-qommunity-logo-2x.width}}" height="{{asset.my-qommunity-logo-2x.height}}" />
-                  </td>
-                </tr>
-                <!-- end image -->
-
-              </table>
-            </td>
-          </tr>
-          <!-- begin mobile content -->
-          <tr class="mobile-only">
-            <td class="mobile-only">
-              <div class="mobile-only">
-                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td class="image">
-                      <img class="w100" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/>
-                    </td>
-                  </tr>
-                  <!-- end image -->
-                </table>
-                <!-- end table block -->
-              </div>
-            </td>
-          </tr>
-          <!-- end mobile content -->
-          <tr>
-            <td class="desktop-only image">
-              <img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/>
-            </td>
-          </tr>
-          <!-- end image -->
-      <!-- End Header -->
-
-      <!-- Start content -->
-          <tr>
-            <td class="content">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="pl5">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="h1 pb20 m-pb15">We’re with you on this journey</td>
-                      </tr>
-                      <!-- end h1 header -->
-                      <tr>
-                        <td class="bold pb5">
-                          Congratulations on your journey with MYQORZO<sup>TM</sup> and becoming part of MYQOMMUNITY!
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="pink bold pb5">
-                          MYQOMMUNITY—where learning and inspiration meet
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="pb10">We're so glad you’re here. To help you get started, here are a few important things to keep in mind:</td>
-                      </tr>
-                      <!-- end paragraph -->
-                      <tr>
-                        <td>
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td valign="top"><img class="max-none" src="{{asset.phone-icon-2x.url}}" alt="{{asset.phone-icon-2x.alt}}" width="{{asset.phone-icon-2x.width}}" height="{{asset.phone-icon-2x.height}}"/></td>
-                              <td class="pl10"><strong>Stay in touch with your healthcare team.</strong> Ensure you have open communication to monitor how treatment is going.</td>
-                            </tr>
-                            
-                            <tr>
-                              <td class="pt10 pb20 m-pb25" valign="top"><img class="max-none" src="{{asset.clipboard-icon-2x.url}}" alt="{{asset.clipboard-icon-2x.alt}}" width="{{asset.clipboard-icon-2x.width}}" height="{{asset.clipboard-icon-2x.height}}"/></td>
-                              <td class="pl10 pb5 m-pt5"><strong>Track your symptoms.</strong> Keep track of any changes or concerns to guide conversations with your doctor.</td>
-                            </tr>
-                            <tr>
-                              <td valign="top"><img class="max-none" src="{{asset.brochure-icon-2x.url}}" alt="{{asset.brochure-icon-2x.alt}}" width="{{asset.brochure-icon-2x.width}}" height="{{asset.brochure-icon-2x.height}}"/></td>
-                              <td class="pl10 pb15 m-pb25"><strong>Explore personalized patient support</strong> for your treatment journey by talking to a MYQORZO Navigator and tapping into MYQORZO & You.</td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <!-- end unordered list -->
-                     
-                     
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td class="pl5">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      {% 
-                          render "cyto-vml-button",
-                            width: '205',
-                            vml_add_width: '0',
-                            height: '45',
-                            text: 'See what to expect',
-                            font: 'Arial, sans-serif',
-                            font_size: '18',
-                            font_weight: 'bold',
-                            color: '#ffffff',
-                            background_color: '#C7376C',
-                            border_color: '#C7376C',
-                            border_size: '1',
-                            border_radius: '30',
-                            href: 'https://www.myqorzo.com/about-myqorzo/myqorzo-results/',
-                            class: 'pb25 m-pb30',
-                            align: 'center',
-                            alias: '',
-                            target: '_blank'
-                      %}
-                      <tr>
-                        <td class="pb25 m-pb15"><span class="pink bold">MYQORZO is the latest FDA-approved treatment</span> for adults with symptomatic obstructive hypertrophic cardiomyopathy (oHCM) to improve functional capacity and symptoms. It is not known if MYQORZO is safe and effective in children.</td>
-                      </tr>
-                      <!-- end paragraph -->
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </table> 
-            </td>
-          </tr>
-      <!-- End content -->
-
-      <!-- Start blue callout -->
-          <tr>
-            <td class="gray-callout">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="h2 m-pt0 pt5 pb10 m-prl20" align="center">Where are you on your journey with MYQORZO?</td>
-                </tr>
-                <!-- end h2 header -->
-                <tr>
-                  <td>
-                    <table class="fixed-width200 pb10" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="200" style="width:200px;">
-                      <tr>
-                        <td class="mobile-stack">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            {% 
-                              render "cyto-vml-button",
-                                width: '170',
-                                vml_add_width: '0',
-                                height: '32',
-                                text: 'Just getting started',
-                                font: 'Arial, sans-serif',
-                                font_size: '16',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#007591',
-                                border_color: '#007591',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/myqommunity-thank-you',
-                                class: 'pr10 m-pb10',
-                                align: 'center',
-                                alias: '',
-                                target: '_blank'
-                          %}
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                        <td class="mobile-stack">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            {% 
-                              render "cyto-vml-button",
-                                width: '234',
-                                vml_add_width: '0',
-                                height: '32',
-                                text: 'Reached personalized dose',
-                                font: 'Arial, sans-serif',
-                                font_size: '16',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#007591',
-                                border_color: '#007591',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/myqommunity-thank-you/',
-                                class: 'pr10 m-pb10',
-                                align: 'center',
-                                alias: '',
-                                target: '_blank'
-                          %}
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                        <td class="mobile-stack">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            {% 
-                              render "cyto-vml-button",
-                                width: '144',
-                                vml_add_width: '0',
-                                height: '32',
-                                text: 'Staying on track',
-                                font: 'Arial, sans-serif',
-                                font_size: '16',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#007591',
-                                border_color: '#007591',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/myqommunity-thank-you/',
-                                class: '',
-                                align: 'center',
-                                alias: '',
-                                target: '_blank'
-                          %}
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </table>
-              <!-- end table block -->
-            </td>
-          </tr>
-      <!-- End blue callout -->
-
-      <!-- Start safety -->
-          <tr>
-            <td class="safety">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="h3 pt25 m-pb15 pb10">IMPORTANT SAFETY INFORMATION</td>
-                </tr>
-                <!-- end h4 header -->
-                <tr>
-                  <td class="pb5 bold">What is the most important information I should know about MYQORZO?</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb5"><strong>MYQORZO can cause serious side effects, including:</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="ul">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="pb5"><strong>Heart failure</strong>, a condition where the heart cannot pump with enough force, is a serious condition that can lead to death. You must have echocardiograms (echos) before and during treatment with MYQORZO and monitor for signs and symptoms of heart failure. People who develop a serious illness such as a serious infection or who develop a new or worsening irregular heartbeat have a greater risk of heart failure during treatment with MYQORZO</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&nbsp;</td>
-                        <td class="pb5"><strong>Tell your healthcare provider or get medical help right away</strong> if you develop new or worsening shortness of breath, chest pain, fatigue, leg swelling, a racing sensation in your heart (palpitations), or rapid weight gain.</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="pb5"><strong>The risk of heart failure is also increased when MYQORZO is taken with certain other medicines.</strong> Tell your healthcare provider about any prescribed and over-the-counter medicines you take, before and during your treatment with MYQORZO</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="bold pb5">Because of the risk of heart failure, MYQORZO is only available through a restricted distribution program called the MYQORZO Risk Evaluation and Mitigation Strategy (REMS) Program</td>
-                      </tr>
-                      <tr>
-                        <td class="ul pb0" colspan="2">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td class="li bold" valign="top">-</td>
-                              <td class="pb5">Your healthcare provider must be enrolled in the MYQORZO REMS Program for you to be prescribed MYQORZO</td>
-                            </tr>
-                            <tr>
-                              <td class="li bold" valign="top">-</td>
-                              <td class="pb5">Before you start treatment with MYQORZO, you must enroll in the MYQORZO REMS Program. Talk to your healthcare provider about how to enroll in the program. You will be given information about the program when you enroll</td>
-                            </tr>
-                            <tr>
-                              <td class="li bold" valign="top">-</td>
-                              <td class="pb5">Before you take MYQORZO, your healthcare provider and pharmacist will make sure you understand how to take MYQORZO safely, which will include returning for echos when advised by your healthcare provider. MYQORZO can only be dispensed by a certified pharmacy that participates in the MYQORZO REMS Program</td>
-                            </tr>
-                             <tr>
-                              <td class="li bold" valign="top">-</td>
-                              <td>If you have any questions about the MYQORZO REMS Program, ask your healthcare provider, go to <a target="_blank" class="black underline" alias="MYQORZO REMS" href="https://www.myqorzorems.com">www.MYQORZOREMS.com</a>, or call <a class="black no-underline" href="tel:1-844-285-7367">1-844-285-7367</a></td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="bold">Who should not take MYQORZO?</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8"><strong>Do not</strong> take MYQORZO if you take a medicine called rifampin.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="bold pb8">What are the possible side effects of MYQORZO?</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="bold pb8">MYQORZO can cause serious side effects, including heart failure.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="bold pb8">What should I tell my healthcare provider before taking MYQORZO?</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8 bold">Before taking MYQORZO, tell your healthcare provider about all of your medical conditions, including if you:</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="ul pb8">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td class="pb5">Are pregnant or plan to become pregnant. It is not known if MYQORZO can cause harm to your unborn baby. Tell your healthcare provider if you become pregnant during treatment or within 3 weeks after the last dose of MYQORZO. There is a pregnancy study for MYQORZO. Your healthcare provider should report your pregnancy exposure to Cytokinetics, Inc</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">•</td>
-                        <td>Are breastfeeding or plan to breastfeed. It is not known if MYQORZO passes into your breast milk. Talk to your healthcare provider about the best way to feed your baby during treatment with MYQORZO</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class=" pb8p"><strong>Before and during MYQORZO treatment, tell your healthcare provider about all the prescription and over-the-counter medicines, vitamins, and herbal supplements you take.</strong> Taking MYQORZO with certain medicines may lead to increased levels of MYQORZO in your blood and increase the risk of heart failure.<strong>Do not stop or change the dose of a medicine or start a new medicine without telling your healthcare provider.</strong></td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pt10 pb8"><strong>Especially tell your healthcare provider if you take</strong> fluconazole (if used for more than 3 days), voriconazole, or fluvoxamine.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8 bold">What are the most common side effects of MYQORZO?</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8">The most common side effect of MYQORZO is high blood pressure (hypertension).</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8">These are not all the possible side effects of MYQORZO. Talk to your healthcare provider for medical advice about side effects. You may report side effects to FDA at <a class="black no-underline" href="tel:1-800-332-1088">1-800-FDA-1088</a>. You may also report side effects to Cytokinetics at <a class="black no-underline" href="tel:1-833-633-2986">1-833-633-2986</a>.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="h3 blue pb8">INDICATION AND USAGE</td>
-                </tr>
-                <!-- end h1 header -->
-                <tr>
-                  <td class="pb8">MYQORZO is a prescription medicine used to treat adults with symptomatic obstructive cardiomyopathy (oHCM) to improve functional capacity and symptoms.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb8">It is not known if MYQORZO is safe and effective in children.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="bold m-pb5">Please see full <a target="_blank" alias="Prescribing Information" href="https://cytokinetics.com/wp-content/uploads/2025/12/MYQORZO_US_Prescribing_Information_and_Med_Guide.pdf">Prescribing Information</a>, including Boxed WARNING, and <a target="_blank" alias="Medication Guide" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf">Medication Guide</a>.</td>
-                </tr>
-                <!-- end paragraph -->
-              </table>
-             </td>
-          </tr>
-      <!-- End safety -->
-
-      <!-- Start MyQorzo and you section -->
-          <tr>
-            <td class="blue-section">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <!-- Fat footer (mobile only) -->
-                <tr class="mobile-only">
-                  <td class="mobile-only fat-footer">
-                    <div class="mobile-only">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <!-- start icon list -->
-                        <tr>
-                          <td>
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="m-prl15">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image m-pl5" valign="middle" width="50" style="width: 50px;">
-                                        <img class="max-none lh14" src="{{asset.computer-icon-2x.url}}" alt="{{asset.computer-icon-2x.alt}}" width="{{asset.computer-icon-2x.width}}" height="{{asset.computer-icon-2x.height}}"/>
-                                      </td>
-                                      <td class="text m-pl15" valign="middle">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="pb5">Get answers to your questions</td>
-                                          </tr>
-                                          <!-- end paragraph -->
-                                          {% 
-                                            render "cyto-vml-button",
-                                            width: '120',
-                                            vml_add_width: '0',
-                                            height: '21',
-                                            text: 'See resources',
-                                            font: 'Arial, sans-serif',
-                                            font_size: '12',
-                                            font_weight: 'bold',
-                                            color: '#ffffff',
-                                            background_color: '#C7376C',
-                                            border_color: '#C7376C',
-                                            border_size: '1',
-                                            border_radius: '30',
-                                            href: 'https://www.myqorzo.com/resources/patient-resources',
-                                            class: '',
-                                            align: 'left',
-                                            alias: 'See Resources',
-                                            target: '_blank'
-                                        %}
-                                        </table>
-                                        <!-- end table block -->
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="pb15">
-                                  <table class="m-bb-gray fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="Enter width" style="Enter width">
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                  </table> 
-                                </td>
-                              </tr>
-                              <!-- end horizontal rule -->
-                              <tr>
-                                <td class="m-pl15">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="m-pl15 image lh14" align="center" valign="middle" width="58" style="width: 58px;">
-                                        <img class="max-none pr10 lh14" src="{{asset.checklist-icon-2x.url}}" alt="{{asset.checklist-icon-2x.alt}}" width="{{asset.checklist-icon-2x.width}}" height="{{asset.checklist-icon-2x.height}}"/>
-                                      </td>
-                                      <td class="text" valign="middle">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="pb5">Take these steps before starting MYQORZO</td>
-                                          </tr>
-                                          <!-- end paragraph -->
-                                          {% 
-                                            render "cyto-vml-button",
-                                            width: '100',
-                                            vml_add_width: '0',
-                                            height: '21',
-                                            text: 'Get started',
-                                            font: 'Arial, sans-serif',
-                                            font_size: '12',
-                                            font_weight: 'bold',
-                                            color: '#ffffff',
-                                            background_color: '#C7376C',
-                                            border_color: '#C7376C',
-                                            border_size: '1',
-                                            border_radius: '30',
-                                            href: 'https://www.myqorzo.com/taking-myqorzo/starting-and-staying-on-myqorzo',
-                                            class: '',
-                                            align: 'left',
-                                            alias: 'Get started',
-                                            target: '_blank'
-                                        %}
-                                        </table>
-                                        <!-- end table block -->
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="pb15">
-                                  <table class="m-bb-gray fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="Enter width" style="Enter width">
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                  </table> 
-                                </td>
-                              </tr>
-                              <!-- end horizontal rule -->
-                              <tr>
-                                <td class="m-prl15">
-                                  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                      <td class="image lh14" valign="middle" width="60" style="width: 60px;">
-                                        <img class="max-none lh14" src="{{asset.copay-icon-2x.url}}" alt="{{asset.copay-icon-2x.alt}}" width="{{asset.copay-icon-2x.width}}" height="{{asset.copay-icon-2x.height}}"/>
-                                      </td>
-                                      <td class="text m-pl10 m-pr5" valign="middle">
-                                        <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                          <tr>
-                                            <td class="pb5">Are you eligible for savings?</td>
-                                          </tr>
-                                          <!-- end paragraph -->
-                                          {% 
-                                            render "cyto-vml-button",
-                                            width: '100',
-                                            vml_add_width: '0',
-                                            height: '21',
-                                            text: 'Learn more',
-                                            font: 'Arial, sans-serif',
-                                            font_size: '12',
-                                            font_weight: 'bold',
-                                            color: '#ffffff',
-                                            background_color: '#C7376C',
-                                            border_color: '#C7376C',
-                                            border_size: '1',
-                                            border_radius: '30',
-                                            href: 'https://www.myqorzo.com/savings-and-support/myqorzo-copay-program',
-                                            class: '',
-                                            align: 'left',
-                                            alias: 'Learn more',
-                                            target: '_blank'
-                                        %}
-                                        </table>
-                                        <!-- end table block -->
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <!-- end icon list -->
-                      </table>
-                      <!-- end table block -->
-                    </div>
-                  </td>
-                </tr>
-                <!-- Fat footer (mobile only) -->
-                <!-- Fat footer (desktop only) -->
-                  <tr>
-                    <td class="desktop-only three-columns btb-gray ptb20">
-                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <!-- Start left column -->
-                          <td class="column3 prl5" valign="top" width="33%" style="border-right:1px solid #D9D9D9;">
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="image pb5" align="center">
-                                  <img class="lh14" src="{{asset.computer-icon-2x.url}}" alt="{{asset.computer-icon-2x.alt}}" width="{{asset.computer-icon-2x.width}}" height="{{asset.computer-icon-2x.height}}"/>
-                                </td>
-                              </tr>
-                              <!-- end image -->
-                              <tr>
-                                <td class="p pb5 m-prl30" align="center">Get answers to your questions</td>
-                              </tr>
-                              <!-- end paragraph -->
-                              {% 
-                                render "cyto-vml-button",
-                                width: '125',
-                                vml_add_width: '0',
-                                height: '30',
-                                text: 'See Resources',
-                                font: 'Arial, sans-serif',
-                                font_size: '14',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#C7376C',
-                                border_color: '#C7376C',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/resources/patient-resources',
-                                class: '',
-                                align: 'center',
-                                alias: 'See Resources',
-                                target: '_blank'
-                             %}
-                            </table>
-                          </td>
-                          <!-- End left column, start middle column -->
-                          <td class="column3 prl5" valign="top" width="33%" style="border-right:1px solid #D9D9D9;">
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="image pb5" align="center">
-                                  <img class="lh14" src="{{asset.checklist-icon-2x.url}}" alt="{{asset.checklist-icon-2x.alt}}" width="{{asset.checklist-icon-2x.width}}" height="{{asset.checklist-icon-2x.height}}"/>
-                                </td>
-                              </tr>
-                              <!-- end image -->
-                              <tr>
-                                <td class="p pb5" align="center">Take these steps before starting MYQORZO</td>
-                              </tr>
-                              <!-- end paragraph -->
-                              {% 
-                                render "cyto-vml-button",
-                                width: '125',
-                                vml_add_width: '0',
-                                height: '30',
-                                text: 'Get started',
-                                font: 'Arial, sans-serif',
-                                font_size: '14',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#C7376C',
-                                border_color: '#C7376C',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/taking-myqorzo/starting-and-staying-on-myqorzo',
-                                class: '',
-                                align: 'center',
-                                alias: 'Get started',
-                                target: '_blank'
-                             %}
-                            </table>
-                          </td>
-                          <!-- End middle column, start right column -->
-                          <td class="column3 prl5" valign="top" width="33%">
-                            <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                <td class="image pb10" align="center">
-                                  <img class="lh14" src="{{asset.copay-icon-2x.url}}" alt="{{asset.copay-icon-2x.alt}}" width="{{asset.copay-icon-2x.width}}" height="{{asset.copay-icon-2x.height}}"/>
-                                </td>
-                              </tr>
-                              <!-- end image -->
-                              <tr>
-                                <td class="pb5" align="center">Are you eligible for<br class="desktop-only"> savings?</td>
-                              </tr>
-                              <!-- end paragraph -->
-                              {% 
-                                render "cyto-vml-button",
-                                width: '125',
-                                vml_add_width: '0',
-                                height: '30',
-                                text: 'Learn more',
-                                font: 'Arial, sans-serif',
-                                font_size: '14',
-                                font_weight: 'bold',
-                                color: '#ffffff',
-                                background_color: '#C7376C',
-                                border_color: '#C7376C',
-                                border_size: '1',
-                                border_radius: '30',
-                                href: 'https://www.myqorzo.com/savings-and-support/myqorzo-copay-program',
-                                class: '',
-                                align: 'center',
-                                alias: 'Learn more',
-                                target: '_blank'
-                             %}
-                            </table>
-                          </td>
-                          <!-- End right column -->
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <!-- End 3 columns -->
-              </table>
-              <!-- end table block -->
-            </td>
-          </tr>
-      <!-- End MyQorzo and you section -->
-
-          <tr>
-            <td class="ptb30 prl40">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="p">If you would like more information about Cytokinetics<sup>®</sup>, please visit <a target="_blank" alias="Cytokinetics HCP Site" class="black" href="https://cytokinetics.com/">cytokinetics.com</a>.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td>This promotional email is brought to you by Cytokinetics.</td>
-                </tr>
-                <!-- end paragraph -->
-              </table>
-              <!-- end table block -->
-            </td>
-          </tr>
-
-      <!-- Start footer -->
-          <tr>
-            <td class="footer">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="prl35 m-prl0 pb20">
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="image block m-center" valign="bottom">
-                          <a target="_blank" alias="MYQORZO Logo" class="ghost-link" href="https://www.myqorzo.com/"><img class="m-pb30" src="{{asset.myqorzo-footer-logo-2x.url}}" alt="{{asset.myqorzo-footer-logo-2x.alt}}" width="{{asset.myqorzo-footer-logo-2x.width}}" height="{{asset.myqorzo-footer-logo-2x.height}}" /></a>
-                        </td>
-                        <td class="image block m-center" align="right" valign="bottom">
-                          <a target="_blank" alias="Cytokinetics logo" class="ghost-link" href="https://cytokinetics.com/"><img src="{{asset.cyto-logo-2x.url}}" alt="{{asset.cyto-logo-2x.alt}}" width="{{asset.cyto-logo-2x.width}}" height="{{asset.cyto-logo-2x.height}}" /></a>
-                        </td>
-                      </tr>
-                      <!-- end image -->
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-                <tr>
-                  <td class="bt-gray ptb25" align="center">
-                    350 Oyster Point Blvd, South San <br class="mobile-only">Francisco, CA 94080
-                  </td>
-                </tr>
-                <tr>
-                  <td class="prl5 m-prl0" align="center">CYTOKINETICS<sup>®</sup> and the CYTOKINETICS C-shaped logo are registered trademarks of Cytokinetics in the U.S. and certain other countries. MYQORZO™, the MYQORZO logo, MYQOMMUNITY™, and the MYQOMMUNITY logo are trademarks of Cytokinetics in the U.S. <br />© 2026 CYTOKINETICS. All Rights Reserved. <span class="no-wrap">US-MYQ-00327 05/2026</span></td>
-                </tr>
-                <!-- end paragraph -->
-              </table>
-             </td>
-          </tr>
-          <tr>
-            <td class="footer-links">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="pb15">
-                    <table class="fixed-width245" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="245" style="width:245px;">
-                      <tr>
-                        <td class="legal">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td class="pr20">
-                                <a target="_blank" alias="Privacy Policy" href="https://cytokinetics.com/privacy-policy/">Privacy&nbsp;Policy</a>
-                              </td>
-                              <td class="pr20">|</td>
-                              <td>
-                                <a target="_blank" alias="Unsubscribe" href="{{build.unsubscribeLink}}">Unsubscribe</a>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- end table block -->
-                        </td>
-                      </tr>
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pl10">
-                    <table class="fixed-width80" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="80" style="width:80px;">
-                      <tr>
-                        <td class="row">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                              <td class="image">
-                                <a class="ghost-link" target="_blank" alias="Facebook" href="https://www.facebook.com/MYQORZO"><img class="max-none" src="{{asset.facebook-logo-2x.url}}" alt="{{asset.facebook-logo-2x.alt}}" width="{{asset.facebook-logo-2x.width}}" height="{{asset.facebook-logo-2x.height}}"/></a>
-                              </td>
-                              <td class="image">
-                                <a class="ghost-link" target="_blank" alias="Instagram" href="https://www.instagram.com/myqorzo_us/"><img class="max-none" src="{{asset.instagram-logo-2x.url}}" alt="{{asset.instagram-logo-2x.alt}}" width="{{asset.instagram-logo-2x.width}}" height="{{asset.instagram-logo-2x.height}}"/></a>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <!-- row -->
-                    </table>
-                    <!-- end table block -->
-                  </td>
-                </tr>
-              </table>
-              <!-- end table block -->
-            </td>
-          </tr>
-      <!-- End footer -->
-
-        </table>
-      </td>
-    </tr>
-
-  </table>
-  <!-- end table wrapper -->
-
-  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  </div>
-
-  
+<body style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; width: 100%;"><custom name="opencounter" type="tracking"></custom><div style="display:none;max-height:0px;overflow:hidden;">Helpful information for your treatment journey &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp; </div>
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%" style="margin: 0; padding: 0; width: 100%; line-height: 100%;"><tbody><tr><td class="main-td" style="font-family: Arial,sans-serif; font-size: 16px; color: #000000; line-height: 20px; background-color: #ffffff; min-width: 650PX;" bgcolor="#ffffff">
+<table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="width:650PX;"><tbody><tr><td class="preheader" style="padding-right: 23px; padding-left: 23px; padding-top: 12px; padding-bottom: 12px; border-bottom: 2px solid #E0E0E0;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="font-size: 14px; line-height: 16px;"> <a target="_blank" alias="MYQORZO logo" class="ghost-link" href="https://www.myqorzo.com/" style="text-decoration: underline; color: #5D5D5D;"><img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/myqorzo-logo-2x.png" alt width="180" height="45" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; border: none; display: inline-block;"></a>
+</td><td class="pl5" align="right" style="padding-left: 5px; font-size: 14px; line-height: 16px;">
+<table class="fixed-width170" align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="170" style="width:170px;"><tbody><tr><td class="br-black pr10" style="border-right: 1px solid #5D5D5D; padding-right: 10px; font-size: 14px; line-height: 16px;"> <a target="_blank" alias="Prescribing Information" href="https://cytokinetics.com/wp-content/uploads/2025/12/MYQORZO_US_Prescribing_Information_and_Med_Guide.pdf" style="text-decoration: underline; color: #5D5D5D;">Prescribing <br>Information</a>
+</td><td class="pl13" style="padding-left: 13px; font-size: 14px; line-height: 16px;"> <a target="_blank" alias="Medication Guide" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf" style="text-decoration: underline; color: #5D5D5D;">Medication <br>Guide</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="header" style="padding-right: 23px; padding-left: 23px; padding-top: 10px; padding-bottom: 10px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="lh14" align="center" style="line-height: 14px;"> <img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/my-qommunity-logo-2x.png" alt width="180" height="30" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td></tr></tbody></table>
+</td></tr><tr class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;"><td class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;"><div class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td> <img class="w100" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/header-mobile-2x.png" alt width="0" height="0" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td></tr></tbody></table></div>
+</td></tr><tr><td class="desktop-only"> <img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/header-desktop-2x.png" alt width="650" height="153" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td></tr><tr><td class="content" style="padding-right: 45px; padding-left: 45px; padding-top: 25px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pl5" style="padding-left: 5px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="h1 pb20 m-pb15" style="font-size: 22px; line-height: 22px; color: #00809E; font-weight: bold; padding-bottom: 20px;">We’re with you on this journey
+</td></tr><tr><td class="bold pb5" style="font-weight: bold; padding-bottom: 5px;"> Congratulations on your journey with MYQORZO<sup style="line-height: 0; font-size: 75%;">TM</sup> and becoming part of MYQOMMUNITY!
+</td></tr><tr><td class="pink bold pb5" style="font-weight: bold; padding-bottom: 5px; color: #C7376C;"> MYQOMMUNITY—where learning and inspiration meet
+</td></tr><tr><td class="pb10" style="padding-bottom: 10px;">We're so glad you’re here. To help you get started, here are a few important things to keep in mind:
+</td></tr><tr><td>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top"><img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/phone-icon-2x.png" alt width="43" height="44" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td><td class="pl10" style="padding-left: 10px;"><strong>Stay in touch with your healthcare team.</strong> Ensure you have open communication to monitor how treatment is going.
+</td></tr><tr><td class="pt10 pb20 m-pb25" valign="top" style="padding-top: 10px; padding-bottom: 20px;"><img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/hand-signing-icon-2x.png" alt width="44" height="51" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td><td class="pl10 pb5 m-pt5" style="padding-bottom: 5px; padding-left: 10px;"><strong>Track your symptoms.</strong> Keep track of any changes or concerns to guide conversations with your doctor.
+</td></tr><tr><td valign="top"><img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/book-icon-2x.png" alt width="46" height="39" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px;">
+</td><td class="pl10 pb15 m-pb25" style="padding-bottom: 15px; padding-left: 10px;"><strong>Explore personalized patient support</strong> for your treatment journey by talking to a MYQORZO Navigator and tapping into MYQORZO &amp; You.
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="pl5" style="padding-left: 5px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb25 m-pb30" align="center" style="padding-bottom: 25px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="CTA - See clinical trial results" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/?" style="height:45px;v-text-anchor:middle;width:205px;" arcsize="67%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:18px;font-weight:bold;">See what to expect</center></v:roundrect>
+<![endif]--><a alias="CTA - See clinical trial results" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 18px; font-weight: bold; line-height: 45px; text-align: center; text-decoration: none; width: 205px; -webkit-text-size-adjust: none; mso-hide: all;">See what to expect</a></div>
+</td></tr><tr><td class="pb25 m-pb15" style="padding-bottom: 25px;"><span class="pink bold" style="font-weight: bold; color: #C7376C;">MYQORZO is the latest FDA-approved treatment</span> for adults with symptomatic obstructive hypertrophic cardiomyopathy (oHCM) to improve functional capacity and symptoms. It is not known if MYQORZO is safe and effective in children.
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="gray-callout" style="background-color: #F8F8F8; padding-top: 10px; padding-bottom: 10px;" bgcolor="#F8F8F8">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="h2 m-pt0 pt5 pb10 m-prl20" align="center" style="font-size: 16px; line-height: 20px; color: #C7376C; font-weight: bold; padding-top: 5px; padding-bottom: 10px;">Where are you on your journey with MYQORZO?
+</td></tr><tr><td>
+<table class="fixed-width200 pb10" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="200" style="padding-bottom: 10px; width: 200px;"><tbody><tr><td class="mobile-stack">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pr10 m-pb10" align="center" style="padding-right: 10px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="CTA - Answer Yes" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/?" style="height:32px;v-text-anchor:middle;width:170px;" arcsize="94%" strokecolor="#007591" fillcolor="#007591" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Just getting started</center></v:roundrect>
+<![endif]--><a alias="CTA - Answer Yes" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/" style="background-color: #007591; border: 1px solid #007591; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 16px; font-weight: bold; line-height: 32px; text-align: center; text-decoration: none; width: 170px; -webkit-text-size-adjust: none; mso-hide: all;">Just getting started</a></div>
+</td></tr></tbody></table>
+</td><td class="mobile-stack">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pr10 m-pb10" align="center" style="padding-right: 10px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="CTA - Answer Yes" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/?" style="height:32px;v-text-anchor:middle;width:234px;" arcsize="94%" strokecolor="#007591" fillcolor="#007591" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Reached personalized dose</center></v:roundrect>
+<![endif]--><a alias="CTA - Answer Yes" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/" style="background-color: #007591; border: 1px solid #007591; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 16px; font-weight: bold; line-height: 32px; text-align: center; text-decoration: none; width: 234px; -webkit-text-size-adjust: none; mso-hide: all;">Reached personalized dose</a></div>
+</td></tr></tbody></table>
+</td><td class="mobile-stack">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="CTA - Answer No" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/?" style="height:32px;v-text-anchor:middle;width:144px;" arcsize="94%" strokecolor="#007591" fillcolor="#007591" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Staying on track</center></v:roundrect>
+<![endif]--><a alias="CTA - Answer No" target="_blank" href="https://www.myqorzo.com/myqommunity-thank-you/" style="background-color: #007591; border: 1px solid #007591; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 16px; font-weight: bold; line-height: 32px; text-align: center; text-decoration: none; width: 144px; -webkit-text-size-adjust: none; mso-hide: all;">Staying on track</a></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="safety" style="padding-right: 40px; padding-left: 40px; padding-bottom: 20px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="h3 pt25 m-pb15 pb10" style="font-size: 20px; line-height: 24px; color: #007591; font-weight: bold; padding-top: 25px; padding-bottom: 10px;">IMPORTANT SAFETY INFORMATION
+</td></tr><tr><td class="pb5 bold" style="font-weight: bold; padding-bottom: 5px;">What is the most important information I should know about MYQORZO?
+</td></tr><tr><td class="pb5" style="padding-bottom: 5px;"><strong>MYQORZO can cause serious side effects, including:</strong>
+</td></tr><tr><td class="ul" style="padding-bottom: 10px;">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">•
+</td><td class="pb5" style="padding-bottom: 5px; width: 100%;" width="100%"><strong>Heart failure</strong>, a condition where the heart cannot pump with enough force, is a serious condition that can lead to death. You must have echocardiograms (echos) before and during treatment with MYQORZO and monitor for signs and symptoms of heart failure. People who develop a serious illness such as a serious infection or who develop a new or worsening irregular heartbeat have a greater risk of heart failure during treatment with MYQORZO
+</td></tr><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">&nbsp;
+</td><td class="pb5" style="padding-bottom: 5px;"><strong>Tell your healthcare provider or get medical help right away</strong> if you develop new or worsening shortness of breath, chest pain, fatigue, leg swelling, a racing sensation in your heart (palpitations), or rapid weight gain.
+</td></tr><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">•
+</td><td class="pb5" style="padding-bottom: 5px;"><strong>The risk of heart failure is also increased when MYQORZO is taken with certain other medicines.</strong> Tell your healthcare provider about any prescribed and over-the-counter medicines you take, before and during your treatment with MYQORZO
+</td></tr><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">•
+</td><td class="bold pb5" style="font-weight: bold; padding-bottom: 5px;">Because of the risk of heart failure, MYQORZO is only available through a restricted distribution program called the MYQORZO Risk Evaluation and Mitigation Strategy (REMS) Program
+</td></tr><tr><td class="ul pb0" colspan="2" style="padding-top: 0; padding-right: 0; padding-left: 10px; padding-bottom: 0;">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="li bold" valign="top" style="width: 1px; font-weight: bold; padding-right: 5px; color: #C7376C;" width="1">-
+</td><td class="pb5" style="padding-bottom: 5px; width: 100%;" width="100%">Your healthcare provider must be enrolled in the MYQORZO REMS Program for you to be prescribed MYQORZO
+</td></tr><tr><td class="li bold" valign="top" style="width: 1px; font-weight: bold; padding-right: 5px; color: #C7376C;" width="1">-
+</td><td class="pb5" style="padding-bottom: 5px;">Before you start treatment with MYQORZO, you must enroll in the MYQORZO REMS Program. Talk to your healthcare provider about how to enroll in the program. You will be given information about the program when you enroll
+</td></tr><tr><td class="li bold" valign="top" style="width: 1px; font-weight: bold; padding-right: 5px; color: #C7376C;" width="1">-
+</td><td class="pb5" style="padding-bottom: 5px;">Before you take MYQORZO, your healthcare provider and pharmacist will make sure you understand how to take MYQORZO safely, which will include returning for echos when advised by your healthcare provider. MYQORZO can only be dispensed by a certified pharmacy that participates in the MYQORZO REMS Program
+</td></tr><tr><td class="li bold" valign="top" style="width: 1px; font-weight: bold; padding-right: 5px; color: #C7376C;" width="1">-
+</td><td>If you have any questions about the MYQORZO REMS Program, ask your healthcare provider, go to <a target="_blank" class="black underline" alias="MYQORZO REMS" href="https://www.myqorzorems.com/" style="text-decoration: underline; color: #000000;">www.MYQORZOREMS.com</a>, or call <a class="black no-underline" href="tel:1-844-285-7367" style="text-decoration: none; white-space: nowrap; color: #000000;">1-844-285-7367</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="bold" style="font-weight: bold;">Who should not take MYQORZO?
+</td></tr><tr><td class="pb8" style="padding-bottom: 8px;"><strong>Do not</strong> take MYQORZO if you take a medicine called rifampin.
+</td></tr><tr><td class="bold pb8" style="font-weight: bold; padding-bottom: 8px;">What are the possible side effects of MYQORZO?
+</td></tr><tr><td class="bold pb8" style="font-weight: bold; padding-bottom: 8px;">MYQORZO can cause serious side effects, including heart failure.
+</td></tr><tr><td class="bold pb8" style="font-weight: bold; padding-bottom: 8px;">What should I tell my healthcare provider before taking MYQORZO?
+</td></tr><tr><td class="pb8 bold" style="font-weight: bold; padding-bottom: 8px;">Before taking MYQORZO, tell your healthcare provider about all of your medical conditions, including if you:
+</td></tr><tr><td class="ul pb8" style="padding-bottom: 8px;">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">•
+</td><td class="pb5" style="padding-bottom: 5px; width: 100%;" width="100%">Are pregnant or plan to become pregnant. It is not known if MYQORZO can cause harm to your unborn baby. Tell your healthcare provider if you become pregnant during treatment or within 3 weeks after the last dose of MYQORZO. There is a pregnancy study for MYQORZO. Your healthcare provider should report your pregnancy exposure to Cytokinetics, Inc
+</td></tr><tr><td class="li" valign="top" style="width: 1px; padding-right: 5px; color: #C7376C;" width="1">•
+</td><td>Are breastfeeding or plan to breastfeed. It is not known if MYQORZO passes into your breast milk. Talk to your healthcare provider about the best way to feed your baby during treatment with MYQORZO
+</td></tr></tbody></table>
+</td></tr><tr><td><strong>Before and during MYQORZO treatment, tell your healthcare provider about all the prescription and over-the-counter medicines, vitamins, and herbal supplements you take.</strong> Taking MYQORZO with certain medicines may lead to increased levels of MYQORZO in your blood and increase the risk of heart failure.<strong>Do not stop or change the dose of a medicine or start a new medicine without telling your healthcare provider.</strong>
+</td></tr><tr><td class="pt10 pb8" style="padding-top: 10px; padding-bottom: 8px;"><strong>Especially tell your healthcare provider if you take</strong> fluconazole (if used for more than 3 days), voriconazole, or fluvoxamine.
+</td></tr><tr><td class="pb8 bold" style="font-weight: bold; padding-bottom: 8px;">What are the most common side effects of MYQORZO?
+</td></tr><tr><td class="pb8" style="padding-bottom: 8px;">The most common side effect of MYQORZO is high blood pressure (hypertension).
+</td></tr><tr><td class="pb8" style="padding-bottom: 8px;">These are not all the possible side effects of MYQORZO. Talk to your healthcare provider for medical advice about side effects. You may report side effects to FDA at <a class="black no-underline" href="tel:1-800-332-1088" style="text-decoration: none; white-space: nowrap; color: #000000;">1-800-FDA-1088</a>. You may also report side effects to Cytokinetics at <a class="black no-underline" href="tel:1-833-633-2986" style="text-decoration: none; white-space: nowrap; color: #000000;">1-833-633-2986</a>.
+</td></tr><tr><td class="h3 blue pb8" style="font-size: 20px; line-height: 24px; font-weight: bold; color: #007591; padding-bottom: 8px;">INDICATION AND USAGE
+</td></tr><tr><td class="pb8" style="padding-bottom: 8px;">MYQORZO is a prescription medicine used to treat adults with symptomatic obstructive cardiomyopathy (oHCM) to improve functional capacity and symptoms.
+</td></tr><tr><td class="pb8" style="padding-bottom: 8px;">It is not known if MYQORZO is safe and effective in children.
+</td></tr><tr><td class="bold" style="font-weight: bold;">Please see full <a target="_blank" alias="Prescribing Information" href="https://cytokinetics.com/wp-content/uploads/2025/12/MYQORZO_US_Prescribing_Information_and_Med_Guide.pdf" style="text-decoration: underline; color: #000000;">Prescribing Information</a>, including Boxed WARNING, and <a target="_blank" alias="Medication Guide" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf" style="text-decoration: underline; color: #000000;">Medication Guide</a>.
+</td></tr></tbody></table>
+</td></tr><tr><td class="blue-section" style="background-color: #DEF2EF; padding-left: 35px; padding-right: 35px; padding-top: 30px; padding-bottom: 15px;" bgcolor="#DEF2EF">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;"><td class="mobile-only fat-footer" style="display: none; max-height: 0px; overflow: hidden;"><div class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m-prl15">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m-pl5" valign="middle" width="50" style="width:50px;"> <img class="max-none lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/monitor-icon-2x.png" alt width="52" height="43" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px;">
+</td><td class="m-pl15" valign="middle">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb5" style="padding-bottom: 5px;">Get answers to your questions
+</td></tr><tr><td align="left"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="See the latest" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/?" style="height:21px;v-text-anchor:middle;width:120px;" arcsize="143%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;">See the latest</center></v:roundrect>
+<![endif]--><a alias="See the latest" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold; line-height: 21px; text-align: center; text-decoration: none; width: 120px; -webkit-text-size-adjust: none; mso-hide: all;">See the latest</a></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="pb15" style="padding-bottom: 15px;">
+<table class="m-bb-gray" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="Enter width" style="Enter width"><tbody><tr><td>&nbsp;
+</td></tr></tbody></table>
+</td></tr><tr><td class="m-pl15">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="m-pl15 lh14" align="center" valign="middle" width="58" style="line-height: 14px; width: 58px;"> <img class="max-none pr10 lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/checked-list-2x.png" alt width="32" height="42" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px; padding-right: 10px;">
+</td><td valign="middle">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb5" style="padding-bottom: 5px;">Take these steps before starting MYQORZO
+</td></tr><tr><td align="left"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Get started" target="_blank" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf?" style="height:21px;v-text-anchor:middle;width:100px;" arcsize="143%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;">Get started</center></v:roundrect>
+<![endif]--><a alias="Get started" target="_blank" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold; line-height: 21px; text-align: center; text-decoration: none; width: 100px; -webkit-text-size-adjust: none; mso-hide: all;">Get started</a></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="pb15" style="padding-bottom: 15px;">
+<table class="m-bb-gray" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="Enter width" style="Enter width"><tbody><tr><td>&nbsp;
+</td></tr></tbody></table>
+</td></tr><tr><td class="m-prl15">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="lh14" valign="middle" width="60" style="line-height: 14px; width: 60px;"> <img class="max-none lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/copay-icon-2x.png" alt width="53" height="35" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px;">
+</td><td class="m-pl10 m-pr5" valign="middle">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb5" style="padding-bottom: 5px;">Are you eligible for savings?
+</td></tr><tr><td align="left"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Learn more" target="_blank" href="https://www.myqorzo.com/savings-and-support/myqorzo-and-you/?" style="height:21px;v-text-anchor:middle;width:100px;" arcsize="143%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;">Learn more</center></v:roundrect>
+<![endif]--><a alias="Learn more" target="_blank" href="https://www.myqorzo.com/savings-and-support/myqorzo-and-you/" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 12px; font-weight: bold; line-height: 21px; text-align: center; text-decoration: none; width: 100px; -webkit-text-size-adjust: none; mso-hide: all;">Learn more</a></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr><tr><td class="desktop-only three-columns ptb20" style="padding-top: 20px; padding-bottom: 20px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="prl5" valign="top" width="33%" style="padding-right: 5px; padding-left: 5px; font-size: 14px; line-height: 18px; border-right: 1px solid #D9D9D9;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb5" align="center" style="padding-bottom: 5px; font-size: 14px; line-height: 18px;"> <img class="lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/monitor-icon-2x.png" alt width="52" height="43" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px;">
+</td></tr><tr><td class="p pb5 m-prl30" align="center" style="padding-bottom: 5px; font-size: 14px; line-height: 18px;">Get answers to your questions
+</td></tr><tr><td align="center" style="font-size: 14px; line-height: 18px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="See the latest" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/?" style="height:30px;v-text-anchor:middle;width:125px;" arcsize="100%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;">See resources</center></v:roundrect>
+<![endif]--><a alias="See the latest" target="_blank" href="https://www.myqorzo.com/about-myqorzo/myqorzo-results/" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; text-align: center; text-decoration: none; width: 125px; -webkit-text-size-adjust: none; mso-hide: all;">See resources</a></div>
+</td></tr></tbody></table>
+</td><td class="prl5" valign="top" width="33%" style="padding-right: 5px; padding-left: 5px; font-size: 14px; line-height: 18px; border-right: 1px solid #D9D9D9;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb5" align="center" style="padding-bottom: 5px; font-size: 14px; line-height: 18px;"> <img class="lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/checked-list-2x.png" alt width="32" height="42" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px;">
+</td></tr><tr><td class="p pb5" align="center" style="padding-bottom: 5px; font-size: 14px; line-height: 18px;">Take these steps before starting MYQORZO
+</td></tr><tr><td align="center" style="font-size: 14px; line-height: 18px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Get started" target="_blank" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf?" style="height:30px;v-text-anchor:middle;width:125px;" arcsize="100%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;">Get started</center></v:roundrect>
+<![endif]--><a alias="Get started" target="_blank" href="https://cytokinetics.com/wp-content/uploads/2025/12/N219083-MG.pdf" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; text-align: center; text-decoration: none; width: 125px; -webkit-text-size-adjust: none; mso-hide: all;">Get started</a></div>
+</td></tr></tbody></table>
+</td><td class="prl5" valign="top" width="33%" style="padding-right: 5px; padding-left: 5px; font-size: 14px; line-height: 18px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb10" align="center" style="padding-bottom: 10px; font-size: 14px; line-height: 18px;"> <img class="lh14" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/copay-icon-2x.png" alt width="53" height="35" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; line-height: 14px;">
+</td></tr><tr><td class="pb5" align="center" style="padding-bottom: 5px; font-size: 14px; line-height: 18px;">Are you eligible for<br class="desktop-only"> savings?
+</td></tr><tr><td align="center" style="font-size: 14px; line-height: 18px;"><div>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="Learn more" target="_blank" href="https://www.myqorzo.com/savings-and-support/myqorzo-and-you/?" style="height:30px;v-text-anchor:middle;width:125px;" arcsize="100%" strokecolor="#C7376C" fillcolor="#C7376C" strokeweight="1px"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;">Learn more</center></v:roundrect>
+<![endif]--><a alias="Learn more" target="_blank" href="https://www.myqorzo.com/savings-and-support/myqorzo-and-you/" style="background-color: #C7376C; border: 1px solid #C7376C; border-radius: 30px; color: #ffffff; display: inline-block; font-family: Arial,sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; text-align: center; text-decoration: none; width: 125px; -webkit-text-size-adjust: none; mso-hide: all;">Learn more</a></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="ptb30 prl40" style="padding-top: 30px; padding-bottom: 30px; padding-right: 40px; padding-left: 40px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="p" style="padding-bottom: 15px;">If you would like more information about Cytokinetics<sup style="line-height: 0; font-size: 75%;">&#174;</sup>, please visit <a target="_blank" alias="Cytokinetics HCP Site" class="black" href="https://cytokinetics.com/" style="text-decoration: underline; color: #000001;">cytokinetics.com</a>.
+</td></tr><tr><td>This promotional email is brought to you by Cytokinetics.
+</td></tr></tbody></table>
+</td></tr><tr><td class="footer" style="padding-right: 60px; padding-left: 60px; padding-top: 15px; padding-bottom: 20px; background-color: #EBEBEB;" bgcolor="#EBEBEB">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="prl35 m-prl0 pb20" style="padding-bottom: 20px; padding-right: 35px; padding-left: 35px; font-size: 14px; line-height: 18px;">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="block m-center" valign="bottom" style="font-size: 14px; line-height: 18px;"> <a target="_blank" alias="MYQORZO Logo" class="ghost-link" href="https://www.myqorzo.com/" style="text-decoration: underline;"><img class="m-pb30" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/myqorzo-footer-logo-2x.png" alt width="228" height="55" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; border: none; display: inline-block;"></a>
+</td><td class="block m-center" align="right" valign="bottom" style="font-size: 14px; line-height: 18px;"> <a target="_blank" alias="Cytokinetics logo" class="ghost-link" href="https://cytokinetics.com/" style="text-decoration: underline;"><img src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/cyto-logo-2x.png" alt width="184" height="80" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; border: none; display: inline-block;"></a>
+</td></tr></tbody></table>
+</td></tr><tr><td class="bt-gray ptb25" align="center" style="border-top: 1px solid #D9D9D9; padding-top: 25px; padding-bottom: 25px; font-size: 14px; line-height: 18px;"> 350 Oyster Point Blvd, South San <br class="mobile-only" style="display: none; max-height: 0px; overflow: hidden;">Francisco, CA 94080
+</td></tr><tr><td class="prl5 m-prl0" align="center" style="padding-right: 5px; padding-left: 5px; font-size: 14px; line-height: 18px;">CYTOKINETICS<sup style="line-height: 0; font-size: 75%;">&#174;</sup> and the CYTOKINETICS C-shaped logo are registered trademarks of Cytokinetics in the U.S. and certain other countries. MYQORZO™, the MYQORZO logo, MYQOMMUNITY™, and the MYQOMMUNITY logo are trademarks of Cytokinetics in the U.S. <br>&#169; 2026 CYTOKINETICS. All Rights Reserved. <span class="no-wrap" style="white-space: nowrap;">US-MYQ-00327 05/2026</span>
+</td></tr></tbody></table>
+</td></tr><tr><td class="footer-links" style="background-color: #DCDCDC; padding: 10px 5px;" bgcolor="#DCDCDC">
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pb15" style="padding-bottom: 15px;">
+<table class="fixed-width245" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="245" style="width:245px;"><tbody><tr><td class="legal">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="pr20" style="padding-right: 20px;"> <a target="_blank" alias="Privacy Policy" href="https://cytokinetics.com/privacy-policy/" style="text-decoration: underline; color: #000000;">Privacy&nbsp;Policy</a>
+</td><td class="pr20" style="padding-right: 20px;">|
+</td><td> <a target="_blank" alias="Unsubscribe" href style="text-decoration: underline; color: #000000;">Unsubscribe</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="pl10" style="padding-left: 10px;">
+<table class="fixed-width80" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="80" style="width:80px;"><tbody><tr><td>
+<table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td> <a class="ghost-link" target="_blank" alias="MYQORZO Facebook" href="https://www.facebook.com/MYQORZO" style="text-decoration: underline;"><img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/facebook-logo-2x.png" alt width="32" height="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; border: none; display: inline-block;"></a>
+</td><td> <a class="ghost-link" target="_blank" alias="MYQORZO Instagram" href="https://www.instagram.com/myqorzo_us/" style="text-decoration: underline;"><img class="max-none" src="https://melt-runmailflow-assets.s3.us-west-2.amazonaws.com/a7c9ed09-a772-4241-a36f-e78e59f63fc7/instagram-logo-2x.png" alt width="32" height="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; border: none; display: inline-block;"></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table><div style="display:none;white-space:nowrap;font:15px courier;line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
 </body>
 </html>
