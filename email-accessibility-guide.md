@@ -1,6 +1,6 @@
 # Email Accessibility & Dark Mode Guide
 i9WIqStI7kYrJl05MYwUII/
-figd_P3XX7mrJ5D1ZEXecMEVy_tSrk3Aaqhy135SIOmj6
+figd_oQMtFLYpufyaE0bow5SGTSbWyp2VUFrRFA4s2AY4
 https://www.figma.com/design/i9WIqStI7kYrJl05MYwUII/BUILDKIT-WEGO-Ambassador-Recruitment-Email-102201746-52test?node-id=77-1066&p=f&m=dev
 
 ## ARIA Roles for Semantic Structure
