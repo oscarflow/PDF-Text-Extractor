@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Target IE10 phones -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style type="text/css">
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    .main-td {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #414042;
+      line-height: 20px;
+      background-color: #ffffff;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+    }
+
+    .h2 { font-size: 16px; line-height: 20px; color: #414042; font-weight: lighter; }
+    .h3 { font-size: 60px; line-height: 65px; color: #C6007E; font-weight: bold; }
+    .h4 { font-size: 14px; line-height: 18px; color: #414042; font-weight: lighter; }
+    .h5 { font-size: 14px; line-height: 18px; color: #003479; font-weight: bold; }
+    .fs19 { font-size: 19px; line-height: 23px; }
+    .lh15 { line-height: 15px !important; }
+
+
+    a { text-decoration: underline; }
+    .content a { color: #C6007E; }
+
+    /* Build Section Styling */
+    .preheader {
+      background-color: #F9F9F9; 
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+    }
+    .preheader td {
+      font-size: 16px;
+      line-height: 20px;
+      color: #414042;
+    }
+    .header-links {
+      padding-right: 16px;
+      padding-left: 16px;
+      padding-top: 12px;
+      padding-bottom: 24px;
+    }
+    .header-links td {
+      font-size: 10px;
+      line-height: 14px; 
+    }
+    .header-links a {
+      color: #C6007E;
+      text-decoration: underline;
+    }
+    .white-container { 
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding-right: 12px;
+      padding-left: 12px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .white-container td { 
+      font-family: Helvetica, Arial, sans-serif !important; 
+    }
+    .content, .safety,
+    .footer {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .safety .h1 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      color: #C6007E;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    .safety .p, .safety .ul { padding-bottom: 8px; }
+    .footer {
+      padding-bottom: 20px;
+    }
+    .footer td {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .references tr:first-child .li + td { width: auto; }
+    .references .li { width: 15px; }
+    /*fixes width issue in yahoo*/
+
+    .footnote,
+    .footnote td { font-size: 12px; line-height: 16px; }
+    .footnote-14 { font-size: 14px; line-height: 16px; }
+
+    /* Horizontal Rule */
+    .bt-color { border-top: 2px solid #001c71; }
+
+    /* additional colors */
+    .black { color: #414042 !important; }
+    .white { color: #ffffff; }
+    .pink { color: #C4007E; }
+    .gray { color: #414042; }
+    .fpo-pink { color: #FF00FF; }
+
+    /* Element Styling */
+    .p,
+    .ul { padding-bottom: 15px; }
+
+    .li { width: 1px; }
+    .ul .li { padding-right: 4px; color: #C6007E; }
+
+    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
+    .ul tr:first-child .li + td { width: 100%; }
+
+    sup, sub { line-height: 0; font-size: 64%; }
+
+    /* Additional formatting and styling */
+    .center { text-align: center; }
+    .center-block { margin: 0 auto; }
+    .no-underline { text-decoration: none; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+
+    .no-wrap { white-space: nowrap; }
+    a[href^="tel:"] { white-space: nowrap; }
+    
+    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
+    /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Button Styling */
+    .button { 
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 1px solid #00b2e2;
+      /*border-radius: 5px; */
+    }
+
+    .button a {
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
+      /*border-radius: 5px;*/
+    }
+
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 2px solid #00b2e2;
+    }
+    .ns-button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px solid #00b2e2;
+    } */
+
+
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+    .ptb0  { padding-top: 0; padding-bottom: 0; }
+    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb8 { padding-top: 8px; padding-bottom: 8px; }
+    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
+    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
+    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
+    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
+    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
+    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    /* Padding top and bottom */
+
+    .pt0  { padding-top: 0; }
+    .pt5  { padding-top: 5px; }
+    .pt10 { padding-top: 10px; }
+    .pt15 { padding-top: 15px; }
+    .pt20 { padding-top: 20px; }
+    .pt24 { padding-top: 24px; }
+    .pt25 { padding-top: 25px; }
+    .pt30 { padding-top: 30px; }
+    .pt35 { padding-top: 35px; }
+    .pt40 { padding-top: 40px; }
+    /* padding top */
+
+    .pb0  { padding-bottom: 0; }
+    .pb5  { padding-bottom: 5px; }
+    .pb8 { padding-bottom: 8px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb12 { padding-bottom: 12px; }
+    .pb15 { padding-bottom: 15px; }
+    .pb16 { padding-bottom: 16px; }
+    .pb20 { padding-bottom: 20px; }
+    .pb24 { padding-bottom: 24px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    .pb45 { padding-bottom: 45px; }
+    /* padding bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl12 { padding-right: 12px; padding-left: 12px;}
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
+
+    .pr0  { padding-right: 0; }
+    .pr5  { padding-right: 5px; }
+    .pr10 { padding-right: 10px; }
+    .pr15 { padding-right: 15px; }
+    .pr20 { padding-right: 20px; }
+    .pr25 { padding-right: 25px; }
+    .pr30 { padding-right: 30px; }
+    .pr35 { padding-right: 35px; }
+    .pr40 { padding-right: 40px; }
+    /* padding right */
+
+    .pl0  { padding-left: 0; }
+    .pl5  { padding-left: 5px; }
+    .pl10 { padding-left: 10px; }
+    .pl15 { padding-left: 15px; }
+    .pl20 { padding-left: 20px; }
+    .pl25 { padding-left: 25px; }
+    .pl30 { padding-left: 30px; }
+    .pl35 { padding-left: 35px; }
+    .pl40 { padding-left: 40px; }
+    /* padding left */
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    #outlook a { padding: 0; }
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
+
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
+    a img { border: none; }
+    /* Some sensible defaults for images*/
+
+    .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
+
+    /***************************************
+                 SAFETY STYLES 
+    ****************************************/
+
+    .safety td {
+      color: #414042;
+    }
+
+    .safety .ul .ul {
+      padding-bottom: 0;
+    }
+
+  </style>
+  <!--[if gte mso 9]>
+    <xml>
+     <o:OfficeDocumentSettings>
+     <o:AllowPNG/>
+     <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+      sup, sub { font-size: 100% !important; }
+      table { border-collapse: collapse !important; border-spacing: 0 !important; }
+    </style> 
+  <![endif]-->
+  <style type="text/css" data-embed>
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    body,
+    td {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #414042;
+      line-height: 20px;
+    }
+    /* Render font family properly in Outlook */
+
+    table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+    * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+
+    .mobile-only {
+      display: none;
+      max-height: 0px;
+      overflow: hidden;
+      mso-hide: all;
+    }
+    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
+
+    .mobile-only table {
+      mso-hide: all;
+    }
+    /* Hides <table> elements in Outlook 2007-13 issue */
+
+    .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+      
+      .block,
+      .content,
+      .safety { display: block; }
+      /* place content you want stacked here */
+
+      .desktop-only { display: none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
+
+      .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
+
+      .m-center { text-align: center !important; margin: 0 auto !important; }
+      .m-valign-top { vertical-align: top !important; }
+
+      .main-table .fixed-width215 { width: 215px !important; margin: 0 auto !important; }
+
+      /*.m-pt0  { padding-top: 0 !important; }*/
+      /*.m-pt5  { padding-top: 5px !important; }*/
+      /*.m-pt10 { padding-top: 10px !important; }*/
+      .m-pt15 { padding-top: 15px !important; }
+      /*.m-pt20 { padding-top: 20px !important; }*/
+      /*.m-pt25 { padding-top: 25px !important; }*/
+      /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
+      /* mobile padding top */
+
+      /*.m-pb0  { padding-bottom: 0 !important; } */
+      /*.m-pb5  { padding-bottom: 5px !important; }*/
+      /*.m-pb10 { padding-bottom: 10px !important; }*/
+      /*.m-pb15 { padding-bottom: 15px !important; }*/
+      /*.m-pb20 { padding-bottom: 20px !important; }*/
+      /*.m-pb25 { padding-bottom: 25px !important; }*/
+      /*.m-pb30 { padding-bottom: 30px !important; }*/
+      /*.m-pb35 { padding-bottom: 35px !important; }*/
+      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      /* mobile padding bottom */
+      .w100 { width: 100% !important; }
+
+    }
+  </style>
+
+
+</head>
+<body>
+<div style="display: none; max-height: 0px; overflow: hidden;">
+{{build.preheader}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+
+    <tr>
+      <td class="main-td">
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
+            
+      <!-- Start top ISI -->
+          <tr>
+            <td class="ptb8 prl12 footnote lh15">Wegovy<sup>®</sup>, along with a reduced calorie diet and increased physical activity, may help adults with obesity, or some adults with excess weight (overweight) who also have weight-related medical problems to lose weight and keep the weight off. Scroll to "What is Wegovy<sup>®</sup>?" for limitations of use.</td>
+          </tr>
+          <!-- end paragraph -->
+      <!-- End top ISI -->
+
+      <!-- Start Header links -->
+          <tr>
+            <td class="header-links">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="pb12" align="center">
+                            <a href="https://www.wegovy.com?tc=em_hwm85ak&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080#isi-anchor"><span>Important Safety Information</span></a>
+                            <span class="link-divider">&nbsp;</span>
+                            <a href="https://www.novo-pi.com/wegovy.pdf?tc=em_njhuli8&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><span>Prescribing Information</span></a>
+                            <span class="link-divider">&nbsp;</span>
+                            <a href="{{token.permalink}}"><span>View&nbsp;web&nbsp;version</span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="image" align="center">
+                            <a class="ghost-link" href="https://www.wegovy.com?tc=em_y9tf2lw&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img src="{{asset.logo-wegovy-v2-2x.url}}" alt="{{asset.logo-wegovy-v2-2x.alt}}" width="{{asset.logo-wegovy-v2-2x.width}}" height="{{asset.logo-wegovy-v2-2x.height}}"/></a>
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="desktop-only">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image">
+                                <a class="ghost-link" href="https://www.wegovy.com?tc=em_y9tf2lw&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img src="{{asset.logo-wegovy-v2-2x.url}}" alt="{{asset.logo-wegovy-v2-2x.alt}}" width="{{asset.logo-wegovy-v2-2x.width}}" height="{{asset.logo-wegovy-v2-2x.height}}"/></a>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                        <td>
+                          <table align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="130" style="width:130px;">
+                            <tr>
+                              <td>
+                                <a href="https://www.wegovy.com?tc=em_hwm85ak&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080#isi-anchor">Important Safety Information</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="ptb5">
+                                <a href="https://www.novo-pi.com/wegovy.pdf?tc=em_njhuli8&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">Prescribing Information</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="{{token.permalink}}">View web version</a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      <!-- End Header links -->
+          <tr>
+            <td style="background-color: #F3F4F4;">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F3F4F4" style="background-color: #F3F4F4;">
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="image">
+                            <a href="https://www.novonordisk-us.com/media/news-archive/news-details.html?id=916544&tc=em_188gm99&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img class="w100" class="width-auto" src="{{asset.banner-cta-mobile-2x.url}}" alt="{{asset.banner-cta-mobile-2x.alt}}" width="0" height="0" /></a>
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="desktop-only image">
+                    <a href="https://www.novonordisk-us.com/media/news-archive/news-details.html?id=916544&tc=em_188gm99&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img src="{{asset.banner-cta-desktop-2x.url}}" alt="{{asset.banner-cta-desktop-2x.alt}}" width="{{asset.banner-cta-desktop-2x.width}}" height="{{asset.banner-cta-desktop-2x.height}}" /></a>
+                  </td>
+                </tr>
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <img class="width-auto w100" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/>
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="desktop-only image">
+                    <img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="content pt24">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="p pb24" align="center">Starting July 1, eligible Medicare patients can access all doses of Wegovy<sup>®</sup>—both pen and pill—for only</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <!-- start icon list -->
+                      <tr>
+                        <td class="pb24">
+                          <table class="fixed-width215" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="215" style="width:215px;">
+                            <tr>
+                              <td class="image" valign="middle" width="120" style="width: 120px;">
+                                <img class="max-none" src="{{asset.50-dollar-2x.url}}" alt="{{asset.50-dollar-2x.alt}}" width="{{asset.50-dollar-2x.width}}" height="{{asset.50-dollar-2x.height}}"/>
+                              </td>
+                              <td class="fs19" valign="middle">
+                                per month*
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- row -->
+                      <tr>
+                        <td class="p pb24" align="center">Talk to your doctor to find out if you could save on Wegovy<sup>®</sup> for weight loss.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="image pb24" align="center">
+                          <a class="ghost-link" href="https://www.novonordisk-us.com/media/news-archive/news-details.html?id=916544&tc=em_jiyuclj&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img src="{{asset.button-announcement-2x.url}}" alt="{{asset.button-announcement-2x.alt}}" width="{{asset.button-announcement-2x.width}}" height="{{asset.button-announcement-2x.height}}"/></a>
+                        </td>
+                      </tr>
+                      <!-- end image -->
+                      <tr>
+                        <td class="footnote-14">*Terms apply. For eligible Medicare patients prescribed Wegovy<sup>®</sup> for a covered FDA-approved indication. Eligibility criteria will be determined by Centers for Medicare & Medicaid Services (CMS). This information is not a guarantee of coverage. Month defined as 1 box of 4 pens of Wegovy<sup>®</sup> and 1 bottle of 30 tablets of Wegovy<sup>®</sup>. Talk to your doctor or visit <a class="pink underline" href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge?tc=em_cvqctv9&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">wegovybridge.novomedlink.com</a> to learn more.</td>
+                      </tr>
+                      <!-- end footnote -->
+                    </table> 
+                  </td>
+                </tr>
+                <!-- End Content -->
+                <tr>
+                  <td class="safety pt24">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                     
+                      
+                       <tr>
+                        <td class="h1">What is Wegovy<sup>®</sup>? </td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> (semaglutide) injection and Wegovy<sup>®</sup> (semaglutide) tablets are prescription medicines used with a reduced calorie diet and increased physical activity to:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                           
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>help adults with obesity, or some adults with excess weight (overweight) who also have weight-related medical problems to lose weight and keep the weight off.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> contains semaglutide and should not be used with other semaglutide-containing products or other GLP-1 receptor agonist medicines.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p">It is not known if Wegovy<sup>®</sup> injection is safe and effective:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">to reduce the risk of major cardiovascular events (death, heart attack, or stroke) in people under 18 years</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">to help children under 12 years of age lose weight and keep the weight off</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="p">It is not known if Wegovy<sup>®</sup> tablets are safe and effective for use in people under 18 years of age.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="h1">Important Safety Information</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="h1">What is the most important information I should know about Wegovy<sup>®</sup>?</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="p bold">Wegovy<sup>®</sup> may cause serious side effects, including:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>Possible thyroid tumors, including cancer.</strong> Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, Wegovy<sup>®</sup> and other medicines that work like Wegovy<sup>®</sup> caused thyroid tumors, including thyroid cancer. It is not known if Wegovy<sup>®</sup> will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>Do not use Wegovy<sup>®</sup> if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h1">Do not use Wegovy<sup>®</sup> if:</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>you have had a serious allergic reaction to semaglutide or any of the ingredients in Wegovy<sup>®</sup> injection or Wegovy<sup>®</sup> tablets. See symptoms of serious allergic reaction in <strong>“What are the possible side effects of Wegovy<sup>®</sup>?”</strong></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h1">Before using Wegovy<sup>®</sup>, tell your healthcare provider if you have any other medical conditions, including if you:</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">have or have had problems with your pancreas or kidneys</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">have type 2 diabetes and a history of diabetic retinopathy</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">are scheduled to have surgery or other procedures that use anesthesia or deep sleepiness (deep sedation)</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">are pregnant or plan to become pregnant. Wegovy<sup>®</sup> may harm your unborn baby. You should stop using Wegovy<sup>®</sup> 2 months before you plan to become pregnant</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>are breastfeeding or plan to breastfeed. Breastfeeding is not recommended during treatment with Wegovy<sup>®</sup> tablets. It is not known if Wegovy<sup>®</sup> when received through an injection passes into your breast milk</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="p"><strong>Tell your healthcare provider about all the medicines you take,</strong> including prescription and over-the-counter medicines, vitamins, and herbal supplements. Wegovy<sup>®</sup> may affect the way some medicines work and some medicines may affect the way Wegovy<sup>®</sup> works. Tell your healthcare provider if you are taking other medicines to treat diabetes, including sulfonylureas or insulin. Wegovy<sup>®</sup> slows stomach emptying and can affect medicines that need to pass through the stomach quickly.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="h1">What are the possible side effects of Wegovy<sup>®</sup>?</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="p bold">Wegovy<sup>®</sup> may cause serious side effects, including:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>inflammation of your pancreas (pancreatitis).</strong> Stop using Wegovy<sup>®</sup> and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without nausea or vomiting. Sometimes you may feel the pain from your abdomen to your back</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>gallbladder problems.</strong> Wegovy<sup>®</sup> may cause gallbladder problems, including gallstones. Some gallstones may need surgery. Call your healthcare provider if you have symptoms, such as pain in your upper stomach (abdomen), fever, yellowing of the skin or eyes (jaundice), or clay-colored stools</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>increased risk of low blood sugar (hypoglycemia), especially those who also take medicines for diabetes such as insulin or sulfonylureas.</strong> This can be a serious side effect. Talk to your healthcare provider about how to recognize and treat low blood sugar and check your blood sugar before you start and while you take Wegovy<sup>®</sup>. Signs and symptoms of low blood sugar may include dizziness or light-headedness, blurred vision, anxiety, irritability or mood changes, sweating, slurred speech, hunger, confusion or drowsiness, shakiness, weakness, headache, fast heartbeat, or feeling jittery</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>dehydration leading to kidney problems.</strong> Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration), which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>severe stomach problems.</strong> Stomach problems, sometimes severe, have been reported in people who use Wegovy<sup>®</sup>. Tell your healthcare provider if you have stomach problems that are severe or will not go away</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>serious allergic reactions.</strong> Stop using Wegovy<sup>®</sup> and get medical help right away, if you have any symptoms of a serious allergic reaction, including swelling of your face, lips, tongue, or throat; problems breathing or swallowing; severe rash or itching; fainting or feeling dizzy; or very rapid heartbeat </td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>change in vision in people with type 2 diabetes.</strong> Tell your healthcare provider if you have changes in vision during treatment with Wegovy<sup>®</sup></td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>increased heart rate.</strong> Wegovy<sup>®</sup> can increase your heart rate while you are at rest. Tell your healthcare provider if you feel your heart racing or pounding in your chest and it lasts for several minutes</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td><strong>food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation).</strong> Wegovy<sup>®</sup> may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking Wegovy<sup>®</sup> before you are scheduled to have surgery or other procedures</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="p"><strong>The most common side effects of Wegovy<sup>®</sup> may include:</strong> nausea, diarrhea, vomiting, constipation, stomach (abdomen) pain, changes in skin sensations, headache, tiredness (fatigue), upset stomach, dizziness, feeling bloated, belching, low blood sugar in people with type 2 diabetes, gas, stomach flu, heartburn, and hair loss.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p bold">Please see <a class="pink underline" href="https://www.novo-pi.com/wegovy.pdf?tc=em_lcdkugo&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">Prescribing Information</a> and <a class="pink underline" href="https://www.novo-pi.com/wegovy.pdf?tc=em_saf7ebw&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080#guide">Medication Guide</a> for Wegovy<sup>®</sup>.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> is a prescription medication.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p">You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a class="pink underline" href="https://www.fda.gov/medwatch?tc=em_dqt6d2r&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">www.fda.gov/medwatch</a>, or call <a class="pink underline" href="tel:1-800-332-1088">1-800-FDA-1088</a>.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="pb24">Novo Nordisk provides savings options for those who qualify. Visit <a class="pink underline" href="https://www.novocare.com/patient/medicines/wegovy.html?utm_source=MyWegovyCost&utm_medium=Vanity_URL&utm_campaign=Affordability_Program&utm_content=NTSB&tc=em_ikdi8qr&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">mywegovycost.com</a> to learn more.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="footnote pb16">PLEASE DO NOT RESPOND TO THIS EMAIL. If you would like to contact us, please <a class="pink underline" href="https://www.novonordisk-us.com/contact-us.html?tc=em_ast6g0r&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">click here</a> or call <a class="black no-underline" href="tel:1-877-744-2579">1-877-744-2579</a>. </td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">UNSUBSCRIBE NOTICE<br />
+                        If you no longer want to receive communications from Novo Nordisk, <a class="pink underline" href="{{build.unsubscribeLink}}">click here</a> to unsubscribe. You may also call us at <a class="black no-underline" href="tel:1-877-744-2579">1-877-744-2579</a> or send us a letter that includes your full contact information (eg, name, email address, phone) to Novo Nordisk, 800 Scudders Mill Road, Plainsboro, New Jersey 08536. To better understand how Novo Nordisk values your privacy, see our <a class="pink underline" href="https://www.novonordisk-us.com/privacy-notice.html?tc=em_qc19tpw&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080">Privacy Statement</a>.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">Novo Nordisk Inc., 800 Scudders Mill Road, Plainsboro, New Jersey 08536 U.S.A.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote">Wegovy<sup>®</sup> is a registered trademark of Novo Nordisk A/S.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">Novo Nordisk is a registered trademark of Novo Nordisk A/S. </td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <!-- Start left column -->
+                              <td class="column2 pr10 m-valign-top" valign="bottom" width="70%">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="footnote pb5">
+                                      &#169;&nbsp;2026 Novo Nordisk&nbsp;&nbsp;All rights reserved.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="footnote">
+                                      US26SEMO01080&nbsp;&nbsp;&nbsp;June 2026
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <!-- End left column -->
+                              <!-- Start right column -->
+                              <td class="column2 pl10 m-valign-top" valign="bottom" width="30%">
+                                <table align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="image" align="right">
+                                      <a class="ghost-link" href="https://www.novonordisk-us.com/?tc=em_hpa22yq&cc=5036&utm_medium=email&utm_source=almk&utm_campaign=medicare_bridge&utm_content=savings_us26semo01080"><img src="{{asset.logo-novo-nordisk-2x.url}}" alt="{{asset.logo-novo-nordisk-2x.alt}}" width="{{asset.logo-novo-nordisk-2x.width}}" height="{{asset.logo-novo-nordisk-2x.height}}"/></a>
+                                    </td>
+                                  </tr>
+                                  <!-- end image -->
+                                </table>
+                              </td>
+                              <!-- End right column -->
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <!-- end table wrapper -->
+
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+
+
+</body>
+</html>

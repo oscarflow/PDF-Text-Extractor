@@ -12,124 +12,153 @@
     /***************************************
                 GLOBAL STYLES
     ****************************************/
+
     .main-td {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
-      color: #717171;
-      line-height: 18px;
+      color: #414042;
+      line-height: 20px;
       background-color: #ffffff;
       min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
     }
 
-    .h1 { font-size: 22px; line-height: 25px; color: #009BD3; font-weight: bold; }
-    .h2 { font-size: 22px; line-height: 24px; color: #ffffff; font-weight: bold; }
-    .h3 { font-size: 19px; line-height: 23px; color: #009BD3; font-weight: bold; }
-    .h4 { font-size: 18px; line-height: 22px; color: #009BD3; font-weight: bold; }
-    .h5 { font-size: 16px; line-height: 20px; color: #009BD3; font-weight: bold; }
-
-    a { color: #009BD3; text-decoration: underline; }
+    .h2 { font-size: 16px; line-height: 20px; color: #414042; font-weight: lighter; }
+    .h3 { font-size: 60px; line-height: 65px; color: #C6007E; font-weight: bold; }
+    .h4 { font-size: 14px; line-height: 18px; color: #414042; font-weight: lighter; }
+    .h5 { font-size: 14px; line-height: 18px; color: #003479; font-weight: bold; }
+    
+    a { text-decoration: underline; }
+    .content a { color: #C6007E; }
 
     /* Build Section Styling */
-    .preheader td {
-      font-size: 12px;
-      line-height: 16px;
-      color: #505050;
-    }
-    .webversion  {
-      color: #505050;
-      font-weight: bold;
-    }
     .preheader {
-      padding-right: 25px;
-      padding-left: 25px;
+      background-color: #F9F9F9; 
       padding-top: 10px;
       padding-bottom: 10px;
-      background-color: #F0F0F0;
+      padding-left: 15px;
     }
-    .header-bar td { 
-      font-size: 12px;
-      line-height: 16px;
+    .preheader td {
+      font-size: 16px;
+      line-height: 20px;
+      color: #414042;
     }
-    .header-bar {
-      padding-right: 25px;
-      padding-left: 25px;
+     .main-table .footnote { 
+        
+        padding-bottom: 8px;   
+        line-height: 15px;
+    }
+    .header-footnote {
+        font-size: 12px; 
+        line-height: 16px;
+        padding-top: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .header-links {
+      padding-right: 16px;
+      padding-left: 16px;
       padding-top: 12px;
       padding-bottom: 12px;
     }
-
-    .header { padding-bottom: 18px; }
-    .find-out {
-      font-size: 18px;
-      line-height: 25px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-top: 2px solid #003B5C;
-      border-bottom: 2px solid #003B5C;
+    .header-links td {
+      font-size: 10px;
+      line-height: 14px; 
     }
-    .left-content {
-      padding-left: 25px;
-      padding-right: 30px;
-      padding-bottom: 60px;
+    .header-links a {
+      color: #C6007E;
+      text-decoration: underline;
     }
-
-    .blue-box {
-      padding-right: 15px;
-      padding-left: 15px;
-      padding-top: 30px;
-      padding-bottom: 25px;
-      background-color: #00406B;
-    }
-    .blue-box td {
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .icon-row .text {
-      padding-left: 15px;
-    }
-
-    .rr-safety {
-      padding-right: 25px;
-    }
-    .safety-cont {
-      padding-right: 30px;
-      padding-left: 30px;
-      padding-bottom: 30px;
-    }
-
-    .social-icons {
+    .white-container { 
+      background-color: #ffffff;
+      border-radius: 8px 8px 0 0;
       padding-right: 20px;
       padding-left: 20px;
-      padding-bottom: 30px;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
-    .legal a { color: #003087; text-decoration: none; }
+    .blue-container { 
+      background-color: #006B95;
+      border-radius: 0 0 8px 8px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .blue-container td, .blue-container a {
+       color: #ffffff;
+    }
+    .blue-container a {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .blue-container .title {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+    .blue-container-footnote {
+      font-size: 14px;
+      line-height: 18px;
+      padding-top: 12px;
+    }
+    .content, .safety,
+    .footer {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .safety .h1 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      color: #C6007E;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    .safety .h2 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 20px;
+      color: #C6007E;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    .safety .p, .safety .ul { padding-bottom: 8px; }
+    .footer {
+      padding-bottom: 20px;
+    }
+    .footer td {
+      font-size: 12px;
+      line-height: 14px;
+    }
 
     .references tr:first-child .li + td { width: auto; }
     .references .li { width: 15px; }
     /*fixes width issue in yahoo*/
 
     .footnote,
-    .footnote td { font-size: 12px; line-height: 14px; }
+    .footnote td { font-size: 12px; line-height: 16px; }
 
     /* Horizontal Rule */
     .bt-color { border-top: 2px solid #001c71; }
 
     /* additional colors */
-    .black { color: #505050; }  
+    .black { color: #414042 !important; }
     .white { color: #ffffff; }
-    .blue { color: #009ad2; }
+    .pink { color: #C4007E; }
+    .gray { color: #414042; }
 
     /* Element Styling */
     .p,
     .ul { padding-bottom: 15px; }
 
     .li { width: 1px; }
-    .ul .li { padding-right: 10px; color: #F04E2A; }
+    .ul .li { padding-right: 4px; color: #C6007E; }
 
     .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
-    .ul tr:first-child .li + td { width: 100%; }      
+    .ul tr:first-child .li + td { width: 100%; }
 
-    sup, sub { line-height: 0; font-size: 75%; }
+    sup, sub { line-height: 0; font-size: 64%; }
 
     /* Additional formatting and styling */
     .center { text-align: center; }
@@ -144,60 +173,116 @@
     .mobile-only { display: none; max-height: 0px; overflow: hidden; }
     /*Hides mobile only elements. Needs to be inlined for Gmail*/
 
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Button Styling */
     .button { 
-      background-color: #0193d7;
-      border: 1px solid #0193d7;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 1px solid #00b2e2;
       /*border-radius: 5px; */
     }
 
-    .button a { 
-      color: #ffffff;
-      text-decoration: none; 
-      display: block; 
-      font-weight: bold;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      border: 1px solid #0193d7; /*border hack needed for outlook clients*/
-      /*border-radius: 5px;*/ 
+    .button a {
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
+      /*border-radius: 5px;*/
     }
 
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 2px solid #00b2e2;
+    }
+    .ns-button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px solid #00b2e2;
+    } */
+
+
     /***************************************
-                  SPACING STYLES 
+                 SPACING STYLES 
     ****************************************/
 
     .ptb0  { padding-top: 0; padding-bottom: 0; }
     .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb8 { padding-top: 8px; padding-bottom: 8px; }
     .ptb10 { padding-top: 10px; padding-bottom: 10px; }
     .ptb15 { padding-top: 15px; padding-bottom: 15px; }
     .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb24 { padding-top: 24px; padding-bottom: 24px; }
     .ptb25 { padding-top: 25px; padding-bottom: 25px; }
     .ptb30 { padding-top: 30px; padding-bottom: 30px; }
     .ptb35 { padding-top: 35px; padding-bottom: 35px; }
     .ptb40 { padding-top: 40px; padding-bottom: 40px; }
     /* Padding top and bottom */
 
-    .prl0  { padding-right: 0; padding-left: 0; }
-    .prl5  { padding-right: 5px; padding-left: 5px; }
-    .prl10 { padding-right: 10px; padding-left: 10px; }
-    .prl15 { padding-right: 15px; padding-left: 15px; }
-    .prl20 { padding-right: 20px; padding-left: 20px; }
-    .prl25 { padding-right: 25px; padding-left: 25px; }
-    .commercial, .prl30 { padding-right: 30px; padding-left: 30px; }
-    .prl35 { padding-right: 35px; padding-left: 35px; }
-    .prl40 { padding-right: 40px; padding-left: 40px; }
-    /* Padding left and right */
     .pt0  { padding-top: 0; }
     .pt5  { padding-top: 5px; }
     .pt10 { padding-top: 10px; }
+    .pt12 { padding-top: 12px; }
     .pt15 { padding-top: 15px; }
     .pt20 { padding-top: 20px; }
+    .pt24 { padding-top: 24px; }
     .pt25 { padding-top: 25px; }
     .pt30 { padding-top: 30px; }
     .pt35 { padding-top: 35px; }
     .pt40 { padding-top: 40px; }
     /* padding top */
+
+    .pb0  { padding-bottom: 0 !important; }
+    .pb5  { padding-bottom: 5px; }
+    .pb8 { padding-bottom: 8px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb12 { padding-bottom: 12px !important; }
+    .pb15 { padding-bottom: 15px; }
+    .pb16 { padding-bottom: 16px !important; }
+    .pb20 { padding-bottom: 20px; }
+    .pb24 { padding-bottom: 24px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    .pb45 { padding-bottom: 45px; }
+    /* padding bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl12 { padding-right: 12px; padding-left: 12px;}
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
 
     .pr0  { padding-right: 0; }
     .pr5  { padding-right: 5px; }
@@ -208,21 +293,7 @@
     .pr30 { padding-right: 30px; }
     .pr35 { padding-right: 35px; }
     .pr40 { padding-right: 40px; }
-    .pr60 { padding-right: 60px; }
     /* padding right */
-
-
-    .pb0  { padding-bottom: 0; }
-    .pb5  { padding-bottom: 5px; }
-    .pb10 { padding-bottom: 10px; }
-    .pb15 { padding-bottom: 15px; }
-    .pb20 { padding-bottom: 20px; }
-    .pb25 { padding-bottom: 25px; }
-    .commercial, .pb30 { padding-bottom: 30px; }
-    .pb35 { padding-bottom: 35px; }
-    .pb40 { padding-bottom: 40px; }
-    .pb50 { padding-bottom: 50px; }
-    /* padding bottom */
 
     .pl0  { padding-left: 0; }
     .pl5  { padding-left: 5px; }
@@ -233,6 +304,7 @@
     .pl30 { padding-left: 30px; }
     .pl35 { padding-left: 35px; }
     .pl40 { padding-left: 40px; }
+    .pl60 { padding-left: 60px; }
     /* padding left */
 
     /***************************************
@@ -245,13 +317,13 @@
     #outlook a { padding: 0; }
     /* Force Outlook to provide a "view in browser" menu link. */
 
-    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
     /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
 
     #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
     /* end reset */
 
-    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; } 
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
     a img { border: none; }
     /* Some sensible defaults for images*/
 
@@ -261,54 +333,28 @@
     /***************************************
                  SAFETY STYLES 
     ****************************************/
+
     .safety td {
-      color: #505050;
-    }
-    .safety .h2 {
-      font-size: 22px;
-      line-height: 26px;
-      color: #009BD3;
-      font-weight: bold;
+      color: #414042;
     }
 
-    .safety .h3 { 
-      font-size: 18px;
-      line-height: 25px;
-      color: #009BD3;
-      font-weight: bold;
-    }
-
-    .safety .p,
-    .safety .ul {
-      padding-bottom: 10px;
-    }
-
-    .safety .pb5,
-    .safety .spaced td {
-      padding-bottom: 5px;
-    }
-
-    .safety .ul td {
-      line-height: 23px;
+    .safety .ul .ul {
+      padding-bottom: 0;
     }
 
   </style>
-
-
   <!--[if gte mso 9]>
     <xml>
-      <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-      </o:OfficeDocumentSettings>
+     <o:OfficeDocumentSettings>
+     <o:AllowPNG/>
+     <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
     </xml>
     <style>
       sup, sub { font-size: 100% !important; }
       table { border-collapse: collapse !important; border-spacing: 0 !important; }
-    </style>
+    </style> 
   <![endif]-->
-
-
   <style type="text/css" data-embed>
     /***************************************
                 GLOBAL STYLES
@@ -316,10 +362,10 @@
 
     body,
     td {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
-      color: #717171;
-      line-height: 18px;
+      color: #414042;
+      line-height: 20px;
     }
     /* Render font family properly in Outlook */
 
@@ -329,8 +375,9 @@
     * { line-height: inherit; }
     /* Prevent Outlook.com from overriding line-height */
 
-    table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
-    /* Outlook 07, 10 Padding issue fix */
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
 
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -346,505 +393,571 @@
       display: none;
       max-height: 0px;
       overflow: hidden;
-      mso-hide: all; 
+      mso-hide: all;
     }
     /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
 
-    .mobile-only table { 
-      mso-hide: all; 
+    .mobile-only table {
+      mso-hide: all;
     }
     /* Hides <table> elements in Outlook 2007-13 issue */
 
+    .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+     
+      .block,
+      .content,
+      .safety { display: block; }
+      /* place content you want stacked here */
+ 
+      .desktop-only { display: none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
+
+      .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
+
+      .m-center { text-align: center !important; margin: 0 auto !important; }
+      .m-left { text-align: left !important; margin: 0 auto !important; }
+      .m-valign-top { vertical-align: top !important; }
+
+      .main-table .fixed-width215 { width: 215px !important; margin: 0 auto !important; }
+
+      /*.m-pt0  { padding-top: 0 !important; }*/
+      /*.m-pt5  { padding-top: 5px !important; }*/
+      /*.m-pt10 { padding-top: 10px !important; }*/
+      .m-pt15 { padding-top: 15px !important; }
+      /*.m-pt20 { padding-top: 20px !important; }*/
+      /*.m-pt25 { padding-top: 25px !important; }*/
+      /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
+      /* mobile padding top */
+      .m-pr30 {padding-right: 30px !important;}
+      /*.m-pb0  { padding-bottom: 0 !important; } */
+      /*.m-pb5  { padding-bottom: 5px !important; }*/
+      /*.m-pb10 { padding-bottom: 10px !important; }*/
+      /*.m-pb15 { padding-bottom: 15px !important; }*/
+      .m-pb20 { padding-bottom: 20px !important; }
+      /*.m-pb25 { padding-bottom: 25px !important; }*/
+      /*.m-pb30 { padding-bottom: 30px !important; }*/
+      /*.m-pb35 { padding-bottom: 35px !important; }*/
+      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      /* mobile padding bottom */
+      .m-pl0 { padding-left: 0px !important;}
+      .w100 { width: 100% !important; }
+
+    }
   </style>
+
 
 </head>
 <body>
-  <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+<div style="display: none; max-height: 0px; overflow: hidden;">
+{{build.preheader}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
 
     <tr>
       <td class="main-td">
-        <table role="presentation" class="main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
-
-      <!-- Start Preheader -->
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
+            
+      <!-- Start top ISI -->
           <tr>
-            <td class="preheader">
-              <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td valign="top">
-                    <span id="preheader">{{build.preheader}}</span>
-                  </td>
-                  <td align="right" valign="top">
-                    <a class="webversion no-wrap" href="{{token.permalink}}">View in browser</a>
-                  </td>
-                </tr>
-              </table>
-            </td>
+            <td class="header-footnote">Wegovy<sup>®</sup>, along with a reduced calorie diet and increased physical activity, may reduce the risk of major cardiovascular (CV) events such as death, heart attack, or stroke in adults with known heart disease and with either obesity or overweight, and may help adults with obesity or some adults with excess weight (overweight) who also have weight-related medical problems to lose weight and keep the weight off. Scroll to “What is Wegovy<sup>®</sup>?” for limitations of use.</td>
           </tr>
-      <!-- End Preheader -->
+          <!-- end paragraph -->
+      <!-- End top ISI -->
 
-      <!-- Start Header -->
+      <!-- Start Header links -->
           <tr>
-            <td class="header">
-              <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-
+            <td class="header-links">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                
                 <tr>
-                  <td class="header-bar">
+                  <td>
                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <td valign="top">
-                          <a class="ghost-link" href="https://www.hemlibra.com/"><img src="{{asset.logo-hemlibra-2x.url}}" alt="{{asset.logo-hemlibra-2x.alt}}" width="{{asset.logo-hemlibra-2x.width}}" height="{{asset.logo-hemlibra-2x.height}}"/></a>
-                        </td>
-                        <td align="right" valign="top">
+                        <td class="m-pr30">
                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                              <td class="ptb10 bold" align="right"><a href="https://www.gene.com/download/pdf/hemlibra_prescribing.pdf">Prescribing Information</a></td>
-                            </tr>
-                            <tr>
-                              <td class="bold" align="right"><a href="https://www.hemlibra.com/side-effects/important-safety-information.html">Important Safety Information</a></td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- end header bar -->
-                <tr>
-                  <td class="image">
-                    <a href="https://www.hemlibra.com/"><img src="{{asset.header-v2-2x.url}}" alt="{{asset.header-v2-2x.alt}}" width="{{asset.header-v2-2x.width}}" height="{{asset.header-v2-2x.height}}"/></a>
-                  </td>
-                </tr>
-                <!-- end image -->
-
-              </table>
-            </td>
-          </tr>
-      <!-- End Header -->
-      <!-- Start Content -->
-          <tr>
-            <td>
-              <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <!-- start left column -->
-                  <td class="left-content" valign="top">
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td class="h1 pb20">
-                          {% if build.type == "GENE_ACM_BATCH" %}
-                          
-                          {{'<%if(recipient.firstName == ""){%>
-                          <%}else{%>
-                            Dear <%= recipient.firstName%>,
-                          <%}%>'}}
-                          
-                          {% elsif build.type == "GENE_ACM_REALTIME" %}
-                          
-                          {{'<%if(rtEvent.ctx.firstName == ""){%>
-                          <%}else{%>
-                            Dear <%= rtEvent.ctx.firstName%>,
-                          <%}%>'}}
-                          
-                          {% else %}
-                          
-                          {{'{{ Dear First Name }}'}}
-                          
-                          {% endif %}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="pb20">Genentech is committed to supporting the hemophilia A community.</td>
-                      </tr>
-                    
-                      <!-- start callout -->
-                      <tr>
-                        <td class="blue-box">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                              <td class="h2">Connect with the hemophilia A community on Facebook</td>
-                            </tr>
-                            <tr>
-                              <td class="pt25" align="center">
-                                <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.facebook.com/hemlibra{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:277px;" arcsize="54%" stroke="f" fillcolor="#ffffff">
-                                    <w:anchorlock/>
-                                    <center>
-                                  <![endif]-->
-                                      <a href="https://www.facebook.com/hemlibra"
-                                style="background-color:#ffffff;border-radius:25px;color:#009BD3;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:257px;-webkit-text-size-adjust:none;">MEET THE COMMUNITY NOW</a>
-                                  <!--[if mso]>
-                                    </center>
-                                  </v:roundrect>
-                                <![endif]--></div>
+                              <td class="image">
+                                <a class="ghost-link" href="https://www.wegovy.com?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100"><img src="{{asset.logo-wegovy-2x.url}}" alt="{{asset.logo-wegovy-2x.alt}}" width="{{asset.logo-wegovy-2x.width}}" height="{{asset.logo-wegovy-2x.height}}"/></a>
                               </td>
                             </tr>
-                            <!-- end button -->
+                            <!-- end image -->
                           </table>
+                          <!-- end table block -->
                         </td>
-                      </tr>
-                      <!-- end callout -->
-                      <!-- start icon row -->
-                      <tr>
-                        <td class="icon-row pt20 pb40">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <td>
+                          <table align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="130" style="width:130px;">
                             <tr>
-                              <td class="find-out">
-                                Find out if there’s a live or virtual educational event near you at <a href="https://www.hemlibraevents.com/">HEMLIBRAevents.com</a>.
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>  
-                      <tr>
-                        <td class="h1 p">Get connected with an Account and Community Manager (ACM)<br/> in your area</td>
-                      </tr>
-                      <!-- tel links don't allow white space to wrap, so the one below is broken in 2 -->
-                      <tr>
-                        <td class="p">To speak with one of our ACMs, call us at <a href="tel:1-866-436-5427">1-866-HEMLIBRA</a> (<a href="tel:1-866-436-5427">1-866-436-5427</a>), Monday to Friday, 9:00 AM-8:00 PM ET (6:00 AM-5:00 PM PT).</td>
-                      </tr>
-                      <tr>
-                        <td class="p">Your local ACM is part of your hemophilia community. They are experts on HEMLIBRA. ACMs are Genentech employees. ACMs do not provide medical advice. Always talk to your doctor about treatment options.</td>
-                      </tr>
-                      <tr>
-                        <td class="p pb40">Click below to find an ACM in your area:</td>
-                      </tr>
-                      <tr>
-                        <td class="pb20">
-                          <div><!--[if mso]>
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.hemlibra.com/resources/connect-with-account-and-community-manager.html{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:140px;" arcsize="54%" strokecolor="#009BD3" fillcolor="#009BD3">
-                              <w:anchorlock/>
-                              <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">FIND AN ACM</center>
-                            </v:roundrect>
-                          <![endif]--><a href="https://www.hemlibra.com/resources/connect-with-account-and-community-manager.html"
-                          style="background-color:#009BD3;border:1px solid #009BD3;border-radius:25px;color:#ffffff;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:140px;-webkit-text-size-adjust:none;mso-hide:all;">FIND AN ACM</a></div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="pb30">
-                          Already taking HEMLIBRA? <a href="https://www.hemlibra.com/resources/downloads.html	">Click here to view our downloadable resources</a>.
-                        </td>
-                      </tr>
-                      <!-- start callout -->
-                      <tr>
-                        <td class="blue-box pt25">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                              <td class="h2 pb10">MEET OUR COMMUNITY</td>
-                            </tr>
-                            <tr>
-                              <td class="h2" style="font-weight: 400;">
-                                  Watch as members of the community talk about their HEMLIBRA experiences.
+                              <td>
+                                <a href="https://www.wegovy.com?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100#isi-anchor">Important Safety Information</a>
                               </td>
                             </tr>
                             <tr>
-                              <td class="pt25 pb15" align="center">
-                                <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.hemlibra.com/patient-stories/meet-our-community.html{% unless build.type == "THIRD_PARTY" %}?{{build.campaignQueryParameters}}{% endunless %}" style="height:47px;v-text-anchor:middle;width:158px;" arcsize="54%" stroke="f" fillcolor="#ffffff">
-                                    <w:anchorlock/>
-                                    <center>
-                                  <![endif]-->
-                                      <a href="https://www.hemlibra.com/patient-stories/meet-our-community.html"
-                                style="background-color:#ffffff;border-radius:25px;color:#009BD3;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;line-height:47px;text-align:center;text-decoration:none;width:138px;-webkit-text-size-adjust:none;">LEARN MORE</a>
-                                  <!--[if mso]>
-                                    </center>
-                                  </v:roundrect>
-                                <![endif]--></div>
+                              <td class="ptb5">
+                                <a href="https://www.novo-pi.com/wegovy.pdf?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">Prescribing Information</a>
                               </td>
                             </tr>
-                            <!-- end button -->
-                          </table>
-                        </td>
-                      </tr>
-                      <!-- end callout -->
-                    </table> 
-                  </td>
-                  <!-- end left column -->
-
-                  <!-- start right column -->
-                  <td class="safety" valign="top">
-                    
-                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="210" style="width: 210px;">
-                      <tr>
-                        <td class="rr-safety">
-                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                              <td class="h2 pb10">What is HEMLIBRA<sup>®</sup>?</td>
-                            </tr>
-                            <!-- end h2 header -->
-                            <tr>
-                              <td class="p">HEMLIBRA is a prescription medicine used for routine prophylaxis to prevent or reduce the frequency of bleeding episodes in adults and children, ages newborn and older, with hemophilia A with or without factor VIII inhibitors.</td>
-                            </tr>
-                            <tr>
-                              <td class="h3 pb10">What is the most important information I should know about HEMLIBRA?</td>
-                            </tr>
-                            <!-- end h3 header -->
-                            <tr>
-                              <td class="p bold">HEMLIBRA increases the potential for your blood to clot. People who use activated prothrombin complex concentrate (aPCC; Feiba<sup>®</sup>) to treat breakthrough bleeds while taking HEMLIBRA may be at risk of serious side effects related to blood clots.</td>
-                            </tr>
-                            <tr>
-                              <td class="p pt5 bold">These serious side effects include:</td>
-                            </tr>
-                            <tr>
-                              <td class="ul pl20">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td class="li" valign="top">&#8226;</td>
-                                    <td class="pb5"><strong>Thrombotic microangiopathy (TMA)</strong>, a condition involving blood clots and injury to small blood vessels that may cause harm to your kidneys, brain, and other organs</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="li" valign="top">&#8226;</td>
-                                    <td><strong>Blood clots (thrombotic events)</strong>, which may form in blood vessels in your arm, leg, lung, or head</td>
-                                  </tr>
-                                </table>
+                              <td>
+                                <a href="{{token.permalink}}">View web version</a>
                               </td>
                             </tr>
-                            <!-- end unordered list -->
-                            <tr>
-                              <td class="h3">Please scroll down for additional Important Safety Information.</td>
-                            </tr>
-                            <!-- end h3 header -->
                           </table>
-                        </td>
-                      </tr>
-
-                    </table>
-                  </td>
-                  <!-- end right column -->
-                </tr>
-              </table> 
-            </td>
-          </tr>
-      <!-- End Content -->
-
-      <!-- Start Safety Cont -->
-          <tr>
-            <td class="safety safety-cont">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="h2 pb10">Additional Important Safety Information</td>
-                </tr>
-                <!-- end h2 header -->
-                <tr>
-                  <td class="h3 pb10">What is the most important information I should know about HEMLIBRA? (continued)</td>
-                </tr>
-                <!-- end h3 header -->
-                <tr>
-                  <td class="p">Talk to your doctor about the signs and symptoms of these serious side effects, which can include:</td>
-                </tr>
-                <tr>
-                  <td class="ul pb5 pl20 spaced">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Confusion</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Stomach, chest, or back pain</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Weakness</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Nausea or vomiting</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Swelling, pain, or redness</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Feeling sick or faint</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Decreased urination</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Swelling of arms and legs</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Yellowing of skin and eyes</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Eye pain, swelling, or trouble seeing</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Fast heart rate</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Numbness in your face</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Headache</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Shortness of breath</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td>Coughing up blood</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class="p">If you experience any of these symptoms during or after treatment with HEMLIBRA, get medical help right away.</td>
-                </tr>
-                <tr>
-                  <td class="p bold">Carefully follow your healthcare provider’s instructions regarding when to use an on-demand bypassing agent or factor VIII, and the dose and schedule to use for breakthrough bleed treatment. If aPCC (Feiba<sup>®</sup>) is needed, talk to your healthcare provider in case you feel you need more than 100 U/kg of aPCC (Feiba<sup>®</sup>) total.</td>
-                </tr>
-                <tr>
-                  <td class="p bold">Your body may make antibodies against HEMLIBRA, which may stop HEMLIBRA from working properly. Contact your healthcare provider immediately if you notice that HEMLIBRA has stopped working for you (eg, increase in bleeds).</td>
-                </tr>
-                <tr>
-                  <td class="p"><strong>The most common side effects of HEMLIBRA include:</strong> injection site reactions (redness, tenderness, warmth, or itching at the site of injection), headache, and joint pain. These are not all of the possible side effects of HEMLIBRA. You can speak with your healthcare provider for more information.</td>
-                </tr>
-                <tr>
-                  <td class="h3 pb10">What else should I know about HEMLIBRA?</td>
-                </tr>
-                <!-- end h3 header -->
-                <tr>
-                  <td class="p bold">See the detailed "Instructions for Use" that comes with your HEMLIBRA for information on how to prepare and inject a dose of HEMLIBRA, and how to properly throw away (dispose of) used needles and syringes.</td>
-                </tr>
-                <tr>
-                  <td class="ul pl20">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td class="bold pb5">Stop taking your prophylactic bypassing therapy the day before you start HEMLIBRA</td>
-                      </tr>
-                      <tr>
-                        <td class="li" valign="top">&#8226;</td>
-                        <td class="bold">You may continue taking your prophylactic factor VIII for the first week of HEMLIBRA</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- end unordered list -->
-                <tr>
-                  <td class="p">HEMLIBRA may interfere with laboratory tests that measure how well your blood is clotting and create an inaccurate result. Speak with your healthcare provider about how this may affect your care.</td>
-                </tr>
-                <tr>
-                  <td class="p">Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Only use HEMLIBRA for the condition it was prescribed. Do not give HEMLIBRA to other people, even if they have the same symptoms that you have. It may harm them.</td>
-                </tr>
-                <tr>
-                  <td class="p"><strong>Tell your healthcare provider about all the medicines you take</strong>, including prescription medicines, over-the-counter medicines, vitamins, or herbal supplements. Keep a list of them to show your healthcare provider and pharmacist.</td>
-                </tr>
-                <tr>
-                  <td class="p"><strong>Before using HEMLIBRA, tell your healthcare provider about all of your medical conditions,</strong> including if you are pregnant, plan to become pregnant, are breastfeeding, or plan to breastfeed.</td>
-                </tr>
-                <tr>
-                  <td class="p">Since HEMLIBRA was tested in males, there is no information on whether HEMLIBRA may impact your unborn baby or breast milk. Females who are able to become pregnant should use birth control during treatment.</td>
-                </tr>
-                <tr>
-                  <td class="p">Side effects may be reported to the FDA at <a href="tel:1-800-332-1088">(800) FDA-1088</a> or <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program">www.fda.gov/medwatch</a>. You may also report side effects to Genentech at <a href="tel:1-888-835-2555">(888) 835-2555</a>.</td>
-                </tr>
-                <tr>
-                  <td class="p">Please see Important Safety Information, including <strong>Serious Side Effects</strong>, as well as the HEMLIBRA full <a href="https://www.gene.com/download/pdf/hemlibra_prescribing.pdf	">Prescribing Information</a> and <a href="https://www.gene.com/download/pdf/hemlibra_medguide.pdf	">Medication Guide</a>.</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-      <!-- End Safety Cont -->
-
-      <!-- Start Social Section -->
-          <tr>
-            <td class="social-icons">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="190" style="width:190px;">
-                <tr>
-                  <td class="pr15" align="center">
-                    <a class="ghost-link" href="https://www.facebook.com/hemlibra"><img src="{{asset.social-facebook-2x.url}}" alt="{{asset.social-facebook-2x.alt}}" width="{{asset.social-facebook-2x.width}}" height="{{asset.social-facebook-2x.height}}"/></a>
-                  </td>
-                  <td class="pr15" align="center">
-                    <a class="ghost-link" href="https://www.instagram.com/hemlibra_emicizumab/"><img src="{{asset.social-instagram-2x.url}}" alt="{{asset.social-instagram-2x.alt}}" width="{{asset.social-instagram-2x.width}}" height="{{asset.social-instagram-2x.height}}"/></a>
-                  </td>
-                  <td class="pr15" align="center">
-                    <a class="ghost-link" href="https://www.tiktok.com/@hemlibra"><img src="{{asset.social-tiktok-2x.url}}" alt="{{asset.social-tiktok-2x.alt}}" width="{{asset.social-tiktok-2x.width}}" height="{{asset.social-tiktok-2x.height}}"/></a>
-                  </td>
-                  <td align="center">
-                    <a class="ghost-link" href="https://open.spotify.com/artist/4CUW1h6STJycrvTs3rxxwe"><img src="{{asset.social-spotify-2x.url}}" alt="{{asset.social-spotify-2x.alt}}" width="{{asset.social-spotify-2x.width}}" height="{{asset.social-spotify-2x.height}}"/></a>
-                  </td>
-                </tr>
-                
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td class="prl20">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                 <tr>
-                  <td class="black bold pb30">This commercial email is brought to you by Genentech USA, Inc.</td>
-                </tr>
-                <!-- end paragraph -->
-              </table>
-              <!-- end table block -->
-            </td>
-          </tr>  
-          <!-- End Social Section -->
-          <!-- Start Footer -->
-          {% if build.type != "THIRD_PARTY" %}
-          <tr>
-            <td class="footer" style="padding-left: 25px; padding-right: 25px; border-top: 2px solid #BBBBBB; background-color: #ffffff;">
-              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="image" style="line-height:1; font-family: Arial, sans-serif; padding-top: 25px; padding-bottom: 30px;">
-                    <a style="display:inline-block;" href="https://www.gene.com/"><img src="{{asset.logo-gene-2x.url}}" alt="{{asset.logo-gene-2x.alt}}" width="{{asset.logo-gene-2x.width}}" height="{{asset.logo-gene-2x.height}}" /></a>
-                  </td>
-                </tr>
-                <!-- end image -->
-                <tr>
-                  <td class="legal" style="padding-bottom: 35px;">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
-                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/contact-us">Contact Us</a>
-                        </td>
-                        <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
-                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/privacy-policy">Privacy Policy</a>
-                        </td>
-                        <td class="pr40 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
-                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/terms-conditions">Terms and Conditions</a>
-                        </td>
-                        <td class="block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px;">
-                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                          <!-- end table block -->
                         </td>
                       </tr>
                     </table>
                     <!-- end table block -->
                   </td>
                 </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">This email is intended for US residents only.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech, Inc. All rights reserved.</td>
-                </tr>
-                <!-- end paragraph -->
-                <tr>
-                  <td style="font-family: Arial, sans-serif; color: #182628; font-size: 12px; line-height: 14px; padding-bottom: 25px;">
-                    Genentech USA, Inc. 1 DNA Way, South San Francisco, CA <span style="white-space: nowrap;">94080-4990</span>
-                  </td>
-                </tr>
-              </table> 
+              </table>
             </td>
           </tr>
-          {% endif %}
-          <!-- End Footer -->
+      <!-- End Header links -->
+          <tr>
+            <td style="background-color: #F3F4F4;">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F3F4F4" style="background-color: #F3F4F4;">
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <img class="width-auto w100" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/>
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="desktop-only image">
+                    <img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="content pt12">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="white-container" align="center">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5 bold">
+                                Inspire people like you
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pb24">
+                                We know how important it is for people taking Wegovy<sup>®</sup> to hear from those who understand what they’re going through. That’s why we’re asking you to share how Wegovy<sup>®</sup> has supported your weight-loss journey.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pb5">
+                                <strong>What to expect</strong>*
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pb8">
+                                If you're interested, you'll share some information to help us determine if you're a match for the program. Once eligible, we'll arrange for you to tell your story! There may be opportunities to:
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="ul pb8">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td class="pb5">Join a photoshoot</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td class="pb5">Take part in live events</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="li" valign="top">•</td>
+                                    <td>Be in a video</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end unordered list -->
+                            <tr>
+                              <td>
+                                You may be compensated for your time.
+                              </td>
+                            </tr>
+                          </table>
+                        <!-- end table block -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="blue-container" align="center">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="title">
+                                Ready to get started?
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pb16">
+                                Call or email to let us know you’re interested in learning more.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="block m-pb20">
+                                      Call <br class="mobile-only"/><a class="bold" href="tel:1-855-370-3959">1-855-370-3959</a>
+                                    </td>
+                                    <td class="block m-left" align="right">
+                                        Email <br class="mobile-only"/><a class="bold" href="mailto:weinspire@mypatientstory.com">WeInspire@mypatientstory.com</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                     
+                      <tr>
+                        <td class="blue-container-footnote">*Selected eligible patients will be asked to share their personal stories in a variety of potential activities as part of the Wegovy<sup>®</sup> Ambassador Program to provide more information to the patient community. Activities may include, but are not limited to, live programs, videos, photography, public speaking, public relations, and online programs. An honorarium may be provided to participants as compensation for their contributions and for time away from family and/or work. Please keep in mind that all candidates must go through a screening process, and not everyone screened will be able to participate.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                    
+                      
+                    </table> 
+                  </td>
+                </tr>
+                <!-- End Content -->
+                <tr>
+                  <td class="safety pt20">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h1">
+                          Important Safety Information
+                        </td>
+                      </tr>
+                       <tr>
+                        <td class="h2">What is the most important information I should know about Wegovy<sup>®</sup>? </td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="bold pb8">
+                          Wegovy<sup>®</sup> may cause serious side effects, including:
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ul pb12">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                           
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">
+                                <strong>Possible thyroid tumors, including cancer.</strong> Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, Wegovy<sup>®</sup> and other medicines that work like Wegovy<sup>®</sup> caused thyroid tumors, including thyroid cancer. It is not known if Wegovy<sup>®</sup> will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>Do not use Wegovy<sup>®</sup> if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h1">What is Wegovy<sup>®</sup>?</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> (semaglutide) injection and Wegovy<sup>®</sup> (semaglutide) tablets are prescription medicines used with a reduced calorie diet and increased physical activity to:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">reduce the risk of major cardiovascular events such as death, heart attack, or stroke in adults with known heart disease and with either obesity or overweight.</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>help adults with obesity, or some adults with excess weight (overweight) who also have weight-related medical problems to lose weight and keep the weight off.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> contains semaglutide and should not be used with other semaglutide-containing products or other GLP-1 receptor agonist medicines.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p"> It is not known if Wegovy<sup>®</sup> injection is safe and effective:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">to reduce the risk of major cardiovascular events (death, heart attack, or stroke) in people under 18 years</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>to help children under 12 years of age lose weight and keep the weight off </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="pb12"> It is not known if Wegovy<sup>®</sup> tablets are safe and effective for use in people under 18 years of age.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="h1">Important Safety Information (continued)</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="h2">Do not use Wegovy<sup>®</sup> if:</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="ul pb12">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>you have had a serious allergic reaction to semaglutide or any of the ingredients in Wegovy<sup>®</sup> injection or Wegovy<sup>®</sup> tablets. See symptoms of serious allergic reaction in <strong>“What are the possible side effects of Wegovy<sup>®</sup>?”</strong></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h2">Before using Wegovy<sup>®</sup>, tell your healthcare provider if you have any other medical conditions, including if you:</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">have or have had problems with your pancreas or kidneys</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">have type 2 diabetes and a history of diabetic retinopathy</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">are scheduled to have surgery or other procedures that use anesthesia or deep sleepiness (deep sedation)</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8">are pregnant or plan to become pregnant. Wegovy<sup>®</sup> may harm your unborn baby. You should stop using Wegovy<sup>®</sup> 2 months before you plan to become pregnant</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>are breastfeeding or plan to breastfeed. Breastfeeding is not recommended during treatment with Wegovy<sup>®</sup> tablets. It is not known if Wegovy<sup>®</sup> when received through an injection passes into your breast milk</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="pb12"><strong>Tell your healthcare provider about all the medicines you take,</strong> including prescription and over-the-counter medicines, vitamins, and herbal supplements. Wegovy<sup>®</sup> may affect the way some medicines work and some medicines may affect the way Wegovy<sup>®</sup> works. Tell your healthcare provider if you are taking other medicines to treat diabetes, including sulfonylureas or insulin. Wegovy<sup>®</sup> slows stomach emptying and can affect medicines that need to pass through the stomach quickly.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="h1">What are the possible side effects of Wegovy<sup>®</sup>?</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="p bold">Wegovy<sup>®</sup> may cause serious side effects, including:</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>inflammation of your pancreas (pancreatitis).</strong> Stop using Wegovy<sup>®</sup> and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without nausea or vomiting. Sometimes you may feel the pain from your abdomen to your back</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>gallbladder problems.</strong> Wegovy<sup>®</sup> may cause gallbladder problems, including gallstones. Some gallstones may need surgery. Call your healthcare provider if you have symptoms, such as pain in your upper stomach (abdomen), fever, yellowing of the skin or eyes (jaundice), or clay-colored stools</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>increased risk of low blood sugar (hypoglycemia), especially those who also take medicines for diabetes such as insulin or sulfonylureas.</strong> This can be a serious side effect. Talk to your healthcare provider about how to recognize and treat low blood sugar and check your blood sugar before you start and while you take Wegovy<sup>®</sup>. Signs and symptoms of low blood sugar may include dizziness or light-headedness, blurred vision, anxiety, irritability or mood changes, sweating, slurred speech, hunger, confusion or drowsiness, shakiness, weakness, headache, fast heartbeat, or feeling jittery</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>dehydration leading to kidney problems.</strong> Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration), which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>severe stomach problems.</strong> Stomach problems, sometimes severe, have been reported in people who use Wegovy<sup>®</sup>. Tell your healthcare provider if you have stomach problems that are severe or will not go away</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>serious allergic reactions.</strong> Stop using Wegovy<sup>®</sup> and get medical help right away, if you have any symptoms of a serious allergic reaction, including swelling of your face, lips, tongue, or throat; problems breathing or swallowing; severe rash or itching; fainting or feeling dizzy; or very rapid heartbeat </td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>change in vision in people with type 2 diabetes.</strong> Tell your healthcare provider if you have changes in vision during treatment with Wegovy<sup>®</sup></td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td class="pb8"><strong>increased heart rate.</strong> Wegovy<sup>®</sup> can increase your heart rate while you are at rest. Tell your healthcare provider if you feel your heart racing or pounding in your chest and it lasts for several minutes</td>
+                            </tr>
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td><strong>food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation).</strong> Wegovy<sup>®</sup> may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking Wegovy<sup>®</sup> before you are scheduled to have surgery or other procedures</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="p"><strong>The most common side effects of Wegovy<sup>®</sup> may include:</strong> nausea, diarrhea, vomiting, constipation, stomach (abdomen) pain, changes in skin sensations, headache, tiredness (fatigue), upset stomach, dizziness, feeling bloated, belching, low blood sugar in people with type 2 diabetes, gas, stomach flu, heartburn, and hair loss.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p bold">Please see <a class="pink underline" href="https://www.novo-pi.com/wegovy.pdf?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">Prescribing Information</a> and <a class="pink underline" href="https://www.novo-pi.com/wegovy.pdf?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100#guide">Medication Guide</a> for Wegovy<sup>®</sup>.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p">Wegovy<sup>®</sup> is a prescription medication.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="p">You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a class="pink underline" href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">www.fda.gov/medwatch</a>, or call <a class="pink underline" href="tel:1-800-332-1088">1-800-FDA-1088</a>.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      <tr>
+                        <td class="pb24">Novo Nordisk provides savings options for those who qualify. Visit <a class="pink underline" href="https://www.novocare.com/patient/medicines/wegovy.html?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">mywegovycost.com</a> to learn more.</td>
+                      </tr>
+                      <!-- end paragraph -->
+                      
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="footnote pb16">PLEASE DO NOT RESPOND TO THIS EMAIL. If you would like to contact us, please <a class="pink underline" href="https://www.novonordisk-us.com/contact-us.html?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">click here</a> or call <a class="black no-underline" href="tel:1-877-744-2579">1-877-744-2579</a>. </td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">UNSUBSCRIBE NOTICE<br />
+                        If you no longer want to receive communications from Novo Nordisk, <a class="pink underline" href="{{build.unsubscribeLink}}">click here</a> to unsubscribe. You may also call us at <a class="black no-underline" href="tel:1-877-744-2579">1-877-744-2579</a> or send us a letter that includes your full contact information (eg, name, email address, phone) to Novo Nordisk, 800 Scudders Mill Road, Plainsboro, New Jersey 08536. To better understand how Novo Nordisk values your privacy, see our <a class="pink underline" href="https://www.novonordisk-us.com/privacy-notice.html?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100">Privacy Statement</a>.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">Novo Nordisk Inc., 800 Scudders Mill Road, Plainsboro, New Jersey 08536 U.S.A.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb0">Wegovy<sup>®</sup> is a registered trademark of Novo Nordisk A/S.</td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td class="footnote pb16">Novo Nordisk is a registered trademark of Novo Nordisk A/S. </td>
+                      </tr>
+                      <!-- end footnote -->
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <!-- Start left column -->
+                              <td class="column2 pr10 m-valign-top" valign="bottom" width="70%">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="footnote pb5">
+                                      &#169;&nbsp;2026 Novo Nordisk&nbsp;&nbsp;All rights reserved.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="footnote">
+                                      US26SEMO01100&nbsp;&nbsp;June 2026
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <!-- End left column -->
+                              <!-- Start right column -->
+                              <td class="column2 pl10 m-valign-top" valign="bottom" width="30%">
+                                <table align="right" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="image" align="right">
+                                      <a class="ghost-link" href="https://www.novonordisk-us.com?tc=em_cu12oxh&cc=2019&utm_medium=email&utm_source=almk&utm_campaign=wegovy_7.2&utm_content=general_information_us26semo01100"><img src="{{asset.logo-novo-nordisk-2x.url}}" alt="{{asset.logo-novo-nordisk-2x.alt}}" width="{{asset.logo-novo-nordisk-2x.width}}" height="{{asset.logo-novo-nordisk-2x.height}}"/></a>
+                                    </td>
+                                  </tr>
+                                  <!-- end image -->
+                                </table>
+                              </td>
+                              <!-- End right column -->
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
         </table>
       </td>
     </tr>
+
   </table>
   <!-- end table wrapper -->
 
@@ -854,6 +967,6 @@
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div>
 
-  
+
 </body>
 </html>
