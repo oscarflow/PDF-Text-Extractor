@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Target IE10 phones -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style type="text/css">
+  /***************************************
+                GLOBAL STYLES
+    ****************************************/
+    .main-td {
+      font-family: Tahoma, Verdana, Segoe, sans-serif;
+      font-size: 12px;
+      color: #323232;
+      line-height: 16px;
+      background-color: #ffffff;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+    }
+
+    .h1 { font-size: 24px; line-height: 28px; color: #7d0c6d; font-weight: bold; }
+    .h2 { font-size: 16px; line-height: 20px; color: #003479; font-weight: bold; }
+    .h3 { font-size: 12px; line-height: 16px; color: #003479; font-weight: bold; }
+    .h4 { font-size: 12px; line-height: 16px; color: #003479; font-weight: bold; }
+    .h5 { font-size: 10px; line-height: 14px; color: #003479; font-weight: bold; }
+
+    .p,
+    .ul { padding-bottom: 15px; }
+
+    .li { width: 1px; }
+    .ul .li { padding-right: 5px; }
+
+    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
+    .ul tr:first-child .li + td { width: 100%;}
+
+    .references tr:first-child .li + td { width: auto;}
+    .references .li { width: 15px; }
+    /*fixes width issue in yahoo*/
+
+    .footnote,
+    .footnote td { font-size: 11px; line-height: 12px; }
+
+    sup, sub { line-height: 0; font-size: 75%; }
+
+    .webversion-link { color: #861c72; text-decoration: underline; }
+    .link-divider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
+    .no-underline { text-decoration: none; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+    .no-link { color: #000001; text-decoration: none; cursor: text; }
+
+    .mobile-only { display: none; max-height:0px; overflow:hidden; }
+    /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    .no-wrap { white-space: nowrap; }
+    a[href^="tel:"] { white-space: nowrap; }
+
+    .legal a { text-decoration: none; }
+    .legal a span { text-decoration: underline; }
+
+    .black { color: #000001; }  
+    .white { color: #ffffff; }
+    .purple { color: #7d0c6d; }
+    .orange { color: #cb4c04 !important;}
+    .button { 
+      background-color: #f6a11c;
+      border: 1px solid #f6a11c;
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .button a { 
+      color: #ffffff;  
+      text-decoration: none; 
+      display: block; 
+      font-weight: bold;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border: 1px solid #f6a11c;
+      border-radius: 25px; 
+    }
+
+    .footer td { font-family: Arial, sans-serif; }
+
+    .legal-links td { font-size: 12px; line-height: 16px; color: #7d0c6d; }
+    .references td { font-size: 11px; line-height: 13px; color: #000001; }
+    .hardcoded-safety { font-size: 12px; line-height: 16px; color: #000001; }
+  
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+    .ptb0  { padding-top: 0; padding-bottom: 0; }
+    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
+    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
+    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
+    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
+    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    /* Padding top and bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
+
+    .pt0  { padding-top: 0; }
+    .pt5  { padding-top: 5px; }
+    .pt10 { padding-top: 10px; } 
+    .pt15 { padding-top: 15px; } 
+    .pt20 { padding-top: 20px; } 
+    .pt25 { padding-top: 25px; }
+    .pt30 { padding-top: 30px; }
+    .pt35 { padding-top: 35px; }
+    .pt40 { padding-top: 40px; }
+    /* padding top */
+
+    .pr0  { padding-right: 0; } 
+    .pr5  { padding-right: 5px; }  
+    .pr10 { padding-right: 10px; }
+    .pr15 { padding-right: 15px; }
+    .pr20 { padding-right: 20px; }
+    .pr25 { padding-right: 25px; }
+    .pr30 { padding-right: 30px; }
+    .pr35 { padding-right: 35px; }
+    .pr40 { padding-right: 40px; }
+    /* padding right */
+
+
+    .pb0  { padding-bottom: 0; } 
+    .pb5  { padding-bottom: 5px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb15 { padding-bottom: 15px; }
+    .pb20 { padding-bottom: 20px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    /* padding bottom */
+
+    .pl0  { padding-left: 0; }
+    .pl5  { padding-left: 5px; }
+    .pl10 { padding-left: 10px; }
+    .pl15 { padding-left: 15px; }
+    .pl20 { padding-left: 20px; }
+    .pl25 { padding-left: 25px; }
+    .pl30 { padding-left: 30px; }
+    .pl35 { padding-left: 35px; }
+    .pl40 { padding-left: 40px; }
+    /* padding left */
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    #outlook a { padding: 0; } 
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body{ width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin: 0; padding: 0; } 
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
+
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; } 
+    a img { border:none; }
+    /* Some sensible defaults for images*/
+
+    .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
+
+    .safety table { border-collapse: collapse; }
+    /*Fixes misalignments in the tables for iMSafe snippets*/
+
+  /***************************************
+               SAFETY STYLES 
+  ****************************************/
+
+  .safety .h2 {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #f6a11c;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .safety .h3 {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #f6a11c;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .safety .p,
+  .safety .ul {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #000001;
+    padding-bottom: 5px;
+  }
+  .safety .ul td {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    padding-bottom: 3px; color: #000001;
+  }
+  .safety .ul .ul { padding-bottom: 0; }
+  .safety .ul .li { color: #f6a11c; }
+  .safety a { 
+    color: #323232;
+    
+  }
+  .safety u a { text-decoration: underline; }
+  </style>
+
+    <!--[if gte mso 9]>
+        <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        <style type="text/css">
+          sup, sub { font-size: 100% !important; }
+          table { border-collapse: collapse; border-spacing: 0; }
+        </style> 
+      <![endif]-->
+      <style type="text/css" data-embed>
+      /***************************************
+                  GLOBAL STYLES
+      ****************************************/
+
+      body,
+      td {
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        font-size: 12px;
+        color: #323232;
+        line-height: 16px;
+      }
+      /* Render font family properly in Outlook */
+
+      table { font-size: inherit; }
+      /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+      * { line-height: inherit; }
+      /* Prevent Outlook.com from overriding line-height */
+
+      table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+      /* Outlook 07, 10 Padding issue fix
+      Bring inline: No.*/
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      /* Disguises iOS auto links */
+
+      .mobile-only { 
+        display: none; 
+        max-height: 0px; 
+        overflow: hidden;
+        mso-hide: all; 
+      }
+      /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
+
+      .mobile-only table { 
+        mso-hide: all; 
+      }
+      /* Hides <table> elements in Outlook 2007-13 issue */
+
+      /***************************************
+                 MOBILE STYLES
+      ****************************************/
+
+      @media only screen and (max-width: 37.5em) {
+
+        .main-table { width: 100% !important; }
+        .main-td { min-width: initial !important; }
+
+        .main-table table { width:100% !important; margin: 0 auto !important; }
+
+        .block, 
+        .content, 
+        .safety { display: block; }
+        /* place content you want stacked here */
+
+        .desktop-only { display: none !important; }
+        /* hide elements for mobile */
+
+        img { max-width: 100% !important; height: auto !important; }
+        /* large images resize down according to their parent container size */
+
+        .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+        .width-auto { width: auto !important; height: auto !important; }
+        /*add to mobile-only images and make sure width and height values are set to zero*/
+
+        .max-none { max-width: none !important; }
+        /*add to image class to expand to full width*/
+
+        .main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }
+        .main-table .fixed-image { width: 111px !important; margin: 0 auto !important; }
+
+        /*.m-pt0  { padding-top: 0 !important; }*/
+        .m-pt3 { padding-top: 3px !important; }
+        /*.m-pt5  { padding-top: 5px !important; }*/
+        /*.m-pt10 { padding-top: 10px !important; }*/ 
+        /*.m-pt15 { padding-top: 15px !important; }*/
+        /*.m-pt20 { padding-top: 20px !important; }*/
+        .m-pt25 { padding-top: 25px !important; }
+        /*.m-pt30 { padding-top: 30px !important; }*/
+        /*.m-pt35 { padding-top: 35px !important; }*/
+        /*.m-pt40 { padding-top: 40px !important; }*/
+        /* mobile padding top */
+
+        .m-pb0  { padding-bottom: 0 !important; } 
+        .m-pb5  { padding-bottom: 5px !important; }
+        .m-pb10 { padding-bottom: 10px !important; }
+        /*.m-pb15 { padding-bottom: 15px !important; }*/
+        .m-pb20 { padding-bottom: 20px !important; }
+        .m-pb25 { padding-bottom: 25px !important; }
+        /*.m-pb30 { padding-bottom: 30px !important; }*/
+        /*.m-pb35 { padding-bottom: 35px !important; }*/
+        /*.m-pb40 { padding-bottom: 40px !important; }*/
+        /* mobile padding bottom */
+
+        .m-pr0 { padding-right: 0 !important; }
+        .m-pr15 { padding-right: 15px !important; }
+        .m-pr25 { padding-right: 25px !important; }
+
+        .m-prl10 { padding-left: 10px !important; padding-right: 10px !important; }
+        .m-prl15 { padding-left: 15px !important; padding-right: 15px !important; }
+
+        .m-left { text-align: left !important; }
+        .m-center { text-align: center !important; }
+
+        .references td { font-size: 13px !important; line-height: 16px !important; }
+
+        .icon-1,
+        .icon-2,
+        .icon-3 { max-width: 18px !important; height: auto !important; }
+        .box-yellow { background-color: #fcfbe3 !important; padding-top: 5px !important; padding-bottom: 15px !important;}
+
+        .main-table .link-container1 { width: 274px !important; margin: 0 auto !important; }
+        .main-table .link-container2 { width: 160px !important; margin: 0 auto !important; }
+
+        .mobile-footer { width: 260px !important; margin: 0 auto !important; }
+        .mobile-footer .footer-links .li { padding-right: 10px !important; }
+
+        .footer-links a { font-weight: bold !important; color: #7d0c6d !important; text-decoration: none !important; }
+        .footer-links img { width: 18px !important; }
+        .footer-links td { font-size: 11px !important; line-height: 12px !important; }
+      }
+      </style>
+
+</head>
+<body>
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+
+    <tr>
+      <td class="main-td">
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}}">
+
+      <!-- Start Preheader -->
+          <tr>
+            <td class="preheader pt15 pb10">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="pl20 block m-prl15 m-pb10">
+                    <span id="preheader">{{build.preheader}}</span>
+                  </td>
+                  <td class="pr15 block m-left m-prl15 m-pb10" align="right">
+                    <a class="webversion-link" href="{{token.permalink}}">View in browser</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      <!-- End Preheader -->
+
+      <!-- Start Header -->
+          <!-- begin mobile content -->
+          <tr class="mobile-only">
+            <td class="mobile-only pb20">
+              <div class="mobile-only">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td valign="top">
+                      <img class="width-auto" src="{{asset.header-mobile-left-2x.url}}" alt="{{asset.header-mobile-left-2x.alt}}" width="0" height="0"/> 
+                    </td>
+                    <td valign="top">
+                      <a class="ghost-link" href="https://www.kadcyla.com/hcp.html">
+                         <img class="width-auto" src="{{asset.header-mobile-right-2x.url}}" alt="{{asset.header-mobile-right-2x.alt}}" width="0" height="0"/> 
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+                <!-- end table block -->
+              </div>
+            </td>
+          </tr>
+          <!-- end mobile content -->
+          <tr>
+            <td class="desktop-only header pb30">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <img src="{{asset.header-desktop-left-2x.url}}" alt="{{asset.header-desktop-left-2x.alt}}" width="{{asset.header-desktop-left-2x.width}}" height="{{asset.header-desktop-left-2x.height}}"/>
+                  </td>
+                  <td valign="top">
+                    <a href="https://www.kadcyla.com/hcp.html">
+                    <img src="{{asset.header-desktop-right-2x.url}}" alt="{{asset.header-desktop-right-2x.alt}}" width="{{asset.header-desktop-right-2x.width}}" height="{{asset.header-desktop-right-2x.height}}"/></a>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+      <!-- End Header -->
+      <!-- Start Content -->
+          <tr>
+            <td class="prl30 m-prl15">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only sprinkled-safety">
+                    <div class="mobile-only">
+                      <table class="safety" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="h2">Indication
+                          </td>
+                        </tr>
+                        <!-- end h2 header -->
+                        <tr>
+                          <td class="p">KADCYLA<sup>®</sup> (ado-trastuzumab emtansine), as a single agent, is indicated for the adjuvant treatment of patients with HER2-positive early breast cancer who have residual invasive disease after neoadjuvant taxane and trastuzumab-based treatment. 
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+                        <tr>
+                          <td class="p">Select patients for therapy based on an FDA-authorized test for KADCYLA.
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+                      </table>
+                      <!-- end table block -->
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="hardcoded-safety pb20 bold">Please see Important Safety Information below.</td>
+                        </tr>
+                        <!-- end paragraph -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="h1 pb25 m-prl15" align="center">Are you providing a full course of KADCYLA treatment after surgery?
+                  </td>
+                </tr>
+                <!-- end h1 header -->
+                <tr>
+                  <td class="p pb25">Your eligible patients should receive a total of <strong>14 cycles of KADCYLA</strong> in the adjuvant setting, unless there is disease recurrence or unmanageable toxicity.<sup>2</sup></td>
+                </tr>
+                <!-- end paragraph -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td class="pl30 pr20 pb20">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                
+                <tr>
+                  <!-- start left column -->
+                  <td class="content" valign="top">
+
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                     
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <!-- begin mobile content -->
+                            <tr class="mobile-only">
+                              <td class="mobile-only">
+                                <div class="mobile-only">      
+                                   <img class="width-auto" src="{{asset.chart-mobile-2x.url}}" alt="{{asset.chart-mobile-2x.alt}}" width="0" height="0"/>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- end mobile content -->
+                            <tr>
+                              <td class="image desktop-only">
+                                <img src="{{asset.chart-desktop-2x.url}}" alt="{{asset.chart-desktop-2x.alt}}" width="{{asset.chart-desktop-2x.width}}" height="{{asset.chart-desktop-2x.height}}"/>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+
+                    </table> 
+                  </td>
+                  <!-- end left column -->
+
+                  <!-- start right column -->
+                  <td class="safety desktop-only" valign="top">
+                    
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="215" style="width:215px;">
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="h2">Indication
+                              </td>
+                            </tr>
+                            <!-- end h2 header -->
+                            <tr>
+                              <td class="p">KADCYLA<sup>®</sup> (ado-trastuzumab emtansine), as a single agent, is indicated for the adjuvant treatment of patients with HER2-positive early breast cancer who have residual invasive disease after neoadjuvant taxane and trastuzumab-based treatment.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p">Select patients for therapy based on an FDA-authorized test for KADCYLA.
+                              </td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p bold">Please see Important Safety Information below.</td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table> 
+                  </td>
+                  <!-- end right column -->
+                </tr>
+              </table> 
+            </td>
+          </tr>
+          <tr>
+           <td class="prl30 m-prl15">
+             <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="pb20">Learn more about dosing considerations and how to manage patients throughout their treatment. </td>
+                </tr>
+                <!-- end paragraph -->
+               <tr>
+                 <td class="pb20">
+                   <table class="fixed-width300" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="300" style="width:300px;">
+                     <tr>
+                       <td class="button" align="center"><a href="https://www.kadcyla.com/hcp/early-breast-cancer/dosing.html">Review full dosing guidelines &gt;</a></td>
+                     </tr>
+                   </table>
+                 </td>
+               </tr>
+               <!-- end button -->
+             </table>
+             <!-- end table block -->
+           </td>
+          </tr>
+      <!-- Start Safety -->
+          <tr>
+            <td class="safety prl30 m-prl15 pt20">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h2">Important Safety Information</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="h3">BOXED WARNINGS: HEPATOTOXICITY, CARDIAC TOXICITY, EMBRYO-FETAL TOXICITY   
+                  </td>
+                </tr>
+                <!-- end h3 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">&#8226;</td>
+                        <td class="bold">Hepatotoxicity: Serious hepatotoxicity has been reported, including liver failure and death in patients treated with KADCYLA. Monitor serum transaminases and bilirubin prior to initiation of KADCYLA treatment and prior to each KADCYLA dose. Reduce dose or discontinue KADCYLA as appropriate in cases of increased serum transaminases or total bilirubin </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">&#8226;</td>
+                        <td class="bold">Cardiac Toxicity: KADCYLA administration may lead to reductions in left ventricular ejection fraction (LVEF). Evaluate left ventricular function in all patients prior to and during treatment with KADCYLA. Withhold treatment for clinically significant decrease in left ventricular function</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">&#8226;</td>
+                        <td class="bold">Embryo-Fetal Toxicity: Exposure to KADCYLA during pregnancy can result in embryo-fetal harm. Advise patients of these risks and the need for effective contraception</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End Safety -->
+       
+      <!-- Start Safety (cont'd)-->
+            <tr>
+              <td class="safety prl30 pb15 m-prl15">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  
+                  <tr>
+                    <td class="h3">Warnings and Precautions
+   
+                    </td>
+                  </tr>
+                  <!-- end h3 header -->
+                  <tr>
+                    <td class="p bold">Hepatotoxicity
+                    </td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Hepatotoxicity, predominantly in the form of asymptomatic increases in the concentrations of serum transaminases, has been observed in KADCYLA clinical trials. Serious hepatotoxicity, including 3 fatal cases, has been observed in clinical trials with KADCYLA as single-agent. Monitor serum transaminases and bilirubin prior to initiation of KADCYLA treatment and prior to each KADCYLA dose. Reduce dose or discontinue KADCYLA as appropriate in cases of increased serum transaminases or total bilirubin </td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Cases of nodular regenerative hyperplasia (NRH) of the liver, some fatal, have been observed in KADCYLA clinical trials. Permanently discontinue KADCYLA upon NRH diagnosis
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Left Ventricular Dysfunction (LVD)</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Patients treated with KADCYLA are at increased risk of developing LVD</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE for patients with early breast cancer (EBC), LVD occurred in 0.4% of patients in the KADCYLA group and 0.6% of patients in the trastuzumab group</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Assess LVEF prior to initiation of KADCYLA and at regular intervals during treatment. Permanently discontinue KADCYLA if LVEF has not improved or has declined further</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Embryo-Fetal Toxicity</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Verify the pregnancy status of females of reproductive potential prior to the initiation of KADCYLA
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Advise pregnant women and females of reproductive potential that exposure to KADCYLA during pregnancy or within 7 months prior to conception can result in fetal harm </td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Advise females of reproductive potential to use effective contraception during treatment and for 7 months following the last dose of KADCYLA</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Advise male patients with female partners of reproductive potential to use effective contraception during treatment and for 4 months following the last dose of KADCYLA</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>If KADCYLA is administered during pregnancy, or if the patient becomes pregnant while receiving KADCYLA or within 7 months of the last dose of KADCYLA, immediately report exposure to Genentech at <a class="bold no-underline" href="tel:1-888-835-2555">1-888-835-2555</a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Pulmonary Toxicity</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Cases of interstitial lung disease (ILD), including pneumonitis, some leading to acute respiratory distress syndrome or fatal outcome, have been reported in KADCYLA clinical trials  
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE, pneumonitis was reported at an incidence of 1.1% (8 out of 740 patients treated with KADCYLA), with one case of Grade 3 pneumonitis. Radiation pneumonitis was reported at an incidence of 1.8% (11 out of 623 patients treated with adjuvant radiotherapy and KADCYLA), with 2 cases of Grade 3 radiation pneumonitis</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Permanently discontinue treatment with KADCYLA in patients diagnosed with ILD or pneumonitis
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>For patients with radiation pneumonitis in the adjuvant setting, KADCYLA should be permanently discontinued for Grade ≥ 3 or for Grade 2 not responding to standard treatment</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Infusion-Related Reactions, Hypersensitivity Reactions</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Treatment with KADCYLA has not been studied in patients who had trastuzumab permanently discontinued due to infusion-related reactions (IRR) and/or hypersensitivity reactions; treatment with KADCYLA is not recommended for these patients</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE, the overall incidence of IRR in patients treated with KADCYLA was 1.6%</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In most patients, these reactions resolved over the course of several hours to a day after the infusion was terminated</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>KADCYLA treatment should be interrupted in patients with severe IRR and permanently discontinued in the event of a life-threatening IRR. Patients should be closely monitored for IRR, especially during the first infusion</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Hemorrhage</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Hemorrhagic events, sometimes fatal, have been reported in KADCYLA clinical trials</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE, the overall incidence of hemorrhage was 29% in the KADCYLA group and 10% in the trastuzumab group (Grade ≥ 3 incidence was 0.4% and 0.3%, respectively)</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In some of the observed cases, the patients were also receiving anticoagulation therapy or antiplatelet therapy, or had thrombocytopenia; in others, there were no known additional risk factors.  Use caution with these agents and consider additional monitoring when concomitant use is medically necessary</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Thrombocytopenia
+                    </td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE, the overall incidence of thrombocytopenia was 29% in the KADCYLA group and 2.4% in the trastuzumab group (Grade ≥ 3 incidence was 6% and 0.3%, respectively)</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In clinical trials of KADCYLA, the incidence and severity of thrombocytopenia were higher in Asian patients</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Monitor platelet counts prior to initiation of KADCYLA and prior to each dose. Institute dose modifications as appropriate</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Neurotoxicity</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KATHERINE, the overall incidence of peripheral neuropathy was 32% in the KADCYLA group and 17% in the trastuzumab group (Grade ≥ 3 incidence was 1.6% and 0.1%, respectively)</td>
+                        </tr>
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>Monitor for signs or symptoms of neurotoxicity. Temporarily discontinue KADCYLA in patients experiencing Grade 3 or 4 peripheral neuropathy until resolution to ≤ Grade 2
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="p bold">Extravasation</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="ul">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="li" valign="top">&#8226;</td>
+                          <td>In KADCYLA clinical studies, reactions secondary to extravasation have been observed and were generally mild. Specific treatment for KADCYLA extravasation is unknown. Closely monitor the infusion site for possible subcutaneous infiltration during drug administration</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end unordered list -->
+                  <tr>
+                    <td class="h3">Adverse Reactions</td>
+                  </tr>
+                  <!-- end h3 header -->
+                  <tr>
+                    <td class="p bold">Early Breast Cancer</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="p">The most common adverse reactions seen with KADCYLA in the KATHERINE trial (frequency >25%) were fatigue, nausea, increased transaminases, musculoskeletal pain, hemorrhage, thrombocytopenia, headache, peripheral neuropathy, and arthralgia. The most common NCI–CTCAE (version 3) Grade ≥ 3 adverse reactions (frequency >2%) were thrombocytopenia and hypertension
+                    </td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="h3">Use in Specific Populations</td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="pb10"><strong>Lactation:</strong> Advise women not to breastfeed during treatment and for 7 months following the last dose of KADCYLA
+                    </td>
+                  </tr>
+                  <!-- end paragraph -->
+                  <tr>
+                    <td class="pb10">
+                      You are encouraged to report side effects to Genentech and the FDA. You may contact Genentech by calling <a class=" no-underline" href="tel:1-888-835-2555">1-888-835-2555</a>. You may contact the FDA by visiting <a class="bold orange no-underline" href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program">www.fda.gov/medwatch</a> or calling <a class="no-underline" href="tel:1-800-332-1088">1-800-FDA-1088</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p bold m-pb5">
+                      Please see <a class="orange no-underline" href="https://www.gene.com/download/pdf/kadcyla_prescribing.pdf">full Prescribing Information</a> for additional Important Safety Information, including BOXED WARNINGS.
+                    </td>
+                  </tr>
+                </table>
+                <!-- end table block -->
+              </td>
+            </tr>
+        <!-- End Safety -->
+      <!-- Start References -->
+          <tr>
+            <td class="references prl30 m-prl15">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td {% if build.type == "VEEVA_EMAIL_TEMPLATE" or build.type == "THIRD_PARTY" %}class="pb10"{% endif %}><strong>References: 1.</strong> Cortazar P, Zhang L, Untch M, et al. Pathological complete response and long-term clinical benefit in breast cancer: the CTNeoBC pooled analysis. <em>Lancet</em>. 2014;384(9938):164-172. <strong>2.</strong> KADCYLA Prescribing Information. Genentech, Inc. 2026. <strong>3.</strong> von Minckwitz G, Huang C-S, Mano MS, et al. Trastuzumab emtansine for residual invasive HER2-positive breast cancer. <em>N Engl J Med</em>. 2019;380(7):617-628.</td>
+                </tr>
+                 {{token.gne-co-disclaimer}} 
+                
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End References -->
+      <!-- Start Footer -->
+           <tr>
+             <td class="pt30 m-pt25">
+               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                 <!-- begin mobile content -->
+                 <tr class="mobile-only">
+                   <td class="mobile-only pb30">
+                     <div class="mobile-only">
+                       <img class="width-auto" src="{{asset.gradient-bar-mobile-2x.url}}" alt="{{asset.gradient-bar-mobile-2x.alt}}" width="0" height="0"/>
+                     </div>
+                   </td>
+                 </tr>
+                 
+                 <!-- end mobile content -->
+                 <tr>
+                   <td class="desktop-only image pb30">
+                     <img src="{{asset.gradient-bar-desktop-2x.url}}" alt="{{asset.gradient-bar-desktop-2x.alt}}" width="{{asset.gradient-bar-desktop-2x.width}}" height="{{asset.gradient-bar-desktop-2x.height}}"/>
+                   </td>
+                 </tr>
+                 <!-- end image -->
+               </table> 
+             </td>
+           </tr>
+           <tr>
+             <td class="footer prl30 pb30 m-prl15">
+               <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                 <tr>
+                   <td class="pr40 m-pr0" valign="top">
+                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                       <tr>
+                         <td class="image pb10 m-center">
+                           <a class="ghost-link" href="https://www.gene.com/"><img src="{{asset.logo-gene-2x.url}}" alt="{{asset.logo-gene-2x.alt}}" width="{{asset.logo-gene-2x.width}}" height="{{asset.logo-gene-2x.height}}"/></a>
+                         </td>
+                       </tr>
+                       <!-- end image -->
+                       <tr>
+                         <td class="footnote p m-center" >© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech, Inc. All Rights Reserved.</td>
+                       </tr>
+                       <!-- end footnote -->
+                       <tr>
+                         <td class="footnote pb10 m-center">
+                           Genentech, Inc.<br /> 
+                           1 DNA Way<br />
+                           South San Francisco, CA <br class="desktop-only"/> 
+                           94080-4990</td>
+                       </tr>
+                       <!-- end footnote -->
+                       <tr>
+                         <td class="footnote m-center pb10">M-US-00006193 (v3.0)&nbsp;|&nbsp;06/26</td>
+                       </tr>
+                       <!-- end footnote -->
+                       
+                       <!-- end footnote -->
+                       <!-- begin mobile content -->
+                       <tr class="mobile-only m-pb10">
+                         <td class="mobile-only mobile-footer">
+                           <div class="mobile-only">
+                             <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                               <tr>
+                                 <td>
+                                   <table class="link-container1" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                     <tr>
+                                       <td class="pr25">
+                                         <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                           <tr>
+                                             <td class="ul pb5 footer-links">
+                                               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                 <tr>
+                                                   <td class="li m-pt3" valign="top">
+                                                    
+                                                      <img class="icon-1" src="{{asset.icon-1-2x.url}}" alt="{{asset.icon-1-2x.alt}}" width="0" height="0"/>
+                                                     </td>
+                                                   <td><a href="https://www.gene.com/contact-us">Contact&nbsp;Genentech</a></td>
+                                                 </tr>
+                                                 
+                                               </table>
+                                             </td>
+                                           </tr>
+                                           <!-- end unordered list -->
+                                         </table>
+                                         <!-- end table block -->
+
+                                       </td>
+                                       <td>
+                                         <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                           <tr>
+                                             <td class="ul pb5 footer-links">
+                                               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                 <tr>
+                                                   <td class="li m-pb5" valign="top">
+                                                    <img class="icon-2" src="{{asset.icon-2-2x.url}}" alt="{{asset.icon-2-2x.alt}}" width="0" height="0"/>
+                                                   </td>
+                                                   <td><a href="https://www.gene.com/privacy-policy">Privacy&nbsp;Policy</a></td>
+                                                 </tr>
+                                               </table>
+                                             </td>
+                                           </tr>
+                                           <!-- end unordered list -->
+                                         </table>
+                                         <!-- end table block -->
+
+                                       </td>
+                                     </tr>
+                                   </table>
+                                   <!-- end table block -->
+                                 </td>
+                               </tr>
+                               <tr>
+                                 <td>
+                                   <table class="link-container2" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                     <tr>
+                                       <td class="ul pb0 footer-links">
+                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                           <tr>
+                                             <td class="li" valign="top">
+                                               <img class="icon-3" src="{{asset.icon-3-2x.url}}" alt="{{asset.icon-3-2x.alt}}" width="0" height="0"/>
+                                              </td>
+                                             <td><a href="https://www.gene.com/terms-conditions">Terms and Conditions</a></td>
+                                           </tr>
+                                         </table>
+                                       </td>
+                                     </tr>
+                                     <!-- end unordered list -->
+                                   </table>
+                                   <!-- end table block -->
+                                 </td>
+                               </tr>
+                             </table>
+                             <!-- end table block -->
+                           </div>
+                         </td>
+                       </tr>
+                       <!-- end mobile content -->
+                       <tr>
+                         <td class="footnote m-center">In accordance with Colorado law, please access wholesale acquisition cost (WAC) pricing information <a class="purple" href="#placeholder">here</a>.</td>
+                       </tr>
+                       <tr>
+                         <td class="footnote ptb10 m-center"><a class="purple underline" href="{{build.unsubscribeLink}}">Unsubscribe</a></td>
+                       </tr>
+                       <!-- end footnote -->
+                       <tr>
+                         <td class="footnote pb10 m-center">This email is intended for US healthcare professionals&nbsp;only.</td>
+                       </tr>
+                       <!-- end footnote -->
+                       <tr>
+                         <td class="footnote m-center">This promotional email is brought to you by Genentech.</td>
+                       </tr>
+                       <!-- end footnote -->
+                     </table>
+                     <!-- end table block -->
+                   </td>
+                   <td class="desktop-only" valign="top">
+                     <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="165" style="width:165px;">
+                       <tr>
+                         <td class="legal-links">
+                           <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                             <tr>
+                               <td class="pb5 pr15" valign="top">
+                                 <img src="{{asset.icon-1-2x.url}}" alt="{{asset.icon-1-2x.alt}}" width="{{asset.icon-1-2x.width}}" height="{{asset.icon-1-2x.height}}"/>
+                               </td>
+                               <td class="pb5" valign="top">
+                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                   <tr>
+                                     <td><a class="purple bold no-underline" href="https://www.gene.com/contact-us">Contact Genentech</a></td>
+                                   </tr>
+                                   <!-- end footnote -->
+                                 </table>
+                                 <!-- end table block -->
+                               </td>
+                             </tr>
+                             <tr>
+                               <td class="pb10 pr15" valign="top">
+                                 <img src="{{asset.icon-2-2x.url}}" alt="{{asset.icon-2-2x.alt}}" width="{{asset.icon-2-2x.width}}" height="{{asset.icon-2-2x.height}}"/>
+                               </td>
+                               <td class="pb10" valign="top">
+                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                   <tr>
+                                     <td class="pt5"><a class="purple bold no-underline" href="https://www.gene.com/privacy-policy">Privacy Policy</a></td>
+                                   </tr>
+                                   <!-- end footnote -->
+                                 </table>
+                                 <!-- end table block -->
+                               </td>
+                             </tr>
+                             <tr>
+                               <td class="pr15" valign="top">
+                                <img src="{{asset.icon-3-2x.url}}" alt="{{asset.icon-3-2x.alt}}" width="{{asset.icon-3-2x.width}}" height="{{asset.icon-3-2x.height}}"/>
+                               </td>
+                               <td valign="top">
+                                 <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                   <tr>
+                                     <td><a class="purple bold no-underline" href="https://www.gene.com/terms-conditions">Terms and Conditions</a></td>
+                                   </tr>
+                                   <!-- end footnote -->
+                                 </table>
+                                 <!-- end table block -->
+                               </td>
+                             </tr>
+                           </table>
+                           <!-- end table block -->
+                         </td>
+                       </tr>
+                     </table>
+                     <!-- end table block -->
+                   </td>
+                 </tr>
+               </table>
+               <!-- end table block -->
+             </td>
+           </tr>
+      <!-- End Footer -->
+
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <!-- end table wrapper -->
+
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+
+  
+</body>
+</html>
