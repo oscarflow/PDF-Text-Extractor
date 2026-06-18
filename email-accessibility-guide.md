@@ -1,5 +1,6 @@
 # Email Accessibility & Dark Mode Guide
 i9WIqStI7kYrJl05MYwUII/
+figd_P3XX7mrJ5D1ZEXecMEVy_tSrk3Aaqhy135SIOmj6
 
 ## ARIA Roles for Semantic Structure
 
