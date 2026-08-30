@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style type="text/css">
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    .main-td {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #25282A;
+      line-height: 22px;
+      background-color: #ffffff;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+    }
+
+    .h1 { font-size: 33px; line-height: 40px; font-weight: bold; }
+    .h2 { font-size: 28px; line-height: 34px; }
+    .h3 { font-size: 24px; line-height: 28px; }
+    .h4 { font-size: 22px; line-height: 26px; }
+
+    a { text-decoration: underline; }
+
+    /* Build Section Styling */
+    .message {
+      padding: 40px;
+    }
+    .section-1 {
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: #13294B;
+    }
+    .section-2 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #C3DC93;
+    }
+    .section-3 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .section-4 {
+      padding-left: 40px;
+      padding-right: 20px;
+    }
+    .section-5 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #F3F1ED;
+    }
+    .section-6 {
+      padding-right: 80px;
+      padding-left: 80px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #13294B;
+    }
+    .section-7 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #F3F1ED;
+    }
+
+    .references tr:first-child .li + td { width: auto; }
+    .references .li { width: 15px; }
+    /*fixes width issue in yahoo*/
+
+    .footnote,
+    .footnote td { font-size: 12px; line-height: 14px; }
+
+    /* Horizontal Rule */
+    .bt-color { border-top: 2px solid #001c71; }
+    .bb-green { border-bottom: 1px solid #C3DC93; }
+
+    /* additional colors */
+    .black { color: #25282A; }
+    .white { color: #ffffff; }
+    .green,
+    .section-6 a { color: #C3DC93; }
+    .green2,
+    .section-5 a { color: #74AA50; }
+    .blue { color: #003087; }
+
+    /* Element Styling */
+    .p,
+    .ul { padding-bottom: 15px; }
+
+    .li { width: 1px; }
+    .ul .li { padding-right: 5px; }
+    .footnote .li { padding-right: 0px; }
+
+    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
+    .ul tr:first-child .li + td { width: 100%; }
+
+    sup, sub { line-height: 0; font-size: 75%; }
+
+    /* Additional formatting and styling */
+    .center { text-align: center; }
+    .center-block { margin: 0 auto; }
+    .no-underline { text-decoration: none; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+
+    .no-wrap { white-space: nowrap; }
+    a[href^="tel:"] { white-space: nowrap; }
+
+    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
+    /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Button Styling */
+    .button { 
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 1px solid #00b2e2;
+      /*border-radius: 5px; */
+    }
+
+    .button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #00b2e2; /*border hack needed for outlook clients*/
+      /*border-radius: 5px;*/
+    }
+
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 2px solid #00b2e2;
+    }
+    .ns-button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px solid #00b2e2;
+    } */
+
+
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+    .ptb0  { padding-top: 0; padding-bottom: 0; }
+    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
+    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
+    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
+    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
+    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    .ptb50 { padding-top: 50px; padding-bottom: 50px; }
+    /* Padding top and bottom */
+
+    .pt0  { padding-top: 0; }
+    .pt5  { padding-top: 5px; }
+    .pt10 { padding-top: 10px; }
+    .pt15 { padding-top: 15px; }
+    .pt20 { padding-top: 20px; }
+    .pt25 { padding-top: 25px; }
+    .pt30 { padding-top: 30px; }
+    .pt35 { padding-top: 35px; }
+    .pt40 { padding-top: 40px; }
+    .pt50 { padding-top: 50px; }
+    /* padding top */
+
+    .pb0  { padding-bottom: 0; }
+    .pb5  { padding-bottom: 5px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb15 { padding-bottom: 15px; }
+    .pb20 { padding-bottom: 20px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    .pb50 { padding-bottom: 50px; }
+    /* padding bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
+
+    .pr0  { padding-right: 0; }
+    .pr5  { padding-right: 5px; }
+    .pr10 { padding-right: 10px; }
+    .pr15 { padding-right: 15px; }
+    .pr20 { padding-right: 20px; }
+    .pr25 { padding-right: 25px; }
+    .pr30 { padding-right: 30px; }
+    .pr35 { padding-right: 35px; }
+    .pr40 { padding-right: 40px; }
+    /* padding right */
+
+    .pl0  { padding-left: 0; }
+    .pl5  { padding-left: 5px; }
+    .pl10 { padding-left: 10px; }
+    .pl15 { padding-left: 15px; }
+    .pl20 { padding-left: 20px; }
+    .pl25 { padding-left: 25px; }
+    .pl30 { padding-left: 30px; }
+    .pl35 { padding-left: 35px; }
+    .pl40 { padding-left: 40px; }
+    .pl60 { padding-left: 60px; }
+    /* padding left */
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    #outlook a { padding: 0; } 
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; }
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
+
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
+    a img { border: none; }
+    /* Some sensible defaults for images*/
+
+    .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
+
+    /***************************************
+                 SAFETY STYLES 
+    ****************************************/
+
+    .safety td {
+      color: #263340;
+    }
+
+    .safety .ul .ul {
+      padding-bottom: 0;
+    }
+
+  </style>
+
+  <!--[if gte mso 9]>
+    <xml>
+     <o:OfficeDocumentSettings>
+     <o:AllowPNG/>
+     <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+      sup, sub { font-size: 100% !important; }
+      table { border-collapse: collapse !important; border-spacing: 0 !important; }
+    </style>
+  <![endif]-->
+
+  <style type="text/css" data-embed>
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    body,
+    td {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #25282A;
+      line-height: 22px;
+    }
+    /* Render font family properly in Outlook */
+
+    table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+    * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix */
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+
+    .mobile-only {
+      display: none;
+      max-height: 0px;
+      overflow: hidden;
+      mso-hide: all;
+    }
+    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
+
+    .mobile-only table {
+      mso-hide: all;
+    }
+    /* Hides <table> elements in Outlook 2007-13 issue */
+
+    .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* use with the tbtn snippet only! */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+
+      .block,
+      .content,
+      .safety { display: block; }
+      /* place content you want stacked here */
+
+      .desktop-only { display: none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
+
+      .w100 { width: 100% !important; }
+      /*fixes issue where Outlook ignores max-width on images, also use for images-off screenshots */
+
+      .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
+
+      .m-center,
+      .section-1 td,
+      .section-2 td,
+      .section-3 td,
+      .section-4 td,
+      .section-5 td,
+      .section-6 td,
+      .footer { text-align: center !important; margin: 0 auto !important; }
+
+      /*.main-table .fixed-width300 { width: 300px !important; margin: 0 auto !important; }*/
+
+      /*.m-pt0  { padding-top: 0 !important; }*/
+      /*.m-pt5  { padding-top: 5px !important; }*/
+      /*.m-pt10 { padding-top: 10px !important; }*/
+      /*.m-pt15 { padding-top: 15px !important; }*/
+      /*.m-pt20 { padding-top: 20px !important; }*/
+      /*.m-pt25 { padding-top: 25px !important; }*/
+      /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
+      /* mobile padding top */
+
+      /*.m-pb0  { padding-bottom: 0 !important; } */
+      /*.m-pb5  { padding-bottom: 5px !important; }*/
+      /*.m-pb10 { padding-bottom: 10px !important; }*/
+      .m-pb15 { padding-bottom: 15px !important; }
+      /*.m-pb20 { padding-bottom: 20px !important; }*/
+      /*.m-pb25 { padding-bottom: 25px !important; }*/
+      /*.m-pb30 { padding-bottom: 30px !important; }*/
+      /*.m-pb35 { padding-bottom: 35px !important; }*/
+      /*.m-pb40 { padding-bottom: 40px !important; }*/
+      /* mobile padding bottom */
+      .m-prl0 { padding-left: 0 !important; padding-right: 0 !important; }
+      .m-prl20 { padding-left: 20px !important; padding-right: 20px !important; }
+      .m-ptb20 { padding-top: 20px !important; padding-bottom: 20px !important; }
+      
+      .message { padding-left: 25px !important; padding-right: 25px !important; }
+      .section-1 { padding-left: 50px !important; padding-right: 50px !important; padding-bottom: 30px !important; }
+      .section-2 { padding-left: 50px !important; padding-right: 50px !important; padding-top: 30px !important; padding-bottom: 30px !important; }
+      .section-3 { padding-left: 25px !important; padding-right: 25px !important; }
+      .section-4 { padding-left: 30px !important; padding-right: 30px !important; padding-bottom: 40px !important; }
+      .section-5 { padding-left: 25px !important; padding-right: 25px !important; }
+      .section-5 .m-left { text-align: left !important; }
+      .section-6 { padding-left: 25px !important; padding-right: 25px !important; }
+      .section-7 { padding-left: 25px !important; padding-right: 25px !important; }
+      
+    }
+  </style>
+
+
+</head>
+<body>
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+
+    <tr>
+      <td class="main-td">
+
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
+
+      <!-- Start Message -->
+          {% if build.type == "VEEVA_EMAIL_TEMPLATE" %}
+          <tr>
+            <td class="message">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td>
+                    {{token.gne-uni-msg}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endif %}
+      <!-- End Message -->
+
+      <!-- Start Sections -->
+          <tr>
+            <td>
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="section-1" valign="top">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="image pt50 pb40">
+                          <a class="ghost-link" href="https://www.gene.com/"><img class="m-center white" src="{{asset.genentech-50-2x.url}}" alt="{{asset.genentech-50-2x.alt}}" width="{{asset.genentech-50-2x.width}}" height="{{asset.genentech-50-2x.height}}" /></a>
+                        </td>
+                      </tr>
+                      <!-- end image -->
+                      <tr>
+                        <td class="h1 green p">YOUR PATIENTS ARE WORRIED ABOUT TREATMENT COSTS</td>
+                      </tr>
+                      <!-- end h1 header -->
+                      <tr>
+                        <td class="h3 white">1 in 4 will abandon therapy&nbsp;because they can’t&nbsp;pay for it<sup>1</sup></td>
+                      </tr>
+                      <!-- end h3 header -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                  <td class="desktop-only" valign="top">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="350" style="width: 350px;">
+                      <tr>
+                        <td>
+                          <img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table> 
+            </td>
+          </tr>
+          <!-- begin mobile content -->
+          <tr class="mobile-only">
+            <td class="mobile-only">
+              <div class="mobile-only">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="image">
+                      <img class="w100 width-auto" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="{{asset.header-mobile-2x.width}}" height="{{asset.header-mobile-2x.height}}" />
+                    </td>
+                  </tr>
+                  <!-- end image -->
+                </table>
+                <!-- end table block -->
+              </div>
+            </td>
+          </tr>
+          <!-- end mobile content -->
+          <tr>
+            <td class="section-2">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h4 blue" align="center">We are more dedicated than ever to <br class="desktop-only"/><strong>breaking down barriers for patients.</strong></td>
+                </tr>
+                <!-- end h4 header -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom: 1px solid #164190;">
+                <tr>
+                  <td class="section-3">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h2 blue pb5" align="center">YOUR PATIENTS. <strong>OUR&nbsp;SHARED FOCUS.</strong></td>
+                      </tr>
+                      <!-- end h2 header -->
+                      <tr>
+                        <td class="h4 pb40">Empowering patients and building healthier communities via:</td>
+                      </tr>
+                      <!-- end h4 header -->
+                      <tr>
+                        <td class="pb30 pl60 bb-green m-prl0">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image block m-pb15" valign="middle" width="72" style="width: 72px;">
+                                <img class="max-none" src="{{asset.hand-icon-2x.url}}" alt="{{asset.hand-icon-2x.alt}}" width="{{asset.hand-icon-2x.width}}" height="{{asset.hand-icon-2x.height}}" />
+                              </td>
+                              <td class="text block" valign="middle">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="pl40 h4 m-prl20"><span class="bold blue">Proactive</span> and personalized tools and&nbsp;resources</td>
+                                  </tr>
+                                  <!-- end h4 header -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ptb30 pl60 bb-green m-prl0">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image block m-pb15" valign="middle" width="72" style="width: 72px;">
+                                <img class="max-none" src="{{asset.programs-icon-2x.url}}" alt="{{asset.programs-icon-2x.alt}}" width="{{asset.programs-icon-2x.width}}" height="{{asset.programs-icon-2x.height}}" />
+                              </td>
+                              <td class="text block" valign="middle">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="pl40 h4 m-prl20"><span class="bold blue">Programs</span> to connect people to care, education and support when they need it</td>
+                                  </tr>
+                                  <!-- end h4 header -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ptb30 pl60 m-prl0">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image block m-pb15" valign="middle" width="72" style="width: 72px;">
+                                <img class="max-none" src="{{asset.dollar-bulb-icon-2x.url}}" alt="{{asset.dollar-bulb-icon-2x.alt}}" width="{{asset.dollar-bulb-icon-2x.width}}" height="{{asset.dollar-bulb-icon-2x.height}}" />
+                              </td>
+                              <td class="text block" valign="middle">
+                                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tr>
+                                    <td class="pl40 h4 m-prl20"><span class="bold blue">Innovative</span> technologies and live&nbsp;support</td>
+                                  </tr>
+                                  <!-- end h4 header -->
+                                </table>
+                                <!-- end table block -->
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      {% 
+                          render "vml-button",
+                            width: '190',
+                            vml_add_width: '0',
+                            height: '50',
+                            text: 'Find out more',
+                            font: 'Arial, sans-serif',
+                            font_size: '22',
+                            font_weight: 'normal',
+                            color: '#ffffff',
+                            background_color: '#13294B',
+                            border_color: '#13294B',
+                            border_size: '1',
+                            border_radius: '30',
+                            href: 'https://www.genentech-pro.com/contact-us.html',
+                            class: '',
+                            align: 'center',
+                      %}
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <!-- begin mobile content -->
+          <tr class="mobile-only">
+            <td class="mobile-only">
+              <div class="mobile-only">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="image">
+                      <img class="w100 width-auto" src="{{asset.patients-mobile-2x.url}}" alt="{{asset.patients-mobile-2x.alt}}" width="{{asset.patients-mobile-2x.width}}" height="{{asset.patients-mobile-2x.height}}" />
+                    </td>
+                  </tr>
+                  <!-- end image -->
+                </table>
+                <!-- end table block -->
+              </div>
+            </td>
+          </tr>
+          <!-- end mobile content -->
+          <tr>
+            <td>
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="section-4" valign="top">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h2 blue p pt40">WE ARE HERE WHEN YOUR <strong>PATIENTS NEED US MOST</strong></td>
+                      </tr>
+                      <!-- end h2 header -->
+                      <tr>
+                        <td class="h4">Behind every patient is a health care professional working tirelessly to help ensure they receive the best possible care. You can feel confident knowing that 50 years of Genentech experience and dedicated support is by your side.</td>
+                      </tr>
+                      <!-- end h4 header -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                  <td class="desktop-only" valign="top">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="258" style="width: 258px;">
+                      <tr>
+                        <td>
+                          <img src="{{asset.patients-desktop-2x.url}}" alt="{{asset.patients-desktop-2x.alt}}" width="{{asset.patients-desktop-2x.width}}" height="{{asset.patients-desktop-2x.height}}" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td class="section-5">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h4 bold blue pb20 m-left">Financial Support</td>
+                </tr>
+                <!-- end h4 header -->
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="image">
+                            <img class="w100" src="{{asset.financial-support-mobile-2x.url}}" alt="{{asset.financial-support-mobile-2x.alt}}" width="{{asset.financial-support-mobile-2x.width}}" height="{{asset.financial-support-mobile-2x.height}}" />
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="pb40">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="desktop-only image" valign="middle" width="223" style="width: 223px;">
+                          <img class="max-none" src="{{asset.financial-support-desktop-2x.url}}" alt="{{asset.financial-support-desktop-2x.alt}}" width="{{asset.financial-support-desktop-2x.width}}" height="{{asset.financial-support-desktop-2x.height}}" />
+                        </td>
+                        <td class="text prl40 m-ptb20" valign="middle" style="background-color: #ffffff;">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5">Help eligible patients afford their out‑of‑pocket costs*</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p green2 bold"><a href="https://www.gene.com/patients/patient-support-services/affordability-options">Affordability Options</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="pb5">Free Genentech medicine for eligible&nbsp;patients<sup>†</sup></td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="green2 bold"><a href="https://www.gene.com/patients/patient-foundation">Genentech Patient Foundation</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 bold blue pb20 m-left">Coverage Support</td>
+                </tr>
+                <!-- end h4 header -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="image">
+                            <img class="w100" src="{{asset.coverage-support-mobile-2x.url}}" alt="{{asset.coverage-support-mobile-2x.alt}}" width="{{asset.coverage-support-mobile-2x.width}}" height="{{asset.coverage-support-mobile-2x.height}}" />
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="pb40">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="desktop-only image" valign="middle" width="223" style="width: 223px;">
+                          <img class="max-none" src="{{asset.coverage-support-desktop-2x.url}}" alt="{{asset.coverage-support-desktop-2x.alt}}" width="{{asset.coverage-support-desktop-2x.width}}" height="{{asset.coverage-support-desktop-2x.height}}" />
+                        </td>
+                        <td class="text prl40 m-ptb20 m-prl20" valign="middle" style="background-color: #ffffff;">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5">Resources to answer patient questions&nbsp;about health insurance coverage and costs</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="green2 bold"><a href="https://www.gene.com/patients/understanding-insurance">Understanding Insurance Coverage</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 bold blue pb20 m-left">Advocacy and Education</td>
+                </tr>
+                <!-- end h4 header -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="image">
+                            <img class="w100" src="{{asset.advocacy-mobile-2x.url}}" alt="{{asset.advocacy-mobile-2x.alt}}" width="{{asset.advocacy-mobile-2x.width}}" height="{{asset.advocacy-mobile-2x.height}}" />
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="pb40">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="desktop-only image" valign="middle" width="223" style="width: 223px;">
+                          <img class="max-none" src="{{asset.advocacy-desktop-2x.url}}" alt="{{asset.advocacy-desktop-2x.alt}}" width="{{asset.advocacy-desktop-2x.width}}" height="{{asset.advocacy-desktop-2x.height}}" />
+                        </td>
+                        <td class="text prl40 m-ptb20" valign="middle" style="background-color: #ffffff;">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5">Partnering with patients for greater health impacts</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="p green2 bold"><a href="https://www.gene.com/patients/giving-patients-a-voice">Patient Advocacy</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="pb5">Information to help patients know more&nbsp;about select conditions</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="green2 bold"><a href="https://www.gene.com/patients/disease-education">Disease Education</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 bold blue pb20 m-left">Additional Resources</td>
+                </tr>
+                <!-- end h4 header -->
+                <tr class="mobile-only">
+                  <td class="mobile-only">
+                    <div class="mobile-only">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="image">
+                            <img class="w100" src="{{asset.additional-resources-mobile-2x.url}}" alt="{{asset.additional-resources-mobile-2x.alt}}" width="{{asset.additional-resources-mobile-2x.width}}" height="{{asset.additional-resources-mobile-2x.height}}" />
+                          </td>
+                        </tr>
+                        <!-- end image -->
+                      </table>
+                      <!-- end table block -->
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="pb50">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="desktop-only image" valign="middle" width="223" style="width: 223px;">
+                          <img class="max-none" src="{{asset.additional-resources-desktop-2x.url}}" alt="{{asset.additional-resources-desktop-2x.alt}}" width="{{asset.additional-resources-desktop-2x.width}}" height="{{asset.additional-resources-desktop-2x.height}}" />
+                        </td>
+                        <td class="text prl40 m-ptb20" valign="middle" style="background-color: #ffffff;">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5">Resource hub to support patients, their families and their communities</td>
+                            </tr>
+                            <!-- end paragraph -->
+                            <tr>
+                              <td class="green2 bold"><a href="https://www.careforcommunities.com/index.html">HealthyCommunities.com</a></td>
+                            </tr>
+                            <!-- end paragraph -->
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {% 
+                    render "vml-button",
+                      width: '190',
+                      vml_add_width: '0',
+                      height: '50',
+                      text: 'Find out more',
+                      font: 'Arial, sans-serif',
+                      font_size: '22',
+                      font_weight: 'normal',
+                      color: '#ffffff',
+                      background_color: '#13294B',
+                      border_color: '#13294B',
+                      border_size: '1',
+                      border_radius: '30',
+                      href: 'https://www.genentech-pro.com/contact-us.html',
+                      class: '',
+                      align: 'center',
+                %}
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td class="section-6">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="image pb20" align="center">
+                    <img class="m-center" src="{{asset.phone-icon-2x.url}}" alt="{{asset.phone-icon-2x.alt}}" width="{{asset.phone-icon-2x.width}}" height="{{asset.phone-icon-2x.height}}" />
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="h4 white bb-green pb20" align="center">Patients can visit us anytime at <a class="bold" href="https://www.gene.com/patients">Gene.com/Patients</a></td>
+                </tr>
+                <!-- end h4 header -->
+                <tr>
+                  <td class="h4 white pt20" align="center"><strong>Live support</strong> is offered through an <span class="bold green">online chat&nbsp;feature</span> or at <a class="bold no-underline" href="tel:1-877-436-3683">(877) GENENTECH</a></td>
+                </tr>
+                <!-- end h4 header -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <tr>
+            <td class="section-7">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="ul footnote pb20">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">*</td>
+                        <td class="pb5">Patients must meet eligibility criteria.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top"><sup>†</sup></td>
+                        <td class="pb5">To be eligible for free Genentech medicine from the Genentech Patient Foundation, insured patients who have coverage for their medicine should try to pursue other forms of financial assistance, if available, and meet certain income requirements. Uninsured patients and insured patients without coverage for their medicine must meet a different set of income requirements.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">&nbsp;</td>
+                        <td class="pb5">Genentech reserves the right to modify or discontinue the program at any time and to verify the accuracy of information submitted.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">&nbsp;</td>
+                        <td><strong>Reference: 1.</strong> Kearney A, Montalvo J, Kirzinger A, Hamel L. Public opinion on prescription drugs and their prices. Published March 31, 2026. Accessed July 8, 2026. <a class="black no-underline" href="https://www.kff.org/health-costs/public-opinion-on-prescription-drugs-and-their-prices/">https://www.kff.org/health-costs/public-opinion-on-prescription-drugs-and-their-prices/</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="bold">This commercial email is brought to you by Genentech USA, Inc.</td>
+                </tr>
+                <!-- end paragraph -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- Start Sections -->
+
+      <!-- Start Footer -->
+          {% if build.type != "THIRD_PARTY" %}
+          <tr>
+            <td class="footer" style="padding-left: 40px; padding-right: 40px; border-top: 2px solid #BBBBBB; background-color: #ffffff;">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="image" style="line-height:1; font-family: Arial, sans-serif; padding-top: 25px; padding-bottom: 30px;">
+                    <a style="display:inline-block;" href="https://www.gene.com/"><img src="{{asset.genentech-logo-2x.url}}" alt="{{asset.genentech-logo-2x.alt}}" width="{{asset.genentech-logo-2x.width}}" height="{{asset.genentech-logo-2x.height}}" /></a>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="legal" style="padding-bottom: 35px;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="pr40 m-prl0 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/contact-us">Contact Us</a>
+                        </td>
+                        <td class="pr40 m-prl0 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/privacy-policy">Privacy Policy</a>
+                        </td>
+                        <td class="pr40 m-prl0 m-pb15 paddingbottom15 block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; padding-right: 40px;">
+                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="https://www.gene.com/terms-conditions">Terms and Conditions</a>
+                        </td>
+                        <td class="block" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px;">
+                          <a style="text-decoration: underline; color: #003087; font-weight: bold;" href="{{build.unsubscribeLink}}">Unsubscribe</a>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">This email is intended for US residents only.</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="pb10" style="font-family: Arial, sans-serif; padding-bottom: 10px; color: #182628; font-size: 12px; line-height: 14px;">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} Genentech, Inc. All rights reserved.</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td style="font-family: Arial, sans-serif; color: #182628; font-size: 12px; line-height: 14px; padding-bottom: 25px;">
+                    Genentech USA, Inc. 1 DNA Way, South San Francisco, CA&nbsp;<span style="white-space: nowrap;">94080-4990</span>
+                  </td>
+                </tr>
+              </table> 
+            </td>
+          </tr>
+          {% endif %}
+      <!-- End Footer -->
+
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <!-- End Body Table Wrapper -->
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+</body>
+</html>
