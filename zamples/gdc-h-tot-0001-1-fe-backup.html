@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{build.title}}</title>
+  <style type="text/css">
+    /***************************************
+               GLOBAL STYLES
+    ****************************************/
+
+    .main-td {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #010202;
+      line-height: 18px;
+      background-color: #ffffff;
+      min-width: {{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};/*android fix*/
+    }
+
+    .h1 { font-size: 19px; line-height: 22px; color: #005070; font-weight: bold; }
+    .h2 { font-size: 19px; line-height: 22px; color: #FFFFFF; font-weight: bold; }
+    .h3 { font-size: 16px; line-height: 19px; color: #005070; font-weight: bold; }
+    .h4 { font-size: 14px; line-height: 20px; color: ##010202; font-weight: bold; }
+    .h5 { font-size: 14px; line-height: 18px; color: #000000; }
+    .h6 { font-size: 14px; line-height: 18px; color: #222222; }
+    .h7 td { font-size: 14px; line-height: 18px; color: #ffffff; }
+    .fs16, .fs16 td { font-size: 16px; line-height: 20px; }
+
+    a { text-decoration: underline; }
+    .content a { color: #1c75bc; }
+
+    /* Build Section Styling */
+    .message {
+      padding-top: 50px;
+      padding-bottom: 35px;
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+    .message td { 
+      font-size: 14px; 
+      line-height: 18px;
+    }
+    .header a {
+      color: #005070;
+    }
+    .header td {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: bold; 
+    }
+    .gradient { background-color: #005570; background: linear-gradient(143deg, #005570, #00a1a3) }
+    .nccn-box { 
+      background-color: #ffffff;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .sprinkle-safety-box {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    .ven-callout {
+      border: 1px solid #005070;
+      border-radius: 15px;
+      padding-right: 70px;
+      padding-left: 65px;
+      padding-top: 25px;
+      padding-bottom: 30px;
+    }
+    .blue-callout {
+      background-color: #005070;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-bottom: 20px;
+      padding-right: 40px;
+      border-radius: 15px;
+    }
+    .safety {
+      padding-right: 35px;
+      padding-left: 35px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+    .footer {
+      padding-right: 35px;
+      padding-left: 35px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #F4F3EE;
+    }
+    .footer .p {
+      font-size: 11px;
+      line-height: 13px; 
+      padding-bottom: 10px;
+      color: #000000;
+    }
+    .footer .pb25 { 
+      padding-bottom: 25px;
+    }
+    .footer .legal {
+      font-size: 12px;
+      line-height: 18px; 
+    }
+    .footer a { color: #357086;  }
+    .br-gray { border-right: 1px solid #C9C9C8; }
+    /* Legal Links */
+    .link-divider { color: #000000; }
+    .legal a { color: #357086; text-decoration: none; }
+    .legal a span { text-decoration: underline; }
+
+    .references tr:first-child .li + td { width: auto; }
+    .references .li { width: 15px; }
+    /*fixes width issue in yahoo*/
+
+    .footnote,
+    .footnote td { font-size: 12px; line-height: 14px; }
+    .footnote-10,
+    .footnote-10 { font-size: 10px; line-height: 12px; }
+    .footnote-11, 
+    .footnote-11 td { font-size: 11px; line-height: 13px; }
+
+    .gradient-content .footnote,
+    .gradient-content .footnote td { font-size: 12px; line-height: 16px; color: #ffffff; }
+
+    /* Horizontal Rule */
+    .bb-yellow { border-top: 9px solid #FFCE00; }
+    .bb-yellow-2 { border-top: 3px solid #FFCE00; }
+    .bb-blue { border-bottom: 1px solid #005070; }
+
+    /* additional colors */
+    .black { color: #4A4A4A; }
+    .white { color: #ffffff; }
+    .blue { color: #005070; }
+    .blue2 { color: #00506F; }
+    .teal { color: #00BBB5; }
+    .pink { color: #F50BC8 !important; }
+    .yellow { color: #FFCE00; }
+
+    /* Element Styling */
+    .p,
+    .ul { padding-bottom: 15px; }
+
+    .li { width: 1px; }
+    .ul .li { padding-right: 5px; }
+
+    .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 15px; }
+    .ul tr:first-child .li + td { width: 100%; }
+
+    sup, sub { line-height: 0; font-size: 75%; }
+
+    /* Additional formatting and styling */
+    .center { text-align: center; }
+    .center-block { margin: 0 auto; }
+    .no-underline { text-decoration: none; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+    .break-word { word-break: break-all; }
+
+    .no-wrap { white-space: nowrap; }
+    a[href^="tel:"] { white-space: nowrap; }
+
+    .mobile-only { display: none; max-height: 0px; overflow: hidden; }
+    /*Hides mobile only elements. Needs to be inlined for Gmail*/
+
+    /* Callout styling */
+    .callout {
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      background-color: #79cd3f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Button Styling */
+    .button { 
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #005070;
+      background-color: #FFCE00;
+      border: 1px solid #FFCE00;
+      border-radius: 20px; 
+    }
+
+    .button a {
+      color: #005070;
+      text-decoration: none;
+      display: block;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      border: 1px solid #FFCE00; /*border hack needed for outlook clients*/
+      border-radius: 20px;
+    }
+
+    /* Non-standard button code to be used with the tnon snippet */
+    /* .ns-button{
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      background-color: #00b2e2;
+      border: 2px solid #00b2e2;
+    }
+    .ns-button a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px solid #00b2e2;
+    } */
+
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+    .ptb0  { padding-top: 0; padding-bottom: 0; }
+    .ptb5  { padding-top: 5px; padding-bottom: 5px; }
+    .ptb10 { padding-top: 10px; padding-bottom: 10px; }
+    .ptb15 { padding-top: 15px; padding-bottom: 15px; }
+    .ptb20 { padding-top: 20px; padding-bottom: 20px; }
+    .ptb25 { padding-top: 25px; padding-bottom: 25px; }
+    .ptb30 { padding-top: 30px; padding-bottom: 30px; }
+    .ptb35 { padding-top: 35px; padding-bottom: 35px; }
+    .ptb40 { padding-top: 40px; padding-bottom: 40px; }
+    /* Padding top and bottom */
+
+    .pt0  { padding-top: 0; }
+    .pt2  { padding-top: 2px; }
+    .pt5  { padding-top: 5px; }
+    .pt10 { padding-top: 10px; }
+    .pt13 { padding-top: 13px; }
+    .pt15 { padding-top: 15px; }
+    .pt20 { padding-top: 20px; }
+    .pt25 { padding-top: 25px; }
+    .pt30 { padding-top: 30px; }
+    .pt35 { padding-top: 35px; }
+    .pt40 { padding-top: 40px; }
+    .pt45 { padding-top: 45px; }
+    /* padding top */
+
+    .pb0  { padding-bottom: 0; }
+    .pb5  { padding-bottom: 5px; }
+    .pb10 { padding-bottom: 10px; }
+    .pb12 { padding-bottom: 12px; }
+    .pb15 { padding-bottom: 15px !important; }
+    .pb20,
+    .footer .pb20 { padding-bottom: 20px; }
+    .pb25 { padding-bottom: 25px; }
+    .pb30 { padding-bottom: 30px; }
+    .pb35 { padding-bottom: 35px; }
+    .pb40 { padding-bottom: 40px; }
+    /* padding bottom */
+
+    .prl0  { padding-right: 0; padding-left: 0; }
+    .prl5  { padding-right: 5px; padding-left: 5px; }
+    .prl10 { padding-right: 10px; padding-left: 10px; }
+    .prl15 { padding-right: 15px; padding-left: 15px; }
+    .prl20 { padding-right: 20px; padding-left: 20px; }
+    .prl25 { padding-right: 25px; padding-left: 25px; }
+    .prl30 { padding-right: 30px; padding-left: 30px; }
+    .prl35 { padding-right: 35px; padding-left: 35px; }
+    .prl40 { padding-right: 40px; padding-left: 40px; }
+    /* Padding left and right */
+
+    .pr0  { padding-right: 0; }
+    .pr5  { padding-right: 5px; }
+    .pr10 { padding-right: 10px; }
+    .pr15 { padding-right: 15px; }
+    .pr20 { padding-right: 20px; }
+    .pr25 { padding-right: 25px; }
+    .pr30 { padding-right: 30px; }
+    .pr35 { padding-right: 35px; }
+    .pr40 { padding-right: 40px; }
+    /* padding right */
+
+    .pl0  { padding-left: 0; }
+    .pl5  { padding-left: 5px; }
+    .pl10 { padding-left: 10px; }
+    .pl15 { padding-left: 15px; }
+    .pl20 { padding-left: 20px; }
+    .pl25 { padding-left: 25px; }
+    .pl30 { padding-left: 30px; }
+    .pl35 { padding-left: 35px; }
+    .pl40 { padding-left: 40px; }
+    /* padding left */
+
+    .p20 { padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; }
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    #outlook a { padding: 0; } 
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body { width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; } 
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; line-height: 100% !important; }
+    /* end reset */
+
+    img { display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-size: 10px; }
+    a img { border: none; }
+    /* Some sensible defaults for images*/
+
+    .ghost-link img { display: inline-block; }
+    /* Removes unwanted linked space - only links the image */
+
+    /***************************************
+                 SAFETY STYLES 
+    ****************************************/
+
+    .safety td,
+    .sprinkle-safety-box td { padding-bottom: 5px; color: #000000; }
+
+    .safety .h2,
+    .sprinkle-safety-box .h2 { font-size: 14px; line-height: 18px; color: #005070; }
+
+    .safety .h3 {
+      font-size: 19px;
+      line-height: 23px;
+      font-weight: bold;
+      color: #005070; 
+    }
+
+    .safety .li,
+    .sprinkle-safety-box .li { color: #000000; }
+
+    .safety .ul,
+    .sprinkle-safety-box .ul { padding-bottom: 0; }
+
+    .safety a { color: #005070; font-weight: bold; }
+
+    .sprinkle-safety-box .pb0 { padding-bottom: 0; }
+    .safety .pb15 { padding-bottom: 15px; }
+
+  </style>
+
+  <!--[if gte mso 9]>
+    <xml>
+     <o:OfficeDocumentSettings>
+     <o:AllowPNG/>
+     <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+      sup, sub { font-size: 100% !important; }
+      table { border-collapse: collapse !important; border-spacing: 0 !important; }
+    </style> 
+  <![endif]-->
+  <style type="text/css" data-embed>
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    body,
+    td {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #010202;
+      line-height: 18px;
+    }
+    /* Render font family properly in Outlook */
+
+    table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+    * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+
+    table td { border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix */
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+
+    .mobile-only {
+      display: none;
+      max-height: 0px;
+      overflow: hidden;
+      mso-hide: all;
+    }
+    /*Hides mobile only elements. Make sure this is the first class and place it on both the parent <tr> and <td>*/
+
+    .mobile-only table {
+      mso-hide: all; 
+    }
+    /* Hides <table> elements in Outlook 2007-13 issue */
+
+    .address a { color: #ffffff !important; text-decoration: none !important; }
+    /* Hack to fix auto-linking on dark backgrounds. Replace with your own text color. */
+
+    /***************************************
+                Hover State Button
+    ****************************************/
+
+    /* uncomment below for hover state button */
+    /* .button:hover {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      border: 1px solid #7fbf12 !important;
+    }
+    .button:hover a {
+      background: #7fbf12 !important;
+      transition: background 200ms;
+      color: #ffffff !important;
+      transition: color 200ms;
+      border: 1px solid #7fbf12 !important;
+    } */
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+
+      .block,
+      .content,
+      .safety { display: block; }
+      /* place content you want stacked here */
+
+      .desktop-only { display: none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+      /*add to mobile-only images and make sure width and height values are set to zero*/
+
+      .max-none { max-width: none !important; }
+      /*add to image class to expand to full width*/
+
+      .m-center { text-align: center !important; margin: 0 auto !important; }
+
+      .main-table .fixed-width224 { width: 224px !important; margin: 0 auto !important; }
+      .main-table .fixed-width278 { width: 278px !important; margin: 0 auto !important; }
+      .main-table .fixed-width264 { width: 264px !important; margin: 0 auto !important; }
+      .main-table .m-initial { width: initial !important; }
+
+      .m-pt0  { padding-top: 0 !important; }
+      .m-pt5  { padding-top: 5px !important; }
+      /*.m-pt10 { padding-top: 10px !important; }*/
+      .m-pt15 { padding-top: 15px !important; }
+      .m-pt20 { padding-top: 20px !important; }
+      .m-pt25 { padding-top: 25px !important; }
+      /*.m-pt30 { padding-top: 30px !important; }*/
+      /*.m-pt35 { padding-top: 35px !important; }*/
+      /*.m-pt40 { padding-top: 40px !important; }*/
+      /* mobile padding top */
+
+      .m-pb0 { padding-bottom: 0 !important; } 
+      .m-pb5 { padding-bottom: 5px !important; }
+      .m-pb10 { padding-bottom: 10px !important; }
+      .m-pb15 { padding-bottom: 15px !important; }
+      .m-pb20 { padding-bottom: 20px !important; }
+      .m-pb25 { padding-bottom: 25px !important; }
+      .m-pb30 { padding-bottom: 30px !important; }
+      .m-pb35 { padding-bottom: 35px !important; }
+      .m-pb40 { padding-bottom: 40px !important; }
+      .m-pb75 { padding-bottom: 75px !important; }
+      /* mobile padding bottom */
+
+      .m-pl0 { padding-left: 0 !important; }
+      .m-pl30 { padding-left: 30px !important; }
+      /* mobile padding left */
+
+      .m-pr0 { padding-right: 0 !important; }
+      .m-pr10 { padding-right: 10px !important; }
+      .m-pr20 { padding-right: 20px !important; }
+      /* mobile padding right */
+
+      .m-ptb15 { padding-top: 15px !important; padding-bottom: 15px !important; }
+      /* mobile padding top and bottom */
+
+      .message,
+      .footer,
+      .safety,
+      .prl35 { padding-left: 30px !important; padding-right: 30px !important; }
+      .safety { padding-top: 40px !important; }
+      .sprinkle-safety-box { padding-bottom: 25px !important; }
+      .m-prl25 { padding-right: 25px !important; padding-left: 25px !important; }
+      .m-prl25 { padding-left: 25px !important; padding-right: 25px !important; }
+      .m-prl15 { padding-left: 15px !important; padding-right: 15px !important; }
+      /* mobile section padding resets */
+
+      .h1 { font-size: 15px !important; line-height: 18px !important; }
+      .h4 { line-height: 16px !important; }
+      .ven-callout { padding-right: 20px !important; padding-left: 20px !important; padding-top: 15px !important; padding-bottom:15px !important; }
+      .blue-callout { padding-right:20px !important; padding-left:20px !important; }
+      .message td { font-size: 14px !important; line-height: 18px !important; } 
+      .m-width200 { width: 200px !important; height: auto !important; } 
+      .column3 { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; }
+      /* other resets */
+
+    }
+  </style>
+
+
+</head>
+<body>
+<!-- Start Body Table Wrapper -->
+  <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+
+    <tr>
+      <td class="main-td">
+
+        <table class="main-table" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="{{build.breakpoints.large.value}}" style="width:{{build.breakpoints.large.value}}{{build.breakpoints.large.unit}};">
+
+      <!-- Start Message -->
+          <tr>
+            <td class="message">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td>
+                    {{token.gne-custom-rich-text}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-title}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-organization}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-phone}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    {{token.gne-rep-email}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      <!-- End Message -->
+
+      <!-- Start Header -->
+          <tr>
+            <td class="header">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="pl20 pr20 pb35 m-prl15 m-pb30">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="m-pb15 m-pr10" valign="top">
+                          <a class="ghost-link" href="https://www.venclextahcp.com/cll.html"><img class="m-width200" src="{{asset.venclexta-logo-2x.url}}" alt="{{asset.venclexta-logo-2x.alt}}" width="200" height="41"/></a>
+                        </td>
+                        <td valign="top">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="pb5 pt5 m-pt0 m-pb10" align="right">
+                                <a href="https://www.venclextahcp.com/important-safety-information.html">Important Safety Information</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="right">
+                                <a href="https://www.rxabbvie.com/pdf/venclexta.pdf">VENCLEXTA Prescribing Information</a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- end table block -->
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- begin mobile content -->
+          <tr class="mobile-only">
+            <td class="mobile-only">
+              <div class="mobile-only">
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="image">
+                      <img class="width-auto" src="{{asset.header-mobile-2x.url}}" alt="{{asset.header-mobile-2x.alt}}" width="0" height="0"/>
+                    </td>
+                  </tr>
+                  <!-- end image -->
+                </table>
+                <!-- end table block -->
+              </div>
+            </td>
+          </tr>
+          <!-- end mobile content -->
+          <tr>
+            <td class="desktop-only image">
+              <img src="{{asset.header-desktop-2x.url}}" alt="{{asset.header-desktop-2x.alt}}" width="{{asset.header-desktop-2x.width}}" height="{{asset.header-desktop-2x.height}}"/>
+            </td>
+          </tr>
+          <!-- end image -->
+      <!-- End Header -->
+
+      <!-- Start Content -->
+          <!-- start gradient -->
+          <tr>
+            <td class="gradient" style="padding:0;margin:0;" width="100%">
+              <center>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;" fillcolor="#005570">  
+                <v:fill type="gradient" color1="#005570" color2="#00a1a3" colors="0% #005570, 100% #00a1a3" angle="217"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                <center>
+                <![endif]-->
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="margin:0;padding:0;width:650px;">
+              
+                  <!-- Content inside gradient -->
+                  <tr>
+                    <td class="gradient-content">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="590" style="width: 590px;">
+                        <tr>
+                          <td class="pt30">
+                            <table class="fixed-width278" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="278" style="width:278px;">
+                              <tr>
+                                <td class="button" align="center"><a href="https://www.venclextahcp.com/ven-a.html">Explore more about VEN+A</a></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- end button -->
+                        <tr>
+                          <td class="footnote m-prl25 pt25 m-pt15 pb10">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="li" valign="top">*</td>
+                                <td class="pb5"><strong>Information about VENCLEXTA + acalabrutinib does not appear in the VENCLEXTA Prescribing Information. Please see the acalabrutinib full Prescribing Information for a complete discussion of Important Safety Information at <a class="white" href="https://www.venclextahcp.com/cll/acalabrutinibPI">https://www.venclextahcp.com/cll/acalabrutinibPI</a>.</strong></td>
+                              </tr>
+                              <tr>
+                                <td class="li" valign="top"><sup>†</sup></td>
+                                <td>The VEN+A regimen is designed to be completed after 12 cycles (twelve 28-day treatment cycles), preceded by a 2-cycle acalabrutinib initiation phase. Acalabrutinib is taken orally 100 mg approximately every 12 hours starting on Cycle 1, Day 1, for a total of 14 cycles or until disease progression or unacceptable toxicity. VENCLEXTA is taken orally 400 mg/day for a total of 12 cycles after the 2-cycle acalabrutinib initiation phase, starting with the 5-week VENCLEXTA dose ramp-up schedule.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- end footnote list -->
+                        <tr>
+                          <td class="footnote m-prl25 pb20">CLL=chronic lymphocytic leukemia; VEN+A=VENCLEXTA + acalabrutinib.</td>
+                        </tr>
+                        <!-- end footnote -->
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </center>
+                <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </center>
+            </td>
+          </tr>
+          <!-- end gradient -->
+          <tr>
+            <td class="pt25 prl35">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td>
+                    <table class="ven-callout" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="99%">
+                      <!-- This table intentionally set to 99% so left border will show -->
+                      <tr>
+                        <td>
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image" valign="middle" width="89" style="width: 89px;">
+                                <img class="max-none" src="{{asset.icon-ongoing-treatment-2x.url}}" alt="{{asset.icon-ongoing-treatment-2x.alt}}" width="66" height="69"/>
+                              </td>
+                              <td class="h1" valign="middle">
+                                No ongoing treatment exposure— fixed-duration treatment with VEN+A limits cumulative drug exposure<sup>1</sup>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- row -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="sprinkle-safety-box">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h2">Indication</td>
+                      </tr>
+                      <!-- end h2 header -->
+                      <tr>
+                        <td class="ul">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>VENCLEXTA and ACALABRUTINIB are indicated for the treatment of adult patients with chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL).</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h2">Important Safety Information</td>
+                      </tr>
+                      <!-- end h2 header -->
+                      <tr>
+                        <td class="h2">Contraindication for VENCLEXTA</td>
+                      </tr>
+                      <!-- end h2 header -->
+                      <tr>
+                        <td class="ul pb15">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">•</td>
+                              <td>Concomitant use of VENCLEXTA with strong CYP3A inhibitors at initiation and during ramp-up phase is contraindicated in patients with CLL/SLL due to the potential for increased risk of tumor lysis syndrome (TLS). </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- end unordered list -->
+                      <tr>
+                        <td class="h2">Please see additional Important Safety Information below.</td>
+                      </tr>
+                      <!-- end h2 header -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <!-- start gradient -->
+          <tr>
+            <td class="gradient" style="padding:0;margin:0;" width="100%">
+              <center>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;" fillcolor="#005570">  
+                <v:fill type="gradient" color1="#005570" color2="#00a1a3" colors="0% #005570, 100% #00a1a3" angle="217"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                <center>
+                <![endif]-->
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="margin:0;padding:0;width:650px;">
+              
+                  <!-- Content inside gradient -->
+                  <tr>
+                    <td class="gradient-content">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="580" style="width: 580px;">
+                        <tr>
+                          <td class="h2 ptb15" align="center">An <span class="yellow">all-oral</span> treatment designed to be completed in 14 months<sup>1‡</sup></td>
+                        </tr>
+                        <!-- end h2 header -->
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </center>
+                <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </center>
+            </td>
+          </tr>
+          <!-- end gradient -->
+          <tr>
+            <td class="pt25 pb30 prl35">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h3 pb15">The AMPLIFY trial evaluated PFS with VEN+A, with treatment completed after 2 cycles of acalabrutinib followed by 12 cycles of VEN+A</td>
+                </tr>
+                <!-- end h3 header -->
+                <tr>
+                  <td class="ul pb0">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="pb10">AMPLIFY was a randomized, multicenter, open-label trial in patients with previously untreated CLL without <em>TP53</em> mutation or 17p deletion (VEN+A: N=291; CIT [FCR/BR]: N=290) and with a median follow-up of 42.6 months</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>The primary endpoint was PFS (IRC-assessed PFS for VEN+A vs CIT was the basis for FDA approval of VEN+A)</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <!-- start gradient -->
+          <tr>
+            <td class="gradient" style="padding:0;margin:0;" width="100%">
+              <center>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;" fillcolor="#005570">  
+                <v:fill type="gradient" color1="#005570" color2="#00a1a3" colors="0% #005570, 100% #00a1a3" angle="217"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                <center>
+                <![endif]-->
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="margin:0;padding:0;width:650px;">
+              
+                  <!-- Content inside gradient -->
+                  <tr>
+                    <td class="gradient-content">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="580" style="width: 580px;">
+                        <tr>
+                          <td class="h2 ptb15 m-prl25" align="center">PFS was <span class="yellow">significantly improved</span> with&nbsp;VEN+A vs CIT<sup>1</sup></td>
+                        </tr>
+                        <!-- end h2 header -->
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </center>
+                <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </center>
+            </td>
+          </tr>
+          <!-- end gradient -->
+          <tr>
+            <td class="pt20 pb30 prl35">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h3 pb15">IRC-assessed PFS (primary endpoint) in 1L CLL</td>
+                </tr>
+                <!-- end h3 header -->
+                <!-- begin mobile content -->
+                <tr class="mobile-only">
+                  <td class="mobile-only m-pb20">
+                    <div class="mobile-only">
+                      <img class="width-auto" src="{{asset.chart-mobile-2x.url}}" alt="{{asset.chart-mobile-2x.alt}}" width="0" height="0"/>
+                    </div>
+                  </td>
+                </tr>
+                <!-- end mobile content -->
+                <tr>
+                  <td class="desktop-only image pb20">
+                    <img src="{{asset.chart-desktop-v2-2x.url}}" alt="{{asset.chart-desktop-v2-2x.alt}}" width="{{asset.chart-desktop-v2-2x.width}}" height="{{asset.chart-desktop-v2-2x.height}}"/>
+                  </td>
+                </tr>
+                <!-- end image -->
+                <tr>
+                  <td class="pb10">After a median follow-up of 42.6 months:</td>
+                </tr>
+                <!-- end paragraph -->
+                <tr>
+                  <td class="ul pb20">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>There were 89 events in the VEN+A arm (77 progressions and 12 death events) compared with 95 events in the CIT arm (66 progressions and 29 death events)</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="footnote-11">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top"><sup>‡</sup></td>
+                        <td>The VEN+A regimen is designed to be completed after 12 cycles, preceded by a 2-cycle acalabrutinib initiation phase.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">&nbsp;</td>
+                        <td>1L=first line; BR=bendamustine-rituximab; CI=confidence interval; CIT=chemoimmunotherapy; FCR=fludarabine-cyclophosphamide-rituximab; FDA=US Food and Drug Administration; HR=hazard ratio; IRC=independent review committee; NE=not estimable; PFS=progression-free survival; <em>TP53</em>=tumor protein 53. </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end footnote list -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <!-- start gradient -->
+          <tr>
+            <td class="gradient" style="padding:0;margin:0;" width="100%">
+              <center>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;" fillcolor="#005570">  
+                <v:fill type="gradient" color1="#005570" color2="#00a1a3" colors="0% #005570, 100% #00a1a3" angle="217"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                <center>
+                <![endif]-->
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="margin:0;padding:0;width:650px;">
+              
+                  <!-- Content inside gradient -->
+                  <tr>
+                    <td class="gradient-content">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="580" style="width: 580px;">
+                        <tr>
+                          <td class="h2 ptb15" align="center"><span class="yellow">Well-characterized safety</span> profile<sup>1</sup></td>
+                        </tr>
+                        <!-- end h2 header -->
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </center>
+                <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </center>
+            </td>
+          </tr>
+          <!-- end gradient -->
+          <tr>
+            <td class="prl35 pt20 pb30">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h3 pb10">VEN+A safety from the AMPLIFY trial</td>
+                </tr>
+                <!-- end h3 header -->
+                <tr>
+                  <td class="ul pb0">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="pb10">Among patients who received VEN+A, 96% were exposed for ≥6 months and 91% were exposed for >1 year</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="pb10">Fatal adverse events occurred in 3.1% of patients on VEN+A. The most common fatal adverse events included COVID-19 and COVID-19 pneumonia</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td class="pb10">Serious adverse reactions occurred in 25% of patients receiving VEN+A. The most common serious adverse reactions (≥2%) were COVID-19 including COVID-19 pneumonia (9%), second primary malignancies (2.7%), and neutropenia (2.1%)</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Most common adverse events with VEN+A were headache (35%), diarrhea (33%), musculoskeletal pain (25%), and COVID-19 (21%)</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+          <!-- start gradient -->
+          <tr>
+            <td class="gradient" style="padding:0;margin:0;" width="100%">
+              <center>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;" fillcolor="#005570">  
+                <v:fill type="gradient" color1="#005570" color2="#00a1a3" colors="0% #005570, 100% #00a1a3" angle="217"/>  <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">  
+                <center>
+                <![endif]-->
+                <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="650" style="margin:0;padding:0;width:650px;">
+              
+                  <!-- Content inside gradient -->
+                  <tr>
+                    <td class="gradient-content">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="585" style="width: 585px;">
+                        <tr>
+                          <td class="h2 ptb15 m-prl25" align="center">VENCLEXTA enables <span class="yellow">targeted, fixed-duration treatment</span> in CLL<sup>2</sup></td>
+                        </tr>
+                        <!-- end h2 header -->
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </center>
+                <p style="margin:0;padding:0;mso-hide:all;"><o:p xmlns:o="urn:schemas-microsoft-com:office:office"> </o:p></p>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </center>
+            </td>
+          </tr>
+          <!-- end gradient -->
+          <tr>
+            <td class="prl35">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <!-- Start 3 columns -->
+                <tr>
+                  <td class="pt20 pb30">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <!-- Start left column -->
+                        <td class="column3 block pr10 m-pb25" valign="top" width="33%">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image" align="center" style="padding-bottom: 23px;">
+                                <img src="{{asset.icon-calendar-2x.url}}" alt="{{asset.icon-calendar-2x.alt}}" width="{{asset.icon-calendar-2x.width}}" height="{{asset.icon-calendar-2x.height}}"/>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                            <tr>
+                              <td class="h4" align="center">No continuous <br />therapy<sup>‡</sup></td>
+                            </tr>
+                            <!-- end h4 header -->
+                          </table>
+                        </td>
+                        <!-- End left column, start middle column -->
+                        <td class="column3 block prl5 m-pb25" valign="top" width="33%">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image" align="center" style="padding-bottom: 5px;">
+                                <img src="{{asset.icon-ongoing-treatment-2x.url}}" alt="{{asset.icon-ongoing-treatment-2x.alt}}" width="{{asset.icon-ongoing-treatment-2x.width}}" height="{{asset.icon-ongoing-treatment-2x.height}}"/>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                            <tr>
+                              <td class="h4" align="center">No ongoing <br />treatment exposure</td>
+                            </tr>
+                            <!-- end h4 header -->
+                          </table>
+                        </td>
+                        <!-- End middle column, start right column -->
+                        <td class="column3 block pl10" valign="top" width="33%">
+                          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="image" align="center" style="padding-bottom: 5px;">
+                                <img src="{{asset.icon-costs-2x.url}}" alt="{{asset.icon-costs-2x.alt}}" width="{{asset.icon-costs-2x.width}}" height="{{asset.icon-costs-2x.height}}"/>
+                              </td>
+                            </tr>
+                            <!-- end image -->
+                            <tr>
+                              <td class="h4" align="center">No ongoing <br />out-of-pocket costs<sup>§</sup></td>
+                            </tr>
+                            <!-- end h4 header -->
+                          </table>
+                        </td>
+                        <!-- End right column -->
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- End 3 columns -->
+                <tr>
+                  <td class="footnote-11 pb35">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top"><sup>§</sup></td>
+                        <td>Coverage and patient out-of-pocket costs for VEN+A vary by health plan. Patients may still incur out-of-pocket costs for other treatments or tests as directed by their healthcare providers.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end footnote list -->
+                <tr>
+                  <td class="blue-callout">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="h2" align="center">Choose a 1L regimen with the <span class="yellow">convenience of all-oral administration</span> and a chance for time off treatment<sup>1</sup></td>
+                      </tr>
+                      <!-- end h2 header -->
+                    </table>
+                    <!-- end table block -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pt30">
+                    <table class="fixed-width224" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="224" style="width:224px;">
+                      <tr>
+                        <td class="button" align="center"><a href="https://www.venclextahcp.com/contact-a-venclexta-representative.html">Contact a Representative</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end button -->
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End Content -->
+
+      <!-- Start Safety -->
+          <tr>
+            <td class="safety">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="h3">Important Safety Information (cont'd)</td>
+                </tr>
+                <!-- end h3 header -->
+                <tr>
+                  <td class="h2">WARNINGS AND PRECAUTIONS FOR VENCLEXTA</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="h2">Tumor Lysis Syndrome</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Tumor lysis syndrome (TLS), including fatal events and renal failure requiring dialysis, has occurred in patients treated with VENCLEXTA.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>VENCLEXTA can cause rapid reduction in tumor and thus poses a risk for TLS at initiation and during the ramp-up phase in all patients, and during reinitiation after dosage interruption in patients with CLL/SLL. Changes in blood chemistries consistent with TLS that require prompt management can occur as early as 6 to 8 hours following the first dose of VENCLEXTA and at each dose increase. TLS, including fatal cases, has been reported after a single 20 mg dose.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>In patients with CLL/SLL who followed the current (5 week) dose ramp-up and the TLS prophylaxis and monitoring measures, the rate of TLS was 2% in the VENCLEXTA CLL/SLL monotherapy trials. The rate of TLS remained consistent with VENCLEXTA in combination with obinutuzumab or rituximab <br />
+                        With a 2- to 3-week dose ramp-up and higher starting dose in patients with CLL/SLL, the TLS rate was 13% and included deaths and renal failure.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>The risk of TLS is a continuum based on multiple factors, particularly reduced renal function, tumor burden, and type of malignancy. Splenomegaly may also increase the risk of TLS in patients with CLL/SLL. </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Assess all patients for risk and provide appropriate prophylaxis for TLS, including hydration and anti-hyperuricemics. Monitor blood chemistries and manage abnormalities promptly. Employ more intensive measures (IV hydration, frequent monitoring, hospitalization) as overall risk increases. Interrupt dosing if needed; when restarting VENCLEXTA follow dose modification guidance in the Prescribing Information.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Concomitant use of VENCLEXTA with P-gp inhibitors or strong or moderate CYP3A inhibitors increases venetoclax exposure, which may increase the risk of TLS at initiation and during the ramp-up phase, and requires VENCLEXTA dose reduction.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Neutropenia</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>In patients with CLL, Grade 3 or 4 neutropenia developed in 63% to 64% of patients and Grade 4 neutropenia developed in 31% to 33% of patients when treated with VENCLEXTA in combination and monotherapy studies. Febrile neutropenia occurred in 4% to 6% of patients.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Monitor complete blood counts. Interrupt dosing for severe neutropenia and resume at same or reduced dose. Consider supportive measures including antimicrobials and growth factors (e.g., G-CSF).</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Infections</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Fatal and serious infections such as pneumonia and sepsis have occurred in patients treated with VENCLEXTA.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Monitor patients for signs and symptoms of infection and treat promptly. Withhold VENCLEXTA for Grade 3 and 4 infection until resolution and resume at same or reduced dose.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Immunization</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Do not administer live attenuated vaccines prior to, during, or after treatment with VENCLEXTA until B-cell recovery occurs. Advise patients that vaccinations may be less effective.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Embryo-Fetal Toxicity </td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>VENCLEXTA may cause embryo-fetal harm when administered to a pregnant woman. Advise females of reproductive potential to use effective contraception during treatment and for 30 days after the last dose.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Increased Mortality in Patients with Multiple Myeloma when VENCLEXTA is Added to Bortezomib and Dexamethasone</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>In a randomized trial (BELLINI; NCT02755597) in patients with relapsed or refractory multiple myeloma, the addition of VENCLEXTA to bortezomib plus dexamethasone, a use for which VENCLEXTA is not indicated, resulted in increased mortality. Treatment of patients with multiple myeloma with VENCLEXTA in combination with bortezomib plus dexamethasone is not recommended outside of controlled clinical trials.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">WARNINGS AND PRECAUTIONS FOR ACALABRUTINIB</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="h2">Serious and Opportunistic Infections</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Fatal and serious infections, including opportunistic infections, have occurred in patients with hematologic malignancies treated with acalabrutinib.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Serious or Grade 3 or higher infections (bacterial, viral, or fungal) occurred in 29% of 2,055 patients exposed to acalabrutinib in clinical trials, most often due to respiratory tract infections (18% of all patients, including pneumonia in 8%). These infections predominantly occurred in the absence of Grade 3 or 4 neutropenia, with neutropenic infection reported in 8% of all patients.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Opportunistic infections in recipients of acalabrutinib have included, but are not limited to, hepatitis B virus reactivation, fungal pneumonia, <em>Pneumocystis jirovecii</em> pneumonia, Epstein-Barr virus reactivation, cytomegalovirus, and progressive multifocal leukoencephalopathy (PML).</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Consider prophylaxis in patients who are at increased risk for opportunistic infections. Monitor patients for signs and symptoms of infection and treat promptly.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Hemorrhage</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Fatal and serious hemorrhagic events have occurred in patients treated with acalabrutinib. Major hemorrhage (serious or Grade 3 or higher bleeding or any central nervous system bleeding) occurred in 4.7% of patients, with fatal hemorrhage occurring in 0.1% of 2,055 patients exposed to acalabrutinib in clinical trials. Bleeding events of any grade, excluding bruising and petechiae, occurred in 39% of patients.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Use of antithrombotic agents concomitantly with acalabrutinib may further increase the risk of hemorrhage. In clinical trials, major hemorrhage occurred in 5% of patients taking acalabrutinib without antithrombotic agents and 3.24% of patients taking acalabrutinib with antithrombotic agents. Consider the risks and benefits of antithrombotic agents when co-administered with acalabrutinib. Monitor patients for signs of bleeding.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Consider the benefit-risk of withholding acalabrutinib for 3 to 7 days pre- and post-surgery depending upon the type of surgery and the risk of bleeding.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Cytopenias</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Acalabrutinib can cause Grade 3 or 4 cytopenias. Grade 3 or 4 cytopenias included absolute neutrophil count decreased (28%), absolute lymphocyte count decreased (10%), hemoglobin decreased (9%), and platelets decreased (9%), in patients treated with acalabrutinib alone or in combination with obinutuzumab; Grade 4 neutropenia developed in 14% of patients.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Monitor complete blood counts regularly during treatment. Interrupt treatment, reduce the dose, or discontinue treatment as warranted.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Second Primary Malignancies</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Second primary malignancies, including skin cancers and other solid tumors, occurred in 16% of 2,055 patients exposed to acalabrutinib in clinical trials. The most frequent second primary malignancy was non-melanoma skin cancer, reported in 9% of patients, followed by other solid tumors in 8% (including melanoma, lung cancer, gastrointestinal cancers, and genitourinary cancers) and hematologic malignancies (0.8%). Monitor patients for the development of second cancers and advise protection from sun exposure.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Cardiac Arrhythmias</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Fatal and serious cardiac arrhythmias have occurred in patients treated with acalabrutinib. Grade 3 or 4 atrial fibrillation or flutter was reported in 2.2% of 2,055 patients treated with acalabrutinib, with all grades of atrial fibrillation or flutter reported in 7% of all patients. Grade 3 or higher ventricular arrhythmia events were reported in 0.5% of patients, including fatal cases in 0.3% of all patients. The risk of arrhythmias may be increased in patients with cardiac risk factors, hypertension, previous arrhythmias, and acute infection. Monitor for symptoms of arrhythmia (eg, palpitations, dizziness, syncope, dyspnea) and manage as appropriate.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Hepatotoxicity, Including Drug-Induced Liver Injury</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Hepatotoxicity, including severe, life-threatening, and potentially fatal cases of drug-induced liver injury (DILI), has occurred in patients treated with Bruton tyrosine kinase inhibitors, including acalabrutinib.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Evaluate bilirubin and transaminases at baseline and throughout treatment with acalabrutinib. For patients who develop abnormal liver tests after acalabrutinib, monitor more frequently for liver test abnormalities and clinical signs and symptoms of hepatic toxicity. If DILI is suspected, withhold acalabrutinib. Upon confirmation of DILI, discontinue acalabrutinib.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">ADVERSE REACTIONS FOR VENCLEXTA AND ACALABRUTINIB</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>In patients with CLL receiving combination therapy with venetoclax and acalabrutinib, serious adverse reactions occurred in 24.7% of patients, the most common adverse reaction (≥5%) was COVID-19 pneumonia (5.8%). The most common adverse reactions (≥15%) of any grade were headache (35%), diarrhea (33%), nausea (15%), musculoskeletal pain (24%), COVID-19 (21%), fatigue (18%), bruising (17%), and rash (16%). </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>New or worsening clinically important laboratory abnormalities (≥15%) of any grade in patients receiving venetoclax and acalabrutinib were neutropenia, lymphopenia, thrombocytopenia, and anemia.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">ADVERSE REACTIONS FOR ACALABRUTINIB</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%">The most common adverse reactions (≥30%) of any grade in patients with CLL exposed to acalabrutinib were anemia,* neutropenia,* thrombocytopenia,* headache, upper respiratory tract infection, and diarrhea.</td>
+                      </tr>
+                      <tr>
+                        <td class="ul" colspan="2">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="li" valign="top">–</td>
+                              <td>Treatment-emergent decreases (all grades) of hemoglobin, platelets, and neutrophils were based on laboratory measurements and adverse reactions.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%">In patients with previously untreated CLL exposed to acalabrutinib, fatal adverse reactions that occurred in the absence of disease progression and with onset within 30 days of the last study treatment were reported in 2% for each treatment arm, most often from infection. Serious adverse reactions were reported in 39% of patients in the acalabrutinib plus obinutuzumab arm and 32% in the acalabrutinib monotherapy arm, most often due to events of pneumonia (2.8% to 7%).</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%">Adverse reactions led to acalabrutinib dose reduction in 7% and 4% of patients in the acalabrutinib plus obinutuzumab arm (N=178) and acalabrutinib monotherapy arm (N=179), respectively. Adverse events led to discontinuation in 11% and 10% of patients, respectively. Increases in creatinine to 1.5 to 3 times ULN occurred in 3.9% and 2.8% of patients in the acalabrutinib combination arm and monotherapy arm, respectively.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td width="100%">Adverse reactions led to acalabrutinib dose reduction in 3.9% of patients (N=154), dose interruptions in 34% of patients, most often due to respiratory tract infections followed by neutropenia, and discontinuation in 10% of patients, most frequently due to second primary malignancies followed by infection. Increases in creatinine to 1.5 to 3 times ULN occurred in 1.3% of patients who received acalabrutinib.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">DRUG INTERACTIONS WITH VENCLEXTA</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Concomitant use with a P-gp inhibitor or a strong or moderate CYP3A inhibitor increases VENCLEXTA exposure, which may increase VENCLEXTA toxicities, including the risk of TLS. Consider alternative medications or adjust VENCLEXTA dosage and monitor more frequently for adverse reactions. Resume the VENCLEXTA dosage that was used prior to concomitant use of a P-gp inhibitor or a strong or moderate CYP3A inhibitor 2 to 3 days after discontinuation of the inhibitor.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Patients should avoid grapefruit products, Seville oranges, and starfruit during treatment as they contain inhibitors of CYP3A.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Avoid concomitant use of strong or moderate CYP3A inducers.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Monitor international normalized ratio (INR) more frequently in patients receiving warfarin.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Avoid concomitant use of VENCLEXTA with a P-gp substrate. If concomitant use is unavoidable, separate dosing of the P-gp substrate at least 6 hours before VENCLEXTA.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">DRUG INTERACTIONS WITH ACALABRUTINIB</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Strong CYP3A Inhibitors: Avoid co-administration of acalabrutinib with a strong CYP3A inhibitor. If these inhibitors will be used short-term, interrupt acalabrutinib. After discontinuation of strong CYP3A inhibitor for at least 24 hours, resume previous dosage of acalabrutinib.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Moderate CYP3A Inhibitors: Reduce the dosage of acalabrutinib to 100 mg once daily when co-administered with a moderate CYP3A inhibitor.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Strong CYP3A Inducers: Avoid co-administration of acalabrutinib with a strong CYP3A inducer. If co-administration is unavoidable, increase the dosage of acalabrutinib to 200 mg approximately every 12 hours.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">USE IN SPECIFIC POPULATIONS FOR VENCLEXTA</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="h2">Lactation</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Advise women not to breastfeed during treatment with VENCLEXTA and for 1 week after the last dose.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Females and Males of Reproductive Potential</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Advise females of reproductive potential to use effective contraception during treatment with VENCLEXTA and for 30 days after the last dose.</td>
+                      </tr>
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Based on findings in animals, VENCLEXTA may impair male fertility.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Hepatic Impairment</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Reduce the dose of VENCLEXTA for patients with severe hepatic impairment (Child-Pugh C); monitor these patients more frequently for adverse reactions. No dose adjustment is recommended for patients with mild (Child-Pugh A) or moderate (Child-Pugh B) hepatic impairment.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list --> 
+                <tr>
+                  <td class="h2">USE IN SPECIFIC POPULATIONS FOR ACALABRUTINIB</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="h2">Females and Males of Reproductive Potential </td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Pregnancy testing is recommended for females of reproductive potential prior to initiating acalabrutinib therapy. Advise female patients of reproductive potential to use effective contraception during treatment with acalabrutinib and for 1 week following the last dose of acalabrutinib.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Pregnancy</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Based on findings in animals, acalabrutinib may cause fetal harm and dystocia when administered to a pregnant woman. There are no available data in pregnant women to inform the drug-associated risk. Advise pregnant women of the potential risk to a fetus.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Lactation</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>It is not known if acalabrutinib is present in human milk. Advise lactating women not to breastfeed while taking acalabrutinib and for 2 weeks after the last dose.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                <tr>
+                  <td class="h2">Hepatic Impairment</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="ul pb15">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="li" valign="top">•</td>
+                        <td>Avoid use of acalabrutinib in patients with severe hepatic impairment (Child-Pugh class C). No dosage adjustment of acalabrutinib is recommended in patients with mild (Child-Pugh class A) or moderate (Child-Pugh class B) hepatic impairment.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end unordered list -->
+                
+                <tr>
+                  <td class="h2 pb15">Please see full <a href="https://www.rxabbvie.com/pdf/venclexta.pdf">Prescribing Information</a> for VENCLEXTA.</td>
+                </tr>
+                <!-- end h2 header -->
+                <tr>
+                  <td class="fs16 p bold">Information about VENCLEXTA + acalabrutinib does not appear in the VENCLEXTA full Prescribing Information (PI). Please see the acalabrutinib full PI for a complete discussion of Important Safety Information at <a class="break-word" href="https://www.venclextahcp.com/cll/acalabrutinibPI">https://www.venclextahcp.com/cll/acalabrutinibPI</a>.</td>
+                </tr>
+                <!-- end paragraph -->
+              </table> 
+            </td>
+          </tr>
+      <!-- End Safety -->
+
+      <!-- Start References -->
+          <tr>
+            <td class="prl35 pb20 m-pb30">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="fs16 pb15"><strong>References: 1.</strong> Acalabrutinib Prescribing Information. <strong>2.</strong> VENCLEXTA Prescribing Information. </td>
+                </tr>
+                <!-- end paragraph -->
+                <!-- start CO logic -->
+                {% if build.type == "VEEVA_EMAIL_TEMPLATE" or build.type == "THIRD_PARTY" %}
+                  <tr>
+                    <td class="fs16">
+                      <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        {{token.gne-co-disclaimer}}
+                      </table>
+                      <!-- end table block -->
+                    </td>
+                  </tr>
+                {% else %}
+                <tr>
+                  <td class="pink fs16">&lt;Please click here for applicable state-specific disclosures.&gt;</td>
+                </tr> 
+                {% endif %}
+              </table>
+              <!-- end table block -->
+            </td>
+          </tr>
+      <!-- End References -->
+
+      <!-- Start Footer -->
+          <tr>
+            <td class="footer">
+              <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="pb15 m-pb15">
+                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="block m-center m-pb15">
+                          <table class="m-initial" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="pr10 br-gray">
+                                <a class="ghost-link" href="https://www.abbvie.com/">
+                                <img src="{{asset.abbvie-logo-2x.url}}" alt="{{asset.abbvie-logo-2x.alt}}" width="{{asset.abbvie-logo-2x.width}}" height="{{asset.abbvie-logo-2x.height}}"/></a>
+                              </td>
+                              <td class="pl10 ptb5">
+                                <a class="ghost-link" href="https://www.gene.com/">
+                                <img src="{{asset.genentech-logo-2x.url}}" alt="{{asset.genentech-logo-2x.alt}}" width="{{asset.genentech-logo-2x.width}}" height="{{asset.genentech-logo-2x.height}}"/></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="block m-center" align="right">
+                          <a align="left" class="ghost-link" href="https://www.venclextahcp.com/cll.html"><img class="m-center" src="{{asset.venclexta-logo-2x.url}}" alt="{{asset.venclexta-logo-2x.alt}}" width="{{asset.venclexta-logo-2x.width}}" height="{{asset.venclexta-logo-2x.height}}"/></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end images -->
+                <tr>
+                  <td class="legal pb20 m-center m-pb15">
+                    <a href="https://www.venclextahcp.com/privacy-policy.html"><span>Privacy Policy</span></a>
+                    <span class="link-divider"> | </span>
+                    <a href="https://www.venclextahcp.com/terms-conditions.html"><span>Terms and Conditions</span></a>
+                    <span class="link-divider"> | </span>
+                    <a href="https://www.venclextahcp.com/contact-us.html"><span>Contact Us</span></a>
+                  </td>
+                </tr>
+                <!-- end legal -->
+                <tr>
+                  <td class="p">This email is intended for US healthcare professionals only.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p">This email is intended for the recipient identified above. If you have received this email in error, please notify the sender immediately and delete the email from your system.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p">To unsubscribe from this type of informational email as delivered by your Genentech representative, please <a class="dark-blue" href="{{build.unsubscribeLink}}">click here</a>. Regular communication between you and your Genentech representative regarding standard business and meeting coordination activities may continue.</td>
+                </tr>
+                <tr>
+                  <td class="p">This commercial email is brought to you by AbbVie Inc. and Genentech USA, Inc.</td>
+                </tr>
+                <tr>
+                  <td class="p">Distributed and marketed by AbbVie Inc. 1 North Waukegan Road, North Chicago, IL 60064.<br />
+                  Marketed by Genentech USA, Inc. 1 DNA Way, South San Francisco, CA 94080-4990.  </td>
+                </tr>
+                <tr>
+                  <td class="p">© {% if build.type == "GENE_ACM_BATCH" or build.type == "GENE_ACM_REALTIME" %}<%= formatDate(new Date(), "%4Y") %>{% else %}{{build.year}}{% endif %} AbbVie and Genentech USA, Inc. All rights reserved.</td>
+                </tr>
+                <tr>
+                  <td class="p pb25 m-pb15">VENCLEXTA<sup>®</sup> and its design are registered trademarks of AbbVie Inc.</td>
+                </tr>
+                <tr>
+                  <td class="p">US-VENC-250256</td>
+                </tr>
+              </table> 
+            </td>
+          </tr>
+      <!-- End Footer -->
+
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <!-- End Body Table Wrapper -->
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+</body>
+</html>
